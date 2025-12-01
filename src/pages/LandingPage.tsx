@@ -78,50 +78,23 @@ export default function LandingPage() {
       <StructuredData />
       
       {/* Floating Ambassador Login Button */}
-      {showAmbassadorButton && location.pathname === '/' && (
-        <button
-          onClick={() => navigate('/ambassador-program')}
-          className="fixed top-6 right-6 z-50 bg-accent hover:bg-accent/90 text-primary font-permanent-marker px-6 py-3 rounded-full shadow-lg transition-all hover:scale-105"
-          style={{ color: '#611a5a' }}
-        >
+      {showAmbassadorButton && location.pathname === '/' && <button onClick={() => navigate('/ambassador-program')} className="fixed top-6 right-6 z-50 bg-accent hover:bg-accent/90 text-primary font-permanent-marker px-6 py-3 rounded-full shadow-lg transition-all hover:scale-105" style={{
+      color: '#611a5a'
+    }}>
           {language === 'en' ? 'Ambassadors Login' : 'Login Embajadores'}
-        </button>
-      )}
+        </button>}
 
       {/* Hero Section */}
       <HeroSection />
 
       {/* App Store Badges Section */}
-      <section style={{
-      backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
-    }} className="w-full bg-black py-8 lg:py-16 px-4 bg-cover bg-center mx-0 mt-8 mb-16 lg:mt-12 lg:mb-24">
-        <div className="container mx-auto max-w-4xl text-center">
-          <img src="/lovable-uploads/app-store-badges.png" alt="Download on App Store and Google Play" className="w-full max-w-2xl lg:max-w-sm mx-auto mb-6 lg:mb-12" loading="lazy" />
-          <h2 className="text-3xl md:text-4xl font-permanent-marker" style={{
-          color: '#699e4b'
-        }}>
-            {t('landing.comingSoon')}
-          </h2>
-        </div>
-      </section>
+      
 
       {/* Angry Chair Scene */}
-      <section style={{
-      backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
-    }} className="w-full bg-black py-8 lg:py-16 px-0 md:px-4 bg-cover bg-center mx-0 mt-8 mb-16 lg:mt-12 lg:mb-24">
-        <div className="w-full md:container md:mx-auto md:max-w-6xl">
-          <img src="/lovable-uploads/angry-chair-scene.png" alt="Angry chair competing with massage chair in the street" className="w-full h-auto object-cover" loading="lazy" />
-        </div>
-      </section>
+      
 
       {/* Furniture Street Scene */}
-      <section style={{
-      backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
-    }} className="w-full bg-black py-8 lg:py-16 px-0 md:px-4 bg-cover bg-center mx-0 mt-8 mb-16 lg:mt-12 lg:mb-24">
-        <div className="w-full md:container md:mx-auto md:max-w-6xl">
-          <img src="/lovable-uploads/furniture-street-scene.png" alt="Urban furniture hunting scene with Empire State Building" className="w-full h-auto object-cover" loading="lazy" />
-        </div>
-      </section>
+      
 
       {/* Furniture Hunt Section */}
       <section className="w-full bg-black py-2 md:py-12 px-2 md:px-4 bg-cover bg-center" style={{
@@ -145,8 +118,8 @@ export default function LandingPage() {
       {/* Hunter Characters Section */}
       <AnimatedSection animation="fade-up">
         <section className="w-full bg-black py-16 px-4 bg-cover bg-center" style={{
-          backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
-        }}>
+        backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
+      }}>
           <div className="container mx-auto max-w-6xl">
             <div className="grid md:grid-cols-2 gap-12">
               {/* Hunter Girl - Hunt and Sell */}
@@ -324,18 +297,16 @@ export default function LandingPage() {
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="flex flex-col items-center text-center">
             <h3 className="text-3xl md:text-4xl font-permanent-marker mb-6" style={{
-              color: '#699e4b'
-            }}>
+            color: '#699e4b'
+          }}>
               {language === 'en' ? 'Partnering for a Circular Future' : 'Alianzas para un Futuro Circular'}
             </h3>
             <p className="text-xl text-subtitle-styled font-sedgwick-ave max-w-3xl mb-8">
-              {language === 'en' 
-                ? 'We are partnering with waste management companies, thrift and antique stores to integrate and co-create our solution with them. Our goal is to scale the \'free stuff\' circular business model to avoid unnecessary waste, reduce first-hand demand, decrease raw material extraction and reduce gas emissions'
-                : 'Nos estamos asociando con empresas de gestión de residuos, tiendas de segunda mano y antigüedades para integrar y co-crear nuestra solución con ellas. Nuestro objetivo es escalar el modelo de negocio circular de \'cosas gratis\' para evitar residuos innecesarios, reducir la demanda de productos nuevos, disminuir la extracción de materias primas y reducir las emisiones de gases'}
+              {language === 'en' ? 'We are partnering with waste management companies, thrift and antique stores to integrate and co-create our solution with them. Our goal is to scale the \'free stuff\' circular business model to avoid unnecessary waste, reduce first-hand demand, decrease raw material extraction and reduce gas emissions' : 'Nos estamos asociando con empresas de gestión de residuos, tiendas de segunda mano y antigüedades para integrar y co-crear nuestra solución con ellas. Nuestro objetivo es escalar el modelo de negocio circular de \'cosas gratis\' para evitar residuos innecesarios, reducir la demanda de productos nuevos, disminuir la extracción de materias primas y reducir las emisiones de gases'}
             </p>
             <Button asChild className="bg-accent hover:bg-accent/90 font-permanent-marker text-lg px-8 py-6 mb-8" style={{
-              color: '#611a5a'
-            }}>
+            color: '#611a5a'
+          }}>
               <Link to="/waste-managers">
                 {language === 'en' ? 'Know More' : 'Saber Más'}
               </Link>
@@ -468,21 +439,19 @@ export default function LandingPage() {
       {/* Bottom Right Buttons - Language Switcher and Scroll to Top */}
       <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
         {/* Scroll to Top Button */}
-        <Button 
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
-          className="bg-accent hover:bg-accent/90 font-permanent-marker shadow-rebel px-3 py-2 h-auto text-lg" 
-          style={{ color: '#611a5a' }}
-          aria-label={language === 'en' ? 'Go to top' : 'Ir al principio'}
-        >
+        <Button onClick={() => window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      })} className="bg-accent hover:bg-accent/90 font-permanent-marker shadow-rebel px-3 py-2 h-auto text-lg" style={{
+        color: '#611a5a'
+      }} aria-label={language === 'en' ? 'Go to top' : 'Ir al principio'}>
           <ArrowUp className="h-5 w-5" />
         </Button>
         
         {/* Language Switcher Button */}
-        <Button 
-          onClick={() => setLanguage(language === 'en' ? 'es' : 'en')} 
-          className="bg-accent hover:bg-accent/90 font-permanent-marker shadow-rebel px-3 py-2 h-auto text-lg" 
-          style={{ color: '#611a5a' }}
-        >
+        <Button onClick={() => setLanguage(language === 'en' ? 'es' : 'en')} className="bg-accent hover:bg-accent/90 font-permanent-marker shadow-rebel px-3 py-2 h-auto text-lg" style={{
+        color: '#611a5a'
+      }}>
           {language === 'en' ? 'ES' : 'EN'}
         </Button>
       </div>
