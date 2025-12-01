@@ -91,30 +91,13 @@ export default function LandingPage() {
       <HeroSection />
 
       {/* App Store Badges Section */}
-      <section style={{
-      backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
-    }} className="w-full bg-black py-8 lg:py-16 px-4 bg-cover bg-center mx-0 mt-8 mb-16 lg:mt-12 lg:mb-24">
-        <div className="container mx-auto max-w-4xl text-center">
-          <img src="/lovable-uploads/app-store-badges.png" alt="Download on App Store and Google Play" className="w-full max-w-2xl lg:max-w-sm mx-auto mb-6 lg:mb-12" loading="lazy" />
-          <h2 className="text-3xl md:text-4xl font-permanent-marker" style={{
-          color: '#699e4b'
-        }}>
-            {t('landing.comingSoon')}
-          </h2>
-        </div>
-      </section>
+      
 
       {/* Angry Chair Scene */}
       
 
       {/* Furniture Street Scene */}
-      <section style={{
-      backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
-    }} className="w-full bg-black py-8 lg:py-16 px-0 md:px-4 bg-cover bg-center mx-0 mt-8 mb-16 lg:mt-12 lg:mb-24">
-        <div className="w-full md:container md:mx-auto md:max-w-6xl">
-          
-        </div>
-      </section>
+      
 
       {/* Furniture Hunt Section */}
       <section className="w-full bg-black py-2 md:py-12 px-2 md:px-4 bg-cover bg-center" style={{
@@ -150,7 +133,9 @@ export default function LandingPage() {
                     <div className="aspect-square mb-4 rounded-xl overflow-hidden bg-gradient-to-b from-purple-900/20 to-transparent">
                       <img src={hunterGirl} alt="Hunter character" className="w-full h-full object-contain" loading="lazy" />
                     </div>
-                    <h3 className="text-xl font-permanent-marker mb-2 text-center" style={{ color: '#611a5a' }}>
+                    <h3 className="text-xl font-permanent-marker mb-2 text-center" style={{
+                    color: '#611a5a'
+                  }}>
                       HUNTER
                     </h3>
                     <p className="text-sm text-subtitle-styled font-sedgwick-ave text-center leading-tight">
@@ -168,7 +153,9 @@ export default function LandingPage() {
                     <div className="aspect-square mb-4 rounded-xl overflow-hidden bg-gradient-to-b from-purple-900/20 to-transparent">
                       <img src={hunterMan} alt="Explorer character" className="w-full h-full object-contain" loading="lazy" />
                     </div>
-                    <h3 className="text-xl font-permanent-marker mb-2 text-center" style={{ color: '#611a5a' }}>
+                    <h3 className="text-xl font-permanent-marker mb-2 text-center" style={{
+                    color: '#611a5a'
+                  }}>
                       EXPLORER
                     </h3>
                     <p className="text-sm text-subtitle-styled font-sedgwick-ave text-center leading-tight">
@@ -186,7 +173,9 @@ export default function LandingPage() {
                     <div className="aspect-square mb-4 rounded-xl overflow-hidden bg-gradient-to-b from-purple-900/20 to-transparent">
                       <img src={entrepreneur} alt="Entrepreneur character" className="w-full h-full object-contain" loading="lazy" />
                     </div>
-                    <h3 className="text-xl font-permanent-marker mb-2 text-center" style={{ color: '#611a5a' }}>
+                    <h3 className="text-xl font-permanent-marker mb-2 text-center" style={{
+                    color: '#611a5a'
+                  }}>
                       ENTREPRENEUR
                     </h3>
                     <p className="text-sm text-subtitle-styled font-sedgwick-ave text-center leading-tight">
@@ -204,7 +193,9 @@ export default function LandingPage() {
                     <div className="aspect-square mb-4 rounded-xl overflow-hidden bg-gradient-to-b from-purple-900/20 to-transparent">
                       <img src={evangelizer} alt="Evangelizer character" className="w-full h-full object-contain" loading="lazy" />
                     </div>
-                    <h3 className="text-xl font-permanent-marker mb-2 text-center" style={{ color: '#611a5a' }}>
+                    <h3 className="text-xl font-permanent-marker mb-2 text-center" style={{
+                    color: '#611a5a'
+                  }}>
                       EVANGELIZER
                     </h3>
                     <p className="text-sm text-subtitle-styled font-sedgwick-ave text-center leading-tight">
@@ -222,7 +213,9 @@ export default function LandingPage() {
                     <div className="aspect-square mb-4 rounded-xl overflow-hidden bg-gradient-to-b from-purple-900/20 to-transparent">
                       <img src={scavenger} alt="Scavenger character" className="w-full h-full object-contain" loading="lazy" />
                     </div>
-                    <h3 className="text-xl font-permanent-marker mb-2 text-center" style={{ color: '#611a5a' }}>
+                    <h3 className="text-xl font-permanent-marker mb-2 text-center" style={{
+                    color: '#611a5a'
+                  }}>
                       SCAVENGER
                     </h3>
                     <p className="text-sm text-subtitle-styled font-sedgwick-ave text-center leading-tight">
