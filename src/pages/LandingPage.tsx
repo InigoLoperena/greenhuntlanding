@@ -143,6 +143,9 @@ export default function LandingPage() {
               <AnimatedSection animation="slide-right" delay={200}>
                 <div className="flex flex-col items-center text-center">
                   <img src={hunterGirl} alt="Hunt abandoned treasures" className="w-64 h-auto mb-6" loading="lazy" />
+                  <h3 className="text-2xl md:text-3xl font-permanent-marker mb-2" style={{ color: '#611a5a' }}>
+                    HUNTER
+                  </h3>
                   <p className="text-xl text-subtitle-styled font-sedgwick-ave max-w-sm md:text-3xl">
                     {t('landing.hunt.treasures')}
                   </p>
@@ -153,6 +156,9 @@ export default function LandingPage() {
               <AnimatedSection animation="slide-left" delay={400}>
                 <div className="flex flex-col items-center text-center">
                   <img src={hunterMan} alt="Explore your city and earn money" className="w-64 h-auto mb-6" loading="lazy" />
+                  <h3 className="text-2xl md:text-3xl font-permanent-marker mb-2" style={{ color: '#611a5a' }}>
+                    EXPLORER
+                  </h3>
                   <p className="text-xl text-subtitle-styled font-sedgwick-ave max-w-sm md:text-2xl">
                     {t('landing.hunt.explore')}
                   </p>
