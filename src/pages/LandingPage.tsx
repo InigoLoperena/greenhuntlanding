@@ -148,7 +148,7 @@ export default function LandingPage() {
                   <div className="absolute inset-0 bg-gradient-to-b from-purple-600/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" />
                   <div className="relative bg-gradient-to-b from-gray-900 to-black border-2 border-purple-600/50 rounded-2xl p-4 shadow-2xl hover:scale-105 transition-transform duration-300 hover:border-purple-400">
                     <div className="aspect-square mb-4 rounded-xl overflow-hidden bg-gradient-to-b from-purple-900/20 to-transparent">
-                      <img src={hunterGirl} alt="Hunter character" className="w-full h-full object-contain" loading="lazy" />
+                      <img src={hunterGirl} alt="Hunter character" className="w-1/2 h-1/2 object-contain mx-auto my-auto" loading="lazy" />
                     </div>
                     <h3 className="text-xl font-permanent-marker mb-2 text-center" style={{ color: '#611a5a' }}>
                       HUNTER
@@ -166,7 +166,7 @@ export default function LandingPage() {
                   <div className="absolute inset-0 bg-gradient-to-b from-purple-600/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" />
                   <div className="relative bg-gradient-to-b from-gray-900 to-black border-2 border-purple-600/50 rounded-2xl p-4 shadow-2xl hover:scale-105 transition-transform duration-300 hover:border-purple-400">
                     <div className="aspect-square mb-4 rounded-xl overflow-hidden bg-gradient-to-b from-purple-900/20 to-transparent">
-                      <img src={hunterMan} alt="Explorer character" className="w-full h-full object-contain" loading="lazy" />
+                      <img src={hunterMan} alt="Explorer character" className="w-1/2 h-1/2 object-contain mx-auto my-auto" loading="lazy" />
                     </div>
                     <h3 className="text-xl font-permanent-marker mb-2 text-center" style={{ color: '#611a5a' }}>
                       EXPLORER
@@ -184,7 +184,7 @@ export default function LandingPage() {
                   <div className="absolute inset-0 bg-gradient-to-b from-purple-600/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" />
                   <div className="relative bg-gradient-to-b from-gray-900 to-black border-2 border-purple-600/50 rounded-2xl p-4 shadow-2xl hover:scale-105 transition-transform duration-300 hover:border-purple-400">
                     <div className="aspect-square mb-4 rounded-xl overflow-hidden bg-gradient-to-b from-purple-900/20 to-transparent">
-                      <img src={entrepreneur} alt="Entrepreneur character" className="w-full h-full object-contain" loading="lazy" />
+                      <img src={entrepreneur} alt="Entrepreneur character" className="w-1/2 h-1/2 object-contain mx-auto my-auto" loading="lazy" />
                     </div>
                     <h3 className="text-xl font-permanent-marker mb-2 text-center" style={{ color: '#611a5a' }}>
                       ENTREPRENEUR
@@ -202,7 +202,7 @@ export default function LandingPage() {
                   <div className="absolute inset-0 bg-gradient-to-b from-purple-600/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" />
                   <div className="relative bg-gradient-to-b from-gray-900 to-black border-2 border-purple-600/50 rounded-2xl p-4 shadow-2xl hover:scale-105 transition-transform duration-300 hover:border-purple-400">
                     <div className="aspect-square mb-4 rounded-xl overflow-hidden bg-gradient-to-b from-purple-900/20 to-transparent">
-                      <img src={evangelizer} alt="Evangelizer character" className="w-full h-full object-contain" loading="lazy" />
+                      <img src={evangelizer} alt="Evangelizer character" className="w-1/2 h-1/2 object-contain mx-auto my-auto" loading="lazy" />
                     </div>
                     <h3 className="text-xl font-permanent-marker mb-2 text-center" style={{ color: '#611a5a' }}>
                       EVANGELIZER
@@ -220,7 +220,7 @@ export default function LandingPage() {
                   <div className="absolute inset-0 bg-gradient-to-b from-purple-600/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" />
                   <div className="relative bg-gradient-to-b from-gray-900 to-black border-2 border-purple-600/50 rounded-2xl p-4 shadow-2xl hover:scale-105 transition-transform duration-300 hover:border-purple-400">
                     <div className="aspect-square mb-4 rounded-xl overflow-hidden bg-gradient-to-b from-purple-900/20 to-transparent">
-                      <img src={scavenger} alt="Scavenger character" className="w-full h-full object-contain" loading="lazy" />
+                      <img src={scavenger} alt="Scavenger character" className="w-1/2 h-1/2 object-contain mx-auto my-auto" loading="lazy" />
                     </div>
                     <h3 className="text-xl font-permanent-marker mb-2 text-center" style={{ color: '#611a5a' }}>
                       SCAVENGER
