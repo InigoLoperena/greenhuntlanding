@@ -80,28 +80,20 @@ export const HeroSection = () => {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 container mx-auto px-8 text-left max-w-2xl">
-          <h1 className="text-xl md:text-2xl lg:text-3xl font-permanent-marker mb-6 leading-relaxed text-accent">
-            Real world <span style={{ color: '#9333ea' }}>game-marketplace</span>
+        <div className="relative z-10 container mx-auto px-8 text-left max-w-3xl flex flex-col justify-end h-full pb-24">
+          <h1 className="text-2xl md:text-4xl lg:text-6xl font-permanent-marker mb-8 leading-relaxed text-accent">
+            Real world <span style={{ color: '#611a5a' }}>game-marketplace</span> & Stooping-Thrifting App
             <br />
+            Your city is a <span style={{ color: '#611a5a' }}>circular economy</span> game board
             <br />
-            Your city is
-            <br />
-            <span style={{ color: '#9333ea' }}>circular economy</span>
-            <br />
-            game board
-            <br />
-            <br />
-            <span className="text-lg md:text-xl lg:text-2xl">
-              Play to Earn $ and Save the planet
-            </span>
+            Play to Earn $ and Save the planet
           </h1>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
+          <div className="flex flex-col sm:flex-row gap-3 items-start mt-6">
             <Button
               onClick={() => setWaitlistOpen(true)}
-              className="bg-accent hover:bg-accent/90 font-permanent-marker text-lg px-8 py-6 text-2xl h-auto"
+              className="bg-accent hover:bg-accent/90 font-permanent-marker text-sm px-4 py-3 text-lg h-auto"
               style={{ color: '#611a5a' }}
             >
               {language === 'en' ? 'Join Beta' : 'Únete a Beta'}
@@ -110,9 +102,9 @@ export const HeroSection = () => {
             <Button
               onClick={() => setTrailerOpen(true)}
               variant="outline"
-              className="font-permanent-marker text-lg px-8 py-6 text-2xl h-auto border-2 border-white text-white hover:bg-white hover:text-black"
+              className="font-permanent-marker text-sm px-4 py-3 text-lg h-auto border-2 border-white text-white hover:bg-white hover:text-black"
             >
-              <Video className="mr-2 h-6 w-6" />
+              <Video className="mr-2 h-4 w-4" />
               Trailer
             </Button>
           </div>
