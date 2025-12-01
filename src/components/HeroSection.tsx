@@ -59,7 +59,7 @@ export const HeroSection = () => {
   return (
     <>
       <section 
-        className="relative w-full min-h-screen flex items-center justify-center overflow-hidden"
+        className="relative w-full min-h-screen flex items-end justify-start overflow-hidden pb-16"
         style={{
           backgroundImage: `url(${heroBackground})`,
           backgroundSize: 'cover',
@@ -80,7 +80,7 @@ export const HeroSection = () => {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 container mx-auto px-8 text-left max-w-3xl flex flex-col justify-end h-full pb-24">
+        <div className="relative z-10 px-8 text-left max-w-3xl">
           <h1 className="text-2xl md:text-4xl lg:text-6xl font-permanent-marker mb-8 leading-relaxed text-accent">
             Real world <span style={{ color: '#611a5a' }}>game-marketplace</span> & Stooping-Thrifting App
             <br />
