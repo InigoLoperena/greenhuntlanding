@@ -14,8 +14,8 @@ Underground, urban and rebellious brand style with Impact font and uppercase tex
        Color 1: Verde oscuro #17503a (primary)
        Color 2: Verde claro #729f31 (accent)  
        Color 3: Gris (muted) */
-    --background: 0 0% 100%; /* White background */
-    --foreground: 124 63% 20%; /* Color 1: #17503a */
+    --background: 0 0% 13%; /* Dark background #212121 */
+    --foreground: 82 52% 41%; /* Accent green for text */
 
     --card: 0 0% 100%;
     --card-foreground: 124 63% 20%;
