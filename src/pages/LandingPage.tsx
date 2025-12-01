@@ -102,13 +102,7 @@ export default function LandingPage() {
       </section>
 
       {/* Angry Chair Scene */}
-      <section style={{
-      backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
-    }} className="w-full bg-black py-8 lg:py-16 px-0 md:px-4 bg-cover bg-center mx-0 mt-8 mb-16 lg:mt-12 lg:mb-24">
-        <div className="w-full md:container md:mx-auto md:max-w-6xl">
-          <img src="/lovable-uploads/angry-chair-scene.png" alt="Angry chair competing with massage chair in the street" className="w-full h-auto object-cover" loading="lazy" />
-        </div>
-      </section>
+      
 
       {/* Furniture Street Scene */}
       <section style={{
