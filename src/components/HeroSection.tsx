@@ -80,8 +80,8 @@ export const HeroSection = () => {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 px-8 text-left max-w-3xl">
-          <h1 className="text-2xl md:text-4xl lg:text-6xl font-permanent-marker mb-8 leading-relaxed text-accent">
+        <div className="relative z-10 w-full px-8 md:px-12 lg:px-16">
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-permanent-marker mb-6 leading-relaxed text-accent">
             Real world <span style={{ color: '#611a5a' }}>game-marketplace</span> & Stooping-Thrifting App
             <br />
             Your city is a <span style={{ color: '#611a5a' }}>circular economy</span> game board
