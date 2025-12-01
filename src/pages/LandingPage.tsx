@@ -9,6 +9,7 @@ import { useScrollThrottle } from "@/hooks/useScrollThrottle";
 import { useState } from "react";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { StructuredData } from "@/components/StructuredData";
+import { HeroSection } from "@/components/HeroSection";
 import greenhuntLogoNew from "@/assets/greenhunt-logo-new.svg";
 import furnitureStreet from "@/assets/furniture-street.png";
 import hunterGirl from "@/assets/hunter-girl.png";
@@ -87,20 +88,8 @@ export default function LandingPage() {
         </button>
       )}
 
-      {/* Logo Header Section */}
-      <section className="w-full bg-black py-8 px-4 bg-cover bg-center" style={{
-      backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
-    }}>
-        <div className="container mx-auto max-w-4xl text-center">
-          <img src={greenhuntLogoNew} alt="GreenHunt Logo - Urban treasure hunting app" className="h-32 sm:h-40 lg:h-48 w-auto mx-auto mb-6" fetchPriority="high" />
-          <h1 className="text-2xl md:text-4xl font-permanent-marker mb-4" style={{
-          color: '#699e4b'
-        }}>
-            {t('landing.stooping.title')}
-          </h1>
-          <p className="text-lg text-subtitle-styled font-sedgwick-ave max-w-3xl mx-auto md:text-3xl">{t('landing.stooping.subtitle')}</p>
-        </div>
-      </section>
+      {/* Hero Section */}
+      <HeroSection />
 
       {/* App Store Badges Section */}
       <section style={{
