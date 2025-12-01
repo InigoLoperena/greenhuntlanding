@@ -82,9 +82,9 @@ export const HeroSection = () => {
         {/* Content */}
         <div className="relative z-10 w-full px-8 md:px-12 lg:px-16">
           <h1 className="text-lg md:text-2xl lg:text-3xl font-permanent-marker mb-4 leading-relaxed text-accent">
-            Real world <span style={{ color: '#611a5a' }}>game-marketplace</span> & Stooping-Thrifting App
+            Real world <span style={{ color: '#000000' }}>game-marketplace</span> & Stooping-Thrifting App
             <br />
-            Your city is a <span style={{ color: '#611a5a' }}>circular economy</span> game board
+            Your city is a <span style={{ color: '#000000' }}>circular economy</span> game board
             <br />
             Play to Earn $ and Save the planet
           </h1>
