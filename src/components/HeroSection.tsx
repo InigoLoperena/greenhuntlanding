@@ -62,10 +62,9 @@ export const HeroSection = () => {
         className="relative w-full min-h-screen flex items-end justify-start overflow-hidden pb-8"
         style={{
           backgroundImage: `url(${heroBackground})`,
-          backgroundSize: 'contain',
+          backgroundSize: 'cover',
           backgroundPosition: 'center top',
-          backgroundRepeat: 'no-repeat',
-          backgroundColor: '#212121'
+          backgroundRepeat: 'no-repeat'
         }}
       >
         {/* Dark overlay for better text readability */}
