@@ -14,6 +14,9 @@ import greenhuntLogoNew from "@/assets/greenhunt-logo-new.svg";
 import furnitureStreet from "@/assets/furniture-street.png";
 import hunterGirl from "@/assets/hunter-girl.png";
 import hunterMan from "@/assets/hunter-man.png";
+import entrepreneur from "@/assets/entrepreneur.png";
+import evangelizer from "@/assets/evangelizer.png";
+import scavenger from "@/assets/scavenger.png";
 import buyLinearEconomy from "@/assets/buy-linear-economy.png";
 import useLinearEconomy from "@/assets/use-linear-economy.png";
 import dumpLinearEconomy from "@/assets/dump-linear-economy-new.png";
@@ -132,36 +135,100 @@ export default function LandingPage() {
         <img src="/lovable-uploads/app-feature-screenshot.png" alt="GreenHunt app showing abandoned furniture location and mapping features" className="w-full h-auto object-cover" loading="lazy" />
       </section>
 
-      {/* Hunter Characters Section */}
+      {/* Hunter Characters Section - Magic Card Style */}
       <AnimatedSection animation="fade-up">
         <section className="w-full bg-black py-16 px-4 bg-cover bg-center" style={{
         backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
       }}>
-          <div className="container mx-auto max-w-6xl">
-            <div className="grid md:grid-cols-2 gap-12">
-              {/* Hunter Girl - Hunt and Sell */}
-              <AnimatedSection animation="slide-right" delay={200}>
-                <div className="flex flex-col items-center text-center">
-                  <img src={hunterGirl} alt="Hunt abandoned treasures" className="w-64 h-auto mb-6" loading="lazy" />
-                  <h3 className="text-2xl md:text-3xl font-permanent-marker mb-2" style={{ color: '#611a5a' }}>
-                    HUNTER
-                  </h3>
-                  <p className="text-xl text-subtitle-styled font-sedgwick-ave max-w-sm md:text-3xl">
-                    {t('landing.hunt.treasures')}
-                  </p>
+          <div className="container mx-auto max-w-7xl">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+              {/* HUNTER */}
+              <AnimatedSection animation="scale-in" delay={100}>
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-b from-purple-600/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" />
+                  <div className="relative bg-gradient-to-b from-gray-900 to-black border-2 border-purple-600/50 rounded-2xl p-4 shadow-2xl hover:scale-105 transition-transform duration-300 hover:border-purple-400">
+                    <div className="aspect-square mb-4 rounded-xl overflow-hidden bg-gradient-to-b from-purple-900/20 to-transparent">
+                      <img src={hunterGirl} alt="Hunter character" className="w-full h-full object-contain" loading="lazy" />
+                    </div>
+                    <h3 className="text-xl font-permanent-marker mb-2 text-center" style={{ color: '#611a5a' }}>
+                      HUNTER
+                    </h3>
+                    <p className="text-sm text-subtitle-styled font-sedgwick-ave text-center leading-tight">
+                      {t('landing.hunt.treasures')}
+                    </p>
+                  </div>
                 </div>
               </AnimatedSection>
 
-              {/* Hunter Man - Explore and Share */}
-              <AnimatedSection animation="slide-left" delay={400}>
-                <div className="flex flex-col items-center text-center">
-                  <img src={hunterMan} alt="Explore your city and earn money" className="w-64 h-auto mb-6" loading="lazy" />
-                  <h3 className="text-2xl md:text-3xl font-permanent-marker mb-2" style={{ color: '#611a5a' }}>
-                    EXPLORER
-                  </h3>
-                  <p className="text-xl text-subtitle-styled font-sedgwick-ave max-w-sm md:text-2xl">
-                    {t('landing.hunt.explore')}
-                  </p>
+              {/* EXPLORER */}
+              <AnimatedSection animation="scale-in" delay={200}>
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-b from-purple-600/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" />
+                  <div className="relative bg-gradient-to-b from-gray-900 to-black border-2 border-purple-600/50 rounded-2xl p-4 shadow-2xl hover:scale-105 transition-transform duration-300 hover:border-purple-400">
+                    <div className="aspect-square mb-4 rounded-xl overflow-hidden bg-gradient-to-b from-purple-900/20 to-transparent">
+                      <img src={hunterMan} alt="Explorer character" className="w-full h-full object-contain" loading="lazy" />
+                    </div>
+                    <h3 className="text-xl font-permanent-marker mb-2 text-center" style={{ color: '#611a5a' }}>
+                      EXPLORER
+                    </h3>
+                    <p className="text-sm text-subtitle-styled font-sedgwick-ave text-center leading-tight">
+                      {t('landing.hunt.explore')}
+                    </p>
+                  </div>
+                </div>
+              </AnimatedSection>
+
+              {/* ENTREPRENEUR */}
+              <AnimatedSection animation="scale-in" delay={300}>
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-b from-purple-600/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" />
+                  <div className="relative bg-gradient-to-b from-gray-900 to-black border-2 border-purple-600/50 rounded-2xl p-4 shadow-2xl hover:scale-105 transition-transform duration-300 hover:border-purple-400">
+                    <div className="aspect-square mb-4 rounded-xl overflow-hidden bg-gradient-to-b from-purple-900/20 to-transparent">
+                      <img src={entrepreneur} alt="Entrepreneur character" className="w-full h-full object-contain" loading="lazy" />
+                    </div>
+                    <h3 className="text-xl font-permanent-marker mb-2 text-center" style={{ color: '#611a5a' }}>
+                      ENTREPRENEUR
+                    </h3>
+                    <p className="text-sm text-subtitle-styled font-sedgwick-ave text-center leading-tight">
+                      {language === 'en' ? 'Start your own circular market and earn money' : 'Inicia tu propio mercado circular y gana dinero'}
+                    </p>
+                  </div>
+                </div>
+              </AnimatedSection>
+
+              {/* EVANGELIZER */}
+              <AnimatedSection animation="scale-in" delay={400}>
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-b from-purple-600/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" />
+                  <div className="relative bg-gradient-to-b from-gray-900 to-black border-2 border-purple-600/50 rounded-2xl p-4 shadow-2xl hover:scale-105 transition-transform duration-300 hover:border-purple-400">
+                    <div className="aspect-square mb-4 rounded-xl overflow-hidden bg-gradient-to-b from-purple-900/20 to-transparent">
+                      <img src={evangelizer} alt="Evangelizer character" className="w-full h-full object-contain" loading="lazy" />
+                    </div>
+                    <h3 className="text-xl font-permanent-marker mb-2 text-center" style={{ color: '#611a5a' }}>
+                      EVANGELIZER
+                    </h3>
+                    <p className="text-sm text-subtitle-styled font-sedgwick-ave text-center leading-tight">
+                      {language === 'en' ? 'Promote the circular economy and earn money' : 'Promueve la economía circular y gana dinero'}
+                    </p>
+                  </div>
+                </div>
+              </AnimatedSection>
+
+              {/* SCAVENGER */}
+              <AnimatedSection animation="scale-in" delay={500}>
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-b from-purple-600/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" />
+                  <div className="relative bg-gradient-to-b from-gray-900 to-black border-2 border-purple-600/50 rounded-2xl p-4 shadow-2xl hover:scale-105 transition-transform duration-300 hover:border-purple-400">
+                    <div className="aspect-square mb-4 rounded-xl overflow-hidden bg-gradient-to-b from-purple-900/20 to-transparent">
+                      <img src={scavenger} alt="Scavenger character" className="w-full h-full object-contain" loading="lazy" />
+                    </div>
+                    <h3 className="text-xl font-permanent-marker mb-2 text-center" style={{ color: '#611a5a' }}>
+                      SCAVENGER
+                    </h3>
+                    <p className="text-sm text-subtitle-styled font-sedgwick-ave text-center leading-tight">
+                      {language === 'en' ? 'Collect free items, decorate your home, or sell and earn' : 'Recoge artículos gratis, decora tu hogar, o vende y gana'}
+                    </p>
+                  </div>
                 </div>
               </AnimatedSection>
             </div>
