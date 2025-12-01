@@ -80,15 +80,19 @@ export const HeroSection = () => {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-permanent-marker mb-8 leading-tight text-accent">
+        <div className="relative z-10 container mx-auto px-8 text-left max-w-2xl">
+          <h1 className="text-xl md:text-2xl lg:text-3xl font-permanent-marker mb-6 leading-relaxed text-accent">
             Real world <span style={{ color: '#9333ea' }}>game-marketplace</span>
             <br />
-            Your city is <span style={{ color: '#9333ea' }}>circular economy</span>
+            <br />
+            Your city is
+            <br />
+            <span style={{ color: '#9333ea' }}>circular economy</span>
             <br />
             game board
             <br />
-            <span className="text-4xl md:text-5xl lg:text-6xl">
+            <br />
+            <span className="text-lg md:text-xl lg:text-2xl">
               Play to Earn $ and Save the planet
             </span>
           </h1>
