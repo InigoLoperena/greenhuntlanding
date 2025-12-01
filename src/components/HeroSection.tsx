@@ -59,7 +59,7 @@ export const HeroSection = () => {
   return (
     <>
       <section 
-        className="relative w-full min-h-screen flex items-end justify-start overflow-hidden pb-16"
+        className="relative w-full min-h-screen flex items-end justify-start overflow-hidden pb-8"
         style={{
           backgroundImage: `url(${heroBackground})`,
           backgroundSize: 'cover',
@@ -81,7 +81,7 @@ export const HeroSection = () => {
 
         {/* Content */}
         <div className="relative z-10 w-full px-8 md:px-12 lg:px-16">
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-permanent-marker mb-6 leading-relaxed text-accent">
+          <h1 className="text-lg md:text-2xl lg:text-3xl font-permanent-marker mb-4 leading-relaxed text-accent">
             Real world <span style={{ color: '#611a5a' }}>game-marketplace</span> & Stooping-Thrifting App
             <br />
             Your city is a <span style={{ color: '#611a5a' }}>circular economy</span> game board
@@ -90,10 +90,10 @@ export const HeroSection = () => {
           </h1>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 items-start mt-6">
+          <div className="flex flex-col sm:flex-row gap-2 items-start mt-4">
             <Button
               onClick={() => setWaitlistOpen(true)}
-              className="bg-accent hover:bg-accent/90 font-permanent-marker text-sm px-4 py-3 text-lg h-auto"
+              className="bg-accent hover:bg-accent/90 font-permanent-marker text-xs px-3 py-2 text-base h-auto"
               style={{ color: '#611a5a' }}
             >
               {language === 'en' ? 'Join Beta' : 'Únete a Beta'}
@@ -102,9 +102,9 @@ export const HeroSection = () => {
             <Button
               onClick={() => setTrailerOpen(true)}
               variant="outline"
-              className="font-permanent-marker text-sm px-4 py-3 text-lg h-auto border-2 border-white text-white hover:bg-white hover:text-black"
+              className="font-permanent-marker text-xs px-3 py-2 text-base h-auto border-2 border-white text-white hover:bg-white hover:text-black"
             >
-              <Video className="mr-2 h-4 w-4" />
+              <Video className="mr-2 h-3 w-3" />
               Trailer
             </Button>
           </div>
