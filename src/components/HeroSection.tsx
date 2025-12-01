@@ -4,7 +4,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { Input } from "@/components/ui/input";
 import { Video } from "lucide-react";
 import greenhuntLogoNew from "@/assets/greenhunt-logo-new.svg";
-import heroBackground from "@/assets/hero-background.jpg";
+import heroBackground from "@/assets/angry-chair-hero.png";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { z } from "zod";
@@ -68,7 +68,7 @@ export const HeroSection = () => {
         }}
       >
         {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/40" />
         
         {/* Logo - Top Left */}
         <div className="absolute top-8 left-8 z-10">
@@ -81,14 +81,14 @@ export const HeroSection = () => {
 
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-permanent-marker mb-8 leading-tight text-white">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-permanent-marker mb-8 leading-tight text-accent">
             Real world <span style={{ color: '#9333ea' }}>game-marketplace</span>
             <br />
             Your city is <span style={{ color: '#9333ea' }}>circular economy</span>
             <br />
             game board
             <br />
-            <span className="text-3xl md:text-5xl lg:text-6xl">
+            <span className="text-4xl md:text-5xl lg:text-6xl">
               Play to Earn $ and Save the planet
             </span>
           </h1>
