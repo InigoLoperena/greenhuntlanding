@@ -118,7 +118,7 @@ export default function LandingPage() {
       <section className="w-full bg-black bg-cover bg-center" style={{
       backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
     }}>
-        <img alt="GreenHunt app showing abandoned furniture location and mapping features" className="w-full h-auto object-cover" loading="lazy" src="/lovable-uploads/0d98c014-55b1-4225-8cb2-5c440c3bdd41.png" />
+        <img alt="GreenHunt app showing abandoned furniture location and mapping features" className="w-full h-auto object-cover" loading="lazy" src="/lovable-uploads/ff5ef3aa-3dae-4f5d-94cc-14631a6a93d9.png" />
       </section>
 
       {/* Hunter Characters Section - Magic Card Style */}
