@@ -418,7 +418,7 @@ export default function LandingPage() {
 
           {/* Waste Manager Flow Image - Full Width */}
           <div className="w-full">
-            <img src={wasteManagerFlow} alt="Waste management flow - Trash Picker, Valuable Stuff Picker, Phygital Marketplace" className="w-full h-auto" loading="lazy" />
+            <img alt="Waste management flow - Trash Picker, Valuable Stuff Picker, Phygital Marketplace" loading="lazy" className="w-full h-auto object-cover" src="/lovable-uploads/97543963-e090-48e5-b9f3-7d5bab1dfcd8.png" />
           </div>
         </div>
       </section>
