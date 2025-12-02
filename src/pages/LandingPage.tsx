@@ -17,6 +17,8 @@ import hunterMan from "@/assets/hunter-man.png";
 import entrepreneur from "@/assets/entrepreneur.png";
 import evangelizer from "@/assets/evangelizer.png";
 import scavenger from "@/assets/scavenger.png";
+import appProfileScreen from "@/assets/app-profile-screen.png";
+import appMapScreen from "@/assets/app-map-screen.png";
 import buyLinearEconomy from "@/assets/buy-linear-economy.png";
 import useLinearEconomy from "@/assets/use-linear-economy.png";
 import dumpLinearEconomy from "@/assets/dump-linear-economy-new.png";
@@ -236,6 +238,22 @@ export default function LandingPage() {
                   </div>
                 </div>
               </AnimatedSection>
+            </div>
+
+            {/* App Screenshots Section */}
+            <div className="flex justify-center items-center gap-8 mt-16 flex-wrap md:flex-nowrap">
+              <img 
+                src={appProfileScreen} 
+                alt="App Profile Screen" 
+                className="w-64 md:w-72 h-auto rounded-2xl shadow-2xl"
+                loading="lazy"
+              />
+              <img 
+                src={appMapScreen} 
+                alt="App Map Screen" 
+                className="w-64 md:w-72 h-auto rounded-2xl shadow-2xl"
+                loading="lazy"
+              />
             </div>
           </div>
         </section>
