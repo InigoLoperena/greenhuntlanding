@@ -17,6 +17,7 @@ import hunterMan from "@/assets/hunter-man.png";
 import entrepreneur from "@/assets/entrepreneur.png";
 import evangelizer from "@/assets/evangelizer.png";
 import scavenger from "@/assets/scavenger.png";
+import ecoHeroStats from "@/assets/eco-hero-stats.png";
 import appProfileScreen from "@/assets/app-profile-screen.png";
 import appMapScreen from "@/assets/app-map-screen.png";
 import buyLinearEconomy from "@/assets/buy-linear-economy.png";
@@ -235,6 +236,16 @@ export default function LandingPage() {
                     <p className="text-sm text-subtitle-styled font-sedgwick-ave text-center leading-tight">
                       {language === 'en' ? 'Collect free items, decorate your home, or sell and earn' : 'Recoge artículos gratis, decora tu hogar, o vende y gana'}
                     </p>
+                  </div>
+                </div>
+              </AnimatedSection>
+
+              {/* ECO-HERO STATS */}
+              <AnimatedSection animation="scale-in" delay={600}>
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-b from-green-600/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" />
+                  <div className="relative bg-gradient-to-b from-gray-900 to-black border-2 border-green-600/50 rounded-2xl p-4 shadow-2xl hover:scale-105 transition-transform duration-300 hover:border-green-400">
+                    <img src={ecoHeroStats} alt="Eco-Hero Stats showing environmental impact" className="w-full h-full object-contain rounded-xl" loading="lazy" />
                   </div>
                 </div>
               </AnimatedSection>
