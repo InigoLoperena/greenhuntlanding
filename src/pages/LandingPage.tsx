@@ -395,11 +395,6 @@ export default function LandingPage() {
           </div>
 
           <p className="text-2xl md:text-3xl text-center text-subtitle-styled font-sedgwick-ave max-w-4xl mx-auto mb-12">{t('landing.economy.text')}</p>
-          
-          {/* Treasure Map */}
-          <div className="flex justify-center">
-            <img src={treasureMap} alt="GreenHunt treasure map showing valuable items nearby" className="w-full max-w-xl h-auto rounded-lg shadow-2xl" loading="lazy" />
-          </div>
         </div>
       </section>
 
