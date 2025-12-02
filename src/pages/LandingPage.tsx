@@ -420,7 +420,7 @@ export default function LandingPage() {
                 {language === 'en' ? 'Know More' : 'Saber Más'}
               </Link>
             </Button>
-            <img alt="Circular waste management flow with trash pickers, valuable stuff pickers, recycling plant and circular market" className="w-full max-w-4xl h-auto rounded-lg" loading="lazy" src="/lovable-uploads/a9692c2c-8bfc-4c04-a08d-29b54036a1d8.png" />
+            <img alt="Circular waste management flow with trash pickers, valuable stuff pickers, recycling plant and circular market" className="w-full max-w-4xl h-auto rounded-lg" loading="lazy" src="/lovable-uploads/3b7bb5a7-c578-4bcd-b5fe-fcb34ba8652f.jpg" />
           </div>
         </div>
       </section>
