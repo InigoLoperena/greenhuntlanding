@@ -420,7 +420,7 @@ export default function LandingPage() {
             <h3 className="text-3xl md:text-4xl font-permanent-marker mb-6" style={{
             color: '#699e4b'
           }}>
-              {language === 'en' ? 'Partnering for a Circular Future' : 'Alianzas para un Futuro Circular'}
+              {language === 'en' ? 'PARTNERING WITH WASTE MANAGERS FOR A CIRCULAR FUTURE' : 'ALIANZAS CON GESTORES DE RESIDUOS PARA UN FUTURO CIRCULAR'}
             </h3>
             <p className="text-xl text-subtitle-styled font-sedgwick-ave max-w-3xl mb-8">
               {language === 'en' ? 'We are partnering with waste management companies, thrift and antique stores to integrate and co-create our solution with them. Our goal is to scale the \'free stuff\' circular business model to avoid unnecessary waste, reduce first-hand demand, decrease raw material extraction and reduce gas emissions' : 'Nos estamos asociando con empresas de gestión de residuos, tiendas de segunda mano y antigüedades para integrar y co-crear nuestra solución con ellas. Nuestro objetivo es escalar el modelo de negocio circular de \'cosas gratis\' para evitar residuos innecesarios, reducir la demanda de productos nuevos, disminuir la extracción de materias primas y reducir las emisiones de gases'}
