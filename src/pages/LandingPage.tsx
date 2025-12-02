@@ -30,6 +30,7 @@ import circularFlow from "@/assets/circular-flow.png";
 import circularFlowDiagram from "@/assets/circular-flow-diagram.png";
 import coordinatesPromo from "@/assets/coordinates-promo.png";
 import treasureMap from "@/assets/treasure-map.jpg";
+import garageSaleScene from "@/assets/garage-sale-scene.svg";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { z } from "zod";
@@ -370,7 +371,7 @@ export default function LandingPage() {
               <img src="/lovable-uploads/thrift-store-profile.png" alt="Create your thrift store profile" className="w-full max-w-md h-auto rounded-lg shadow-2xl" loading="lazy" />
             </div>
             <div className="flex justify-center">
-              <img src="/lovable-uploads/garage-sale-profile.png" alt="Create your garage sale profile" className="w-full max-w-md h-auto rounded-lg shadow-2xl" loading="lazy" />
+              <img src={garageSaleScene} alt="Create your garage sale profile" className="w-full max-w-md h-auto rounded-2xl shadow-2xl" loading="lazy" />
             </div>
           </div>
         </div>
