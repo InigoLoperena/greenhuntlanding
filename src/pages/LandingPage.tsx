@@ -414,12 +414,12 @@ export default function LandingPage() {
             </div>
           </div>
 
-          {/* Waste Manager Flow Image */}
-          <div className="flex justify-center mb-12">
-            <img src={wasteManagerFlow} alt="Waste management flow - Trash Picker, Valuable Stuff Picker, Phygital Marketplace" className="w-full max-w-5xl h-auto" loading="lazy" />
-          </div>
-
           <p className="text-2xl md:text-3xl text-center text-subtitle-styled font-sedgwick-ave max-w-4xl mx-auto mb-12">{t('landing.economy.text')}</p>
+
+          {/* Waste Manager Flow Image - Full Width */}
+          <div className="w-full">
+            <img src={wasteManagerFlow} alt="Waste management flow - Trash Picker, Valuable Stuff Picker, Phygital Marketplace" className="w-full h-auto" loading="lazy" />
+          </div>
         </div>
       </section>
 
