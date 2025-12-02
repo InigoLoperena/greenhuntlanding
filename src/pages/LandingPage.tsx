@@ -313,12 +313,13 @@ export default function LandingPage() {
       </section>
 
       {/* Coordinates Promo Image */}
-      <section className="py-16 px-4 bg-black relative bg-cover bg-center" style={{
-      backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
-    }}>
-        <div className="flex justify-center">
-          
-        </div>
+      <section className="w-full bg-black">
+        <img 
+          src={coordinatesPromo} 
+          alt="GreenHunt app showing map navigation to abandoned furniture and product card with sofa" 
+          className="w-full h-auto object-cover" 
+          loading="lazy" 
+        />
       </section>
 
       {/* Circular Markets Feature */}
