@@ -115,7 +115,7 @@ export default function LandingPage() {
       <section className="w-full bg-black bg-cover bg-center" style={{
       backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
     }}>
-        <img src="/lovable-uploads/app-feature-screenshot.png" alt="GreenHunt app showing abandoned furniture location and mapping features" className="w-full h-auto object-cover" loading="lazy" />
+        <img alt="GreenHunt app showing abandoned furniture location and mapping features" className="w-full h-auto object-cover" loading="lazy" src="/lovable-uploads/0d98c014-55b1-4225-8cb2-5c440c3bdd41.png" />
       </section>
 
       {/* Hunter Characters Section - Magic Card Style */}
@@ -125,10 +125,14 @@ export default function LandingPage() {
       }}>
           <div className="container mx-auto max-w-7xl">
             <h2 className="text-4xl md:text-6xl font-permanent-marker text-center mb-12">
-              <span style={{ color: '#699e4b' }}>
+              <span style={{
+              color: '#699e4b'
+            }}>
                 {language === 'en' ? 'SELECT YOUR CHARACTER AND ' : 'SELECCIONA TU PERSONAJE Y '}
               </span>
-              <span style={{ color: '#611a5a' }}>
+              <span style={{
+              color: '#611a5a'
+            }}>
                 {language === 'en' ? 'PLAY TO EARN FOR THE PLANET' : 'JUEGA PARA GANAR POR EL PLANETA'}
               </span>
             </h2>
