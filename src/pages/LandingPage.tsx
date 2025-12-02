@@ -28,6 +28,7 @@ import coordinatesPhoneNew from "@/assets/coordinates-phone-new.png";
 import appFeatureScreenshot from "@/assets/app-feature-screenshot.png";
 import circularFlow from "@/assets/circular-flow.png";
 import circularFlowDiagram from "@/assets/circular-flow-diagram.png";
+import coordinatesPromo from "@/assets/coordinates-promo.png";
 import treasureMap from "@/assets/treasure-map.jpg";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
@@ -306,6 +307,13 @@ export default function LandingPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Coordinates Promo Image */}
+      <section className="py-16 px-4 bg-black">
+        <div className="flex justify-center">
+          <img src={coordinatesPromo} alt="GreenHunt app coordinates feature" className="max-w-md w-full h-auto" loading="lazy" />
         </div>
       </section>
 
