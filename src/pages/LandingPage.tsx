@@ -18,8 +18,8 @@ import entrepreneur from "@/assets/entrepreneur.png";
 import evangelizer from "@/assets/evangelizer.png";
 import scavenger from "@/assets/scavenger.png";
 import ecoHeroStats from "@/assets/eco-hero-stats.png";
-import appProfileScreen from "@/assets/app-profile-screen.png";
-import appMapScreen from "@/assets/app-map-screen.png";
+import appProfileScreen from "@/assets/app-profile-screen.svg";
+import appMapScreen from "@/assets/app-map-screen.svg";
 import buyLinearEconomy from "@/assets/buy-linear-economy.png";
 import useLinearEconomy from "@/assets/use-linear-economy.png";
 import dumpLinearEconomy from "@/assets/dump-linear-economy-new.png";
@@ -97,10 +97,9 @@ export default function LandingPage() {
       <HeroSection />
 
       {/* App Feature Screenshot - centered below hero */}
-      <section className="w-full bg-black py-12 px-4 flex justify-center items-center">
-        <img src={appFeatureScreenshot} alt="GreenHunt app interface showing furniture item with distance, share, and maps features" className="max-w-full h-auto object-contain" style={{
-        maxHeight: '80vh'
-      }} loading="lazy" />
+      <section className="w-full bg-black py-12 px-4 flex justify-center items-center gap-4 md:gap-8">
+        <img src={appMapScreen} alt="GreenHunt app map screen" className="w-1/2 max-w-md h-auto object-contain" loading="lazy" />
+        <img src={appProfileScreen} alt="GreenHunt app profile screen" className="w-1/2 max-w-md h-auto object-contain" loading="lazy" />
       </section>
 
       {/* App Store Badges Section */}
