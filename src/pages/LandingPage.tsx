@@ -95,12 +95,7 @@ export default function LandingPage() {
 
       {/* Coordinates Phone Section */}
       <section className="w-full bg-black py-12 px-4 flex justify-center items-center">
-        <img 
-          src={coordinatesPhoneNew} 
-          alt="Coordinates phone interface" 
-          className="max-w-full h-auto"
-          loading="lazy"
-        />
+        
       </section>
 
       {/* App Store Badges Section */}
