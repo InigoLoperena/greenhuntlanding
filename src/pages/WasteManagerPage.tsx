@@ -43,7 +43,7 @@ export default function WasteManagerPage() {
           <p className="text-lg text-subtitle-styled font-sedgwick-ave max-w-3xl mx-auto mb-8">
             Transform linear waste management and save valuable items from beeing distroyed on landfills or recycling plants. Get a new revenue stream and measure the impact of your companie
           </p>
-          <img alt="Circular economy flow showing city explorer, trash picker, valuable stuff picker, recycling plant, and digital circular market" className="w-full max-w-5xl mx-auto h-auto rounded-lg" loading="lazy" src="/lovable-uploads/21058fe6-2812-4ceb-a0d9-d697ed2d302a.png" />
+          <img alt="Circular economy flow showing city explorer, trash picker, valuable stuff picker, recycling plant, and digital circular market" className="w-full max-w-5xl mx-auto h-auto rounded-lg" loading="lazy" src="/lovable-uploads/7ffa4896-a750-4257-9e86-856f25ee3a23.png" />
         </div>
       </section>
 
