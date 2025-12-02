@@ -28,7 +28,7 @@ import coordinatesPhoneNew from "@/assets/coordinates-phone-new.png";
 import appFeatureScreenshot from "@/assets/app-feature-screenshot.png";
 import circularFlow from "@/assets/circular-flow.png";
 import circularFlowDiagram from "@/assets/circular-flow-diagram.png";
-import coordinatesPromo from "@/assets/coordinates-promo.png";
+import coordinatesPromo from "@/assets/coordinates-promo.svg";
 import treasureMap from "@/assets/treasure-map.jpg";
 import garageSaleScene from "@/assets/garage-sale-scene.svg";
 import { supabase } from "@/integrations/supabase/client";
@@ -317,7 +317,7 @@ export default function LandingPage() {
       backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
     }}>
         <div className="flex justify-center">
-          
+          <img src={coordinatesPromo} alt="Coordinates promo illustration" className="w-full max-w-5xl h-auto" loading="lazy" />
         </div>
       </section>
 
