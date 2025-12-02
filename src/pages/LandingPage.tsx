@@ -253,18 +253,8 @@ export default function LandingPage() {
 
             {/* App Screenshots Section */}
             <div className="flex justify-center items-center gap-8 mt-16 flex-wrap md:flex-nowrap">
-              <img 
-                src={appProfileScreen} 
-                alt="App Profile Screen" 
-                className="w-64 md:w-72 h-auto rounded-2xl shadow-2xl"
-                loading="lazy"
-              />
-              <img 
-                src={appMapScreen} 
-                alt="App Map Screen" 
-                className="w-64 md:w-72 h-auto rounded-2xl shadow-2xl"
-                loading="lazy"
-              />
+              <img src={appProfileScreen} alt="App Profile Screen" className="w-64 md:w-72 h-auto rounded-2xl shadow-2xl" loading="lazy" />
+              <img src={appMapScreen} alt="App Map Screen" className="w-64 md:w-72 h-auto rounded-2xl shadow-2xl" loading="lazy" />
             </div>
           </div>
         </section>
@@ -430,7 +420,7 @@ export default function LandingPage() {
                 {language === 'en' ? 'Know More' : 'Saber Más'}
               </Link>
             </Button>
-            <img src={circularFlow} alt="Circular waste management flow with trash pickers, valuable stuff pickers, recycling plant and circular market" className="w-full max-w-4xl h-auto rounded-lg" loading="lazy" />
+            <img alt="Circular waste management flow with trash pickers, valuable stuff pickers, recycling plant and circular market" className="w-full max-w-4xl h-auto rounded-lg" loading="lazy" src="/lovable-uploads/a9692c2c-8bfc-4c04-a08d-29b54036a1d8.png" />
           </div>
         </div>
       </section>
