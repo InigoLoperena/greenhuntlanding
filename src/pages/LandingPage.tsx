@@ -27,6 +27,7 @@ import coordinatesPhone from "@/assets/coordinates-phone.png";
 import coordinatesPhoneNew from "@/assets/coordinates-phone-new.png";
 import appFeatureScreenshot from "@/assets/app-feature-screenshot.png";
 import circularFlow from "@/assets/circular-flow.png";
+import circularFlowDiagram from "@/assets/circular-flow-diagram.png";
 import treasureMap from "@/assets/treasure-map.jpg";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
@@ -408,10 +409,10 @@ export default function LandingPage() {
       </section>
 
       {/* Circular Waste Management Partnership Section */}
-      <section className="py-20 px-4 bg-black relative bg-cover bg-center" style={{
+      <section className="py-20 bg-black relative bg-cover bg-center" style={{
       backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
     }}>
-        <div className="container mx-auto max-w-6xl relative z-10">
+        <div className="container mx-auto max-w-6xl relative z-10 px-4">
           <div className="flex flex-col items-center text-center">
             <h3 className="text-3xl md:text-4xl font-permanent-marker mb-6" style={{
             color: '#699e4b'
@@ -428,9 +429,9 @@ export default function LandingPage() {
                 {language === 'en' ? 'Know More' : 'Saber Más'}
               </Link>
             </Button>
-            <img alt="Circular waste management flow with trash pickers, valuable stuff pickers, recycling plant and circular market" className="w-full max-w-4xl h-auto rounded-lg" loading="lazy" src="/lovable-uploads/57d08f91-6169-41bb-80bc-419cbf84ecf5.png" />
           </div>
         </div>
+        <img src={circularFlowDiagram} alt="Value Reclamation Ecosystem showing circular economy flow" className="w-full h-auto" loading="lazy" />
       </section>
 
       {/* Ambassador Program Section */}
