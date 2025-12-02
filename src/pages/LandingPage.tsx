@@ -98,9 +98,11 @@ export default function LandingPage() {
       <HeroSection />
 
       {/* App Feature Screenshot - centered below hero */}
-      <section className="w-full bg-black py-12 px-4 flex justify-center items-center gap-4 md:gap-8">
-        <img src={appMapScreen} alt="GreenHunt app map screen" className="w-1/2 max-w-md h-auto object-contain" loading="lazy" />
-        <img src={appProfileScreen} alt="GreenHunt app profile screen" className="w-1/2 max-w-md h-auto object-contain" loading="lazy" />
+      <section className="w-full py-12 px-4 flex justify-center items-center gap-4 md:gap-8 bg-cover bg-center" style={{
+        backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
+      }}>
+        <img src={appMapScreen} alt="GreenHunt app map screen" className="w-1/2 max-w-2xl h-auto object-contain" loading="lazy" />
+        <img src={appProfileScreen} alt="GreenHunt app profile screen" className="w-1/2 max-w-2xl h-auto object-contain" loading="lazy" />
       </section>
 
       {/* App Store Badges Section */}
