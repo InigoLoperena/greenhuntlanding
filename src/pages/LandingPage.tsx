@@ -25,6 +25,7 @@ import useLinearEconomy from "@/assets/use-linear-economy.png";
 import dumpLinearEconomy from "@/assets/dump-linear-economy-new.png";
 import coordinatesPhone from "@/assets/coordinates-phone.png";
 import coordinatesPhoneNew from "@/assets/coordinates-phone-new.png";
+import appFeatureScreenshot from "@/assets/app-feature-screenshot.png";
 import circularFlow from "@/assets/circular-flow.png";
 import treasureMap from "@/assets/treasure-map.jpg";
 import { supabase } from "@/integrations/supabase/client";
@@ -93,9 +94,15 @@ export default function LandingPage() {
       {/* Hero Section */}
       <HeroSection />
 
-      {/* Coordinates Phone Section */}
+      {/* App Feature Screenshot - centered below hero */}
       <section className="w-full bg-black py-12 px-4 flex justify-center items-center">
-        
+        <img 
+          src={appFeatureScreenshot} 
+          alt="GreenHunt app interface showing furniture item with distance, share, and maps features" 
+          className="max-w-full h-auto object-contain"
+          style={{ maxHeight: '80vh' }}
+          loading="lazy"
+        />
       </section>
 
       {/* App Store Badges Section */}
