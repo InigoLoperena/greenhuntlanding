@@ -124,10 +124,13 @@ export default function LandingPage() {
         backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
       }}>
           <div className="container mx-auto max-w-7xl">
-            <h2 className="text-4xl md:text-6xl font-permanent-marker text-center mb-12" style={{
-              color: '#699e4b'
-            }}>
-              {language === 'en' ? 'SELECT YOUR CHARACTER' : 'SELECCIONA TU PERSONAJE'}
+            <h2 className="text-4xl md:text-6xl font-permanent-marker text-center mb-12">
+              <span style={{ color: '#699e4b' }}>
+                {language === 'en' ? 'SELECT YOUR CHARACTER AND ' : 'SELECCIONA TU PERSONAJE Y '}
+              </span>
+              <span style={{ color: '#611a5a' }}>
+                {language === 'en' ? 'PLAY TO EARN FOR THE PLANET' : 'JUEGA PARA GANAR POR EL PLANETA'}
+              </span>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {/* HUNTER */}
