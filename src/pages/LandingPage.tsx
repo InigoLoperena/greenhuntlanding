@@ -31,6 +31,7 @@ import circularFlowDiagram from "@/assets/circular-flow-diagram.png";
 import coordinatesPromo from "@/assets/coordinates-promo.svg";
 import treasureMap from "@/assets/treasure-map.jpg";
 import garageSaleScene from "@/assets/garage-sale-scene.svg";
+import wasteManagerFlow from "@/assets/waste-manager-flow.png";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { z } from "zod";
@@ -411,6 +412,11 @@ export default function LandingPage() {
               color: '#699e4b'
             }}>{t('landing.economy.dump')}</h3>
             </div>
+          </div>
+
+          {/* Waste Manager Flow Image */}
+          <div className="flex justify-center mb-12">
+            <img src={wasteManagerFlow} alt="Waste management flow - Trash Picker, Valuable Stuff Picker, Phygital Marketplace" className="w-full max-w-5xl h-auto" loading="lazy" />
           </div>
 
           <p className="text-2xl md:text-3xl text-center text-subtitle-styled font-sedgwick-ave max-w-4xl mx-auto mb-12">{t('landing.economy.text')}</p>
