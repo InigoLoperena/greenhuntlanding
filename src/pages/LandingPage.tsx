@@ -440,7 +440,7 @@ export default function LandingPage() {
             </Button>
           </div>
         </div>
-        <img src={circularFlowDiagram} alt="Value Reclamation Ecosystem showing circular economy flow" className="w-full h-auto" loading="lazy" />
+        
       </section>
 
       {/* Ambassador Program Section */}
