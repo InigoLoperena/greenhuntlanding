@@ -332,7 +332,7 @@ export default function LandingPage() {
               {/* App Screenshots - Aligned to left */}
               <div className="space-y-8">
                 <div className="w-80 max-w-sm">
-                  <img src="/lovable-uploads/860b2bc4-0465-47b1-85e8-9d18413210d3.png" alt="Mary's Garage Sale showcasing various items for sale" className="w-full h-auto rounded-3xl shadow-2xl" loading="lazy" />
+                  <img alt="Mary's Garage Sale showcasing various items for sale" className="w-full h-auto rounded-3xl shadow-2xl" loading="lazy" src="/lovable-uploads/ab9befd0-bc33-4099-951d-521544999c84.png" />
                 </div>
               </div>
             </div>
