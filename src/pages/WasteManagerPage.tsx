@@ -7,20 +7,20 @@ import scoutingSystemIllustration from "@/assets/scouting-system-illustration.pn
 import circularVsLinearWaste from "@/assets/circular-flow.png";
 import circularFlowDiagram from "@/assets/circular-flow-diagram.png";
 import treasureMap from "@/assets/treasure-map.jpg";
-
 export default function WasteManagerPage() {
-  return (
-    <div className="min-h-screen bg-black text-white overflow-x-hidden">
+  return <div className="min-h-screen bg-black text-white overflow-x-hidden">
       {/* Header with Logo */}
       <header className="w-full bg-black py-8 px-4 bg-cover bg-center sticky top-0 z-40" style={{
-        backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
-      }}>
+      backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
+    }}>
         <div className="container mx-auto max-w-6xl flex justify-between items-center">
           <Link to="/">
             <img src={greenhuntLogoNew} alt="GreenHunt Logo" className="h-16 sm:h-20 w-auto" />
           </Link>
           <Link to="/">
-            <Button className="bg-accent hover:bg-accent/90 font-permanent-marker" style={{ color: '#611a5a' }}>
+            <Button className="bg-accent hover:bg-accent/90 font-permanent-marker" style={{
+            color: '#611a5a'
+          }}>
               Back to Home
             </Button>
           </Link>
@@ -29,12 +29,12 @@ export default function WasteManagerPage() {
 
       {/* Hero Section */}
       <section className="w-full bg-black py-16 px-4 bg-cover bg-center" style={{
-        backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
-      }}>
+      backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
+    }}>
         <div className="container mx-auto max-w-6xl text-center">
           <h1 className="text-4xl md:text-6xl font-permanent-marker mb-6 leading-tight" style={{
-            color: '#699e4b'
-          }}>
+          color: '#699e4b'
+        }}>
             GreenHunt Waste Manager System
           </h1>
           <p className="text-xl md:text-3xl text-subtitle-styled font-sedgwick-ave max-w-4xl mx-auto mb-8">
@@ -43,21 +43,21 @@ export default function WasteManagerPage() {
           <p className="text-lg text-subtitle-styled font-sedgwick-ave max-w-3xl mx-auto mb-8">
             Transform linear waste management and save valuable items from beeing distroyed on landfills or recycling plants. Get a new revenue stream and measure the impact of your companie
           </p>
-          <img src={circularFlowDiagram} alt="Circular economy flow showing city explorer, trash picker, valuable stuff picker, recycling plant, and digital circular market" className="w-full max-w-5xl mx-auto h-auto rounded-lg" loading="lazy" />
+          <img alt="Circular economy flow showing city explorer, trash picker, valuable stuff picker, recycling plant, and digital circular market" className="w-full max-w-5xl mx-auto h-auto rounded-lg" loading="lazy" src="/lovable-uploads/21058fe6-2812-4ceb-a0d9-d697ed2d302a.png" />
         </div>
       </section>
 
 
       {/* Waste Manager Profile Feature */}
       <section className="py-20 px-4 bg-black relative bg-cover bg-center" style={{
-        backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
-      }}>
+      backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
+    }}>
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
               <h2 className="text-3xl md:text-5xl font-permanent-marker mb-8 leading-tight" style={{
-                color: '#699e4b'
-              }}>
+              color: '#699e4b'
+            }}>
                 Coordinates share system
               </h2>
               <div className="space-y-6 mb-8">
@@ -90,8 +90,8 @@ export default function WasteManagerPage() {
 
       {/* Team Collaboration */}
       <section className="py-20 px-4 bg-black relative bg-cover bg-center" style={{
-        backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
-      }}>
+      backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
+    }}>
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-1 lg:order-1">
@@ -99,8 +99,8 @@ export default function WasteManagerPage() {
             </div>
             <div className="order-2 lg:order-2">
               <h2 className="text-3xl md:text-5xl font-permanent-marker mb-8 leading-tight" style={{
-                color: '#699e4b'
-              }}>
+              color: '#699e4b'
+            }}>
                 Team Collaboration
               </h2>
               <div className="space-y-6">
@@ -130,16 +130,20 @@ export default function WasteManagerPage() {
 
       {/* Coordinate Sharing */}
       <section className="py-20 px-4 bg-black relative bg-cover bg-center" style={{
-        backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
-      }}>
+      backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
+    }}>
         <div className="container mx-auto max-w-6xl relative z-10 text-center">
-          <h2 className="text-3xl md:text-5xl font-permanent-marker mb-12" style={{ color: '#699e4b' }}>
+          <h2 className="text-3xl md:text-5xl font-permanent-marker mb-12" style={{
+          color: '#699e4b'
+        }}>
             Share Valuable Item Locations
           </h2>
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="bg-black/50 p-8 rounded-lg border border-primary/20">
               <Camera className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h3 className="text-2xl font-permanent-marker mb-4" style={{ color: '#699e4b' }}>
+              <h3 className="text-2xl font-permanent-marker mb-4" style={{
+              color: '#699e4b'
+            }}>
                 With Photo
               </h3>
               <p className="text-subtitle-styled font-sedgwick-ave">
@@ -148,7 +152,9 @@ export default function WasteManagerPage() {
             </div>
             <div className="bg-black/50 p-8 rounded-lg border border-primary/20">
               <MapPin className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h3 className="text-2xl font-permanent-marker mb-4" style={{ color: '#699e4b' }}>
+              <h3 className="text-2xl font-permanent-marker mb-4" style={{
+              color: '#699e4b'
+            }}>
                 Coordinates Only
               </h3>
               <p className="text-subtitle-styled font-sedgwick-ave">
@@ -157,7 +163,9 @@ export default function WasteManagerPage() {
             </div>
             <div className="bg-black/50 p-8 rounded-lg border border-primary/20">
               <Share2 className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h3 className="text-2xl font-permanent-marker mb-4" style={{ color: '#699e4b' }}>
+              <h3 className="text-2xl font-permanent-marker mb-4" style={{
+              color: '#699e4b'
+            }}>
                 Public or Private
               </h3>
               <p className="text-subtitle-styled font-sedgwick-ave">
@@ -170,14 +178,14 @@ export default function WasteManagerPage() {
 
       {/* Advanced Scouting System */}
       <section className="py-20 px-4 bg-black relative bg-cover bg-center" style={{
-        backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
-      }}>
+      backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
+    }}>
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
               <h2 className="text-3xl md:text-5xl font-permanent-marker mb-8 leading-tight" style={{
-                color: '#699e4b'
-              }}>
+              color: '#699e4b'
+            }}>
                 Advanced Scouting System
               </h2>
               <div className="space-y-6 mb-8">
@@ -225,15 +233,19 @@ export default function WasteManagerPage() {
 
       {/* Benefits Section */}
       <section className="py-20 px-4 bg-black relative bg-cover bg-center" style={{
-        backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
-      }}>
+      backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
+    }}>
         <div className="container mx-auto max-w-6xl relative z-10">
-          <h2 className="text-3xl md:text-5xl font-permanent-marker mb-12 text-center" style={{ color: '#699e4b' }}>
+          <h2 className="text-3xl md:text-5xl font-permanent-marker mb-12 text-center" style={{
+          color: '#699e4b'
+        }}>
             Benefits for Waste Management Companies
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-black/50 p-8 rounded-lg border border-primary/20">
-              <h3 className="text-2xl font-permanent-marker mb-4" style={{ color: '#699e4b' }}>
+              <h3 className="text-2xl font-permanent-marker mb-4" style={{
+              color: '#699e4b'
+            }}>
                 Enhance Community Relations
               </h3>
               <p className="text-lg text-subtitle-styled font-sedgwick-ave">
@@ -241,7 +253,9 @@ export default function WasteManagerPage() {
               </p>
             </div>
             <div className="bg-black/50 p-8 rounded-lg border border-primary/20">
-              <h3 className="text-2xl font-permanent-marker mb-4" style={{ color: '#699e4b' }}>
+              <h3 className="text-2xl font-permanent-marker mb-4" style={{
+              color: '#699e4b'
+            }}>
                 Reduce Landfill Impact
               </h3>
               <p className="text-lg text-subtitle-styled font-sedgwick-ave">
@@ -249,7 +263,9 @@ export default function WasteManagerPage() {
               </p>
             </div>
             <div className="bg-black/50 p-8 rounded-lg border border-primary/20">
-              <h3 className="text-2xl font-permanent-marker mb-4" style={{ color: '#699e4b' }}>
+              <h3 className="text-2xl font-permanent-marker mb-4" style={{
+              color: '#699e4b'
+            }}>
                 Operational Efficiency
               </h3>
               <p className="text-lg text-subtitle-styled font-sedgwick-ave">
@@ -257,7 +273,9 @@ export default function WasteManagerPage() {
               </p>
             </div>
             <div className="bg-black/50 p-8 rounded-lg border border-primary/20">
-              <h3 className="text-2xl font-permanent-marker mb-4" style={{ color: '#699e4b' }}>
+              <h3 className="text-2xl font-permanent-marker mb-4" style={{
+              color: '#699e4b'
+            }}>
                 Revenue Opportunities
               </h3>
               <p className="text-lg text-subtitle-styled font-sedgwick-ave">
@@ -270,17 +288,21 @@ export default function WasteManagerPage() {
 
       {/* CTA Section */}
       <section className="py-20 px-4 bg-black relative bg-cover bg-center" style={{
-        backgroundImage: 'url(/lovable-uploads/brick-wall-dark.png)'
-      }}>
+      backgroundImage: 'url(/lovable-uploads/brick-wall-dark.png)'
+    }}>
         <div className="container mx-auto max-w-4xl text-center relative z-10">
-          <h2 className="text-3xl md:text-5xl font-permanent-marker mb-6" style={{ color: '#699e4b' }}>
+          <h2 className="text-3xl md:text-5xl font-permanent-marker mb-6" style={{
+          color: '#699e4b'
+        }}>
             Ready to Transform Your Waste Management?
           </h2>
           <p className="text-xl text-subtitle-styled font-sedgwick-ave mb-8 max-w-2xl mx-auto">
             Join GreenHunt and be part of the circular economy revolution. Connect with your community and save valuable items from landfills.
           </p>
           <Link to="/#waitlist">
-            <Button className="bg-accent hover:bg-accent/90 font-permanent-marker text-xl px-12 py-6" style={{ color: '#611a5a' }}>
+            <Button className="bg-accent hover:bg-accent/90 font-permanent-marker text-xl px-12 py-6" style={{
+            color: '#611a5a'
+          }}>
               Join the Waitlist
             </Button>
           </Link>
@@ -312,6 +334,5 @@ export default function WasteManagerPage() {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 }
