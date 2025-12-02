@@ -99,8 +99,8 @@ export default function LandingPage() {
 
       {/* App Feature Screenshot - centered below hero */}
       <section className="w-full py-12 px-4 flex justify-center items-center gap-4 md:gap-8 bg-cover bg-center" style={{
-        backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
-      }}>
+      backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
+    }}>
         <img src={appMapScreen} alt="GreenHunt app map screen" className="w-1/2 max-w-2xl h-auto object-contain" loading="lazy" />
         <img src={appProfileScreen} alt="GreenHunt app profile screen" className="w-1/2 max-w-2xl h-auto object-contain" loading="lazy" />
       </section>
@@ -314,10 +314,10 @@ export default function LandingPage() {
 
       {/* Coordinates Promo Image */}
       <section className="py-16 px-4 bg-black relative bg-cover bg-center" style={{
-        backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
-      }}>
+      backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
+    }}>
         <div className="flex justify-center">
-          <img src={coordinatesPromo} alt="GreenHunt app coordinates feature" className="max-w-md w-full h-auto" loading="lazy" />
+          
         </div>
       </section>
 
