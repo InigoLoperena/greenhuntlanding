@@ -311,7 +311,9 @@ export default function LandingPage() {
       </section>
 
       {/* Coordinates Promo Image */}
-      <section className="py-16 px-4 bg-black">
+      <section className="py-16 px-4 bg-black relative bg-cover bg-center" style={{
+        backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
+      }}>
         <div className="flex justify-center">
           <img src={coordinatesPromo} alt="GreenHunt app coordinates feature" className="max-w-md w-full h-auto" loading="lazy" />
         </div>
