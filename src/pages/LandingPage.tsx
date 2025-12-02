@@ -96,13 +96,9 @@ export default function LandingPage() {
 
       {/* App Feature Screenshot - centered below hero */}
       <section className="w-full bg-black py-12 px-4 flex justify-center items-center">
-        <img 
-          src={appFeatureScreenshot} 
-          alt="GreenHunt app interface showing furniture item with distance, share, and maps features" 
-          className="max-w-full h-auto object-contain"
-          style={{ maxHeight: '80vh' }}
-          loading="lazy"
-        />
+        <img src={appFeatureScreenshot} alt="GreenHunt app interface showing furniture item with distance, share, and maps features" className="max-w-full h-auto object-contain" style={{
+        maxHeight: '80vh'
+      }} loading="lazy" />
       </section>
 
       {/* App Store Badges Section */}
@@ -432,7 +428,7 @@ export default function LandingPage() {
                 {language === 'en' ? 'Know More' : 'Saber Más'}
               </Link>
             </Button>
-            <img alt="Circular waste management flow with trash pickers, valuable stuff pickers, recycling plant and circular market" className="w-full max-w-4xl h-auto rounded-lg" loading="lazy" src="/lovable-uploads/9314dc0c-3265-4340-bcfa-858615734bac.png" />
+            <img alt="Circular waste management flow with trash pickers, valuable stuff pickers, recycling plant and circular market" className="w-full max-w-4xl h-auto rounded-lg" loading="lazy" src="/lovable-uploads/57d08f91-6169-41bb-80bc-419cbf84ecf5.png" />
           </div>
         </div>
       </section>
