@@ -35,6 +35,8 @@ import wasteManagerFlow from "@/assets/waste-manager-flow.png";
 import wasteStep1 from "@/assets/waste-step-1.png";
 import wasteStep2 from "@/assets/waste-step-2.png";
 import wasteStep3 from "@/assets/waste-step-3.png";
+import coordinatesCard from "@/assets/coordinates-card.png";
+import coordinatesMap from "@/assets/coordinates-map.png";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { z } from "zod";
@@ -324,12 +326,15 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Coordinates Promo Image */}
+      {/* Coordinates Card and Map Section */}
       <section className="py-16 px-4 bg-black relative bg-cover bg-center" style={{
       backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
     }}>
-        <div className="flex justify-center">
-          
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid md:grid-cols-2 gap-8 items-center justify-items-center">
+            <img src={coordinatesCard} alt="Coordinates card showing couch 322ft away with Maps button for $1" className="w-full max-w-md h-auto rounded-2xl shadow-2xl" loading="lazy" />
+            <img src={coordinatesMap} alt="Map showing route from home to store location" className="w-full max-w-md h-auto rounded-2xl shadow-2xl" loading="lazy" />
+          </div>
         </div>
       </section>
 
