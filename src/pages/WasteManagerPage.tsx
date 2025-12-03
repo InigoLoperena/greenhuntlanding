@@ -10,6 +10,9 @@ import coordinatesMap from "@/assets/coordinates-map.png";
 import wasteStep1 from "@/assets/waste-step-1.png";
 import wasteStep2 from "@/assets/waste-step-2.png";
 import wasteStep3 from "@/assets/waste-step-3.png";
+import wasteFlow1 from "@/assets/waste-flow-1.png";
+import wasteFlow2 from "@/assets/waste-flow-2.png";
+import wasteFlow3 from "@/assets/waste-flow-3.png";
 export default function WasteManagerPage() {
   return <div className="min-h-screen bg-black text-white overflow-x-hidden">
       {/* Header with Logo */}
@@ -46,6 +49,12 @@ export default function WasteManagerPage() {
           <p className="text-lg text-subtitle-styled font-sedgwick-ave max-w-3xl mx-auto mb-8">
             Transform linear waste management and save valuable items from beeing distroyed on landfills or recycling plants. Get a new revenue stream and measure the impact of your companie
           </p>
+          {/* Flow images - 3 column grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
+            <img src={wasteFlow1} alt="Step 1: Share valuable discarded stuff coordinates" className="w-full h-auto rounded-lg" loading="lazy" />
+            <img src={wasteFlow2} alt="Step 2: Optimized picking route" className="w-full h-auto rounded-lg" loading="lazy" />
+            <img src={wasteFlow3} alt="Step 3: Sell or donate fast" className="w-full h-auto rounded-lg" loading="lazy" />
+          </div>
           {/* Desktop: Two images side by side */}
           <div className="hidden md:grid md:grid-cols-2 gap-8 items-center justify-items-center max-w-5xl mx-auto">
             
