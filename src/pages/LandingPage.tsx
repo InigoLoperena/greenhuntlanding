@@ -18,8 +18,8 @@ import entrepreneur from "@/assets/entrepreneur.png";
 import evangelizer from "@/assets/evangelizer.png";
 import scavenger from "@/assets/scavenger.png";
 import ecoHeroStats from "@/assets/eco-hero-stats.png";
-import appProfileScreen from "@/assets/app-profile-screen.svg";
-import appMapScreen from "@/assets/app-map-screen.svg";
+import appProfileScreen from "@/assets/app-profile-screen.png";
+import appMapScreen from "@/assets/app-map-screen.png";
 import buyLinearEconomy from "@/assets/buy-linear-economy.png";
 import useLinearEconomy from "@/assets/use-linear-economy.png";
 import dumpLinearEconomy from "@/assets/dump-linear-economy-new.png";
@@ -416,9 +416,15 @@ export default function LandingPage() {
 
           <p className="text-2xl md:text-3xl text-center text-subtitle-styled font-sedgwick-ave max-w-4xl mx-auto mb-12">{t('landing.economy.text')}</p>
 
-          {/* Waste Manager Flow Image - Full Width */}
-          <div className="w-full">
+          {/* Waste Manager Flow Image - Desktop Only */}
+          <div className="w-full hidden md:block">
             <img alt="Waste management flow - Trash Picker, Valuable Stuff Picker, Phygital Marketplace" loading="lazy" className="w-full h-auto object-cover" src="/lovable-uploads/97543963-e090-48e5-b9f3-7d5bab1dfcd8.png" />
+          </div>
+          
+          {/* Mobile Only - Two App Screenshots */}
+          <div className="flex flex-col gap-8 md:hidden">
+            <img src={appProfileScreen} alt="App profile screen" loading="lazy" className="w-full h-auto rounded-lg shadow-xl" />
+            <img src={appMapScreen} alt="App map screen" loading="lazy" className="w-full h-auto rounded-lg shadow-xl" />
           </div>
         </div>
       </section>
