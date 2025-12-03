@@ -17,6 +17,7 @@ const LegalPage = lazy(() => import("./pages/LegalPage"));
 const AmbassadorPage = lazy(() => import("./pages/AmbassadorPage"));
 const AdminPage = lazy(() => import("./pages/AdminPage"));
 const WasteManagerPage = lazy(() => import("./pages/WasteManagerPage"));
+const TestPage = lazy(() => import("./pages/TestPage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -60,6 +61,7 @@ const App = () => (
                 <Route path="/ambassador-program" element={<AmbassadorPage />} />
                 <Route path="/admin" element={<AdminPage />} />
                 <Route path="/waste-managers" element={<WasteManagerPage />} />
+                <Route path="/test-page" element={<TestPage />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>
