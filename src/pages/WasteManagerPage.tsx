@@ -48,8 +48,8 @@ export default function WasteManagerPage() {
           </p>
           {/* Desktop: Two images side by side */}
           <div className="hidden md:grid md:grid-cols-2 gap-8 items-center justify-items-center max-w-5xl mx-auto">
-            <img src={coordinatesCard} alt="Coordinates card showing couch 322ft away with Maps button for $1" className="w-full max-w-md h-auto rounded-2xl shadow-2xl" loading="lazy" />
-            <img src={coordinatesMap} alt="Map showing route from home to store location" className="w-full max-w-md h-auto rounded-2xl shadow-2xl" loading="lazy" />
+            
+            
           </div>
           {/* Mobile: Three step images stacked */}
           <div className="md:hidden flex flex-col gap-6">
