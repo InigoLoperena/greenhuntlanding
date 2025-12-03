@@ -4,9 +4,12 @@ import { Link } from "react-router-dom";
 import greenhuntLogoNew from "@/assets/greenhunt-logo-new.svg";
 import wasteManagerTruck from "@/assets/waste-manager-truck.png";
 import scoutingSystemIllustration from "@/assets/scouting-system-illustration.png";
-import circularVsLinearWaste from "@/assets/circular-flow.png";
-import circularFlowDiagram from "@/assets/circular-flow-diagram.png";
 import treasureMap from "@/assets/treasure-map.jpg";
+import coordinatesCard from "@/assets/coordinates-card.png";
+import coordinatesMap from "@/assets/coordinates-map.png";
+import wasteStep1 from "@/assets/waste-step-1.png";
+import wasteStep2 from "@/assets/waste-step-2.png";
+import wasteStep3 from "@/assets/waste-step-3.png";
 export default function WasteManagerPage() {
   return <div className="min-h-screen bg-black text-white overflow-x-hidden">
       {/* Header with Logo */}
@@ -43,7 +46,17 @@ export default function WasteManagerPage() {
           <p className="text-lg text-subtitle-styled font-sedgwick-ave max-w-3xl mx-auto mb-8">
             Transform linear waste management and save valuable items from beeing distroyed on landfills or recycling plants. Get a new revenue stream and measure the impact of your companie
           </p>
-          <img alt="Circular economy flow showing city explorer, trash picker, valuable stuff picker, recycling plant, and digital circular market" className="w-full max-w-5xl mx-auto h-auto rounded-lg" loading="lazy" src="/lovable-uploads/7ffa4896-a750-4257-9e86-856f25ee3a23.png" />
+          {/* Desktop: Two images side by side */}
+          <div className="hidden md:grid md:grid-cols-2 gap-8 items-center justify-items-center max-w-5xl mx-auto">
+            <img src={coordinatesCard} alt="Coordinates card showing couch 322ft away with Maps button for $1" className="w-full max-w-md h-auto rounded-2xl shadow-2xl" loading="lazy" />
+            <img src={coordinatesMap} alt="Map showing route from home to store location" className="w-full max-w-md h-auto rounded-2xl shadow-2xl" loading="lazy" />
+          </div>
+          {/* Mobile: Three step images stacked */}
+          <div className="md:hidden flex flex-col gap-6">
+            <img src={wasteStep1} alt="Step 1: Finding valuable items" className="w-full h-auto rounded-lg shadow-xl" loading="lazy" />
+            <img src={wasteStep2} alt="Step 2: Sharing coordinates" className="w-full h-auto rounded-lg shadow-xl" loading="lazy" />
+            <img src={wasteStep3} alt="Step 3: Collection and recovery" className="w-full h-auto rounded-lg shadow-xl" loading="lazy" />
+          </div>
         </div>
       </section>
 
