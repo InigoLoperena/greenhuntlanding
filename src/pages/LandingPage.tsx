@@ -35,7 +35,6 @@ import wasteManagerFlow from "@/assets/waste-manager-flow.png";
 import wasteStep1 from "@/assets/waste-step-1.png";
 import wasteStep2 from "@/assets/waste-step-2.png";
 import wasteStep3 from "@/assets/waste-step-3.png";
-import coordinatesMapNew from "@/assets/coordinates-map-new.png";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { z } from "zod";
@@ -313,12 +312,6 @@ export default function LandingPage() {
                 color: '#699e4b'
               }} className="text-2xl md:text-4xl font-permanent-marker mb-4 my-0 py-[10px]">{t('landing.coordinates.buy.title')}</h3>
                 <p className="text-lg text-subtitle-styled font-sedgwick-ave py-[10px]">{t('landing.coordinates.buy.description')}</p>
-                
-                {/* Coordinates Images */}
-                <div className="flex flex-col md:flex-row gap-6 mt-8">
-                  <img src={coordinatesPhoneNew} alt="Couch listing with coordinates for $1" className="w-full md:w-1/2 h-auto rounded-xl shadow-lg" loading="lazy" />
-                  <img src={coordinatesMapNew} alt="Map showing route to furniture location" className="w-full md:w-1/2 h-auto rounded-xl shadow-lg" loading="lazy" />
-                </div>
               </div>
             </div>
 
