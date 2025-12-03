@@ -32,6 +32,9 @@ import coordinatesPromo from "@/assets/coordinates-promo.svg";
 import treasureMap from "@/assets/treasure-map.jpg";
 import garageSaleScene from "@/assets/garage-sale-scene.svg";
 import wasteManagerFlow from "@/assets/waste-manager-flow.png";
+import wasteStep1 from "@/assets/waste-step-1.png";
+import wasteStep2 from "@/assets/waste-step-2.png";
+import wasteStep3 from "@/assets/waste-step-3.png";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { z } from "zod";
@@ -421,10 +424,11 @@ export default function LandingPage() {
             <img alt="Waste management flow - Trash Picker, Valuable Stuff Picker, Phygital Marketplace" loading="lazy" className="w-full h-auto object-cover" src="/lovable-uploads/97543963-e090-48e5-b9f3-7d5bab1dfcd8.png" />
           </div>
           
-          {/* Mobile Only - Two App Screenshots */}
+          {/* Mobile Only - Three Waste Steps */}
           <div className="flex flex-col gap-8 md:hidden">
-            <img src={appProfileScreen} alt="App profile screen" loading="lazy" className="w-full h-auto rounded-lg shadow-xl" />
-            <img src={appMapScreen} alt="App map screen" loading="lazy" className="w-full h-auto rounded-lg shadow-xl" />
+            <img src={wasteStep1} alt="1. Share valuable discarded stuff coordinates - Trash Picker" loading="lazy" className="w-full h-auto" />
+            <img src={wasteStep2} alt="2. Optimized picking route - Valuable Stuff Picker" loading="lazy" className="w-full h-auto" />
+            <img src={wasteStep3} alt="3. Sell or donate fast - Phygital Circular Marketplace" loading="lazy" className="w-full h-auto" />
           </div>
         </div>
       </section>
