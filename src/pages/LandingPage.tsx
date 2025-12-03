@@ -329,7 +329,7 @@ export default function LandingPage() {
       backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
     }}>
         <div className="flex justify-center">
-          <img src={coordinatesPromo} alt="Coordinates promo illustration" className="w-full max-w-5xl h-auto" loading="lazy" />
+          
         </div>
       </section>
 
