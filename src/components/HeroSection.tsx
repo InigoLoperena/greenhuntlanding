@@ -147,7 +147,7 @@ export const HeroSection = () => {
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/AoEmQPU2gtg"
+              src={trailerOpen ? "https://www.youtube.com/embed/RHj_lCvC9xw?autoplay=1" : ""}
               title="GreenHunt Trailer"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
