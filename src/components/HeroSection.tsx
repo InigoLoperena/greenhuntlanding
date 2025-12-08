@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Video } from "lucide-react";
 import greenhuntLogoNew from "@/assets/greenhunt-logo-new.svg";
 import heroBackground from "@/assets/angry-chair-hero.png";
+import heroMobileBackground from "@/assets/hero-mobile-background.png";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { z } from "zod";
@@ -60,13 +61,27 @@ export const HeroSection = () => {
     <>
       <section 
         className="relative w-full min-h-screen flex items-end justify-start overflow-hidden pb-8"
-        style={{
-          backgroundImage: `url(${heroBackground})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center top',
-          backgroundRepeat: 'no-repeat'
-        }}
       >
+        {/* Desktop background */}
+        <div 
+          className="absolute inset-0 hidden md:block"
+          style={{
+            backgroundImage: `url(${heroBackground})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center top',
+            backgroundRepeat: 'no-repeat'
+          }}
+        />
+        {/* Mobile background */}
+        <div 
+          className="absolute inset-0 md:hidden"
+          style={{
+            backgroundImage: `url(${heroMobileBackground})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center top',
+            backgroundRepeat: 'no-repeat'
+          }}
+        />
         {/* Dark overlay for better text readability */}
         <div className="absolute inset-0 bg-black/40" />
         
