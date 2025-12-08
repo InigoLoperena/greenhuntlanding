@@ -154,48 +154,7 @@ export default function WasteManagerPage() {
       <section className="py-20 px-4 bg-black relative bg-cover bg-center" style={{
       backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
     }}>
-        <div className="container mx-auto max-w-6xl relative z-10 text-center">
-          <h2 className="text-3xl md:text-5xl font-permanent-marker mb-12" style={{
-          color: '#699e4b'
-        }}>
-            Share Valuable Item Locations
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-black/50 p-8 rounded-lg border border-primary/20">
-              <Camera className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h3 className="text-2xl font-permanent-marker mb-4" style={{
-              color: '#699e4b'
-            }}>
-                With Photo
-              </h3>
-              <p className="text-subtitle-styled font-sedgwick-ave">
-                Capture and share valuable items with photos for quick identification
-              </p>
-            </div>
-            <div className="bg-black/50 p-8 rounded-lg border border-primary/20">
-              <MapPin className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h3 className="text-2xl font-permanent-marker mb-4" style={{
-              color: '#699e4b'
-            }}>
-                Coordinates Only
-              </h3>
-              <p className="text-subtitle-styled font-sedgwick-ave">
-                Quick location sharing without photos for faster workflow
-              </p>
-            </div>
-            <div className="bg-black/50 p-8 rounded-lg border border-primary/20">
-              <Share2 className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h3 className="text-2xl font-permanent-marker mb-4" style={{
-              color: '#699e4b'
-            }}>
-                Public or Private
-              </h3>
-              <p className="text-subtitle-styled font-sedgwick-ave">
-                Share with your team only or make coordinates public for all users
-              </p>
-            </div>
-          </div>
-        </div>
+        
       </section>
 
       {/* Advanced Scouting System */}
