@@ -221,48 +221,48 @@ export default function WasteManagerPage() {
         }}>
             Benefits for Waste Management Companies
           </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-black/50 p-8 rounded-lg border border-primary/20">
-              <img src={benefitPartnership} alt="Community partnership icon" className="w-20 h-20 mb-4" loading="lazy" />
-              <h3 className="text-2xl font-permanent-marker mb-4" style={{
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="flex flex-col items-center text-center">
+              <h3 className="text-xl md:text-2xl font-permanent-marker mb-6" style={{
               color: '#699e4b'
             }}>
                 Enhance Community Relations
               </h3>
-              <p className="text-lg text-subtitle-styled font-sedgwick-ave">
+              <img src={benefitPartnership} alt="Community partnership icon" className="w-40 h-40 mb-6" loading="lazy" />
+              <p className="text-lg text-subtitle-styled font-sedgwick-ave italic">
                 Facilitate communication and interaction between waste management companies and citizens. Build trust and demonstrate environmental commitment.
               </p>
             </div>
-            <div className="bg-black/50 p-8 rounded-lg border border-primary/20">
-              <img src={benefitRecycling} alt="Recycling icon" className="w-20 h-20 mb-4" loading="lazy" />
-              <h3 className="text-2xl font-permanent-marker mb-4" style={{
+            <div className="flex flex-col items-center text-center">
+              <h3 className="text-xl md:text-2xl font-permanent-marker mb-6" style={{
               color: '#699e4b'
             }}>
                 Reduce Landfill Impact
               </h3>
-              <p className="text-lg text-subtitle-styled font-sedgwick-ave">
+              <img src={benefitRecycling} alt="Recycling icon" className="w-40 h-40 mb-6" loading="lazy" />
+              <p className="text-lg text-subtitle-styled font-sedgwick-ave italic">
                 Divert valuable items from landfills and recycling plants. Contribute to circular economy goals and sustainability metrics.
               </p>
             </div>
-            <div className="bg-black/50 p-8 rounded-lg border border-primary/20">
-              <img src={benefitRoutes} alt="Truck routes icon" className="w-20 h-20 mb-4" loading="lazy" />
-              <h3 className="text-2xl font-permanent-marker mb-4" style={{
+            <div className="flex flex-col items-center text-center">
+              <h3 className="text-xl md:text-2xl font-permanent-marker mb-6" style={{
               color: '#699e4b'
             }}>
                 Operational Efficiency
               </h3>
-              <p className="text-lg text-subtitle-styled font-sedgwick-ave">
+              <img src={benefitRoutes} alt="Truck routes icon" className="w-40 h-40 mb-6" loading="lazy" />
+              <p className="text-lg text-subtitle-styled font-sedgwick-ave italic">
                 Streamline valuable item identification and recovery with mobile scouting and integrated navigation. Optimize collection routes.
               </p>
             </div>
-            <div className="bg-black/50 p-8 rounded-lg border border-primary/20">
-              <img src={benefitCosts} alt="Revenue opportunities icon" className="w-20 h-20 mb-4" loading="lazy" />
-              <h3 className="text-2xl font-permanent-marker mb-4" style={{
+            <div className="flex flex-col items-center text-center">
+              <h3 className="text-xl md:text-2xl font-permanent-marker mb-6" style={{
               color: '#699e4b'
             }}>
                 Revenue Opportunities
               </h3>
-              <p className="text-lg text-subtitle-styled font-sedgwick-ave">
+              <img src={benefitCosts} alt="Revenue opportunities icon" className="w-40 h-40 mb-6" loading="lazy" />
+              <p className="text-lg text-subtitle-styled font-sedgwick-ave italic">
                 Create additional revenue streams through Circular Markets. Turn waste management into resource recovery.
               </p>
             </div>
