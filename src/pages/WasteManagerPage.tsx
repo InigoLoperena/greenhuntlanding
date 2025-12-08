@@ -144,8 +144,15 @@ export default function WasteManagerPage() {
                   </p>
                 </div>
                 <div className="flex gap-4">
-                  
-                  
+                  <Navigation className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="text-lg text-subtitle-styled font-sedgwick-ave font-bold mb-2">
+                      Integrated Navigation
+                    </p>
+                    <p className="text-subtitle-styled font-sedgwick-ave">
+                      Built-in navigation system similar to Uber - no need to open external map apps
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -192,17 +199,6 @@ export default function WasteManagerPage() {
                     </p>
                     <p className="text-subtitle-styled font-sedgwick-ave">
                       Deploy a motorcycle scout to find valuable items quickly. The collection truck follows behind with the shared coordinates map
-                    </p>
-                  </div>
-                </div>
-                <div className="flex gap-4">
-                  <Navigation className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="text-lg text-subtitle-styled font-sedgwick-ave font-bold mb-2">
-                      Integrated Navigation
-                    </p>
-                    <p className="text-subtitle-styled font-sedgwick-ave">
-                      Built-in navigation system similar to Uber - no need to open external map apps
                     </p>
                   </div>
                 </div>
