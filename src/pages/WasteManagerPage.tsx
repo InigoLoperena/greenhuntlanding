@@ -144,7 +144,7 @@ export default function WasteManagerPage() {
                   </p>
                 </div>
                 <div className="flex gap-4">
-                  <TrendingUp className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                  
                   
                 </div>
               </div>
