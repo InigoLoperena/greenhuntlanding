@@ -14,6 +14,10 @@ import wasteStep3 from "@/assets/waste-step-3.png";
 import wasteFlow1 from "@/assets/waste-flow-1.png";
 import wasteFlow2 from "@/assets/waste-flow-2.png";
 import wasteFlow3 from "@/assets/waste-flow-3.png";
+import benefitPartnership from "@/assets/benefit-partnership.png";
+import benefitRecycling from "@/assets/benefit-recycling.png";
+import benefitRoutes from "@/assets/benefit-routes.png";
+import benefitCosts from "@/assets/benefit-costs.png";
 export default function WasteManagerPage() {
   return <div className="min-h-screen bg-black text-white overflow-x-hidden">
       {/* Header with Logo */}
@@ -225,6 +229,7 @@ export default function WasteManagerPage() {
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-black/50 p-8 rounded-lg border border-primary/20">
+              <img src={benefitPartnership} alt="Community partnership icon" className="w-20 h-20 mb-4" loading="lazy" />
               <h3 className="text-2xl font-permanent-marker mb-4" style={{
               color: '#699e4b'
             }}>
@@ -235,6 +240,7 @@ export default function WasteManagerPage() {
               </p>
             </div>
             <div className="bg-black/50 p-8 rounded-lg border border-primary/20">
+              <img src={benefitRecycling} alt="Recycling icon" className="w-20 h-20 mb-4" loading="lazy" />
               <h3 className="text-2xl font-permanent-marker mb-4" style={{
               color: '#699e4b'
             }}>
@@ -245,6 +251,7 @@ export default function WasteManagerPage() {
               </p>
             </div>
             <div className="bg-black/50 p-8 rounded-lg border border-primary/20">
+              <img src={benefitRoutes} alt="Truck routes icon" className="w-20 h-20 mb-4" loading="lazy" />
               <h3 className="text-2xl font-permanent-marker mb-4" style={{
               color: '#699e4b'
             }}>
@@ -255,6 +262,7 @@ export default function WasteManagerPage() {
               </p>
             </div>
             <div className="bg-black/50 p-8 rounded-lg border border-primary/20">
+              <img src={benefitCosts} alt="Revenue opportunities icon" className="w-20 h-20 mb-4" loading="lazy" />
               <h3 className="text-2xl font-permanent-marker mb-4" style={{
               color: '#699e4b'
             }}>
