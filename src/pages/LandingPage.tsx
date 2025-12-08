@@ -448,6 +448,17 @@ export default function LandingPage() {
             <img src={wasteStep2} alt="2. Optimized picking route - Valuable Stuff Picker" loading="lazy" className="w-full h-auto" />
             <img src={wasteStep3} alt="3. Sell or donate fast - Phygital Circular Marketplace" loading="lazy" className="w-full h-auto" />
           </div>
+
+          {/* Know More Button */}
+          <div className="flex justify-center mt-12">
+            <Button asChild className="bg-accent hover:bg-accent/90 font-permanent-marker text-lg px-8 py-6" style={{
+              color: '#611a5a'
+            }}>
+              <Link to="/waste-managers">
+                {language === 'en' ? 'Know More' : 'Saber Más'}
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -465,13 +476,6 @@ export default function LandingPage() {
             <p className="text-xl text-subtitle-styled font-sedgwick-ave max-w-3xl mb-8">
               {language === 'en' ? 'We are partnering with waste management companies, thrift and antique stores to integrate and co-create our solution with them. Our goal is to scale the \'free stuff\' circular business model to avoid unnecessary waste, reduce first-hand demand, decrease raw material extraction and reduce gas emissions' : 'Nos estamos asociando con empresas de gestión de residuos, tiendas de segunda mano y antigüedades para integrar y co-crear nuestra solución con ellas. Nuestro objetivo es escalar el modelo de negocio circular de \'cosas gratis\' para evitar residuos innecesarios, reducir la demanda de productos nuevos, disminuir la extracción de materias primas y reducir las emisiones de gases'}
             </p>
-            <Button asChild className="bg-accent hover:bg-accent/90 font-permanent-marker text-lg px-8 py-6 mb-8" style={{
-            color: '#611a5a'
-          }}>
-              <Link to="/waste-managers">
-                {language === 'en' ? 'Know More' : 'Saber Más'}
-              </Link>
-            </Button>
           </div>
         </div>
         
