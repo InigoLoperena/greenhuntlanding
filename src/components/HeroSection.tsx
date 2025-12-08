@@ -77,8 +77,8 @@ export const HeroSection = () => {
           className="absolute inset-0 md:hidden"
           style={{
             backgroundImage: `url(${heroMobileBackground})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center top',
+            backgroundSize: '140%',
+            backgroundPosition: 'center 20%',
             backgroundRepeat: 'no-repeat'
           }}
         />
