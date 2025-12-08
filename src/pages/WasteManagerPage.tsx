@@ -3,6 +3,7 @@ import { MapPin, Users, Camera, Smartphone, Bluetooth, Navigation, Store, Recycl
 import { Link } from "react-router-dom";
 import greenhuntLogoNew from "@/assets/greenhunt-logo-new.svg";
 import wasteManagerTruck from "@/assets/waste-manager-truck.png";
+import coordinatesShareTruck from "@/assets/coordinates-share-truck.png";
 import wasteScoutMotorcycle from "@/assets/waste-scout-motorcycle.png";
 import treasureMap from "@/assets/treasure-map.jpg";
 import coordinatesCard from "@/assets/coordinates-card.png";
@@ -104,7 +105,7 @@ export default function WasteManagerPage() {
               </div>
             </div>
             <div className="order-1 lg:order-2">
-              <img src={wasteManagerTruck} alt="Waste Manager using GreenHunt app in truck" className="w-full h-auto rounded-lg shadow-2xl" loading="lazy" />
+              <img src={coordinatesShareTruck} alt="Waste Manager using GreenHunt app in truck" className="w-full h-auto rounded-lg shadow-2xl" loading="lazy" />
             </div>
           </div>
         </div>
