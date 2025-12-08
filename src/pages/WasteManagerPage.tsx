@@ -48,7 +48,7 @@ export default function WasteManagerPage() {
         }}>
             GreenHunt Waste Manager System
           </h1>
-          <p className="text-xl md:text-3xl text-subtitle-styled font-sedgwick-ave max-w-4xl mx-auto mb-8">
+          <p className="text-xl md:text-3xl text-subtitle-styled font-sedgwick-ave max-w-4xl mx-auto mb-8 my-[75px]">
             A Tool to Facilitate the Circularity of discarded Valuable Objects
           </p>
           <p className="text-lg text-subtitle-styled font-sedgwick-ave max-w-3xl mx-auto mb-8">
