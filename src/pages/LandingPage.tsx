@@ -431,7 +431,9 @@ export default function LandingPage() {
           </div>
 
           <p className="text-2xl md:text-3xl text-center text-subtitle-styled font-sedgwick-ave max-w-4xl mx-auto mb-6">{t('landing.economy.text')}</p>
-          <h2 className="text-3xl md:text-5xl font-permanent-marker text-center mb-12" style={{ color: '#699e4b' }}>
+          <h2 style={{
+          color: '#699e4b'
+        }} className="text-3xl md:text-5xl font-permanent-marker text-center mb-12 px-0 my-[155px]">
             GreenHunt Waste Management System
           </h2>
 
