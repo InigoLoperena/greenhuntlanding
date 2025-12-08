@@ -145,9 +145,7 @@ export default function WasteManagerPage() {
                 </div>
                 <div className="flex gap-4">
                   <TrendingUp className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-                  <p className="text-lg text-subtitle-styled font-sedgwick-ave">
-                    Track recovery rates and contribute to circular economy metrics
-                  </p>
+                  
                 </div>
               </div>
             </div>
