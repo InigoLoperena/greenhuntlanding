@@ -51,7 +51,7 @@ export default function WasteManagerPage() {
           <p className="text-xl md:text-3xl text-subtitle-styled font-sedgwick-ave max-w-4xl mx-auto mb-8 my-[75px]">
             A Tool to Facilitate the Circularity of discarded Valuable Objects
           </p>
-          <p className="text-lg text-subtitle-styled font-sedgwick-ave max-w-3xl mx-auto mb-8">
+          <p className="text-lg text-subtitle-styled font-sedgwick-ave max-w-3xl mx-auto mb-8 py-[47px]">
             Transform linear waste management and save valuable items from beeing distroyed on landfills or recycling plants. Get a new revenue stream and measure the impact of your companie
           </p>
           {/* Flow images - 3 column grid */}
