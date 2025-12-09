@@ -28,11 +28,11 @@ export const API_ENDPOINTS = {
 
 // Social media links
 export const SOCIAL_LINKS = {
-  LINKEDIN: 'https://www.linkedin.com/company/greenriot/',
-  INSTAGRAM: 'https://www.instagram.com/stoopingappgreenriot/',
+  LINKEDIN: 'https://www.linkedin.com/company/greenhunt',
+  INSTAGRAM: 'https://www.instagram.com/greenhuntstoopingapp/',
   TWITTER: 'https://x.com/StoopingApp',
-  YOUTUBE: 'https://www.youtube.com/@greenriotstoopingapp',
-  TIKTOK: 'https://www.tiktok.com/@stoopingappgreenriot',
+  YOUTUBE: 'https://www.youtube.com/@GreenHuntStoopingApp',
+  TIKTOK: 'https://www.tiktok.com/@greenhuntstoopingapp',
 } as const;
 
 // App metadata

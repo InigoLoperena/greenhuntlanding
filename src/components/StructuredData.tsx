@@ -38,11 +38,11 @@ export const StructuredData = () => {
     "url": "https://greenhunt.net",
     "logo": "https://greenhunt.net/lovable-uploads/greenhunt-logo-new.svg",
     "sameAs": [
-      "https://www.linkedin.com/company/greenriot/",
-      "https://www.instagram.com/stoopingappgreenriot/",
+      "https://www.linkedin.com/company/greenhunt",
+      "https://www.instagram.com/greenhuntstoopingapp/",
       "https://x.com/StoopingApp",
-      "https://www.youtube.com/@greenriotstoopingapp",
-      "https://www.tiktok.com/@stoopingappgreenriot"
+      "https://www.youtube.com/@GreenHuntStoopingApp",
+      "https://www.tiktok.com/@greenhuntstoopingapp"
     ],
     "contactPoint": {
       "@type": "ContactPoint",
