@@ -496,9 +496,9 @@ export default function LandingPage() {
               <p className="text-lg text-subtitle-styled font-sedgwick-ave mb-8">
                 {t('landing.ambassador.description')}
               </p>
-              <Button className="bg-accent/60 hover:bg-accent/60 font-permanent-marker text-lg px-8 py-6 cursor-default" style={{
+              <Button className="bg-accent hover:bg-accent font-permanent-marker text-lg px-8 py-6 cursor-default" style={{
               color: '#611a5a'
-            }} disabled>
+            }}>
                 {t('landing.ambassador.button')}
               </Button>
             </div>
