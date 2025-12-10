@@ -60,7 +60,7 @@ const translations: Record<Language, Record<string, string>> = {
     'landing.footer.forPlanet': 'for the planet',
     'landing.footer.contact': 'Contact: stooping@greenriot.net',
     'landing.ambassador.title': "We're looking for GreenHunt Ambassadors!",
-    'landing.ambassador.description': 'Help us build our circular thrift store and waste managers network before the app launch. Earn money by bringing partners on board and become a lifetime GreenHunt Ambassador to receive exclusive benefits such as higher commissions affiliate program and more',
+    'landing.ambassador.description': 'Help us build our circular markets and waste managers network before the app launch. Earn money by bringing partners on board and become a lifetime GreenHunt Ambassador to receive exclusive benefits such as higher commissions affiliate program and more',
     'landing.ambassador.button': 'Ambassadors program coming soon',
     'ambassador.dashboard': 'Ambassador Dashboard',
     'ambassador.welcome': 'Welcome',
