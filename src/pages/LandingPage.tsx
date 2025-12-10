@@ -93,12 +93,12 @@ export default function LandingPage() {
   return <div className="min-h-screen bg-black text-white overflow-x-hidden">
       <StructuredData />
       
-      {/* Floating Ambassador Login Button */}
-      {showAmbassadorButton && location.pathname === '/' && <button onClick={() => navigate('/ambassador-program')} className="fixed top-6 right-6 z-50 bg-accent hover:bg-accent/90 text-primary font-permanent-marker px-6 py-3 rounded-full shadow-lg transition-all hover:scale-105" style={{
+      {/* Floating Ambassador Login Button - TEMPORARILY DISABLED */}
+      {/* {showAmbassadorButton && location.pathname === '/' && <button onClick={() => navigate('/ambassador-program')} className="fixed top-6 right-6 z-50 bg-accent hover:bg-accent/90 text-primary font-permanent-marker px-6 py-3 rounded-full shadow-lg transition-all hover:scale-105" style={{
       color: '#611a5a'
     }}>
           {language === 'en' ? 'Ambassadors Login' : 'Login Embajadores'}
-        </button>}
+        </button>} */}
 
       {/* Hero Section */}
       <HeroSection />
@@ -496,12 +496,10 @@ export default function LandingPage() {
               <p className="text-lg text-subtitle-styled font-sedgwick-ave mb-8">
                 {t('landing.ambassador.description')}
               </p>
-              <Button asChild className="bg-accent hover:bg-accent/90 font-permanent-marker text-lg px-8 py-6" style={{
+              <Button className="bg-accent/60 hover:bg-accent/60 font-permanent-marker text-lg px-8 py-6 cursor-default" style={{
               color: '#611a5a'
-            }}>
-                <a href="/ambassador-program">
-                  {t('landing.ambassador.button')}
-                </a>
+            }} disabled>
+                {t('landing.ambassador.button')}
               </Button>
             </div>
             <div className="order-1 lg:order-2">
