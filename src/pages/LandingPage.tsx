@@ -74,7 +74,7 @@ export default function LandingPage() {
               <p className="text-lg text-subtitle-styled font-sedgwick-ave mb-8">
                 {t('landing.ambassador.description')}
               </p>
-              <Link to="/ambassador">
+              <Link to="/ambassador-program">
                 <Button className="bg-accent hover:bg-accent/90 font-permanent-marker text-lg px-8 py-6" style={{
                   color: '#611a5a'
                 }}>
