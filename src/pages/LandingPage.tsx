@@ -74,11 +74,13 @@ export default function LandingPage() {
               <p className="text-lg text-subtitle-styled font-sedgwick-ave mb-8">
                 {t('landing.ambassador.description')}
               </p>
-              <Button className="bg-accent hover:bg-accent font-permanent-marker text-lg px-8 py-6 cursor-default" style={{
-                color: '#611a5a'
-              }}>
-                {t('landing.ambassador.button')}
-              </Button>
+              <Link to="/ambassador">
+                <Button className="bg-accent hover:bg-accent/90 font-permanent-marker text-lg px-8 py-6" style={{
+                  color: '#611a5a'
+                }}>
+                  {t('landing.ambassador.button')}
+                </Button>
+              </Link>
             </div>
             <div className="order-1 lg:order-2">
               <img src="/lovable-uploads/ambassador-program.png" alt="GreenHunt Ambassador Program" className="w-full max-w-md mx-auto lg:ml-auto h-auto rounded-lg" loading="lazy" />
