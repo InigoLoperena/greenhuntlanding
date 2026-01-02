@@ -110,7 +110,7 @@ const translations: Record<Language, Record<string, string>> = {
     'landing.thrifting.title': 'Local Phygital Thrifting',
     'landing.thrifting.step1': 'Explore catalogs of local thrift stores and garage sales. Chat and negotiate.',
     'landing.thrifting.step2': 'Ask them to come to your house to collect your unwanted items instead of throwing them in the trash.',
-    'landing.thrifting.step3': 'Create your own circular market on your garage free, make money with unwanted stuff.'
+    'landing.thrifting.step3': 'Create your own circular market on your garage for free, make money with unwanted stuff.'
   },
   es: {
     'landing.hero.cta.abandoned': 'ENCUENTRA MUEBLES ABANDONADOS',
