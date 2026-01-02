@@ -10,6 +10,9 @@ import greenhuntLogoNew from "@/assets/greenhunt-logo-new.svg";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { z } from "zod";
+import tutorialStep1 from "@/assets/tutorial-step-1.png";
+import tutorialStep2 from "@/assets/tutorial-step-2.png";
+import tutorialStep3 from "@/assets/tutorial-step-3.png";
 
 const emailSchema = z.string().email();
 
@@ -58,6 +61,69 @@ export default function LandingPage() {
       
       {/* Hero Section */}
       <HeroSection />
+
+      {/* Tutorial Section */}
+      <section className="py-16 md:py-20 px-4 bg-black relative bg-cover bg-center" style={{
+        backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
+      }}>
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <h2 className="text-3xl md:text-5xl font-permanent-marker mb-12 text-center" style={{
+            color: '#699e4b'
+          }}>
+            {t('landing.tutorial.title')}
+          </h2>
+          
+          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+            {/* Step 1 */}
+            <div className="flex flex-col items-center text-center">
+              <div className="relative mb-6">
+                <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{ color: '#699e4b' }}>1</span>
+                <img 
+                  src={tutorialStep1} 
+                  alt="Take photos of street finds" 
+                  className="w-full max-w-xs rounded-2xl shadow-lg"
+                  loading="lazy"
+                />
+              </div>
+              <p className="text-lg font-sedgwick-ave text-subtitle-styled">
+                {t('landing.tutorial.step1')}
+              </p>
+            </div>
+
+            {/* Step 2 */}
+            <div className="flex flex-col items-center text-center">
+              <div className="relative mb-6">
+                <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{ color: '#699e4b' }}>2</span>
+                <img 
+                  src={tutorialStep2} 
+                  alt="Make money when someone unlocks coordinates" 
+                  className="w-full max-w-xs rounded-2xl shadow-lg"
+                  loading="lazy"
+                />
+              </div>
+              <p className="text-lg font-sedgwick-ave text-subtitle-styled">
+                {t('landing.tutorial.step2')}
+              </p>
+            </div>
+
+            {/* Step 3 */}
+            <div className="flex flex-col items-center text-center">
+              <div className="relative mb-6">
+                <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{ color: '#699e4b' }}>3</span>
+                <img 
+                  src={tutorialStep3} 
+                  alt="Buy coordinates and get valuable items" 
+                  className="w-full max-w-xs rounded-2xl shadow-lg"
+                  loading="lazy"
+                />
+              </div>
+              <p className="text-lg font-sedgwick-ave text-subtitle-styled">
+                {t('landing.tutorial.step3')}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Ambassador Program Section */}
       <section className="py-20 px-4 bg-black relative bg-cover bg-center" style={{
