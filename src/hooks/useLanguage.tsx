@@ -104,7 +104,7 @@ const translations: Record<Language, Record<string, string>> = {
     'ambassador.loginError': 'Error logging in',
     'ambassador.createError': 'Error creating account',
     'landing.tutorial.title': 'How It Works',
-    'landing.tutorial.step1': 'Take photos of valuable street finds.',
+    'landing.tutorial.step1': 'Take photos of valuable discarded street finds.',
     'landing.tutorial.step2': 'Make money when someone nearby unlocks the coordinates.',
     'landing.tutorial.step3': 'Buy coordinates, open Google Maps, go and get a $300 couch for $1.'
   },
@@ -203,7 +203,7 @@ const translations: Record<Language, Record<string, string>> = {
     'ambassador.loginError': 'Error al iniciar sesión',
     'ambassador.createError': 'Error al crear cuenta',
     'landing.tutorial.title': 'Cómo Funciona',
-    'landing.tutorial.step1': 'Toma fotos de hallazgos valiosos en la calle.',
+    'landing.tutorial.step1': 'Toma fotos de hallazgos valiosos descartados en la calle.',
     'landing.tutorial.step2': 'Gana dinero cuando alguien cercano desbloquea las coordenadas.',
     'landing.tutorial.step3': 'Compra coordenadas, abre Google Maps, ve y consigue un sofá de $300 por $1.'
   }
