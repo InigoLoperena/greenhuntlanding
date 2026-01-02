@@ -106,7 +106,11 @@ const translations: Record<Language, Record<string, string>> = {
     'landing.tutorial.title': 'How It Works',
     'landing.tutorial.step1': 'Take photos of valuable discarded street finds.',
     'landing.tutorial.step2': 'Make money when someone nearby unlocks the coordinates.',
-    'landing.tutorial.step3': 'Buy coordinates, open Google Maps, go and get a $300 couch for $1.'
+    'landing.tutorial.step3': 'Buy coordinates, open Google Maps, go and get a $300 couch for $1.',
+    'landing.thrifting.title': 'Local Phygital Thrifting',
+    'landing.thrifting.step1': 'Explore catalogs of local thrift stores and garage sales. Chat and negotiate.',
+    'landing.thrifting.step2': 'Ask them to come to your house to collect your unwanted items instead of throwing them in the trash.',
+    'landing.thrifting.step3': 'Create your own circular market on your garage free, make money with unwanted stuff.'
   },
   es: {
     'landing.hero.cta.abandoned': 'ENCUENTRA MUEBLES ABANDONADOS',
@@ -205,7 +209,11 @@ const translations: Record<Language, Record<string, string>> = {
     'landing.tutorial.title': 'Cómo Funciona',
     'landing.tutorial.step1': 'Toma fotos de hallazgos valiosos descartados en la calle.',
     'landing.tutorial.step2': 'Gana dinero cuando alguien cercano desbloquea las coordenadas.',
-    'landing.tutorial.step3': 'Compra coordenadas, abre Google Maps, ve y consigue un sofá de $300 por $1.'
+    'landing.tutorial.step3': 'Compra coordenadas, abre Google Maps, ve y consigue un sofá de $300 por $1.',
+    'landing.thrifting.title': 'Thrifting Phygital Local',
+    'landing.thrifting.step1': 'Explora catálogos de tiendas de segunda mano y ventas de garaje locales. Chatea y negocia.',
+    'landing.thrifting.step2': 'Pídeles que vengan a tu casa a recoger tus objetos no deseados en lugar de tirarlos a la basura.',
+    'landing.thrifting.step3': 'Crea tu propio mercado circular en tu garaje gratis, gana dinero con cosas no deseadas.'
   }
 };
 
