@@ -16,17 +16,17 @@ import tutorialStep3 from "@/assets/tutorial-step-3.png";
 import thriftingStep1 from "@/assets/thrifting-step-1.png";
 import thriftingStep2 from "@/assets/thrifting-step-2.png";
 import thriftingStep3 from "@/assets/thrifting-step-3.png";
-
 const emailSchema = z.string().email();
-
 export default function LandingPage() {
-  const { t, language, setLanguage } = useLanguage();
+  const {
+    t,
+    language,
+    setLanguage
+  } = useLanguage();
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
-
   const handleWaitlistSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
     const validation = emailSchema.safeParse(email);
     if (!validation.success) {
       toast.error(t('landing.beta.invalidEmail'));
@@ -35,11 +35,15 @@ export default function LandingPage() {
     setLoading(true);
     try {
       // @ts-ignore - waitlist table exists but types may not be updated
-      const { error } = await supabase
-        // @ts-ignore
-        .from('waitlist')
-        // @ts-ignore
-        .insert([{ email: email.toLowerCase().trim() }]);
+      const {
+        error
+      } = await supabase
+      // @ts-ignore
+      .from('waitlist')
+      // @ts-ignore
+      .insert([{
+        email: email.toLowerCase().trim()
+      }]);
       if (error) {
         if (error.code === '23505') {
           toast.error(t('landing.beta.emailExists'));
@@ -57,9 +61,7 @@ export default function LandingPage() {
       setLoading(false);
     }
   };
-
-  return (
-    <div className="min-h-screen bg-black text-white overflow-x-hidden">
+  return <div className="min-h-screen bg-black text-white overflow-x-hidden">
       <StructuredData />
       
       {/* Hero Section */}
@@ -67,12 +69,12 @@ export default function LandingPage() {
 
       {/* Tutorial Section */}
       <section className="py-16 md:py-20 px-4 bg-black relative bg-cover bg-center" style={{
-        backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
-      }}>
+      backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
+    }}>
         <div className="container mx-auto max-w-6xl relative z-10">
           <h2 className="text-3xl md:text-5xl font-permanent-marker mb-12 text-center" style={{
-            color: '#699e4b'
-          }}>
+          color: '#699e4b'
+        }}>
             {t('landing.tutorial.title')}
           </h2>
           
@@ -80,13 +82,10 @@ export default function LandingPage() {
             {/* Step 1 */}
             <div className="flex flex-col items-center text-center">
               <div className="relative mb-6">
-                <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{ color: '#699e4b' }}>1</span>
-                <img 
-                  src={tutorialStep1} 
-                  alt="Take photos of street finds" 
-                  className="w-full max-w-xs rounded-2xl shadow-lg"
-                  loading="lazy"
-                />
+                <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
+                color: '#699e4b'
+              }}>1</span>
+                <img src={tutorialStep1} alt="Take photos of street finds" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" />
               </div>
               <p className="text-lg font-sedgwick-ave text-subtitle-styled">
                 {t('landing.tutorial.step1')}
@@ -96,13 +95,10 @@ export default function LandingPage() {
             {/* Step 2 */}
             <div className="flex flex-col items-center text-center">
               <div className="relative mb-6">
-                <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{ color: '#699e4b' }}>2</span>
-                <img 
-                  src={tutorialStep2} 
-                  alt="Make money when someone unlocks coordinates" 
-                  className="w-full max-w-xs rounded-2xl shadow-lg"
-                  loading="lazy"
-                />
+                <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
+                color: '#699e4b'
+              }}>2</span>
+                <img src={tutorialStep2} alt="Make money when someone unlocks coordinates" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" />
               </div>
               <p className="text-lg font-sedgwick-ave text-subtitle-styled">
                 {t('landing.tutorial.step2')}
@@ -112,13 +108,10 @@ export default function LandingPage() {
             {/* Step 3 */}
             <div className="flex flex-col items-center text-center">
               <div className="relative mb-6">
-                <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{ color: '#699e4b' }}>3</span>
-                <img 
-                  src={tutorialStep3} 
-                  alt="Buy coordinates and get valuable items" 
-                  className="w-full max-w-xs rounded-2xl shadow-lg"
-                  loading="lazy"
-                />
+                <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
+                color: '#699e4b'
+              }}>3</span>
+                <img src={tutorialStep3} alt="Buy coordinates and get valuable items" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" />
               </div>
               <p className="text-lg font-sedgwick-ave text-subtitle-styled">
                 {t('landing.tutorial.step3')}
@@ -130,12 +123,12 @@ export default function LandingPage() {
 
       {/* Local Phygital Thrifting Section */}
       <section className="py-16 md:py-20 px-4 bg-black relative bg-cover bg-center" style={{
-        backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
-      }}>
+      backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
+    }}>
         <div className="container mx-auto max-w-6xl relative z-10">
           <h2 className="text-3xl md:text-5xl font-permanent-marker mb-12 text-center" style={{
-            color: '#699e4b'
-          }}>
+          color: '#699e4b'
+        }}>
             {t('landing.thrifting.title')}
           </h2>
           
@@ -143,13 +136,10 @@ export default function LandingPage() {
             {/* Step 1 */}
             <div className="flex flex-col items-center text-center">
               <div className="relative mb-6">
-                <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{ color: '#699e4b' }}>1</span>
-                <img 
-                  src={thriftingStep1} 
-                  alt="Explore thrift store catalogs" 
-                  className="w-full max-w-xs rounded-2xl shadow-lg"
-                  loading="lazy"
-                />
+                <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
+                color: '#699e4b'
+              }}>1</span>
+                <img alt="Explore thrift store catalogs" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" src="/lovable-uploads/7385e5d0-3dff-4261-aaeb-fd0b991b89be.png" />
               </div>
               <p className="text-lg font-sedgwick-ave text-subtitle-styled">
                 {t('landing.thrifting.step1')}
@@ -159,13 +149,10 @@ export default function LandingPage() {
             {/* Step 2 */}
             <div className="flex flex-col items-center text-center">
               <div className="relative mb-6">
-                <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{ color: '#699e4b' }}>2</span>
-                <img 
-                  src={thriftingStep2} 
-                  alt="Request pickup for donations" 
-                  className="w-full max-w-xs rounded-2xl shadow-lg"
-                  loading="lazy"
-                />
+                <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
+                color: '#699e4b'
+              }}>2</span>
+                <img src={thriftingStep2} alt="Request pickup for donations" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" />
               </div>
               <p className="text-lg font-sedgwick-ave text-subtitle-styled">
                 {t('landing.thrifting.step2')}
@@ -175,13 +162,10 @@ export default function LandingPage() {
             {/* Step 3 */}
             <div className="flex flex-col items-center text-center">
               <div className="relative mb-6">
-                <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{ color: '#699e4b' }}>3</span>
-                <img 
-                  src={thriftingStep3} 
-                  alt="Create your own garage sale" 
-                  className="w-full max-w-xs rounded-2xl shadow-lg"
-                  loading="lazy"
-                />
+                <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
+                color: '#699e4b'
+              }}>3</span>
+                <img src={thriftingStep3} alt="Create your own garage sale" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" />
               </div>
               <p className="text-lg font-sedgwick-ave text-subtitle-styled">
                 {t('landing.thrifting.step3')}
@@ -193,14 +177,14 @@ export default function LandingPage() {
 
       {/* Ambassador Program Section */}
       <section className="py-20 px-4 bg-black relative bg-cover bg-center" style={{
-        backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
-      }}>
+      backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
+    }}>
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
               <h2 className="text-3xl md:text-5xl font-permanent-marker mb-6 leading-tight" style={{
-                color: '#699e4b'
-              }}>
+              color: '#699e4b'
+            }}>
                 {t('landing.ambassador.title')}
               </h2>
               <p className="text-lg text-subtitle-styled font-sedgwick-ave mb-8">
@@ -208,8 +192,8 @@ export default function LandingPage() {
               </p>
               <Link to="/ambassador-program">
                 <Button className="bg-accent hover:bg-accent/90 font-permanent-marker text-lg px-8 py-6" style={{
-                  color: '#611a5a'
-                }}>
+                color: '#611a5a'
+              }}>
                   {t('landing.ambassador.button')}
                 </Button>
               </Link>
@@ -223,34 +207,23 @@ export default function LandingPage() {
 
       {/* Join Beta Section */}
       <section id="waitlist" className="relative py-20 px-4 bg-black bg-cover bg-center" style={{
-        backgroundImage: 'url(/lovable-uploads/brick-wall-dark.png)'
-      }}>
+      backgroundImage: 'url(/lovable-uploads/brick-wall-dark.png)'
+    }}>
         <div className="container mx-auto max-w-4xl text-center relative z-10">
           <div className="max-w-md mx-auto bg-black/60 backdrop-blur-sm p-8 rounded-lg border border-white/20">
             <h2 className="text-2xl font-permanent-marker mb-2" style={{
-              color: '#699e4b'
-            }}>
+            color: '#699e4b'
+          }}>
               {t('landing.beta.title')}
             </h2>
             <p className="text-white font-sedgwick-ave mb-6">
               {t('landing.beta.description')}
             </p>
             <form onSubmit={handleWaitlistSubmit} className="space-y-4">
-              <Input 
-                type="email" 
-                placeholder={t('landing.beta.placeholder')} 
-                value={email} 
-                onChange={e => setEmail(e.target.value)} 
-                required 
-                disabled={loading} 
-                className="w-full bg-white/90" 
-              />
-              <Button 
-                type="submit" 
-                disabled={loading} 
-                className="w-full bg-accent hover:bg-accent/90 font-permanent-marker" 
-                style={{ color: '#611a5a' }}
-              >
+              <Input type="email" placeholder={t('landing.beta.placeholder')} value={email} onChange={e => setEmail(e.target.value)} required disabled={loading} className="w-full bg-white/90" />
+              <Button type="submit" disabled={loading} className="w-full bg-accent hover:bg-accent/90 font-permanent-marker" style={{
+              color: '#611a5a'
+            }}>
                 {loading ? t('landing.beta.joining') : t('landing.beta.button')}
               </Button>
             </form>
@@ -316,23 +289,20 @@ export default function LandingPage() {
 
       {/* Bottom Right Buttons */}
       <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
-        <Button 
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
-          className="bg-accent hover:bg-accent/90 font-permanent-marker shadow-rebel px-3 py-2 h-auto text-lg" 
-          style={{ color: '#611a5a' }} 
-          aria-label={language === 'en' ? 'Go to top' : 'Ir al principio'}
-        >
+        <Button onClick={() => window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      })} className="bg-accent hover:bg-accent/90 font-permanent-marker shadow-rebel px-3 py-2 h-auto text-lg" style={{
+        color: '#611a5a'
+      }} aria-label={language === 'en' ? 'Go to top' : 'Ir al principio'}>
           <ArrowUp className="h-5 w-5" />
         </Button>
         
-        <Button 
-          onClick={() => setLanguage(language === 'en' ? 'es' : 'en')} 
-          className="bg-accent hover:bg-accent/90 font-permanent-marker shadow-rebel px-3 py-2 h-auto text-lg" 
-          style={{ color: '#611a5a' }}
-        >
+        <Button onClick={() => setLanguage(language === 'en' ? 'es' : 'en')} className="bg-accent hover:bg-accent/90 font-permanent-marker shadow-rebel px-3 py-2 h-auto text-lg" style={{
+        color: '#611a5a'
+      }}>
           {language === 'en' ? 'ES' : 'EN'}
         </Button>
       </div>
-    </div>
-  );
+    </div>;
 }
