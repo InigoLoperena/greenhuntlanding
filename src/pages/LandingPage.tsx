@@ -85,7 +85,7 @@ export default function LandingPage() {
                 <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
                 color: '#699e4b'
               }}>1</span>
-                <img src={tutorialStep1} alt="Take photos of street finds" className="w-full max-w-xs rounded-2xl shadow-lg object-cover aspect-[9/16]" loading="lazy" />
+                <img src={tutorialStep1} alt="Take photos of street finds" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" />
               </div>
               <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
                 {t('landing.tutorial.step1')}
@@ -98,7 +98,7 @@ export default function LandingPage() {
                 <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
                 color: '#699e4b'
               }}>2</span>
-                <img src={tutorialStep2} alt="Make money when someone unlocks coordinates" className="w-full max-w-xs rounded-2xl shadow-lg object-cover aspect-[9/16]" loading="lazy" />
+                <img src={tutorialStep2} alt="Make money when someone unlocks coordinates" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" />
               </div>
               <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
                 {t('landing.tutorial.step2')}
