@@ -110,7 +110,11 @@ const translations: Record<Language, Record<string, string>> = {
     'landing.thrifting.title': 'Local Phygital Thrifting',
     'landing.thrifting.step1': 'Explore catalogs of local thrift stores and garage sales. Chat and negotiate.',
     'landing.thrifting.step2': 'Ask them to come to your house to collect your unwanted items instead of throwing them in the trash.',
-    'landing.thrifting.step3': 'Create your own circular market on your garage for free, make money with unwanted stuff.'
+    'landing.thrifting.step3': 'Create your own circular market on your garage for free, make money with unwanted stuff.',
+    'landing.waste.title': 'WASTE MANAGEMENT',
+    'landing.waste.step1': 'Share valuable item coordinates with your team with a push of a button.',
+    'landing.waste.step2': 'Go to exact locations with an optimized route to pick up valuable stuff.',
+    'landing.waste.step3': 'Donate it to local stores or sell it on your phygital circular market.'
   },
   es: {
     'landing.hero.cta.abandoned': 'ENCUENTRA MUEBLES ABANDONADOS',
@@ -213,7 +217,11 @@ const translations: Record<Language, Record<string, string>> = {
     'landing.thrifting.title': 'Thrifting Phygital Local',
     'landing.thrifting.step1': 'Explora catálogos de tiendas de segunda mano y ventas de garaje locales. Chatea y negocia.',
     'landing.thrifting.step2': 'Pídeles que vengan a tu casa a recoger tus objetos no deseados en lugar de tirarlos a la basura.',
-    'landing.thrifting.step3': 'Crea tu propio mercado circular en tu garaje gratis, gana dinero con cosas no deseadas.'
+    'landing.thrifting.step3': 'Crea tu propio mercado circular en tu garaje gratis, gana dinero con cosas no deseadas.',
+    'landing.waste.title': 'GESTIÓN DE RESIDUOS',
+    'landing.waste.step1': 'Comparte las coordenadas de objetos valiosos con tu equipo con solo pulsar un botón.',
+    'landing.waste.step2': 'Ve a ubicaciones exactas con una ruta optimizada para recoger cosas valiosas.',
+    'landing.waste.step3': 'Dónalo a tiendas locales o véndelo en tu mercado circular phygital.'
   }
 };
 
