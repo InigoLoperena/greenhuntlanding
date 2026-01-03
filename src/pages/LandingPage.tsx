@@ -87,7 +87,7 @@ export default function LandingPage() {
               }}>1</span>
                 <img src={tutorialStep1} alt="Take photos of street finds" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" />
               </div>
-              <p className="text-lg font-sedgwick-ave text-subtitle-styled">
+              <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
                 {t('landing.tutorial.step1')}
               </p>
             </div>
@@ -100,7 +100,7 @@ export default function LandingPage() {
               }}>2</span>
                 <img src={tutorialStep2} alt="Make money when someone unlocks coordinates" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" />
               </div>
-              <p className="text-lg font-sedgwick-ave text-subtitle-styled">
+              <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
                 {t('landing.tutorial.step2')}
               </p>
             </div>
@@ -113,7 +113,7 @@ export default function LandingPage() {
               }}>3</span>
                 <img src={tutorialStep3} alt="Buy coordinates and get valuable items" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" />
               </div>
-              <p className="text-lg font-sedgwick-ave text-subtitle-styled">
+              <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
                 {t('landing.tutorial.step3')}
               </p>
             </div>
@@ -141,7 +141,7 @@ export default function LandingPage() {
               }}>1</span>
                 <img alt="Explore thrift store catalogs" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" src="/lovable-uploads/7385e5d0-3dff-4261-aaeb-fd0b991b89be.png" />
               </div>
-              <p className="text-lg font-sedgwick-ave text-subtitle-styled">
+              <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
                 {t('landing.thrifting.step1')}
               </p>
             </div>
@@ -154,7 +154,7 @@ export default function LandingPage() {
               }}>2</span>
                 <img src={thriftingStep2} alt="Request pickup for donations" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" />
               </div>
-              <p className="text-lg font-sedgwick-ave text-subtitle-styled">
+              <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
                 {t('landing.thrifting.step2')}
               </p>
             </div>
@@ -167,7 +167,7 @@ export default function LandingPage() {
               }}>3</span>
                 <img src={thriftingStep3} alt="Create your own garage sale" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" />
               </div>
-              <p className="text-lg font-sedgwick-ave text-subtitle-styled">
+              <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
                 {t('landing.thrifting.step3')}
               </p>
             </div>
