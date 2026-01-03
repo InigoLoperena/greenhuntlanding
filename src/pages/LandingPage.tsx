@@ -111,7 +111,7 @@ export default function LandingPage() {
                 <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
                 color: '#699e4b'
               }}>3</span>
-                <img alt="Buy coordinates and get valuable items" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" src="/lovable-uploads/82dc7a70-9bf3-4e78-ba9f-ad642d7988f4.png" />
+                <img alt="Buy coordinates and get valuable items" className="w-full max-w-xs rounded-2xl shadow-lg object-cover aspect-[9/16]" loading="lazy" src="/lovable-uploads/82dc7a70-9bf3-4e78-ba9f-ad642d7988f4.png" />
               </div>
               <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
                 {t('landing.tutorial.step3')}
