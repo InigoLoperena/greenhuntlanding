@@ -141,7 +141,7 @@ export default function LandingPage() {
               }}>1</span>
                 <img alt="Explore thrift store catalogs" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" src="/lovable-uploads/7385e5d0-3dff-4261-aaeb-fd0b991b89be.png" />
               </div>
-              <p className="text-lg font-sedgwick-ave text-subtitle-styled">
+              <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
                 {t('landing.thrifting.step1')}
               </p>
             </div>
