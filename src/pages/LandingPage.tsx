@@ -16,6 +16,9 @@ import tutorialStep3 from "@/assets/tutorial-step-3.png";
 import thriftingStep1 from "@/assets/thrifting-step-1.png";
 import thriftingStep2 from "@/assets/thrifting-step-2.png";
 import thriftingStep3 from "@/assets/thrifting-step-3.png";
+import wasteStep1 from "@/assets/waste-step-1-new.png";
+import wasteStep2 from "@/assets/waste-step-2-new.png";
+import wasteStep3 from "@/assets/waste-step-3-new.png";
 const emailSchema = z.string().email();
 export default function LandingPage() {
   const {
@@ -169,6 +172,60 @@ export default function LandingPage() {
               </div>
               <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
                 {t('landing.thrifting.step3')}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Waste Management Section */}
+      <section className="py-16 md:py-20 px-4 bg-black relative bg-cover bg-center" style={{
+        backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
+      }}>
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <h2 className="text-3xl md:text-5xl font-permanent-marker mb-12 text-center" style={{
+            color: '#699e4b'
+          }}>
+            {t('landing.waste.title')}
+          </h2>
+          
+          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+            {/* Step 1 */}
+            <div className="flex flex-col items-center text-center">
+              <div className="relative mb-6">
+                <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
+                  color: '#699e4b'
+                }}>1</span>
+                <img src={wasteStep1} alt="Share coordinates with team" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" />
+              </div>
+              <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
+                {t('landing.waste.step1')}
+              </p>
+            </div>
+
+            {/* Step 2 */}
+            <div className="flex flex-col items-center text-center">
+              <div className="relative mb-6">
+                <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
+                  color: '#699e4b'
+                }}>2</span>
+                <img src={wasteStep2} alt="Optimized route navigation" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" />
+              </div>
+              <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
+                {t('landing.waste.step2')}
+              </p>
+            </div>
+
+            {/* Step 3 */}
+            <div className="flex flex-col items-center text-center">
+              <div className="relative mb-6">
+                <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
+                  color: '#699e4b'
+                }}>3</span>
+                <img src={wasteStep3} alt="Donate to local stores" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" />
+              </div>
+              <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
+                {t('landing.waste.step3')}
               </p>
             </div>
           </div>
