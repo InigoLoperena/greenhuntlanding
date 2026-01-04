@@ -3,8 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import greenhuntLogoNew from "@/assets/greenhunt-logo-new.svg";
-import wasteManagerVideo from "@/assets/waste-manager-video.mp4";
-import stickerRecycle from "@/assets/sticker-recycle.png";
+import heroVideo from "@/assets/hero-video.mp4";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { z } from "zod";
@@ -58,24 +57,68 @@ export const HeroSection = () => {
 
   return (
     <>
-      <section className="relative w-full min-h-screen bg-black flex items-center justify-center overflow-hidden py-12 px-4">
-        {/* Logo - Top Left */}
-        <div className="absolute top-6 left-6 z-20">
-          <img 
-            src={greenhuntLogoNew} 
-            alt="GreenHunt Logo" 
-            className="h-16 md:h-24 w-auto"
-          />
-        </div>
-
+      <section className="relative w-full min-h-[70vh] md:min-h-[80vh] bg-black flex items-start overflow-hidden pt-6 pb-12 px-4 md:px-8">
         {/* Main Content Container */}
-        <div className="container mx-auto max-w-6xl relative z-10 pt-20 md:pt-24">
+        <div className="container mx-auto max-w-7xl relative z-10">
+          {/* Logo with text - Top Left */}
+          <div className="flex items-center gap-3 mb-8 md:mb-12">
+            <img 
+              src={greenhuntLogoNew} 
+              alt="GreenHunt Logo" 
+              className="h-12 md:h-16 w-auto"
+            />
+            <span className="font-permanent-marker text-2xl md:text-3xl" style={{ color: '#6ea151' }}>
+              GreenHunt
+            </span>
+          </div>
+
           {/* Two Column Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             
-            {/* Left Side - Title */}
-            <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
-              <h1 className="font-permanent-marker text-lg md:text-xl lg:text-2xl xl:text-3xl leading-tight"
+            {/* Left Side - Arrow and Title */}
+            <div className="flex flex-col">
+              {/* Green Arrow */}
+              <div className="mb-6 md:mb-8">
+                <svg 
+                  viewBox="0 0 200 80" 
+                  className="w-48 md:w-64 h-auto"
+                  fill="none"
+                >
+                  {/* Arrow body */}
+                  <path 
+                    d="M10 45 C 30 20, 80 15, 120 25 C 140 30, 155 35, 160 40" 
+                    stroke="#6ea151" 
+                    strokeWidth="20" 
+                    strokeLinecap="round"
+                    fill="none"
+                  />
+                  {/* Arrow head */}
+                  <polygon 
+                    points="155,25 190,42 155,58" 
+                    fill="#6ea151"
+                  />
+                  {/* Sketch lines for texture */}
+                  <path 
+                    d="M15 42 C 35 22, 85 18, 125 28" 
+                    stroke="#4a7a3a" 
+                    strokeWidth="3" 
+                    strokeLinecap="round"
+                    fill="none"
+                    opacity="0.5"
+                  />
+                  <path 
+                    d="M20 48 C 40 28, 90 23, 130 33" 
+                    stroke="#8bc46a" 
+                    strokeWidth="2" 
+                    strokeLinecap="round"
+                    fill="none"
+                    opacity="0.4"
+                  />
+                </svg>
+              </div>
+
+              {/* Title */}
+              <h1 className="font-permanent-marker text-xl md:text-2xl lg:text-3xl leading-tight max-w-lg"
                   style={{ color: '#6ea151' }}>
                 This is what waste managers do with hundreds of tons of high valuable dumped stuff daily
               </h1>
@@ -83,7 +126,7 @@ export const HeroSection = () => {
 
             {/* Right Side - Video */}
             <div className="flex justify-center lg:justify-end">
-              <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 max-w-xs md:max-w-sm">
+              <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 max-w-sm md:max-w-md">
                 <video 
                   autoPlay 
                   loop 
@@ -91,28 +134,10 @@ export const HeroSection = () => {
                   playsInline
                   className="w-full h-auto"
                 >
-                  <source src={wasteManagerVideo} type="video/mp4" />
+                  <source src={heroVideo} type="video/mp4" />
                 </video>
               </div>
             </div>
-          </div>
-
-          {/* Recycle Sticker - Positioned between title and video */}
-          <div className="absolute left-1/2 lg:left-[45%] top-1/2 transform -translate-x-1/2 z-20 hidden lg:block" style={{ marginTop: '200px' }}>
-            <img 
-              src={stickerRecycle} 
-              alt="Recycle" 
-              className="w-16 h-auto"
-            />
-          </div>
-          
-          {/* Recycle Sticker - Mobile position */}
-          <div className="lg:hidden flex justify-center mt-6">
-            <img 
-              src={stickerRecycle} 
-              alt="Recycle" 
-              className="w-14 h-auto"
-            />
           </div>
         </div>
       </section>
