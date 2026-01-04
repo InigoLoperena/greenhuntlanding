@@ -135,7 +135,7 @@ export default function LandingPage() {
         <div className="container mx-auto max-w-6xl relative z-10">
           <h2 style={{
           color: '#699e4b'
-        }} className="text-3xl font-permanent-marker mb-12 text-center md:text-7xl">
+        }} className="text-3xl font-permanent-marker mb-12 text-center md:text-5xl">
             {t('landing.tutorial.title')}
           </h2>
           
