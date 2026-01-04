@@ -25,6 +25,7 @@ import junkStep2 from "@/assets/junk-step-2.png";
 import junkStep3 from "@/assets/junk-step-3.png";
 import appStoreBadges from "@/assets/app-store-badges.png";
 import wasteManagementFlow from "@/assets/waste-management-flow.png";
+import playForPlanetScreen from "@/assets/play-for-planet-screen.png";
 const emailSchema = z.string().email();
 export default function LandingPage() {
   const {
@@ -306,6 +307,27 @@ export default function LandingPage() {
               <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
                 {t('landing.waste.step3')}
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Play for the Planet Section */}
+      <section className="py-20 px-4 bg-black relative">
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-5xl font-permanent-marker mb-6 leading-tight" style={{
+                color: '#699e4b'
+              }}>
+                Play for the planet
+              </h2>
+              <p className="text-xl md:text-2xl text-subtitle-styled font-sedgwick-ave">
+                For fun or for money, company or individual, play for the planet and measure the impact of the treasures you saved from the landfill
+              </p>
+            </div>
+            <div>
+              <img src={playForPlanetScreen} alt="Play for the Planet - GreenHunt App" className="w-full max-w-md mx-auto lg:ml-auto h-auto rounded-lg" loading="lazy" />
             </div>
           </div>
         </div>
