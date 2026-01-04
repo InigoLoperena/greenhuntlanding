@@ -374,7 +374,7 @@ export default function LandingPage() {
               {t('landing.beta.description')}
             </p>
             <form onSubmit={handleWaitlistSubmit} className="space-y-4">
-              <Input type="email" placeholder={t('landing.beta.placeholder')} value={email} onChange={e => setEmail(e.target.value)} required disabled={loading} className="w-full bg-white/90" />
+              <Input type="email" placeholder={t('landing.beta.placeholder')} value={email} onChange={e => setEmail(e.target.value)} required disabled={loading} className="w-full bg-white/90 font-permanent-marker text-xl" style={{ color: '#6ea151' }} />
               <Button type="submit" disabled={loading} className="w-full bg-accent hover:bg-accent/90 font-permanent-marker" style={{
                 color: '#611a5a'
               }}>
