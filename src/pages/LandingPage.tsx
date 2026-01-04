@@ -275,7 +275,7 @@ export default function LandingPage() {
           
           {/* Waste Management Flow Diagram */}
           <div className="mb-12 flex justify-center">
-            <img src={wasteManagementFlow} alt="Waste Management Flow" className="w-full max-w-4xl rounded-lg" loading="lazy" />
+            <img alt="Waste Management Flow" className="w-full max-w-4xl rounded-lg" loading="lazy" src="/lovable-uploads/a1848cb5-8abc-4f8a-bf63-c40c183e6fde.png" />
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 md:gap-12">
