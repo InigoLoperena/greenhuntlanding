@@ -73,9 +73,9 @@ export default function LandingPage() {
       setLoading(false);
     }
   };
-  return <div className="min-h-screen text-white overflow-x-hidden relative" style={{ backgroundColor: 'transparent' }}>
+  return <div className="min-h-screen bg-black text-white overflow-x-hidden relative">
       <ScatteredBackground />
-      <div className="relative" style={{ zIndex: 1 }}>
+      <div className="relative z-10">
       <StructuredData />
       
       {/* Hero Section */}
