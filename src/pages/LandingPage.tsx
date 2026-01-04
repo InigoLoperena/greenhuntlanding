@@ -7,7 +7,6 @@ import { useLanguage } from "@/hooks/useLanguage";
 import { useState } from "react";
 import { StructuredData } from "@/components/StructuredData";
 import { HeroSection } from "@/components/HeroSection";
-import { FloatingDecoIcons } from "@/components/FloatingDecoIcons";
 import greenhuntLogoNew from "@/assets/greenhunt-logo-new.svg";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
@@ -130,11 +129,6 @@ export default function LandingPage() {
         </DialogContent>
       </Dialog>
 
-      {/* Decorative Icons Divider 1 */}
-      <div className="relative h-24 md:h-32 bg-black">
-        <FloatingDecoIcons count={3} seed={1} />
-      </div>
-
       {/* Tutorial Section */}
       <section className="py-16 md:py-20 px-4 bg-black relative">
         <div className="container mx-auto max-w-6xl relative z-10">
@@ -177,11 +171,6 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
-
-      {/* Decorative Icons Divider 2 */}
-      <div className="relative h-24 md:h-32 bg-black">
-        <FloatingDecoIcons count={4} seed={42} />
-      </div>
 
       {/* Local Phygital Thrifting Section */}
       <section className="py-16 md:py-20 px-4 bg-black relative">
@@ -226,11 +215,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Decorative Icons Divider 3 */}
-      <div className="relative h-24 md:h-32 bg-black">
-        <FloatingDecoIcons count={3} seed={99} />
-      </div>
-
       {/* Junk Removal Section */}
       <section className="py-16 md:py-20 px-4 bg-black relative">
         <div className="container mx-auto max-w-6xl relative z-10">
@@ -274,11 +258,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Decorative Icons Divider 4 */}
-      <div className="relative h-24 md:h-32 bg-black">
-        <FloatingDecoIcons count={4} seed={156} />
-      </div>
-
       {/* Waste Management Section */}
       <section className="py-16 md:py-20 px-4 bg-black relative">
         <div className="container mx-auto max-w-6xl relative z-10">
@@ -321,11 +300,6 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
-
-      {/* Decorative Icons Divider 5 */}
-      <div className="relative h-24 md:h-32 bg-black">
-        <FloatingDecoIcons count={3} seed={213} />
-      </div>
 
       {/* Ambassador Program Section */}
       <section className="py-20 px-4 bg-black relative">
