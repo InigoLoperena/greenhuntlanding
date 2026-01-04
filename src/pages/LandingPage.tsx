@@ -75,14 +75,14 @@ export default function LandingPage() {
   };
   return <div className="min-h-screen bg-black text-white overflow-x-hidden relative">
       <ScatteredBackground />
-      <div className="relative z-10">
+      <div className="relative" style={{ zIndex: 2 }}>
       <StructuredData />
       
       {/* Hero Section */}
       <HeroSection />
 
       {/* App Promo & CTA Section */}
-      <section className="bg-black px-4 py-0">
+      <section className="px-4 py-0">
         <div className="container mx-auto max-w-6xl">
           {/* Title, Description and Buttons Row */}
           <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-start justify-between mb-8">
@@ -134,7 +134,7 @@ export default function LandingPage() {
       </Dialog>
 
       {/* Tutorial Section */}
-      <section className="py-16 md:py-20 px-4 bg-black relative">
+      <section className="py-16 md:py-20 px-4 relative">
         <div className="container mx-auto max-w-6xl relative z-10">
           <h2 style={{
           color: '#699e4b'
@@ -180,7 +180,7 @@ export default function LandingPage() {
       </section>
 
       {/* Local Phygital Thrifting Section */}
-      <section className="py-16 md:py-20 px-4 bg-black relative">
+      <section className="py-16 md:py-20 px-4 relative">
         <div className="container mx-auto max-w-6xl relative z-10">
           <h2 className="text-3xl md:text-5xl font-permanent-marker mb-12 text-center" style={{
           color: '#699e4b'
@@ -223,7 +223,7 @@ export default function LandingPage() {
       </section>
 
       {/* Junk Removal Section */}
-      <section className="py-16 md:py-20 px-4 bg-black relative">
+      <section className="py-16 md:py-20 px-4 relative">
         <div className="container mx-auto max-w-6xl relative z-10">
           <h2 className="text-3xl md:text-5xl font-permanent-marker mb-12 text-center" style={{
           color: '#699e4b'
@@ -266,7 +266,7 @@ export default function LandingPage() {
       </section>
 
       {/* Waste Management Section */}
-      <section className="py-16 md:py-20 px-4 bg-black relative">
+      <section className="py-16 md:py-20 px-4 relative">
         <div className="container mx-auto max-w-6xl relative z-10">
           <h2 className="text-3xl md:text-5xl font-permanent-marker mb-12 text-center" style={{
           color: '#699e4b'
@@ -309,7 +309,7 @@ export default function LandingPage() {
       </section>
 
       {/* Ambassador Program Section */}
-      <section className="py-20 px-4 bg-black relative">
+      <section className="py-20 px-4 relative">
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
@@ -337,7 +337,7 @@ export default function LandingPage() {
       </section>
 
       {/* Join Beta Section */}
-      <section id="waitlist" className="relative py-20 px-4 bg-black">
+      <section id="waitlist" className="relative py-20 px-4">
         <div className="container mx-auto max-w-4xl text-center relative z-10">
           <div className="max-w-md mx-auto bg-black/60 backdrop-blur-sm p-8 rounded-lg border border-white/20">
             <h2 className="text-2xl font-permanent-marker mb-2" style={{
@@ -361,12 +361,12 @@ export default function LandingPage() {
       </section>
 
       {/* Separator Line */}
-      <div className="w-full flex justify-center py-8 bg-black">
+      <div className="w-full flex justify-center py-8">
         <div className="w-[95%] h-px" style={{ backgroundColor: '#b4fa74' }} />
       </div>
 
       {/* Footer */}
-      <footer className="bg-black py-12 px-4">
+      <footer className="py-12 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col items-center justify-center mb-8">
             <img src={greenhuntLogoNew} alt="GreenHunt" className="h-32 sm:h-40 lg:h-48 w-auto mb-4" loading="lazy" />
