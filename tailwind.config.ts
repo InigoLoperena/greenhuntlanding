@@ -66,13 +66,7 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				'price-blue': 'hsl(var(--price-blue))',
-				// Brand colors from knowledge
-				'brand-green': 'hsl(var(--brand-green))',
-				'brand-green-subtitle': 'hsl(var(--brand-green-subtitle))',
-				'brand-cta': 'hsl(var(--brand-cta))',
-				'brand-cta-hover': 'hsl(var(--brand-cta-hover))',
-				'brand-purple': 'hsl(var(--brand-purple))'
+				'price-blue': 'hsl(var(--price-blue))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

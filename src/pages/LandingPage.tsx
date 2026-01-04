@@ -76,7 +76,9 @@ export default function LandingPage() {
       {/* Tutorial Section */}
       <section className="py-16 md:py-20 px-4 bg-black relative">
         <div className="container mx-auto max-w-6xl relative z-10">
-          <h2 className="text-3xl md:text-7xl font-permanent-marker mb-12 text-center text-brand-green">
+          <h2 style={{
+          color: '#699e4b'
+        }} className="text-3xl font-permanent-marker mb-12 text-center md:text-7xl">
             {t('landing.tutorial.title')}
           </h2>
           
@@ -117,7 +119,9 @@ export default function LandingPage() {
       {/* Local Phygital Thrifting Section */}
       <section className="py-16 md:py-20 px-4 bg-black relative">
         <div className="container mx-auto max-w-6xl relative z-10">
-          <h2 className="text-3xl md:text-5xl font-permanent-marker mb-12 text-center text-brand-green">
+          <h2 className="text-3xl md:text-5xl font-permanent-marker mb-12 text-center" style={{
+          color: '#699e4b'
+        }}>
             {t('landing.thrifting.title')}
           </h2>
           
@@ -158,7 +162,9 @@ export default function LandingPage() {
       {/* Junk Removal Section */}
       <section className="py-16 md:py-20 px-4 bg-black relative">
         <div className="container mx-auto max-w-6xl relative z-10">
-          <h2 className="text-3xl md:text-5xl font-permanent-marker mb-12 text-center text-brand-green">
+          <h2 className="text-3xl md:text-5xl font-permanent-marker mb-12 text-center" style={{
+          color: '#699e4b'
+        }}>
             {t('landing.junk.title')}
           </h2>
           
@@ -199,7 +205,9 @@ export default function LandingPage() {
       {/* Waste Management Section */}
       <section className="py-16 md:py-20 px-4 bg-black relative">
         <div className="container mx-auto max-w-6xl relative z-10">
-          <h2 className="text-3xl md:text-5xl font-permanent-marker mb-12 text-center text-brand-green">
+          <h2 className="text-3xl md:text-5xl font-permanent-marker mb-12 text-center" style={{
+          color: '#699e4b'
+        }}>
             {t('landing.waste.title')}
           </h2>
           
@@ -242,14 +250,18 @@ export default function LandingPage() {
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <h2 className="text-3xl md:text-5xl font-permanent-marker mb-6 leading-tight text-brand-green">
+              <h2 className="text-3xl md:text-5xl font-permanent-marker mb-6 leading-tight" style={{
+              color: '#699e4b'
+            }}>
                 {t('landing.ambassador.title')}
               </h2>
               <p className="text-lg text-subtitle-styled font-sedgwick-ave mb-8">
                 {t('landing.ambassador.description')}
               </p>
               <Link to="/ambassador-program">
-                <Button className="bg-brand-cta hover:bg-brand-cta-hover text-brand-purple font-permanent-marker text-xl px-8 py-6 rounded-xl transform rotate-1 hover:rotate-0 transition-all shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)]">
+                <Button className="bg-accent hover:bg-accent/90 font-permanent-marker text-lg px-8 py-6" style={{
+                color: '#611a5a'
+              }}>
                   {t('landing.ambassador.button')}
                 </Button>
               </Link>
@@ -265,7 +277,9 @@ export default function LandingPage() {
       <section id="waitlist" className="relative py-20 px-4 bg-black">
         <div className="container mx-auto max-w-4xl text-center relative z-10">
           <div className="max-w-md mx-auto bg-black/60 backdrop-blur-sm p-8 rounded-lg border border-white/20">
-            <h2 className="text-2xl font-permanent-marker mb-2 text-brand-green">
+            <h2 className="text-2xl font-permanent-marker mb-2" style={{
+            color: '#699e4b'
+          }}>
               {t('landing.beta.title')}
             </h2>
             <p className="text-white font-sedgwick-ave mb-6">
@@ -273,7 +287,9 @@ export default function LandingPage() {
             </p>
             <form onSubmit={handleWaitlistSubmit} className="space-y-4">
               <Input type="email" placeholder={t('landing.beta.placeholder')} value={email} onChange={e => setEmail(e.target.value)} required disabled={loading} className="w-full bg-white/90" />
-              <Button type="submit" disabled={loading} className="w-full bg-brand-cta hover:bg-brand-cta-hover text-brand-purple font-permanent-marker text-xl px-8 py-6 rounded-xl transform rotate-1 hover:rotate-0 transition-all shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)]">
+              <Button type="submit" disabled={loading} className="w-full bg-accent hover:bg-accent/90 font-permanent-marker" style={{
+              color: '#611a5a'
+            }}>
                 {loading ? t('landing.beta.joining') : t('landing.beta.button')}
               </Button>
             </form>
@@ -342,11 +358,15 @@ export default function LandingPage() {
         <Button onClick={() => window.scrollTo({
         top: 0,
         behavior: 'smooth'
-      })} className="bg-brand-cta hover:bg-brand-cta-hover text-brand-purple font-permanent-marker shadow-rebel px-3 py-2 h-auto text-lg rounded-xl transform rotate-1 hover:rotate-0 transition-all shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)]" aria-label={language === 'en' ? 'Go to top' : 'Ir al principio'}>
+      })} className="bg-accent hover:bg-accent/90 font-permanent-marker shadow-rebel px-3 py-2 h-auto text-lg" style={{
+        color: '#611a5a'
+      }} aria-label={language === 'en' ? 'Go to top' : 'Ir al principio'}>
           <ArrowUp className="h-5 w-5" />
         </Button>
         
-        <Button onClick={() => setLanguage(language === 'en' ? 'es' : 'en')} className="bg-brand-cta hover:bg-brand-cta-hover text-brand-purple font-permanent-marker shadow-rebel px-3 py-2 h-auto text-lg rounded-xl transform rotate-1 hover:rotate-0 transition-all shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)]">
+        <Button onClick={() => setLanguage(language === 'en' ? 'es' : 'en')} className="bg-accent hover:bg-accent/90 font-permanent-marker shadow-rebel px-3 py-2 h-auto text-lg" style={{
+        color: '#611a5a'
+      }}>
           {language === 'en' ? 'ES' : 'EN'}
         </Button>
       </div>
