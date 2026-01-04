@@ -79,15 +79,6 @@ export const HeroSection = () => {
                   style={{ color: '#6ea151' }}>
                 This is what waste managers do with hundreds of tons of high valuable dumped stuff daily
               </h1>
-              
-              {/* Recycle Sticker - Below title */}
-              <div className="mt-6">
-                <img 
-                  src={stickerRecycle} 
-                  alt="Recycle" 
-                  className="w-14 md:w-16 lg:w-20 h-auto"
-                />
-              </div>
             </div>
 
             {/* Right Side - Video */}
@@ -104,6 +95,24 @@ export const HeroSection = () => {
                 </video>
               </div>
             </div>
+          </div>
+
+          {/* Recycle Sticker - Positioned between title and video */}
+          <div className="absolute left-1/2 lg:left-[45%] top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 hidden lg:block">
+            <img 
+              src={stickerRecycle} 
+              alt="Recycle" 
+              className="w-16 h-auto"
+            />
+          </div>
+          
+          {/* Recycle Sticker - Mobile position */}
+          <div className="lg:hidden flex justify-center mt-6">
+            <img 
+              src={stickerRecycle} 
+              alt="Recycle" 
+              className="w-14 h-auto"
+            />
           </div>
         </div>
       </section>
