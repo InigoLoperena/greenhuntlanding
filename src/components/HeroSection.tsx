@@ -8,34 +8,35 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { z } from "zod";
 import { useLanguage } from "@/hooks/useLanguage";
-
 const emailSchema = z.string().email();
-
 export const HeroSection = () => {
   const [waitlistOpen, setWaitlistOpen] = useState(false);
   const [trailerOpen, setTrailerOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
-  const { t, language } = useLanguage();
-
+  const {
+    t,
+    language
+  } = useLanguage();
   const handleWaitlistSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
     const validation = emailSchema.safeParse(email);
     if (!validation.success) {
       toast.error(t('landing.beta.invalidEmail'));
       return;
     }
-
     setLoading(true);
     try {
       // @ts-ignore - waitlist table exists
-      const { error } = await supabase
-        // @ts-ignore
-        .from('waitlist')
-        // @ts-ignore
-        .insert([{ email: email.toLowerCase().trim() }]);
-
+      const {
+        error
+      } = await supabase
+      // @ts-ignore
+      .from('waitlist')
+      // @ts-ignore
+      .insert([{
+        email: email.toLowerCase().trim()
+      }]);
       if (error) {
         if (error.code === '23505') {
           toast.error(t('landing.beta.emailExists'));
@@ -54,19 +55,13 @@ export const HeroSection = () => {
       setLoading(false);
     }
   };
-
-  return (
-    <>
+  return <>
       <section className="relative w-full min-h-[70vh] md:min-h-[80vh] bg-black flex items-start overflow-hidden pt-6 pb-12 px-4 md:px-8">
         {/* Main Content Container */}
         <div className="container mx-auto max-w-7xl relative z-10">
           {/* Logo - Top Left */}
           <div className="mb-8 md:mb-12">
-            <img 
-              src={greenhuntLogoNew} 
-              alt="GreenHunt Logo" 
-              className="h-12 md:h-16 w-auto"
-            />
+            <img src={greenhuntLogoNew} alt="GreenHunt Logo" className="h-12 md:h-16 w-auto" />
           </div>
 
           {/* Two Column Layout */}
@@ -75,8 +70,9 @@ export const HeroSection = () => {
             {/* Left Side - Title */}
             <div className="flex flex-col">
               {/* Title */}
-              <h1 className="font-permanent-marker text-xl md:text-2xl lg:text-3xl leading-tight max-w-lg"
-                  style={{ color: '#6ea151' }}>
+              <h1 style={{
+              color: '#6ea151'
+            }} className="font-permanent-marker text-xl md:text-2xl lg:text-3xl leading-tight max-w-lg my-[100px]">
                 This is what waste managers do with hundreds of tons of high valuable dumped stuff daily
               </h1>
             </div>
@@ -84,13 +80,7 @@ export const HeroSection = () => {
             {/* Right Side - Video */}
             <div className="flex justify-center lg:justify-end">
               <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 max-w-sm md:max-w-md">
-                <video 
-                  autoPlay 
-                  loop 
-                  muted 
-                  playsInline
-                  className="w-full h-auto"
-                >
+                <video autoPlay loop muted playsInline className="w-full h-auto">
                   <source src={heroVideo} type="video/mp4" />
                 </video>
               </div>
@@ -108,21 +98,11 @@ export const HeroSection = () => {
             </DialogTitle>
           </DialogHeader>
           <form onSubmit={handleWaitlistSubmit} className="space-y-4">
-            <Input
-              type="email"
-              placeholder={language === 'en' ? 'Enter your email' : 'Ingresa tu email'}
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="font-sedgwick-ave"
-            />
-            <Button
-              type="submit"
-              disabled={loading}
-              className="w-full bg-accent hover:bg-accent/90 font-permanent-marker"
-              style={{ color: '#611a5a' }}
-            >
-              {loading ? (language === 'en' ? 'Joining...' : 'Uniéndose...') : (language === 'en' ? 'Join Waitlist' : 'Unirse a la Lista')}
+            <Input type="email" placeholder={language === 'en' ? 'Enter your email' : 'Ingresa tu email'} value={email} onChange={e => setEmail(e.target.value)} required className="font-sedgwick-ave" />
+            <Button type="submit" disabled={loading} className="w-full bg-accent hover:bg-accent/90 font-permanent-marker" style={{
+            color: '#611a5a'
+          }}>
+              {loading ? language === 'en' ? 'Joining...' : 'Uniéndose...' : language === 'en' ? 'Join Waitlist' : 'Unirse a la Lista'}
             </Button>
           </form>
         </DialogContent>
@@ -132,19 +112,9 @@ export const HeroSection = () => {
       <Dialog open={trailerOpen} onOpenChange={setTrailerOpen}>
         <DialogContent className="sm:max-w-4xl p-0">
           <div className="aspect-video">
-            <iframe
-              width="100%"
-              height="100%"
-              src={trailerOpen ? "https://www.youtube.com/embed/RHj_lCvC9xw?autoplay=1" : ""}
-              title="GreenHunt Trailer"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="rounded-lg"
-            />
+            <iframe width="100%" height="100%" src={trailerOpen ? "https://www.youtube.com/embed/RHj_lCvC9xw?autoplay=1" : ""} title="GreenHunt Trailer" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="rounded-lg" />
           </div>
         </DialogContent>
       </Dialog>
-    </>
-  );
+    </>;
 };
