@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Linkedin, Instagram, Youtube, ArrowUp } from "lucide-react";
+import { Linkedin, Instagram, Youtube, ArrowUp, Video } from "lucide-react";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/hooks/useLanguage";
 import { useState } from "react";
@@ -31,6 +32,8 @@ export default function LandingPage() {
   } = useLanguage();
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
+  const [waitlistOpen, setWaitlistOpen] = useState(false);
+  const [trailerOpen, setTrailerOpen] = useState(false);
   const handleWaitlistSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const validation = emailSchema.safeParse(email);
@@ -72,6 +75,46 @@ export default function LandingPage() {
       
       {/* Hero Section */}
       <HeroSection />
+
+      {/* CTA Buttons Section */}
+      <section className="py-8 px-4 bg-black">
+        <div className="container mx-auto max-w-6xl flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <Button
+            onClick={() => setWaitlistOpen(true)}
+            className="bg-accent hover:bg-accent/90 font-permanent-marker text-lg px-6 py-4 h-auto"
+            style={{ color: '#611a5a' }}
+          >
+            {language === 'en' ? 'Join Beta' : 'Únete a Beta'}
+          </Button>
+          
+          <Button
+            onClick={() => setTrailerOpen(true)}
+            variant="outline"
+            className="font-permanent-marker text-lg px-6 py-4 h-auto border-2 border-white text-white hover:bg-white hover:text-black"
+          >
+            <Video className="mr-2 h-5 w-5" />
+            Trailer
+          </Button>
+        </div>
+      </section>
+
+      {/* Trailer Dialog */}
+      <Dialog open={trailerOpen} onOpenChange={setTrailerOpen}>
+        <DialogContent className="sm:max-w-4xl p-0">
+          <div className="aspect-video">
+            <iframe
+              width="100%"
+              height="100%"
+              src={trailerOpen ? "https://www.youtube.com/embed/RHj_lCvC9xw?autoplay=1" : ""}
+              title="GreenHunt Trailer"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="rounded-lg"
+            />
+          </div>
+        </DialogContent>
+      </Dialog>
 
       {/* Tutorial Section */}
       <section className="py-16 md:py-20 px-4 bg-black relative">

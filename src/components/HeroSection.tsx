@@ -104,25 +104,6 @@ export const HeroSection = () => {
             Play to Earn $ and Save the planet
           </h1>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-2 items-start mt-4">
-            <Button
-              onClick={() => setWaitlistOpen(true)}
-              className="bg-accent hover:bg-accent/90 font-permanent-marker text-xs px-3 py-2 text-base h-auto"
-              style={{ color: '#611a5a' }}
-            >
-              {language === 'en' ? 'Join Beta' : 'Únete a Beta'}
-            </Button>
-            
-            <Button
-              onClick={() => setTrailerOpen(true)}
-              variant="outline"
-              className="font-permanent-marker text-xs px-3 py-2 text-base h-auto border-2 border-white text-white hover:bg-white hover:text-black"
-            >
-              <Video className="mr-2 h-3 w-3" />
-              Trailer
-            </Button>
-          </div>
         </div>
       </section>
 
