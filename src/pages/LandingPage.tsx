@@ -212,7 +212,7 @@ export default function LandingPage() {
                 <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
                 color: '#699e4b'
               }}>2</span>
-                <img src={junkStep2} alt="Users bid for removal" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" />
+                <img alt="Users bid for removal" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" src="/lovable-uploads/7af001b6-bb85-47b6-bc77-636a2a117ade.png" />
               </div>
               <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
                 {t('landing.junk.step2')}
