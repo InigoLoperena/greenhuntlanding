@@ -74,9 +74,7 @@ export default function LandingPage() {
       <HeroSection />
 
       {/* Tutorial Section */}
-      <section className="py-16 md:py-20 px-4 bg-black relative bg-cover bg-center" style={{
-      backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
-    }}>
+      <section className="py-16 md:py-20 px-4 bg-black relative">
         <div className="container mx-auto max-w-6xl relative z-10">
           <h2 style={{
           color: '#699e4b'
@@ -128,9 +126,7 @@ export default function LandingPage() {
       </section>
 
       {/* Local Phygital Thrifting Section */}
-      <section className="py-16 md:py-20 px-4 bg-black relative bg-cover bg-center" style={{
-      backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
-    }}>
+      <section className="py-16 md:py-20 px-4 bg-black relative">
         <div className="container mx-auto max-w-6xl relative z-10">
           <h2 className="text-3xl md:text-5xl font-permanent-marker mb-12 text-center" style={{
           color: '#699e4b'
@@ -182,9 +178,7 @@ export default function LandingPage() {
       </section>
 
       {/* Junk Removal Section */}
-      <section className="py-16 md:py-20 px-4 bg-black relative bg-cover bg-center" style={{
-      backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
-    }}>
+      <section className="py-16 md:py-20 px-4 bg-black relative">
         <div className="container mx-auto max-w-6xl relative z-10">
           <h2 className="text-3xl md:text-5xl font-permanent-marker mb-12 text-center" style={{
           color: '#699e4b'
@@ -236,9 +230,7 @@ export default function LandingPage() {
       </section>
 
       {/* Waste Management Section */}
-      <section className="py-16 md:py-20 px-4 bg-black relative bg-cover bg-center" style={{
-      backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
-    }}>
+      <section className="py-16 md:py-20 px-4 bg-black relative">
         <div className="container mx-auto max-w-6xl relative z-10">
           <h2 className="text-3xl md:text-5xl font-permanent-marker mb-12 text-center" style={{
           color: '#699e4b'
@@ -290,9 +282,7 @@ export default function LandingPage() {
       </section>
 
       {/* Ambassador Program Section */}
-      <section className="py-20 px-4 bg-black relative bg-cover bg-center" style={{
-      backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
-    }}>
+      <section className="py-20 px-4 bg-black relative">
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
@@ -320,9 +310,7 @@ export default function LandingPage() {
       </section>
 
       {/* Join Beta Section */}
-      <section id="waitlist" className="relative py-20 px-4 bg-black bg-cover bg-center" style={{
-      backgroundImage: 'url(/lovable-uploads/brick-wall-dark.png)'
-    }}>
+      <section id="waitlist" className="relative py-20 px-4 bg-black">
         <div className="container mx-auto max-w-4xl text-center relative z-10">
           <div className="max-w-md mx-auto bg-black/60 backdrop-blur-sm p-8 rounded-lg border border-white/20">
             <h2 className="text-2xl font-permanent-marker mb-2" style={{
