@@ -360,6 +360,11 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Separator Line */}
+      <div className="w-full flex justify-center py-8 bg-black">
+        <div className="w-[95%] h-px" style={{ backgroundColor: '#b4fa74' }} />
+      </div>
+
       {/* Footer */}
       <footer className="bg-black py-12 px-4">
         <div className="container mx-auto max-w-6xl">
