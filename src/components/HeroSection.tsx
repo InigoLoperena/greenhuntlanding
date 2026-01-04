@@ -60,63 +60,20 @@ export const HeroSection = () => {
       <section className="relative w-full min-h-[70vh] md:min-h-[80vh] bg-black flex items-start overflow-hidden pt-6 pb-12 px-4 md:px-8">
         {/* Main Content Container */}
         <div className="container mx-auto max-w-7xl relative z-10">
-          {/* Logo with text - Top Left */}
-          <div className="flex items-center gap-3 mb-8 md:mb-12">
+          {/* Logo - Top Left */}
+          <div className="mb-8 md:mb-12">
             <img 
               src={greenhuntLogoNew} 
               alt="GreenHunt Logo" 
               className="h-12 md:h-16 w-auto"
             />
-            <span className="font-permanent-marker text-2xl md:text-3xl" style={{ color: '#6ea151' }}>
-              GreenHunt
-            </span>
           </div>
 
           {/* Two Column Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             
-            {/* Left Side - Arrow and Title */}
+            {/* Left Side - Title */}
             <div className="flex flex-col">
-              {/* Green Arrow */}
-              <div className="mb-6 md:mb-8">
-                <svg 
-                  viewBox="0 0 200 80" 
-                  className="w-48 md:w-64 h-auto"
-                  fill="none"
-                >
-                  {/* Arrow body */}
-                  <path 
-                    d="M10 45 C 30 20, 80 15, 120 25 C 140 30, 155 35, 160 40" 
-                    stroke="#6ea151" 
-                    strokeWidth="20" 
-                    strokeLinecap="round"
-                    fill="none"
-                  />
-                  {/* Arrow head */}
-                  <polygon 
-                    points="155,25 190,42 155,58" 
-                    fill="#6ea151"
-                  />
-                  {/* Sketch lines for texture */}
-                  <path 
-                    d="M15 42 C 35 22, 85 18, 125 28" 
-                    stroke="#4a7a3a" 
-                    strokeWidth="3" 
-                    strokeLinecap="round"
-                    fill="none"
-                    opacity="0.5"
-                  />
-                  <path 
-                    d="M20 48 C 40 28, 90 23, 130 33" 
-                    stroke="#8bc46a" 
-                    strokeWidth="2" 
-                    strokeLinecap="round"
-                    fill="none"
-                    opacity="0.4"
-                  />
-                </svg>
-              </div>
-
               {/* Title */}
               <h1 className="font-permanent-marker text-xl md:text-2xl lg:text-3xl leading-tight max-w-lg"
                   style={{ color: '#6ea151' }}>
