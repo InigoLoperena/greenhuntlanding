@@ -196,7 +196,7 @@ export default function LandingPage() {
                 <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
                 color: '#699e4b'
               }}>1</span>
-                <img src={wasteStep1} alt="Share coordinates with team" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" />
+                <img alt="Share coordinates with team" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" src="/lovable-uploads/746cc348-3ec5-4283-8ede-3caa2807ada7.png" />
               </div>
               <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
                 {t('landing.waste.step1')}
