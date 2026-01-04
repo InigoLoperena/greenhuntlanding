@@ -75,8 +75,7 @@ export const HeroSection = () => {
             {/* Left Side - Title */}
             <div className="flex flex-col">
               {/* Title */}
-              <h1 className="font-permanent-marker text-xl md:text-2xl lg:text-3xl leading-tight max-w-lg"
-                  style={{ color: '#6ea151' }}>
+              <h1 className="font-permanent-marker text-xl md:text-2xl lg:text-3xl leading-tight max-w-lg text-title-neon">
                 This is what waste managers do with hundreds of tons of high valuable dumped stuff daily
               </h1>
             </div>
