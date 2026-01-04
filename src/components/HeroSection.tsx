@@ -57,7 +57,7 @@ export const HeroSection = () => {
 
   return (
     <>
-      <section className="relative w-full min-h-[70vh] md:min-h-[80vh] flex items-start overflow-hidden pt-6 pb-12 px-4 md:px-8">
+      <section className="relative w-full min-h-[70vh] md:min-h-[80vh] bg-black flex items-start overflow-hidden pt-6 pb-12 px-4 md:px-8">
         {/* Main Content Container */}
         <div className="container mx-auto max-w-7xl relative z-10">
           {/* Logo - Top Left */}

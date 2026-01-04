@@ -18,7 +18,7 @@ const images = [
   bgMeat,
 ];
 
-// Pre-generated random positions distributed across viewport
+// Pre-generated random positions to avoid re-rendering issues
 const positions = [
   { top: '5%', left: '8%', rotate: 15 },
   { top: '12%', left: '85%', rotate: -20 },
@@ -34,37 +34,41 @@ const positions = [
   { top: '75%', left: '86%', rotate: 25 },
   { top: '85%', left: '9%', rotate: 35 },
   { top: '82%', left: '92%', rotate: -30 },
+  { top: '92%', left: '5%', rotate: 5 },
+  { top: '95%', left: '89%', rotate: -45 },
+  { top: '15%', left: '45%', rotate: 12 },
+  { top: '32%', left: '52%', rotate: -18 },
+  { top: '45%', left: '48%', rotate: 28 },
+  { top: '68%', left: '50%', rotate: -22 },
+  { top: '88%', left: '46%', rotate: 8 },
+  { top: '8%', left: '25%', rotate: -12 },
+  { top: '28%', left: '72%', rotate: 22 },
+  { top: '55%', left: '30%', rotate: -8 },
+  { top: '78%', left: '68%', rotate: 38 },
+  { top: '18%', left: '65%', rotate: -28 },
+  { top: '42%', left: '22%', rotate: 18 },
+  { top: '65%', left: '78%', rotate: -5 },
+  { top: '90%', left: '35%', rotate: 32 },
+  { top: '3%', left: '58%', rotate: -15 },
+  { top: '35%', left: '38%', rotate: 42 },
+  { top: '70%', left: '15%', rotate: -38 },
 ];
 
 export default function ScatteredBackground() {
   return (
-    <div 
-      style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        width: '100vw',
-        height: '100vh',
-        overflow: 'hidden',
-        pointerEvents: 'none',
-        zIndex: 1,
-        backgroundColor: 'black',
-      }}
-    >
+    <div className="fixed inset-0 bg-black overflow-hidden pointer-events-none z-0">
       {positions.map((pos, index) => (
         <img
           key={index}
           src={images[index % images.length]}
           alt=""
+          className="absolute w-12 h-12 object-contain opacity-40"
           style={{
-            position: 'absolute',
             top: pos.top,
             left: pos.left,
             transform: `rotate(${pos.rotate}deg)`,
-            width: '80px',
-            height: '80px',
-            objectFit: 'contain',
           }}
+          loading="lazy"
         />
       ))}
     </div>
