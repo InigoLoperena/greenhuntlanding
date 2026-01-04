@@ -6,6 +6,7 @@ import { useLanguage } from "@/hooks/useLanguage";
 import { useState } from "react";
 import { StructuredData } from "@/components/StructuredData";
 import { HeroSection } from "@/components/HeroSection";
+import ScatteredStickers from "@/components/ScatteredStickers";
 import greenhuntLogoNew from "@/assets/greenhunt-logo-new.svg";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
@@ -69,6 +70,7 @@ export default function LandingPage() {
   };
   return <div className="min-h-screen bg-black text-white overflow-x-hidden">
       <StructuredData />
+      <ScatteredStickers />
       
       {/* Hero Section */}
       <HeroSection />
