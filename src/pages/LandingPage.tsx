@@ -24,7 +24,7 @@ import junkStep1 from "@/assets/junk-step-1.jpg";
 import junkStep2 from "@/assets/junk-step-2.png";
 import junkStep3 from "@/assets/junk-step-3.png";
 import appStoreBadges from "@/assets/app-store-badges.png";
-import circularEconomyFlow from "@/assets/circular-economy-flow.png";
+import wasteManagementFlow from "@/assets/waste-management-flow.png";
 const emailSchema = z.string().email();
 export default function LandingPage() {
   const {
@@ -272,9 +272,9 @@ export default function LandingPage() {
             {t('landing.waste.title')}
           </h2>
           
-          {/* Circular Economy Flow Diagram */}
-          <div className="mb-12">
-            
+          {/* Waste Management Flow Diagram */}
+          <div className="mb-12 flex justify-center">
+            <img src={wasteManagementFlow} alt="Waste Management Flow" className="w-full max-w-4xl rounded-lg" loading="lazy" />
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 md:gap-12">
