@@ -98,7 +98,7 @@ export const HeroSection = () => {
           </div>
 
           {/* Recycle Sticker - Positioned between title and video */}
-          <div className="absolute left-1/2 lg:left-[45%] top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 hidden lg:block">
+          <div className="absolute left-1/2 lg:left-[45%] top-1/2 transform -translate-x-1/2 z-20 hidden lg:block" style={{ marginTop: '200px' }}>
             <img 
               src={stickerRecycle} 
               alt="Recycle" 
