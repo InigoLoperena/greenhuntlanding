@@ -18,38 +18,40 @@ const stickers = [
   { src: stickerPizza, alt: 'Pizza Slice' },
 ];
 
-// Positions scattered throughout the page (percentage based, relative to parent)
+// Positions carefully placed in margins and between sections (avoiding header and content)
+// Using pixel values from top to ensure they start after the hero section
 const positions = [
-  { top: '5%', left: '8%', rotate: -15 },
-  { top: '12%', left: '75%', rotate: 12 },
-  { top: '22%', left: '15%', rotate: -8 },
-  { top: '30%', left: '82%', rotate: 20 },
-  { top: '42%', left: '5%', rotate: 5 },
-  { top: '52%', left: '88%', rotate: -12 },
-  { top: '62%', left: '20%', rotate: 18 },
-  { top: '72%', left: '78%', rotate: -5 },
+  { top: '850px', left: '2%', rotate: -15 },
+  { top: '1100px', right: '2%', rotate: 12 },
+  { top: '1600px', left: '3%', rotate: -8 },
+  { top: '1900px', right: '3%', rotate: 20 },
+  { top: '2500px', left: '2%', rotate: 5 },
+  { top: '2800px', right: '2%', rotate: -12 },
+  { top: '3400px', left: '3%', rotate: 18 },
+  { top: '3700px', right: '3%', rotate: -5 },
 ];
 
 const ScatteredStickers = () => {
   return (
-    <>
+    <div className="absolute inset-0 overflow-visible pointer-events-none hidden lg:block" aria-hidden="true">
       {stickers.map((sticker, index) => {
         const pos = positions[index];
         return (
           <img
             key={index}
             src={sticker.src}
-            alt={sticker.alt}
-            className="absolute w-16 h-16 object-contain opacity-80 pointer-events-none z-20"
+            alt=""
+            className="absolute w-16 h-16 object-contain opacity-70"
             style={{
               top: pos.top,
               left: pos.left,
+              right: pos.right,
               transform: `rotate(${pos.rotate}deg)`,
             }}
           />
         );
       })}
-    </>
+    </div>
   );
 };
 
