@@ -68,7 +68,7 @@ export default function LandingPage() {
       setLoading(false);
     }
   };
-  return <div className="min-h-screen bg-black text-white overflow-x-hidden">
+  return <div className="min-h-screen bg-black text-white overflow-x-hidden relative">
       <StructuredData />
       <ScatteredStickers />
       
@@ -76,18 +76,18 @@ export default function LandingPage() {
       <HeroSection />
 
       {/* Tutorial Section */}
-      <section className="py-16 md:py-20 px-4 bg-black relative">
+      <section className="py-24 md:py-32 px-4 bg-black relative">
         <div className="container mx-auto max-w-6xl relative z-10">
           <h2 style={{
           color: '#699e4b'
-        }} className="text-3xl font-permanent-marker mb-12 text-center md:text-7xl">
+        }} className="text-3xl font-permanent-marker mb-16 text-center md:text-7xl">
             {t('landing.tutorial.title')}
           </h2>
           
-          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+          <div className="grid md:grid-cols-3 gap-12 md:gap-16">
             {/* Step 1 */}
             <div className="flex flex-col items-center text-center">
-              <div className="relative mb-6">
+              <div className="relative mb-8">
                 <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
                 color: '#699e4b'
               }}>1</span>
@@ -100,7 +100,7 @@ export default function LandingPage() {
 
             {/* Step 2 */}
             <div className="flex flex-col items-center text-center">
-              <div className="relative mb-6">
+              <div className="relative mb-8">
                 <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
                 color: '#699e4b'
               }}>2</span>
@@ -113,7 +113,7 @@ export default function LandingPage() {
 
             {/* Step 3 */}
             <div className="flex flex-col items-center text-center">
-              <div className="relative mb-6">
+              <div className="relative mb-8">
                 <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
                 color: '#699e4b'
               }}>3</span>
@@ -128,18 +128,18 @@ export default function LandingPage() {
       </section>
 
       {/* Local Phygital Thrifting Section */}
-      <section className="py-16 md:py-20 px-4 bg-black relative">
+      <section className="py-24 md:py-32 px-4 bg-black relative">
         <div className="container mx-auto max-w-6xl relative z-10">
-          <h2 className="text-3xl md:text-5xl font-permanent-marker mb-12 text-center" style={{
+          <h2 className="text-3xl md:text-5xl font-permanent-marker mb-16 text-center" style={{
           color: '#699e4b'
         }}>
             {t('landing.thrifting.title')}
           </h2>
           
-          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+          <div className="grid md:grid-cols-3 gap-12 md:gap-16">
             {/* Step 1 */}
             <div className="flex flex-col items-center text-center">
-              <div className="relative mb-6">
+              <div className="relative mb-8">
                 <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
                 color: '#699e4b'
               }}>1</span>
@@ -152,7 +152,7 @@ export default function LandingPage() {
 
             {/* Step 2 */}
             <div className="flex flex-col items-center text-center">
-              <div className="relative mb-6">
+              <div className="relative mb-8">
                 <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
                 color: '#699e4b'
               }}>2</span>
@@ -165,7 +165,7 @@ export default function LandingPage() {
 
             {/* Step 3 */}
             <div className="flex flex-col items-center text-center">
-              <div className="relative mb-6">
+              <div className="relative mb-8">
                 <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
                 color: '#699e4b'
               }}>3</span>
@@ -180,18 +180,18 @@ export default function LandingPage() {
       </section>
 
       {/* Junk Removal Section */}
-      <section className="py-16 md:py-20 px-4 bg-black relative">
+      <section className="py-24 md:py-32 px-4 bg-black relative">
         <div className="container mx-auto max-w-6xl relative z-10">
-          <h2 className="text-3xl md:text-5xl font-permanent-marker mb-12 text-center" style={{
+          <h2 className="text-3xl md:text-5xl font-permanent-marker mb-16 text-center" style={{
           color: '#699e4b'
         }}>
             {t('landing.junk.title')}
           </h2>
           
-          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+          <div className="grid md:grid-cols-3 gap-12 md:gap-16">
             {/* Step 1 */}
             <div className="flex flex-col items-center text-center">
-              <div className="relative mb-6">
+              <div className="relative mb-8">
                 <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
                 color: '#699e4b'
               }}>1</span>
@@ -204,7 +204,7 @@ export default function LandingPage() {
 
             {/* Step 2 */}
             <div className="flex flex-col items-center text-center">
-              <div className="relative mb-6">
+              <div className="relative mb-8">
                 <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
                 color: '#699e4b'
               }}>2</span>
@@ -217,7 +217,7 @@ export default function LandingPage() {
 
             {/* Step 3 */}
             <div className="flex flex-col items-center text-center">
-              <div className="relative mb-6">
+              <div className="relative mb-8">
                 <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
                 color: '#699e4b'
               }}>3</span>
@@ -232,18 +232,18 @@ export default function LandingPage() {
       </section>
 
       {/* Waste Management Section */}
-      <section className="py-16 md:py-20 px-4 bg-black relative">
+      <section className="py-24 md:py-32 px-4 bg-black relative">
         <div className="container mx-auto max-w-6xl relative z-10">
-          <h2 className="text-3xl md:text-5xl font-permanent-marker mb-12 text-center" style={{
+          <h2 className="text-3xl md:text-5xl font-permanent-marker mb-16 text-center" style={{
           color: '#699e4b'
         }}>
             {t('landing.waste.title')}
           </h2>
           
-          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+          <div className="grid md:grid-cols-3 gap-12 md:gap-16">
             {/* Step 1 */}
             <div className="flex flex-col items-center text-center">
-              <div className="relative mb-6">
+              <div className="relative mb-8">
                 <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
                 color: '#699e4b'
               }}>1</span>
@@ -256,7 +256,7 @@ export default function LandingPage() {
 
             {/* Step 2 */}
             <div className="flex flex-col items-center text-center">
-              <div className="relative mb-6">
+              <div className="relative mb-8">
                 <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
                 color: '#699e4b'
               }}>2</span>
@@ -269,7 +269,7 @@ export default function LandingPage() {
 
             {/* Step 3 */}
             <div className="flex flex-col items-center text-center">
-              <div className="relative mb-6">
+              <div className="relative mb-8">
                 <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
                 color: '#699e4b'
               }}>3</span>
@@ -284,16 +284,16 @@ export default function LandingPage() {
       </section>
 
       {/* Ambassador Program Section */}
-      <section className="py-20 px-4 bg-black relative">
+      <section className="py-28 px-4 bg-black relative">
         <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1">
-              <h2 className="text-3xl md:text-5xl font-permanent-marker mb-6 leading-tight" style={{
+              <h2 className="text-3xl md:text-5xl font-permanent-marker mb-8 leading-tight" style={{
               color: '#699e4b'
             }}>
                 {t('landing.ambassador.title')}
               </h2>
-              <p className="text-lg text-subtitle-styled font-sedgwick-ave mb-8">
+              <p className="text-lg text-subtitle-styled font-sedgwick-ave mb-10">
                 {t('landing.ambassador.description')}
               </p>
               <Link to="/ambassador-program">
@@ -312,18 +312,18 @@ export default function LandingPage() {
       </section>
 
       {/* Join Beta Section */}
-      <section id="waitlist" className="relative py-20 px-4 bg-black">
+      <section id="waitlist" className="relative py-28 px-4 bg-black">
         <div className="container mx-auto max-w-4xl text-center relative z-10">
-          <div className="max-w-md mx-auto bg-black/60 backdrop-blur-sm p-8 rounded-lg border border-white/20">
-            <h2 className="text-2xl font-permanent-marker mb-2" style={{
+          <div className="max-w-md mx-auto bg-black/60 backdrop-blur-sm p-10 rounded-lg border border-white/20">
+            <h2 className="text-2xl font-permanent-marker mb-3" style={{
             color: '#699e4b'
           }}>
               {t('landing.beta.title')}
             </h2>
-            <p className="text-white font-sedgwick-ave mb-6">
+            <p className="text-white font-sedgwick-ave mb-8">
               {t('landing.beta.description')}
             </p>
-            <form onSubmit={handleWaitlistSubmit} className="space-y-4">
+            <form onSubmit={handleWaitlistSubmit} className="space-y-5">
               <Input type="email" placeholder={t('landing.beta.placeholder')} value={email} onChange={e => setEmail(e.target.value)} required disabled={loading} className="w-full bg-white/90" />
               <Button type="submit" disabled={loading} className="w-full bg-accent hover:bg-accent/90 font-permanent-marker" style={{
               color: '#611a5a'
