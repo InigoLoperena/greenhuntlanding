@@ -125,18 +125,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Circular Economy Flow Diagram */}
-      <section className="py-16 md:py-20 px-4 bg-black">
-        <div className="container mx-auto max-w-6xl">
-          <img 
-            src={circularEconomyFlow} 
-            alt="Circular Economy Flow - Trash Picker, Valuable Stuff Picker, Recycling Plant, Phygital Circular Market" 
-            className="w-full max-w-5xl mx-auto" 
-            loading="lazy"
-          />
-        </div>
-      </section>
-
       {/* Trailer Dialog */}
       <Dialog open={trailerOpen} onOpenChange={setTrailerOpen}>
         <DialogContent className="sm:max-w-4xl p-0">
@@ -281,11 +269,21 @@ export default function LandingPage() {
       {/* Waste Management Section */}
       <section className="py-16 md:py-20 px-4 bg-black relative">
         <div className="container mx-auto max-w-6xl relative z-10">
-          <h2 className="text-3xl md:text-5xl font-permanent-marker mb-12 text-center" style={{
+          <h2 className="text-3xl md:text-5xl font-permanent-marker mb-8 text-center" style={{
           color: '#699e4b'
         }}>
             {t('landing.waste.title')}
           </h2>
+          
+          {/* Circular Economy Flow Diagram */}
+          <div className="mb-12">
+            <img 
+              src={circularEconomyFlow} 
+              alt="Circular Economy Flow - Trash Picker, Valuable Stuff Picker, Recycling Plant, Phygital Circular Market" 
+              className="w-full max-w-5xl mx-auto" 
+              loading="lazy"
+            />
+          </div>
           
           <div className="grid md:grid-cols-3 gap-8 md:gap-12">
             {/* Step 1 */}
