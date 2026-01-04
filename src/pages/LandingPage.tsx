@@ -24,7 +24,7 @@ import junkStep1 from "@/assets/junk-step-1.jpg";
 import junkStep2 from "@/assets/junk-step-2.png";
 import junkStep3 from "@/assets/junk-step-3.png";
 import appStoreBadges from "@/assets/app-store-badges.png";
-import stoopingNotAllowedSign from "@/assets/stooping-not-allowed-sign.png";
+
 const emailSchema = z.string().email();
 export default function LandingPage() {
   const {
@@ -148,7 +148,6 @@ export default function LandingPage() {
               <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
                 {t('landing.tutorial.step1')}
               </p>
-              <img src={stoopingNotAllowedSign} alt="Notice: Stooping Not Allowed sign" className="w-24 h-auto mt-4" loading="lazy" />
             </div>
 
             {/* Step 2 */}
@@ -169,8 +168,8 @@ export default function LandingPage() {
               <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
                 {t('landing.tutorial.step3')}
               </p>
-              <p className="font-sedgwick-ave text-subtitle-styled text-lg mt-3 opacity-80 max-w-xs">
-                *It is not guaranteed that the object is still there, but the time of publication or the publisher user's reputation are indicators of the probability
+              <p className="font-sedgwick-ave text-subtitle-styled text-lg mt-3 opacity-80 max-w-md">
+                *It is not guaranteed that the object is still there, but the time of publication or the publisher user's reputation are indicators of the probability. We are integrating other systems to make sure publications are legit
               </p>
             </div>
           </div>
