@@ -25,6 +25,7 @@ import junkStep1 from "@/assets/junk-step-1.jpg";
 import junkStep2 from "@/assets/junk-step-2.png";
 import junkStep3 from "@/assets/junk-step-3.png";
 import appStoreBadges from "@/assets/app-store-badges.png";
+import circularEconomyFlow from "@/assets/circular-economy-flow.png";
 
 const emailSchema = z.string().email();
 export default function LandingPage() {
@@ -121,6 +122,18 @@ export default function LandingPage() {
               Coming Soon
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Circular Economy Flow Diagram */}
+      <section className="py-16 md:py-20 px-4 bg-black">
+        <div className="container mx-auto max-w-6xl">
+          <img 
+            src={circularEconomyFlow} 
+            alt="Circular Economy Flow - Trash Picker, Valuable Stuff Picker, Recycling Plant, Phygital Circular Market" 
+            className="w-full max-w-5xl mx-auto" 
+            loading="lazy"
+          />
         </div>
       </section>
 
