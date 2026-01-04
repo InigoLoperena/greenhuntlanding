@@ -78,9 +78,10 @@ export default function LandingPage() {
       <HeroSection />
 
       {/* App Promo & CTA Section */}
-      <section className="bg-black px-px py-0">
+      <section className="bg-black px-4 py-0">
         <div className="container mx-auto max-w-6xl">
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center justify-between">
+          {/* Title, Description and Buttons Row */}
+          <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-start justify-between mb-8">
             
             {/* Left Side - App Info */}
             <div className="flex-1 text-center lg:text-left">
@@ -89,34 +90,32 @@ export default function LandingPage() {
             }}>
                 Local circular economy App
               </h2>
-              <p className="font-sedgwick-ave text-subtitle-styled text-xl md:text-2xl mb-6 max-w-xl mx-auto lg:mx-0">
+              <p className="font-sedgwick-ave text-subtitle-styled text-xl md:text-2xl max-w-xl mx-auto lg:mx-0">
                 We make local circular collaboration between bargain hunters, valuable stuff dumpers, waste managers, junk removers, thrift stores and garage sales easy, fun and profitable
-              </p>
-              
-              {/* App Store Logos */}
-              <div className="flex items-center justify-center lg:justify-start mb-4">
-                <img src={appStoreBadges} alt="Available on App Store and Google Play" className="h-36 md:h-42 w-auto opacity-60" />
-              </div>
-              
-              {/* Coming Soon */}
-              <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
-                Coming Soon
               </p>
             </div>
             
-            {/* Right Side - CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button onClick={() => setWaitlistOpen(true)} className="bg-accent hover:bg-accent/90 font-permanent-marker text-lg px-6 py-4 h-auto" style={{
+            {/* Right Side - CTA Buttons (smaller, aligned with text) */}
+            <div className="flex flex-row gap-3 items-center lg:mt-16">
+              <Button onClick={() => setWaitlistOpen(true)} className="bg-accent hover:bg-accent/90 font-permanent-marker text-sm px-4 py-2 h-auto" style={{
               color: '#611a5a'
             }}>
                 {language === 'en' ? 'Join Beta' : 'Únete a Beta'}
               </Button>
               
-              <Button onClick={() => setTrailerOpen(true)} variant="outline" className="font-permanent-marker text-lg px-6 py-4 h-auto border-2 border-white text-white hover:bg-white hover:text-black">
-                <Video className="mr-2 h-5 w-5" />
+              <Button onClick={() => setTrailerOpen(true)} variant="outline" className="font-permanent-marker text-sm px-4 py-2 h-auto border border-white text-white hover:bg-white hover:text-black">
+                <Video className="mr-1 h-4 w-4" />
                 Trailer
               </Button>
             </div>
+          </div>
+          
+          {/* Centered App Store Badges */}
+          <div className="flex flex-col items-center justify-center mb-4">
+            <img src={appStoreBadges} alt="Available on App Store and Google Play" className="h-16 md:h-20 w-auto opacity-60" />
+            <p className="font-sedgwick-ave text-subtitle-styled text-2xl mt-2">
+              Coming Soon
+            </p>
           </div>
         </div>
       </section>
