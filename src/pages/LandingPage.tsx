@@ -85,10 +85,7 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-3 gap-8 md:gap-12">
             {/* Step 1 */}
             <div className="flex flex-col items-center text-center">
-              <div className="relative mb-6">
-                <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
-                color: '#699e4b'
-              }}>1</span>
+              <div className="mb-6">
                 <img src={tutorialStep1} alt="Take photos of street finds" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" />
               </div>
               <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
@@ -98,10 +95,7 @@ export default function LandingPage() {
 
             {/* Step 2 */}
             <div className="flex flex-col items-center text-center">
-              <div className="relative mb-6">
-                <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
-                color: '#699e4b'
-              }}>2</span>
+              <div className="mb-6">
                 <img src={tutorialStep2} alt="Make money when someone unlocks coordinates" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" />
               </div>
               <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
@@ -111,10 +105,7 @@ export default function LandingPage() {
 
             {/* Step 3 */}
             <div className="flex flex-col items-center text-center">
-              <div className="relative mb-6">
-                <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
-                color: '#699e4b'
-              }}>3</span>
+              <div className="mb-6">
                 <img src={tutorialStep3} alt="Buy coordinates and get valuable items" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" />
               </div>
               <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
@@ -137,10 +128,7 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-3 gap-8 md:gap-12">
             {/* Step 1 */}
             <div className="flex flex-col items-center text-center">
-              <div className="relative mb-6">
-                <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
-                color: '#699e4b'
-              }}>1</span>
+              <div className="mb-6">
                 <img alt="Explore thrift store catalogs" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" src="/lovable-uploads/a6d30d46-5c10-4aa8-92c3-e2125445a269.png" />
               </div>
               <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
@@ -150,10 +138,7 @@ export default function LandingPage() {
 
             {/* Step 2 */}
             <div className="flex flex-col items-center text-center">
-              <div className="relative mb-6">
-                <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
-                color: '#699e4b'
-              }}>2</span>
+              <div className="mb-6">
                 <img src={thriftingStep2} alt="Request pickup for donations" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" />
               </div>
               <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
@@ -163,10 +148,7 @@ export default function LandingPage() {
 
             {/* Step 3 */}
             <div className="flex flex-col items-center text-center">
-              <div className="relative mb-6">
-                <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
-                color: '#699e4b'
-              }}>3</span>
+              <div className="mb-6">
                 <img src={thriftingStep3} alt="Create your own garage sale" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" />
               </div>
               <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
@@ -189,10 +171,7 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-3 gap-8 md:gap-12">
             {/* Step 1 */}
             <div className="flex flex-col items-center text-center">
-              <div className="relative mb-6">
-                <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
-                color: '#699e4b'
-              }}>1</span>
+              <div className="mb-6">
                 <img alt="Take photos of junk" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" src="/lovable-uploads/ddb40b3c-aada-427a-ae3c-992bf6263692.png" />
               </div>
               <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
@@ -202,10 +181,7 @@ export default function LandingPage() {
 
             {/* Step 2 */}
             <div className="flex flex-col items-center text-center">
-              <div className="relative mb-6">
-                <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
-                color: '#699e4b'
-              }}>2</span>
+              <div className="mb-6">
                 <img alt="Users bid for removal" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" src="/lovable-uploads/7af001b6-bb85-47b6-bc77-636a2a117ade.png" />
               </div>
               <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
@@ -215,10 +191,7 @@ export default function LandingPage() {
 
             {/* Step 3 */}
             <div className="flex flex-col items-center text-center">
-              <div className="relative mb-6">
-                <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
-                color: '#699e4b'
-              }}>3</span>
+              <div className="mb-6">
                 <img src={junkStep3} alt="Accept bid and schedule" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" />
               </div>
               <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
@@ -241,10 +214,7 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-3 gap-8 md:gap-12">
             {/* Step 1 */}
             <div className="flex flex-col items-center text-center">
-              <div className="relative mb-6">
-                <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
-                color: '#699e4b'
-              }}>1</span>
+              <div className="mb-6">
                 <img alt="Share coordinates with team" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" src="/lovable-uploads/746cc348-3ec5-4283-8ede-3caa2807ada7.png" />
               </div>
               <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
@@ -254,10 +224,7 @@ export default function LandingPage() {
 
             {/* Step 2 */}
             <div className="flex flex-col items-center text-center">
-              <div className="relative mb-6">
-                <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
-                color: '#699e4b'
-              }}>2</span>
+              <div className="mb-6">
                 <img alt="Optimized route navigation" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" src="/lovable-uploads/4d4b3cc6-477f-46d2-b66e-1849b04e2072.png" />
               </div>
               <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
@@ -267,10 +234,7 @@ export default function LandingPage() {
 
             {/* Step 3 */}
             <div className="flex flex-col items-center text-center">
-              <div className="relative mb-6">
-                <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
-                color: '#699e4b'
-              }}>3</span>
+              <div className="mb-6">
                 <img src={wasteStep3} alt="Donate to local stores" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" />
               </div>
               <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
