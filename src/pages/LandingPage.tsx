@@ -78,13 +78,15 @@ export default function LandingPage() {
       <HeroSection />
 
       {/* App Promo & CTA Section */}
-      <section className="py-12 px-4 bg-black">
+      <section className="bg-black px-px py-0">
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center justify-between">
             
             {/* Left Side - App Info */}
             <div className="flex-1 text-center lg:text-left">
-              <h2 className="font-permanent-marker text-3xl md:text-4xl lg:text-5xl mb-4" style={{ color: '#6ea151' }}>
+              <h2 className="font-permanent-marker text-3xl md:text-4xl lg:text-5xl mb-4" style={{
+              color: '#6ea151'
+            }}>
                 Local circular economy App
               </h2>
               <p className="font-sedgwick-ave text-subtitle-styled text-xl md:text-2xl mb-6 max-w-xl mx-auto lg:mx-0">
@@ -93,11 +95,7 @@ export default function LandingPage() {
               
               {/* App Store Logos */}
               <div className="flex items-center justify-center lg:justify-start mb-4">
-                <img 
-                  src={appStoreBadges} 
-                  alt="Available on App Store and Google Play" 
-                  className="h-36 md:h-42 w-auto opacity-60"
-                />
+                <img src={appStoreBadges} alt="Available on App Store and Google Play" className="h-36 md:h-42 w-auto opacity-60" />
               </div>
               
               {/* Coming Soon */}
@@ -108,19 +106,13 @@ export default function LandingPage() {
             
             {/* Right Side - CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                onClick={() => setWaitlistOpen(true)}
-                className="bg-accent hover:bg-accent/90 font-permanent-marker text-lg px-6 py-4 h-auto"
-                style={{ color: '#611a5a' }}
-              >
+              <Button onClick={() => setWaitlistOpen(true)} className="bg-accent hover:bg-accent/90 font-permanent-marker text-lg px-6 py-4 h-auto" style={{
+              color: '#611a5a'
+            }}>
                 {language === 'en' ? 'Join Beta' : 'Únete a Beta'}
               </Button>
               
-              <Button
-                onClick={() => setTrailerOpen(true)}
-                variant="outline"
-                className="font-permanent-marker text-lg px-6 py-4 h-auto border-2 border-white text-white hover:bg-white hover:text-black"
-              >
+              <Button onClick={() => setTrailerOpen(true)} variant="outline" className="font-permanent-marker text-lg px-6 py-4 h-auto border-2 border-white text-white hover:bg-white hover:text-black">
                 <Video className="mr-2 h-5 w-5" />
                 Trailer
               </Button>
@@ -133,16 +125,7 @@ export default function LandingPage() {
       <Dialog open={trailerOpen} onOpenChange={setTrailerOpen}>
         <DialogContent className="sm:max-w-4xl p-0">
           <div className="aspect-video">
-            <iframe
-              width="100%"
-              height="100%"
-              src={trailerOpen ? "https://www.youtube.com/embed/RHj_lCvC9xw?autoplay=1" : ""}
-              title="GreenHunt Trailer"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="rounded-lg"
-            />
+            <iframe width="100%" height="100%" src={trailerOpen ? "https://www.youtube.com/embed/RHj_lCvC9xw?autoplay=1" : ""} title="GreenHunt Trailer" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="rounded-lg" />
           </div>
         </DialogContent>
       </Dialog>
