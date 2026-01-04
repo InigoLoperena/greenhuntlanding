@@ -66,8 +66,7 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				'price-blue': 'hsl(var(--price-blue))',
-				'title-neon': 'hsl(var(--title-neon))'
+				'price-blue': 'hsl(var(--price-blue))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

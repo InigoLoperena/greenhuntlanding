@@ -84,7 +84,9 @@ export default function LandingPage() {
             
             {/* Left Side - App Info */}
             <div className="flex-1 text-center lg:text-left">
-              <h2 className="font-permanent-marker text-3xl md:text-4xl lg:text-5xl mb-4 text-title-neon">
+              <h2 className="font-permanent-marker text-3xl md:text-4xl lg:text-5xl mb-4" style={{
+              color: '#6ea151'
+            }}>
                 Local circular economy App
               </h2>
               <p className="font-sedgwick-ave text-subtitle-styled text-xl md:text-2xl mb-6 max-w-xl mx-auto lg:mx-0">
@@ -131,7 +133,9 @@ export default function LandingPage() {
       {/* Tutorial Section */}
       <section className="py-16 md:py-20 px-4 bg-black relative">
         <div className="container mx-auto max-w-6xl relative z-10">
-          <h2 className="text-3xl font-permanent-marker mb-12 text-center md:text-7xl text-title-neon">
+          <h2 style={{
+          color: '#699e4b'
+        }} className="text-3xl font-permanent-marker mb-12 text-center md:text-7xl">
             {t('landing.tutorial.title')}
           </h2>
           
@@ -172,7 +176,9 @@ export default function LandingPage() {
       {/* Local Phygital Thrifting Section */}
       <section className="py-16 md:py-20 px-4 bg-black relative">
         <div className="container mx-auto max-w-6xl relative z-10">
-          <h2 className="text-3xl md:text-5xl font-permanent-marker mb-12 text-center text-title-neon">
+          <h2 className="text-3xl md:text-5xl font-permanent-marker mb-12 text-center" style={{
+          color: '#699e4b'
+        }}>
             {t('landing.thrifting.title')}
           </h2>
           
@@ -213,7 +219,9 @@ export default function LandingPage() {
       {/* Junk Removal Section */}
       <section className="py-16 md:py-20 px-4 bg-black relative">
         <div className="container mx-auto max-w-6xl relative z-10">
-          <h2 className="text-3xl md:text-5xl font-permanent-marker mb-12 text-center text-title-neon">
+          <h2 className="text-3xl md:text-5xl font-permanent-marker mb-12 text-center" style={{
+          color: '#699e4b'
+        }}>
             {t('landing.junk.title')}
           </h2>
           
@@ -254,7 +262,9 @@ export default function LandingPage() {
       {/* Waste Management Section */}
       <section className="py-16 md:py-20 px-4 bg-black relative">
         <div className="container mx-auto max-w-6xl relative z-10">
-          <h2 className="text-3xl md:text-5xl font-permanent-marker mb-12 text-center text-title-neon">
+          <h2 className="text-3xl md:text-5xl font-permanent-marker mb-12 text-center" style={{
+          color: '#699e4b'
+        }}>
             {t('landing.waste.title')}
           </h2>
           
@@ -297,7 +307,9 @@ export default function LandingPage() {
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <h2 className="text-3xl md:text-5xl font-permanent-marker mb-6 leading-tight text-title-neon">
+              <h2 className="text-3xl md:text-5xl font-permanent-marker mb-6 leading-tight" style={{
+              color: '#699e4b'
+            }}>
                 {t('landing.ambassador.title')}
               </h2>
               <p className="text-lg text-subtitle-styled font-sedgwick-ave mb-8">
@@ -322,7 +334,9 @@ export default function LandingPage() {
       <section id="waitlist" className="relative py-20 px-4 bg-black">
         <div className="container mx-auto max-w-4xl text-center relative z-10">
           <div className="max-w-md mx-auto bg-black/60 backdrop-blur-sm p-8 rounded-lg border border-white/20">
-            <h2 className="text-2xl font-permanent-marker mb-2 text-title-neon">
+            <h2 className="text-2xl font-permanent-marker mb-2" style={{
+            color: '#699e4b'
+          }}>
               {t('landing.beta.title')}
             </h2>
             <p className="text-white font-sedgwick-ave mb-6">
