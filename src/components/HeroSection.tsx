@@ -9,7 +9,11 @@ import { toast } from "sonner";
 import { z } from "zod";
 import { useLanguage } from "@/hooks/useLanguage";
 const emailSchema = z.string().email();
-export const HeroSection = () => {
+interface HeroSectionProps {
+  className?: string;
+}
+
+export const HeroSection = ({ className }: HeroSectionProps) => {
   const [waitlistOpen, setWaitlistOpen] = useState(false);
   const [trailerOpen, setTrailerOpen] = useState(false);
   const [email, setEmail] = useState("");
@@ -56,12 +60,12 @@ export const HeroSection = () => {
     }
   };
   return <>
-      <section className="relative w-full min-h-[70vh] md:min-h-[80vh] bg-black flex items-start overflow-hidden pt-6 pb-12 px-4 md:px-8">
+      <section className={`relative w-full min-h-[70vh] md:min-h-[80vh] bg-black flex items-start overflow-hidden pt-6 pb-12 px-4 md:px-8 ${className || ''}`}>
         {/* Main Content Container */}
         <div className="container mx-auto max-w-7xl relative z-10">
           {/* Logo - Top Left */}
           <div className="mb-8 md:mb-12">
-            <img src={greenhuntLogoNew} alt="GreenHunt Logo" className="h-12 md:h-16 w-auto" />
+            <img src={greenhuntLogoNew} alt="GreenHunt Logo" className="h-32 sm:h-40 lg:h-48 w-auto" />
           </div>
 
           {/* Two Column Layout */}
