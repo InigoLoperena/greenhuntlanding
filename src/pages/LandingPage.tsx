@@ -19,6 +19,9 @@ import thriftingStep3 from "@/assets/thrifting-step-3.png";
 import wasteStep1 from "@/assets/waste-step-1-new.png";
 import wasteStep2 from "@/assets/waste-step-2-new.png";
 import wasteStep3 from "@/assets/waste-step-3-new.png";
+import junkStep1 from "@/assets/junk-step-1.jpg";
+import junkStep2 from "@/assets/junk-step-2.png";
+import junkStep3 from "@/assets/junk-step-3.png";
 const emailSchema = z.string().email();
 export default function LandingPage() {
   const {
@@ -172,6 +175,60 @@ export default function LandingPage() {
               </div>
               <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
                 {t('landing.thrifting.step3')}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Junk Removal Section */}
+      <section className="py-16 md:py-20 px-4 bg-black relative bg-cover bg-center" style={{
+      backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
+    }}>
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <h2 className="text-3xl md:text-5xl font-permanent-marker mb-12 text-center" style={{
+          color: '#699e4b'
+        }}>
+            {t('landing.junk.title')}
+          </h2>
+          
+          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+            {/* Step 1 */}
+            <div className="flex flex-col items-center text-center">
+              <div className="relative mb-6">
+                <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
+                color: '#699e4b'
+              }}>1</span>
+                <img src={junkStep1} alt="Take photos of junk" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" />
+              </div>
+              <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
+                {t('landing.junk.step1')}
+              </p>
+            </div>
+
+            {/* Step 2 */}
+            <div className="flex flex-col items-center text-center">
+              <div className="relative mb-6">
+                <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
+                color: '#699e4b'
+              }}>2</span>
+                <img src={junkStep2} alt="Users bid for removal" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" />
+              </div>
+              <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
+                {t('landing.junk.step2')}
+              </p>
+            </div>
+
+            {/* Step 3 */}
+            <div className="flex flex-col items-center text-center">
+              <div className="relative mb-6">
+                <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
+                color: '#699e4b'
+              }}>3</span>
+                <img src={junkStep3} alt="Accept bid and schedule" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" />
+              </div>
+              <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
+                {t('landing.junk.step3')}
               </p>
             </div>
           </div>

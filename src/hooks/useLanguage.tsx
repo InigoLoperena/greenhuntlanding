@@ -114,7 +114,11 @@ const translations: Record<Language, Record<string, string>> = {
     'landing.waste.title': 'WASTE MANAGEMENT',
     'landing.waste.step1': 'Share valuable item coordinates with your team with a push of a button.',
     'landing.waste.step2': 'Go to exact locations with an optimized route to pick up valuable stuff.',
-    'landing.waste.step3': 'Donate it to local stores or sell it on your phygital circular market.'
+    'landing.waste.step3': 'Donate it to local stores or sell it on your phygital circular market.',
+    'landing.junk.title': 'JUNK REMOVAL',
+    'landing.junk.step1': 'Take photos of your junk and fill the form.',
+    'landing.junk.step2': 'Other users bid to pay you or to charge you for removing the junk.',
+    'landing.junk.step3': 'Accept the bid you want and schedule the pick up.'
   },
   es: {
     'landing.hero.cta.abandoned': 'ENCUENTRA MUEBLES ABANDONADOS',
@@ -221,7 +225,11 @@ const translations: Record<Language, Record<string, string>> = {
     'landing.waste.title': 'GESTIÓN DE RESIDUOS',
     'landing.waste.step1': 'Comparte las coordenadas de objetos valiosos con tu equipo con solo pulsar un botón.',
     'landing.waste.step2': 'Ve a ubicaciones exactas con una ruta optimizada para recoger cosas valiosas.',
-    'landing.waste.step3': 'Dónalo a tiendas locales o véndelo en tu mercado circular phygital.'
+    'landing.waste.step3': 'Dónalo a tiendas locales o véndelo en tu mercado circular phygital.',
+    'landing.junk.title': 'ELIMINACIÓN DE BASURA',
+    'landing.junk.step1': 'Toma fotos de tu basura y completa el formulario.',
+    'landing.junk.step2': 'Otros usuarios pujan para pagarte o cobrarte por retirar la basura.',
+    'landing.junk.step3': 'Acepta la oferta que quieras y programa la recogida.'
   }
 };
 
