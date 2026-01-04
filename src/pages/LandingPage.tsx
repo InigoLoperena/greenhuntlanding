@@ -180,12 +180,12 @@ export default function LandingPage() {
 
       {/* Waste Management Section */}
       <section className="py-16 md:py-20 px-4 bg-black relative bg-cover bg-center" style={{
-        backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
-      }}>
+      backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)'
+    }}>
         <div className="container mx-auto max-w-6xl relative z-10">
           <h2 className="text-3xl md:text-5xl font-permanent-marker mb-12 text-center" style={{
-            color: '#699e4b'
-          }}>
+          color: '#699e4b'
+        }}>
             {t('landing.waste.title')}
           </h2>
           
@@ -194,8 +194,8 @@ export default function LandingPage() {
             <div className="flex flex-col items-center text-center">
               <div className="relative mb-6">
                 <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
-                  color: '#699e4b'
-                }}>1</span>
+                color: '#699e4b'
+              }}>1</span>
                 <img src={wasteStep1} alt="Share coordinates with team" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" />
               </div>
               <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
@@ -207,9 +207,9 @@ export default function LandingPage() {
             <div className="flex flex-col items-center text-center">
               <div className="relative mb-6">
                 <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
-                  color: '#699e4b'
-                }}>2</span>
-                <img src={wasteStep2} alt="Optimized route navigation" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" />
+                color: '#699e4b'
+              }}>2</span>
+                <img alt="Optimized route navigation" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" src="/lovable-uploads/4d4b3cc6-477f-46d2-b66e-1849b04e2072.png" />
               </div>
               <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
                 {t('landing.waste.step2')}
@@ -220,8 +220,8 @@ export default function LandingPage() {
             <div className="flex flex-col items-center text-center">
               <div className="relative mb-6">
                 <span className="absolute -top-4 -left-4 text-6xl font-permanent-marker" style={{
-                  color: '#699e4b'
-                }}>3</span>
+                color: '#699e4b'
+              }}>3</span>
                 <img src={wasteStep3} alt="Donate to local stores" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" />
               </div>
               <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
