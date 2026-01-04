@@ -78,7 +78,7 @@ export default function LandingPage() {
       <StructuredData />
       
       {/* Hero Section */}
-      <HeroSection />
+      <HeroSection className="my-0 py-[90px]" />
 
       {/* App Promo & CTA Section */}
       <section className="bg-black px-4 py-0">
