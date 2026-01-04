@@ -32,8 +32,15 @@ Underground, urban and rebellious brand style with Impact font and uppercase tex
     --muted: 200 3% 12%; /* Color 3: Gris oscuro #1d2122 */
     --muted-foreground: 124 63% 20%;
 
-    --accent: 82 52% 41%; /* Color 2: Verde claro #729f31 */
-    --accent-foreground: 0 0% 100%;
+    --accent: 75 61% 50%; /* Verde CTA #a2c041 */
+    --accent-foreground: 314 62% 23%; /* Púrpura #611a5a */
+    
+    /* Brand colors from knowledge */
+    --brand-green: 86 68% 71%; /* #b5ef77 for titles */
+    --brand-green-subtitle: 85 44% 70%; /* #b4d88b for subtitles */
+    --brand-cta: 75 61% 50%; /* #a2c041 for buttons */
+    --brand-cta-hover: 75 56% 44%; /* #8da836 for button hover */
+    --brand-purple: 314 62% 23%; /* #611a5a for button text */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -161,7 +168,31 @@ Underground, urban and rebellious brand style with Impact font and uppercase tex
   .text-subtitle-styled {
     font-family: 'Sedgwick Ave', cursive;
     text-transform: lowercase;
-    color: #a2c041;
+    color: #b4d88b;
+  }
+  
+  /* Brand title styling from knowledge */
+  .text-brand-title {
+    font-family: 'Permanent Marker', cursive;
+    color: #b5ef77;
+  }
+  
+  /* Primary CTA button styling from knowledge */
+  .btn-cta-primary {
+    background-color: #a2c041;
+    color: #611a5a;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.25rem;
+    padding: 1.5rem 2rem;
+    border-radius: 0.75rem;
+    transform: rotate(1deg);
+    transition: all 0.3s ease;
+    box-shadow: 4px 4px 0px 0px rgba(255, 255, 255, 0.2);
+  }
+  
+  .btn-cta-primary:hover {
+    background-color: #8da836;
+    transform: rotate(0deg);
   }
 }
 
