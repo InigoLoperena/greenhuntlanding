@@ -96,7 +96,7 @@ export default function LandingPage() {
                 <img 
                   src={appStoreBadges} 
                   alt="Available on App Store and Google Play" 
-                  className="h-12 md:h-14 w-auto opacity-60"
+                  className="h-36 md:h-42 w-auto opacity-60"
                 />
               </div>
               
