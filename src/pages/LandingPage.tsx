@@ -134,7 +134,7 @@ export default function LandingPage() {
             
             {/* Right Side - Phone Image */}
             <div className="flex-1 flex items-center justify-center">
-              <img src={appHeroPhone} alt="GreenHunt App Screenshot" className="h-80 md:h-[450px] lg:h-[550px] w-auto object-contain" loading="lazy" />
+              <img src={appHeroPhone} alt="GreenHunt App Screenshot" className="h-96 md:h-[550px] lg:h-[700px] w-auto object-contain" loading="lazy" />
             </div>
           </div>
         </div>
