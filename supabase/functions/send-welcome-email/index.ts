@@ -136,7 +136,7 @@ const handler = async (req: Request): Promise<Response> => {
         Authorization: `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "GreenHunt <onboarding@resend.dev>",
+      from: "GreenHunt <welcome@greenhunt.net>",
         to: [email],
         subject: "Welcome to GreenHunt Beta! 🌿",
         html: emailHtml,
