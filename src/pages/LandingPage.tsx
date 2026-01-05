@@ -64,18 +64,18 @@ export default function LandingPage() {
           toast.error(t('landing.beta.error'));
         }
       } else {
+        const userEmail = email.toLowerCase().trim();
         toast.success(t('landing.beta.success'));
         setEmail("");
         
         // Send welcome email
         try {
-          await supabase.functions.invoke('send-welcome-email', {
-            body: { email: email.toLowerCase().trim() }
+          const { data, error: emailError } = await supabase.functions.invoke('send-welcome-email', {
+            body: { email: userEmail }
           });
-          console.log('Welcome email sent successfully');
+          console.log('Welcome email response:', data, emailError);
         } catch (emailError) {
           console.error('Error sending welcome email:', emailError);
-          // Don't show error to user - they're already registered
         }
       }
     } catch (error) {
