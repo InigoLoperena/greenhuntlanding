@@ -76,19 +76,11 @@ export const HeroSection = ({ className }: HeroSectionProps) => {
               {/* Title */}
               <h1 style={{
               color: '#6ea151'
-            }} className="font-permanent-marker text-xl md:text-2xl lg:text-3xl leading-tight max-w-lg mt-8 mb-6">
+            }} className="font-permanent-marker text-xl md:text-2xl lg:text-3xl leading-tight max-w-lg mt-8">
                 {language === 'en' 
                   ? 'This is what waste managers do with hundreds of tons of high valuable dumped stuff daily'
                   : 'Esto es lo que hacen los gestores de residuos con cientos de toneladas de cosas valiosas tiradas a diario'}
               </h1>
-              
-              {/* GET BETA Button */}
-              <Button 
-                onClick={() => setWaitlistOpen(true)}
-                className="bg-[#a2c041] hover:bg-[#8da836] text-[#611a5a] font-permanent-marker text-xl px-8 py-6 rounded-xl transform rotate-1 hover:rotate-0 transition-all shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)] w-fit"
-              >
-                {language === 'en' ? 'GET BETA' : 'OBTÉN BETA'}
-              </Button>
             </div>
 
             {/* Right Side - Video */}

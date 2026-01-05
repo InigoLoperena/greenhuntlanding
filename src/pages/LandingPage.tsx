@@ -110,11 +110,9 @@ export default function LandingPage() {
               </p>
               
               {/* CTA Buttons - Below Description */}
-              <div className="flex flex-row gap-3 items-center justify-center lg:justify-start">
-                <Button onClick={() => setWaitlistOpen(true)} className="bg-accent hover:bg-accent/90 font-permanent-marker text-sm px-4 py-2 h-auto" style={{
-                  color: '#611a5a'
-                }}>
-                  {language === 'en' ? 'Get Beta' : 'Obtén Beta'}
+              <div className="flex flex-row gap-4 items-center justify-center lg:justify-start">
+                <Button onClick={() => setWaitlistOpen(true)} className="bg-[#a2c041] hover:bg-[#8da836] text-[#611a5a] font-permanent-marker text-xl px-8 py-6 rounded-xl transform rotate-1 hover:rotate-0 transition-all shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)]">
+                  {language === 'en' ? 'GET BETA' : 'OBTÉN BETA'}
                 </Button>
                 
                 <Button onClick={() => setTrailerOpen(true)} variant="outline" className="font-permanent-marker text-sm px-4 py-2 h-auto border border-white text-white hover:bg-white hover:text-black">
