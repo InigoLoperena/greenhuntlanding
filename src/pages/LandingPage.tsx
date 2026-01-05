@@ -140,6 +140,37 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Waitlist Dialog */}
+      <Dialog open={waitlistOpen} onOpenChange={setWaitlistOpen}>
+        <DialogContent className="sm:max-w-md bg-black border-accent/20">
+          <div className="text-center">
+            <h3 className="font-permanent-marker text-2xl mb-4" style={{ color: '#b4fa74' }}>
+              {language === 'en' ? 'Get the Beta' : 'Obtén la Beta'}
+            </h3>
+          </div>
+          <form onSubmit={handleWaitlistSubmit} className="space-y-4">
+            <Input
+              type="email"
+              placeholder={language === 'en' ? 'Enter your email' : 'Ingresa tu email'}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              className="font-sedgwick-ave bg-black/50 border-accent/30 text-white"
+            />
+            <Button
+              type="submit"
+              disabled={loading}
+              className="w-full bg-[#a2c041] hover:bg-[#8da836] font-permanent-marker text-lg"
+              style={{ color: '#611a5a' }}
+            >
+              {loading
+                ? (language === 'en' ? 'Sending...' : 'Enviando...')
+                : (language === 'en' ? 'GET BETA' : 'OBTÉN BETA')}
+            </Button>
+          </form>
+        </DialogContent>
+      </Dialog>
+
       {/* Trailer Dialog */}
       <Dialog open={trailerOpen} onOpenChange={setTrailerOpen}>
         <DialogContent className="sm:max-w-4xl p-0">
