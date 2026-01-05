@@ -98,7 +98,7 @@ export default function LandingPage() {
           {/* Title Row with Phone Image */}
           <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-center justify-between">
             
-            {/* Left Side - App Info with Buttons and Badges */}
+            {/* Left Side - App Info with Buttons */}
             <div className="flex-1 text-center lg:text-left">
               <h2 className="font-permanent-marker text-3xl md:text-4xl lg:text-5xl mb-4" style={{
                 color: '#6ea151'
@@ -110,7 +110,7 @@ export default function LandingPage() {
               </p>
               
               {/* CTA Buttons - Below Description */}
-              <div className="flex flex-row gap-3 items-center justify-center lg:justify-start mb-8">
+              <div className="flex flex-row gap-3 items-center justify-center lg:justify-start">
                 <Button onClick={() => setWaitlistOpen(true)} className="bg-accent hover:bg-accent/90 font-permanent-marker text-sm px-4 py-2 h-auto" style={{
                   color: '#611a5a'
                 }}>
@@ -123,8 +123,8 @@ export default function LandingPage() {
                 </Button>
               </div>
               
-              {/* App Store Badges - Directly under buttons */}
-              <div className="flex flex-col items-center lg:items-start">
+              {/* App Store Badges - Centered below buttons */}
+              <div className="flex flex-col items-center lg:items-center mt-10">
                 <img src={appStoreBadges} alt="Available on App Store and Google Play" className="w-[280px] md:w-[320px] h-auto" />
                 <p style={{
                   color: '#97c26c'
