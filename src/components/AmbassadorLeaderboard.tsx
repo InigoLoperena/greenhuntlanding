@@ -48,7 +48,7 @@ export function AmbassadorLeaderboard() {
     return (
       <Card className="bg-black/50 border-primary/20">
         <CardContent className="p-8 text-center">
-          <p className="text-subtitle-styled font-sedgwick-ave">{t('ambassador.loading')}</p>
+          <p className="text-subtitle-styled font-sedgwick-ave text-xl">{t('ambassador.loading')}</p>
         </CardContent>
       </Card>
     );
@@ -63,7 +63,7 @@ export function AmbassadorLeaderboard() {
       </CardHeader>
       <CardContent>
         {leaderboard.length === 0 ? (
-          <p className="text-center text-subtitle-styled font-sedgwick-ave py-8">
+          <p className="text-center text-subtitle-styled font-sedgwick-ave text-xl py-8">
             {t('ambassador.leaderboard.empty')}
           </p>
         ) : (
@@ -86,7 +86,7 @@ export function AmbassadorLeaderboard() {
                   </div>
                   <div className="flex gap-6 text-right">
                     <div>
-                      <p className="text-xs text-muted-foreground font-sedgwick-ave">
+                      <p className="text-subtitle-styled font-sedgwick-ave text-sm">
                         {t('ambassador.leaderboard.stores')}
                       </p>
                       <p className="text-lg font-permanent-marker text-accent">
@@ -94,7 +94,7 @@ export function AmbassadorLeaderboard() {
                       </p>
                     </div>
                     <div>
-                      <p className="text-xs text-muted-foreground font-sedgwick-ave">
+                      <p className="text-subtitle-styled font-sedgwick-ave text-sm">
                         {t('ambassador.leaderboard.earned')}
                       </p>
                       <p className="text-lg font-permanent-marker text-accent">
