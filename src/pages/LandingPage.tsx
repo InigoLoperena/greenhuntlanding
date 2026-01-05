@@ -90,7 +90,7 @@ export default function LandingPage() {
       <StructuredData />
       
       {/* Hero Section */}
-      <HeroSection className="my-0 py-[80px]" onOpenWaitlist={() => setWaitlistOpen(true)} />
+      <HeroSection className="my-0 py-[80px]" />
 
       {/* App Promo & CTA Section */}
       <section className="bg-black px-4 py-0">
