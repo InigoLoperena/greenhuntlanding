@@ -26,6 +26,7 @@ import junkStep3 from "@/assets/junk-step-3.png";
 import appStoreBadges from "@/assets/app-store-badges.png";
 import wasteManagementFlow from "@/assets/waste-management-flow.png";
 import playForPlanetScreen from "@/assets/play-for-planet-screen.png";
+import appHeroPhone from "@/assets/app-hero-phone.png";
 const emailSchema = z.string().email();
 export default function LandingPage() {
   const {
@@ -83,33 +84,43 @@ export default function LandingPage() {
       {/* App Promo & CTA Section */}
       <section className="bg-black px-4 py-0">
         <div className="container mx-auto max-w-6xl">
-          {/* Title, Description and Buttons Row */}
+          {/* Title Row with Phone Image */}
           <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-start justify-between mb-8">
             
-            {/* Left Side - App Info */}
+            {/* Left Side - App Info with Buttons */}
             <div className="flex-1 text-center lg:text-left">
               <h2 className="font-permanent-marker text-3xl md:text-4xl lg:text-5xl mb-4" style={{
                 color: '#6ea151'
               }}>
                 Local circular economy App
               </h2>
-              <p className="font-sedgwick-ave text-subtitle-styled text-xl md:text-2xl max-w-xl mx-auto lg:mx-0">
+              <p className="font-sedgwick-ave text-subtitle-styled text-xl md:text-2xl max-w-xl mx-auto lg:mx-0 mb-6">
                 We make local circular collaboration between bargain hunters, valuable stuff dumpers, waste managers, junk removers, thrift stores and garage sales easy, fun and profitable
               </p>
+              
+              {/* CTA Buttons - Below Description */}
+              <div className="flex flex-row gap-3 items-center justify-center lg:justify-start">
+                <Button onClick={() => setWaitlistOpen(true)} className="bg-accent hover:bg-accent/90 font-permanent-marker text-sm px-4 py-2 h-auto" style={{
+                  color: '#611a5a'
+                }}>
+                  {language === 'en' ? 'Join Beta' : 'Únete a Beta'}
+                </Button>
+                
+                <Button onClick={() => setTrailerOpen(true)} variant="outline" className="font-permanent-marker text-sm px-4 py-2 h-auto border border-white text-white hover:bg-white hover:text-black">
+                  <Video className="mr-1 h-4 w-4" />
+                  Trailer
+                </Button>
+              </div>
             </div>
             
-            {/* Right Side - CTA Buttons (smaller, aligned with text) */}
-            <div className="flex flex-row gap-3 items-center lg:mt-16">
-              <Button onClick={() => setWaitlistOpen(true)} className="bg-accent hover:bg-accent/90 font-permanent-marker text-sm px-4 py-2 h-auto" style={{
-                color: '#611a5a'
-              }}>
-                {language === 'en' ? 'Join Beta' : 'Únete a Beta'}
-              </Button>
-              
-              <Button onClick={() => setTrailerOpen(true)} variant="outline" className="font-permanent-marker text-sm px-4 py-2 h-auto border border-white text-white hover:bg-white hover:text-black">
-                <Video className="mr-1 h-4 w-4" />
-                Trailer
-              </Button>
+            {/* Right Side - Phone Image */}
+            <div className="flex-shrink-0">
+              <img 
+                src={appHeroPhone} 
+                alt="GreenHunt App Screenshot" 
+                className="h-64 md:h-80 lg:h-96 w-auto object-contain"
+                loading="lazy"
+              />
             </div>
           </div>
           
