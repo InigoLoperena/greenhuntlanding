@@ -125,9 +125,9 @@ export default function LandingPage() {
           </div>
           
           {/* Centered App Store Badges */}
-          <div className="flex flex-col items-center justify-center mb-8">
-            <img src={appStoreBadges} alt="Available on App Store and Google Play" className="h-12 md:h-14 w-auto" />
-            <p className="font-sedgwick-ave text-subtitle-styled text-xl md:text-2xl mt-3">
+          <div className="flex flex-col items-center justify-center py-8">
+            <img src={appStoreBadges} alt="Available on App Store and Google Play" className="w-[320px] md:w-[380px] lg:w-[420px] h-auto" />
+            <p className="font-sedgwick-ave text-3xl md:text-4xl mt-4" style={{ color: '#97c26c' }}>
               coming soon
             </p>
           </div>
