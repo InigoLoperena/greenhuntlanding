@@ -108,10 +108,10 @@ export default function LandingPage() {
               <h2 className="font-permanent-marker text-3xl md:text-4xl lg:text-5xl mb-4" style={{
                 color: '#6ea151'
               }}>
-                Local circular economy App
+                {t('landing.app.title')}
               </h2>
               <p className="font-sedgwick-ave text-subtitle-styled text-xl md:text-2xl max-w-xl mx-auto lg:mx-0 mb-6">
-                We make local circular collaboration between bargain hunters, valuable stuff dumpers, waste managers, junk removers, thrift stores and garage sales easy, fun and profitable
+                {t('landing.app.subtitle')}
               </p>
               
               {/* CTA Buttons - Below Description */}
@@ -386,10 +386,10 @@ export default function LandingPage() {
               <h2 className="text-3xl md:text-5xl font-permanent-marker mb-6 leading-tight" style={{
                 color: '#699e4b'
               }}>
-                Play for the planet
+                {t('landing.playPlanet.title')}
               </h2>
               <p className="text-xl md:text-2xl text-subtitle-styled font-sedgwick-ave">
-                For fun or for money, company or individual, play for the planet and measure the impact of the treasures you saved from the landfill
+                {t('landing.playPlanet.subtitle')}
               </p>
             </div>
             <div>
