@@ -49,7 +49,7 @@ const handler = async (req: Request): Promise<Response> => {
                 <!-- Header with Logo -->
                 <tr>
                   <td align="center" style="padding: 40px 40px 20px 40px; background-color: #000000;">
-                    <img src="https://greenhunt.net/lovable-uploads/greenhunt-logo-new.svg" alt="GreenHunt Logo" style="max-width: 200px; height: auto;" />
+                    <img src="https://rsfzxykkwonvygmaitrt.supabase.co/storage/v1/object/public/assets/greenhunt-logo.png" alt="GreenHunt Logo" width="200" style="max-width: 200px; height: auto; display: block;" />
                   </td>
                 </tr>
                 
