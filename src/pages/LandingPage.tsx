@@ -176,9 +176,6 @@ export default function LandingPage() {
                 <img alt="Buy coordinates and get valuable items" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" src="/lovable-uploads/c1d89d6c-343e-495a-8f4a-58d9ff2876f5.png" />
               </div>
               <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
-                {t('landing.tutorial.step3')}
-              </p>
-              <p className="font-sedgwick-ave text-subtitle-styled text-xl mt-4 max-w-md">
                 {t('landing.tutorial.disclaimer')}
               </p>
             </div>
