@@ -47,12 +47,12 @@ export default function LandingPage() {
     }
     setLoading(true);
     try {
-      // @ts-ignore - waitlist table exists but types may not be updated
+      // @ts-ignore - beta_testers table exists but types may not be updated
       const {
         error
       } = await supabase
       // @ts-ignore
-      .from('waitlist')
+      .from('beta_testers')
       // @ts-ignore
       .insert([{
         email: email.toLowerCase().trim()
