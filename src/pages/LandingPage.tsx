@@ -19,7 +19,7 @@ import thriftingStep2 from "@/assets/thrifting-step-2.png";
 import thriftingStep3 from "@/assets/thrifting-step-3.png";
 import wasteStep1 from "@/assets/waste-step-1-new.png";
 import wasteStep2 from "@/assets/waste-step-2-new.png";
-import wasteStep3 from "@/assets/waste-step-3-new.png";
+import wasteStep3 from "@/assets/circular-market-delivery.png";
 import junkStep1 from "@/assets/junk-step-1.jpg";
 import junkStep2 from "@/assets/junk-step-2.png";
 import junkStep3 from "@/assets/junk-step-3.png";
