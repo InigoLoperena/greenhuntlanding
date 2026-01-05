@@ -116,7 +116,7 @@ const handler = async (req: Request): Promise<Response> => {
                       © 2026 GreenHunt. Making local circular economy easy, fun and profitable.
                     </p>
                     <p style="color: #666666; font-size: 12px; text-align: center; margin: 10px 0 0 0;">
-                      Contact: stooping@greenriot.net
+                      Contact: hello@greenhunt.net
                     </p>
                   </td>
                 </tr>
@@ -136,7 +136,7 @@ const handler = async (req: Request): Promise<Response> => {
         Authorization: `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-      from: "GreenHunt <welcome@greenhunt.net>",
+      from: "GreenHunt <hello@greenhunt.net>",
         to: [email],
         subject: "Welcome to GreenHunt Beta! 🌿",
         html: emailHtml,
