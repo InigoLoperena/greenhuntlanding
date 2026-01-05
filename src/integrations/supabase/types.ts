@@ -47,34 +47,37 @@ export type Database = {
       bank_accounts: {
         Row: {
           account_holder_name: string
-          account_number: string
+          account_number: string | null
           account_type: string
           bank_name: string | null
           created_at: string
+          iban: string | null
           id: string
-          routing_number: string
+          routing_number: string | null
           updated_at: string
           user_id: string
         }
         Insert: {
           account_holder_name: string
-          account_number: string
+          account_number?: string | null
           account_type?: string
           bank_name?: string | null
           created_at?: string
+          iban?: string | null
           id?: string
-          routing_number: string
+          routing_number?: string | null
           updated_at?: string
           user_id: string
         }
         Update: {
           account_holder_name?: string
-          account_number?: string
+          account_number?: string | null
           account_type?: string
           bank_name?: string | null
           created_at?: string
+          iban?: string | null
           id?: string
-          routing_number?: string
+          routing_number?: string | null
           updated_at?: string
           user_id?: string
         }
