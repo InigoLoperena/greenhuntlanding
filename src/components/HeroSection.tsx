@@ -98,7 +98,7 @@ export const HeroSection = ({ className }: HeroSectionProps) => {
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
             <DialogTitle className="font-permanent-marker text-2xl">
-              {language === 'en' ? 'Join the Beta' : 'Únete a la Beta'}
+              {language === 'en' ? 'Get the Beta' : 'Obtén la Beta'}
             </DialogTitle>
           </DialogHeader>
           <form onSubmit={handleWaitlistSubmit} className="space-y-4">
@@ -106,7 +106,7 @@ export const HeroSection = ({ className }: HeroSectionProps) => {
             <Button type="submit" disabled={loading} className="w-full bg-accent hover:bg-accent/90 font-permanent-marker" style={{
             color: '#611a5a'
           }}>
-              {loading ? language === 'en' ? 'Joining...' : 'Uniéndose...' : language === 'en' ? 'Join Waitlist' : 'Unirse a la Lista'}
+              {loading ? language === 'en' ? 'Sending...' : 'Enviando...' : language === 'en' ? 'Get Beta' : 'Obtén Beta'}
             </Button>
           </form>
         </DialogContent>
