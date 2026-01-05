@@ -273,11 +273,7 @@ export default function AmbassadorPage() {
     .filter(s => s.status === 'confirmed')
     .reduce((sum, s) => sum + (Number(s.commission_amount) || 0), 0);
   const isPremium = roles.includes('premium_ambassador');
-  return <div className="min-h-screen bg-black text-white" style={{
-    backgroundImage: 'url(/lovable-uploads/brick-wall-background.png)',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center'
-  }}>
+  return <div className="min-h-screen bg-black text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
@@ -288,7 +284,7 @@ export default function AmbassadorPage() {
             }}>
                 {user && profile ? t('ambassador.dashboard') : language === 'en' ? 'Ambassador Program' : 'Programa de Embajadores'}
               </h1>
-              {user && profile && <p className="text-subtitle-styled font-sedgwick-ave">
+              {user && profile && <p className="text-subtitle-styled font-sedgwick-ave text-xl md:text-2xl">
                   {t('ambassador.welcome')}, {profile.nickname}!
                   {isPremium && <span className="ml-2 px-3 py-1 bg-accent text-primary rounded-full text-sm font-permanent-marker">
                       PREMIUM
@@ -435,12 +431,12 @@ export default function AmbassadorPage() {
                     <form onSubmit={handleSaveProfile} className="space-y-6">
                       {/* Personal Information Section */}
                       <div className="space-y-4">
-                        <h3 className="text-lg font-permanent-marker" style={{ color: '#699e4b' }}>
+                        <h3 className="text-xl font-permanent-marker" style={{ color: '#699e4b' }}>
                           {language === 'en' ? 'Personal Information' : 'Información Personal'}
                         </h3>
                         
                         <div>
-                          <Label htmlFor="fullName" className="font-sedgwick-ave">
+                          <Label htmlFor="fullName" className="font-sedgwick-ave text-subtitle-styled text-base">
                             {language === 'en' ? 'Full Name' : 'Nombre Completo'}
                           </Label>
                           <Input
@@ -462,7 +458,7 @@ export default function AmbassadorPage() {
                         </div>
                         
                         <div>
-                          <Label htmlFor="profileNickname" className="font-sedgwick-ave">
+                          <Label htmlFor="profileNickname" className="font-sedgwick-ave text-subtitle-styled text-base">
                             {language === 'en' ? 'Nickname (for leaderboard)' : 'Apodo (para el ranking)'}
                           </Label>
                           <Input
@@ -486,10 +482,10 @@ export default function AmbassadorPage() {
                       
                       {/* Bank Account Section */}
                       <div className="space-y-4 pt-4 border-t border-primary/20">
-                        <h3 className="text-lg font-permanent-marker" style={{ color: '#699e4b' }}>
+                        <h3 className="text-xl font-permanent-marker" style={{ color: '#699e4b' }}>
                           {language === 'en' ? 'Bank Account (US only)' : 'Cuenta Bancaria (solo EE.UU.)'}
                         </h3>
-                        <p className="text-sm text-muted-foreground font-sedgwick-ave">
+                        <p className="text-subtitle-styled font-sedgwick-ave text-base">
                           {language === 'en' 
                             ? 'Enter your US bank account details to receive payments' 
                             : 'Ingresa los datos de tu cuenta bancaria de EE.UU. para recibir pagos'
@@ -497,7 +493,7 @@ export default function AmbassadorPage() {
                         </p>
                         
                         <div>
-                          <Label htmlFor="accountNumber" className="font-sedgwick-ave">
+                          <Label htmlFor="accountNumber" className="font-sedgwick-ave text-subtitle-styled text-base">
                             {language === 'en' ? 'Account Number' : 'Número de Cuenta'}
                           </Label>
                           <Input
@@ -513,7 +509,7 @@ export default function AmbassadorPage() {
                         </div>
                         
                         <div>
-                          <Label htmlFor="routingNumber" className="font-sedgwick-ave">
+                          <Label htmlFor="routingNumber" className="font-sedgwick-ave text-subtitle-styled text-base">
                             {language === 'en' ? 'Routing Number (9 digits)' : 'Número de Ruta (9 dígitos)'}
                           </Label>
                           <Input
@@ -530,7 +526,7 @@ export default function AmbassadorPage() {
                       </div>
                       
                       <div>
-                        <Label htmlFor="accountType" className="font-sedgwick-ave">
+                        <Label htmlFor="accountType" className="font-sedgwick-ave text-subtitle-styled text-base">
                           {language === 'en' ? 'Account Type' : 'Tipo de Cuenta'}
                         </Label>
                         <select
@@ -573,7 +569,7 @@ export default function AmbassadorPage() {
                     </CardTitle>
                     {totalEarnings > 0 && (
                       <div className="text-right">
-                        <p className="text-sm text-subtitle-styled font-sedgwick-ave">
+                    <p className="text-subtitle-styled font-sedgwick-ave text-base">
                           {language === 'en' ? 'Total Earnings' : 'Ganancias Totales'}
                         </p>
                         <p className="text-2xl font-permanent-marker text-accent">
@@ -584,7 +580,7 @@ export default function AmbassadorPage() {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  {submissions.length === 0 ? <p className="text-center text-subtitle-styled font-sedgwick-ave py-8">
+                  {submissions.length === 0 ? <p className="text-center text-subtitle-styled font-sedgwick-ave text-xl py-8">
                       {language === 'en' ? 'No stores submitted yet' : 'Aún no has enviado ninguna tienda'}
                     </p> : <div className="space-y-4">
                       {submissions.map((submission) => (
@@ -596,7 +592,7 @@ export default function AmbassadorPage() {
                             <h3 className="font-permanent-marker text-lg" style={{ color: '#699e4b' }}>
                               {submission.store_name}
                             </h3>
-                            <p className="text-sm text-subtitle-styled font-sedgwick-ave mt-1">
+                            <p className="text-subtitle-styled font-sedgwick-ave text-base mt-1">
                               {submission.city}
                             </p>
                             <a
@@ -638,7 +634,7 @@ export default function AmbassadorPage() {
               }}>
                   {language === 'en' ? 'Earning Opportunities' : 'Oportunidades de Ganar'}
                 </h2>
-                <div className="space-y-4 text-subtitle-styled font-sedgwick-ave">
+                <div className="space-y-4 text-subtitle-styled font-sedgwick-ave text-lg md:text-xl">
                   <div className="border-l-4 border-accent pl-4">
                     <p className="font-bold text-accent">
                       {language === 'en' ? 'Get a thrift store on board in NYC, Brooklyn, or New Jersey' : 'Consigue una tienda de segunda mano en NYC, Brooklyn o New Jersey'}
@@ -674,9 +670,9 @@ export default function AmbassadorPage() {
           }}>
               {language === 'en' ? 'Pre-Launch Agreement - Thrift Stores' : 'Acuerdo de Pre-Lanzamiento - Tiendas de Segunda Mano'}
             </h2>
-            <div className="space-y-4 text-subtitle-styled font-sedgwick-ave mb-6">
+            <div className="space-y-4 text-subtitle-styled font-sedgwick-ave text-lg md:text-xl mb-6">
               <div>
-                <h3 className="font-bold text-lg mb-2" style={{
+                <h3 className="font-permanent-marker text-xl mb-2" style={{
                 color: '#699e4b'
               }}>
                   {language === 'en' ? 'Obligations:' : 'Obligaciones:'}
@@ -686,7 +682,7 @@ export default function AmbassadorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-lg mb-2" style={{
+                <h3 className="font-permanent-marker text-xl mb-2" style={{
                 color: '#699e4b'
               }}>
                   {language === 'en' ? 'Rights:' : 'Derechos:'}
@@ -699,7 +695,7 @@ export default function AmbassadorPage() {
             <a href="/GreenHunt_Prelaunch_Agreement.pdf" target="_blank" rel="noopener noreferrer" className="block">
               <img src="/lovable-uploads/agreement-preview.jpg" alt="Pre-Launch Agreement" className="w-full max-w-2xl mx-auto rounded-lg hover:opacity-80 transition-opacity cursor-pointer border-2 border-primary/30 hover:border-primary" />
             </a>
-            <p className="text-center text-sm text-subtitle-styled font-sedgwick-ave mt-4">
+            <p className="text-center text-subtitle-styled font-sedgwick-ave text-lg mt-4">
               {language === 'en' ? 'Click the image above to view the full agreement' : 'Haz clic en la imagen de arriba para ver el acuerdo completo'}
             </p>
           </div>
