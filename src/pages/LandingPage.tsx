@@ -125,10 +125,10 @@ export default function LandingPage() {
           </div>
           
           {/* Centered App Store Badges */}
-          <div className="flex flex-col items-center justify-center mb-4">
-            <img src={appStoreBadges} alt="Available on App Store and Google Play" className="h-16 md:h-20 w-auto" />
-            <p className="font-sedgwick-ave text-subtitle-styled text-2xl mt-4">
-              Coming Soon
+          <div className="flex flex-col items-center justify-center mb-8">
+            <img src={appStoreBadges} alt="Available on App Store and Google Play" className="h-12 md:h-14 w-auto" />
+            <p className="font-sedgwick-ave text-subtitle-styled text-xl md:text-2xl mt-3">
+              coming soon
             </p>
           </div>
         </div>
