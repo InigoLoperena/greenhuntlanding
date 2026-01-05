@@ -180,6 +180,32 @@ export default function LandingPage() {
         </DialogContent>
       </Dialog>
 
+      {/* Beta Form Before Stooping */}
+      <section className="py-12 px-4 bg-black">
+        <div className="container mx-auto max-w-4xl text-center">
+          <div className="max-w-md mx-auto bg-black/60 backdrop-blur-sm p-8 rounded-lg border border-white/20">
+            <h2 className="text-2xl font-permanent-marker mb-2" style={{
+              color: '#699e4b'
+            }}>
+              {t('landing.beta.title')}
+            </h2>
+            <p className="text-white font-sedgwick-ave mb-6">
+              {t('landing.beta.description')}
+            </p>
+            <form onSubmit={handleWaitlistSubmit} className="space-y-4">
+              <Input type="email" placeholder={t('landing.beta.placeholder')} value={email} onChange={e => setEmail(e.target.value)} required disabled={loading} className="w-full bg-white/90 font-permanent-marker text-xl" style={{
+                color: '#6ea151'
+              }} />
+              <Button type="submit" disabled={loading} className="w-full bg-accent hover:bg-accent/90 font-permanent-marker" style={{
+                color: '#611a5a'
+              }}>
+                {loading ? t('landing.beta.joining') : t('landing.beta.button')}
+              </Button>
+            </form>
+          </div>
+        </div>
+      </section>
+
       {/* Tutorial Section */}
       <section className="py-16 md:py-20 px-4 bg-black relative">
         <div className="container mx-auto max-w-6xl relative z-10">
