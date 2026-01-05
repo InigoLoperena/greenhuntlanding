@@ -83,7 +83,17 @@ export const HeroSection = ({
             </div>
 
             {/* Right Side - Video */}
-            
+            <div className="flex justify-center lg:justify-end">
+              <video 
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+                className="w-full max-w-md lg:max-w-lg rounded-2xl shadow-2xl"
+              >
+                <source src={heroVideo} type="video/mp4" />
+              </video>
+            </div>
           </div>
         </div>
       </section>
