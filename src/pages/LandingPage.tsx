@@ -67,11 +67,16 @@ export default function LandingPage() {
         const userEmail = email.toLowerCase().trim();
         toast.success(t('landing.beta.success'));
         setEmail("");
-        
+
         // Send welcome email
         try {
-          const { data, error: emailError } = await supabase.functions.invoke('send-welcome-email', {
-            body: { email: userEmail }
+          const {
+            data,
+            error: emailError
+          } = await supabase.functions.invoke('send-welcome-email', {
+            body: {
+              email: userEmail
+            }
           });
           console.log('Welcome email response:', data, emailError);
         } catch (emailError) {
@@ -144,28 +149,18 @@ export default function LandingPage() {
       <Dialog open={waitlistOpen} onOpenChange={setWaitlistOpen}>
         <DialogContent className="sm:max-w-md bg-black border-accent/20">
           <div className="text-center">
-            <h3 className="font-permanent-marker text-2xl mb-4" style={{ color: '#b4fa74' }}>
+            <h3 className="font-permanent-marker text-2xl mb-4" style={{
+              color: '#b4fa74'
+            }}>
               {language === 'en' ? 'Get the Beta' : 'Obtén la Beta'}
             </h3>
           </div>
           <form onSubmit={handleWaitlistSubmit} className="space-y-4">
-            <Input
-              type="email"
-              placeholder={language === 'en' ? 'Enter your email' : 'Ingresa tu email'}
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="font-sedgwick-ave bg-black/50 border-accent/30 text-white"
-            />
-            <Button
-              type="submit"
-              disabled={loading}
-              className="w-full bg-[#a2c041] hover:bg-[#8da836] font-permanent-marker text-lg"
-              style={{ color: '#611a5a' }}
-            >
-              {loading
-                ? (language === 'en' ? 'Sending...' : 'Enviando...')
-                : (language === 'en' ? 'GET BETA' : 'OBTÉN BETA')}
+            <Input type="email" placeholder={language === 'en' ? 'Enter your email' : 'Ingresa tu email'} value={email} onChange={e => setEmail(e.target.value)} required className="font-sedgwick-ave bg-black/50 border-accent/30 text-white" />
+            <Button type="submit" disabled={loading} className="w-full bg-[#a2c041] hover:bg-[#8da836] font-permanent-marker text-lg" style={{
+              color: '#611a5a'
+            }}>
+              {loading ? language === 'en' ? 'Sending...' : 'Enviando...' : language === 'en' ? 'GET BETA' : 'OBTÉN BETA'}
             </Button>
           </form>
         </DialogContent>
@@ -373,7 +368,7 @@ export default function LandingPage() {
             {/* Step 3 */}
             <div className="flex flex-col items-center text-center">
               <div className="mb-6">
-                <img src={wasteStep3} alt="Donate to local stores" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" />
+                <img alt="Donate to local stores" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" src="/lovable-uploads/318700f9-052e-424f-bb23-94c7e893031c.png" />
               </div>
               <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
                 {t('landing.waste.step3')}
