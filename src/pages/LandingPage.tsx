@@ -67,16 +67,11 @@ export default function LandingPage() {
         const userEmail = email.toLowerCase().trim();
         toast.success(t('landing.beta.success'));
         setEmail("");
-
+        
         // Send welcome email
         try {
-          const {
-            data,
-            error: emailError
-          } = await supabase.functions.invoke('send-welcome-email', {
-            body: {
-              email: userEmail
-            }
+          const { data, error: emailError } = await supabase.functions.invoke('send-welcome-email', {
+            body: { email: userEmail }
           });
           console.log('Welcome email response:', data, emailError);
         } catch (emailError) {
@@ -139,7 +134,7 @@ export default function LandingPage() {
             
             {/* Right Side - Phone Image */}
             <div className="flex-1 flex items-center justify-center">
-              <img alt="GreenHunt App Screenshot" loading="lazy" className="h-80 md:h-[450px] lg:h-[550px] w-auto object-cover" src="/lovable-uploads/754bb493-639c-4706-92a7-85f50fbbe830.png" />
+              <img src={appHeroPhone} alt="GreenHunt App Screenshot" className="h-80 md:h-[450px] lg:h-[550px] w-auto object-contain" loading="lazy" />
             </div>
           </div>
         </div>
@@ -149,18 +144,28 @@ export default function LandingPage() {
       <Dialog open={waitlistOpen} onOpenChange={setWaitlistOpen}>
         <DialogContent className="sm:max-w-md bg-black border-accent/20">
           <div className="text-center">
-            <h3 className="font-permanent-marker text-2xl mb-4" style={{
-              color: '#b4fa74'
-            }}>
+            <h3 className="font-permanent-marker text-2xl mb-4" style={{ color: '#b4fa74' }}>
               {language === 'en' ? 'Get the Beta' : 'Obtén la Beta'}
             </h3>
           </div>
           <form onSubmit={handleWaitlistSubmit} className="space-y-4">
-            <Input type="email" placeholder={language === 'en' ? 'Enter your email' : 'Ingresa tu email'} value={email} onChange={e => setEmail(e.target.value)} required className="font-sedgwick-ave bg-black/50 border-accent/30 text-white" />
-            <Button type="submit" disabled={loading} className="w-full bg-[#a2c041] hover:bg-[#8da836] font-permanent-marker text-lg" style={{
-              color: '#611a5a'
-            }}>
-              {loading ? language === 'en' ? 'Sending...' : 'Enviando...' : language === 'en' ? 'GET BETA' : 'OBTÉN BETA'}
+            <Input
+              type="email"
+              placeholder={language === 'en' ? 'Enter your email' : 'Ingresa tu email'}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              className="font-sedgwick-ave bg-black/50 border-accent/30 text-white"
+            />
+            <Button
+              type="submit"
+              disabled={loading}
+              className="w-full bg-[#a2c041] hover:bg-[#8da836] font-permanent-marker text-lg"
+              style={{ color: '#611a5a' }}
+            >
+              {loading
+                ? (language === 'en' ? 'Sending...' : 'Enviando...')
+                : (language === 'en' ? 'GET BETA' : 'OBTÉN BETA')}
             </Button>
           </form>
         </DialogContent>
