@@ -119,7 +119,11 @@ const translations: Record<Language, Record<string, string>> = {
     'landing.junk.title': 'JUNK REMOVAL',
     'landing.junk.step1': 'Take photos of your junk and fill the form.',
     'landing.junk.step2': 'Other users bid to pay you or to charge you for removing the junk.',
-    'landing.junk.step3': 'Accept the bid you want and schedule the pick up.'
+    'landing.junk.step3': 'Accept the bid you want and schedule the pick up.',
+    'landing.app.title': 'Local circular economy App',
+    'landing.app.subtitle': 'We make local circular collaboration between bargain hunters, valuable stuff dumpers, waste managers, junk removers, thrift stores and garage sales easy, fun and profitable',
+    'landing.playPlanet.title': 'Play for the planet',
+    'landing.playPlanet.subtitle': 'For fun or for money, company or individual, play for the planet and measure the impact of the treasures you saved from the landfill'
   },
   es: {
     'landing.hero.cta.abandoned': 'ENCUENTRA MUEBLES ABANDONADOS',
@@ -231,7 +235,11 @@ const translations: Record<Language, Record<string, string>> = {
     'landing.junk.title': 'ELIMINACIÓN DE BASURA',
     'landing.junk.step1': 'Toma fotos de tu basura y completa el formulario.',
     'landing.junk.step2': 'Otros usuarios pujan para pagarte o cobrarte por retirar la basura.',
-    'landing.junk.step3': 'Acepta la oferta que quieras y programa la recogida.'
+    'landing.junk.step3': 'Acepta la oferta que quieras y programa la recogida.',
+    'landing.app.title': 'App de economía circular local',
+    'landing.app.subtitle': 'Facilitamos la colaboración circular local entre cazadores de gangas, gente que tira cosas valiosas, gestores de residuos, servicios de recogida, tiendas de segunda mano y ventas de garaje de forma fácil, divertida y rentable',
+    'landing.playPlanet.title': 'Juega por el planeta',
+    'landing.playPlanet.subtitle': 'Por diversión o por dinero, empresa o particular, juega por el planeta y mide el impacto de los tesoros que salvaste del vertedero'
   }
 };
 
