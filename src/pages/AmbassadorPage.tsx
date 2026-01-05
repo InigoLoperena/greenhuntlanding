@@ -34,7 +34,8 @@ export default function AmbassadorPage() {
   const [profileNickname, setProfileNickname] = useState("");
   const [accountNumber, setAccountNumber] = useState("");
   const [routingNumber, setRoutingNumber] = useState("");
-  const [accountType, setAccountType] = useState("checking");
+  const [iban, setIban] = useState("");
+  const [accountType, setAccountType] = useState("USD");
   const navigate = useNavigate();
   const {
     t,
@@ -116,9 +117,10 @@ export default function AmbassadorPage() {
     
     if (data) {
       setBankAccount(data);
-      setAccountNumber(data.account_number);
-      setRoutingNumber(data.routing_number);
-      setAccountType(data.account_type);
+      setAccountNumber(data.account_number || "");
+      setRoutingNumber(data.routing_number || "");
+      setIban(data.iban || "");
+      setAccountType(data.account_type || "USD");
     }
   };
   const loadSubmissions = async (userId: string) => {
@@ -219,9 +221,10 @@ export default function AmbassadorPage() {
       // Update or insert bank account using full_name as account_holder_name
       const bankData = {
         user_id: user.id,
-        account_holder_name: fullName, // Use full name as account holder name
-        account_number: accountNumber,
-        routing_number: routingNumber,
+        account_holder_name: fullName,
+        account_number: accountType === 'USD' ? accountNumber : null,
+        routing_number: accountType === 'USD' ? routingNumber : null,
+        iban: accountType === 'EUR' ? iban : null,
         account_type: accountType,
       };
       
@@ -483,63 +486,91 @@ export default function AmbassadorPage() {
                       {/* Bank Account Section */}
                       <div className="space-y-4 pt-4 border-t border-primary/20">
                         <h3 className="text-xl font-permanent-marker" style={{ color: '#699e4b' }}>
-                          {language === 'en' ? 'Bank Account (US only)' : 'Cuenta Bancaria (solo EE.UU.)'}
+                          {language === 'en' ? 'Bank Account (USD and EUR only)' : 'Cuenta Bancaria (solo USD y EUR)'}
                         </h3>
                         <p className="text-subtitle-styled font-sedgwick-ave text-base">
                           {language === 'en' 
-                            ? 'Enter your US bank account details to receive payments' 
-                            : 'Ingresa los datos de tu cuenta bancaria de EE.UU. para recibir pagos'
+                            ? 'Enter your bank account details to receive payments' 
+                            : 'Ingresa los datos de tu cuenta bancaria para recibir pagos'
                           }
                         </p>
                         
                         <div>
-                          <Label htmlFor="accountNumber" className="font-sedgwick-ave text-subtitle-styled text-base">
-                            {language === 'en' ? 'Account Number' : 'Número de Cuenta'}
+                          <Label htmlFor="accountType" className="font-sedgwick-ave text-subtitle-styled text-base">
+                            {language === 'en' ? 'Currency' : 'Moneda'}
                           </Label>
-                          <Input
-                            id="accountNumber"
-                            type="text"
-                            value={accountNumber}
-                            onChange={(e) => setAccountNumber(e.target.value)}
-                            placeholder="000123456789"
+                          <select
+                            id="accountType"
+                            value={accountType}
+                            onChange={(e) => setAccountType(e.target.value)}
+                            className="w-full mt-1 px-3 py-2 rounded-md border border-input bg-background text-foreground font-sedgwick-ave"
                             required
-                            className="mt-1"
-                            maxLength={17}
-                          />
+                          >
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                          </select>
                         </div>
                         
-                        <div>
-                          <Label htmlFor="routingNumber" className="font-sedgwick-ave text-subtitle-styled text-base">
-                            {language === 'en' ? 'Routing Number (9 digits)' : 'Número de Ruta (9 dígitos)'}
-                          </Label>
-                          <Input
-                            id="routingNumber"
-                            type="text"
-                            value={routingNumber}
-                          onChange={(e) => setRoutingNumber(e.target.value)}
-                          placeholder="021000021"
-                          required
-                          className="mt-1"
-                          maxLength={9}
-                          pattern="[0-9]{9}"
-                        />
-                      </div>
-                      
-                      <div>
-                        <Label htmlFor="accountType" className="font-sedgwick-ave text-subtitle-styled text-base">
-                          {language === 'en' ? 'Account Type' : 'Tipo de Cuenta'}
-                        </Label>
-                        <select
-                          id="accountType"
-                          value={accountType}
-                          onChange={(e) => setAccountType(e.target.value)}
-                          className="w-full mt-1 px-3 py-2 rounded-md border border-input bg-background text-foreground font-sedgwick-ave"
-                          required
-                        >
-                          <option value="checking">{language === 'en' ? 'Checking' : 'Corriente'}</option>
-                          <option value="savings">{language === 'en' ? 'Savings' : 'Ahorros'}</option>
-                        </select>
-                      </div>
+                        {accountType === 'USD' && (
+                          <>
+                            <div>
+                              <Label htmlFor="accountNumber" className="font-sedgwick-ave text-subtitle-styled text-base">
+                                {language === 'en' ? 'Account Number' : 'Número de Cuenta'}
+                              </Label>
+                              <Input
+                                id="accountNumber"
+                                type="text"
+                                value={accountNumber}
+                                onChange={(e) => setAccountNumber(e.target.value)}
+                                placeholder="000123456789"
+                                required
+                                className="mt-1"
+                                maxLength={17}
+                              />
+                            </div>
+                            
+                            <div>
+                              <Label htmlFor="routingNumber" className="font-sedgwick-ave text-subtitle-styled text-base">
+                                {language === 'en' ? 'Routing Number (9 digits)' : 'Número de Ruta (9 dígitos)'}
+                              </Label>
+                              <Input
+                                id="routingNumber"
+                                type="text"
+                                value={routingNumber}
+                                onChange={(e) => setRoutingNumber(e.target.value)}
+                                placeholder="021000021"
+                                required
+                                className="mt-1"
+                                maxLength={9}
+                                pattern="[0-9]{9}"
+                              />
+                            </div>
+                          </>
+                        )}
+                        
+                        {accountType === 'EUR' && (
+                          <div>
+                            <Label htmlFor="iban" className="font-sedgwick-ave text-subtitle-styled text-base">
+                              IBAN
+                            </Label>
+                            <Input
+                              id="iban"
+                              type="text"
+                              value={iban}
+                              onChange={(e) => setIban(e.target.value.toUpperCase())}
+                              placeholder="ES12 3456 7890 1234 5678 9012"
+                              required
+                              className="mt-1"
+                              maxLength={34}
+                            />
+                            <p className="text-xs text-muted-foreground mt-1 font-sedgwick-ave">
+                              {language === 'en' 
+                                ? 'International Bank Account Number for EUR transfers' 
+                                : 'Número de cuenta bancaria internacional para transferencias en EUR'
+                              }
+                            </p>
+                          </div>
+                        )}
                       
                       <Button 
                         type="submit" 
