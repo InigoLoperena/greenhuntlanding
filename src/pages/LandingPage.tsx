@@ -115,19 +115,16 @@ export default function LandingPage() {
             
             {/* Right Side - Phone Image (larger and centered) */}
             <div className="flex-1 flex items-center justify-center">
-              <img 
-                src={appHeroPhone} 
-                alt="GreenHunt App Screenshot" 
-                className="h-80 md:h-[450px] lg:h-[550px] w-auto object-contain"
-                loading="lazy"
-              />
+              <img src={appHeroPhone} alt="GreenHunt App Screenshot" className="h-80 md:h-[450px] lg:h-[550px] w-auto object-contain" loading="lazy" />
             </div>
           </div>
           
           {/* Centered App Store Badges */}
           <div className="flex flex-col items-center justify-center py-8">
             <img src={appStoreBadges} alt="Available on App Store and Google Play" className="w-[320px] md:w-[380px] lg:w-[420px] h-auto" />
-            <p className="font-sedgwick-ave text-3xl md:text-4xl mt-4" style={{ color: '#97c26c' }}>
+            <p style={{
+              color: '#97c26c'
+            }} className="font-sedgwick-ave text-3xl md:text-4xl mt-4 py-0 my-0">
               coming soon
             </p>
           </div>
@@ -385,7 +382,9 @@ export default function LandingPage() {
               {t('landing.beta.description')}
             </p>
             <form onSubmit={handleWaitlistSubmit} className="space-y-4">
-              <Input type="email" placeholder={t('landing.beta.placeholder')} value={email} onChange={e => setEmail(e.target.value)} required disabled={loading} className="w-full bg-white/90 font-permanent-marker text-xl" style={{ color: '#6ea151' }} />
+              <Input type="email" placeholder={t('landing.beta.placeholder')} value={email} onChange={e => setEmail(e.target.value)} required disabled={loading} className="w-full bg-white/90 font-permanent-marker text-xl" style={{
+                color: '#6ea151'
+              }} />
               <Button type="submit" disabled={loading} className="w-full bg-accent hover:bg-accent/90 font-permanent-marker" style={{
                 color: '#611a5a'
               }}>
