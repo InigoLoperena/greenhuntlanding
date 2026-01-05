@@ -85,7 +85,7 @@ export default function LandingPage() {
       <section className="bg-black px-4 py-0">
         <div className="container mx-auto max-w-6xl">
           {/* Title Row with Phone Image */}
-          <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-start justify-between mb-8">
+          <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-center justify-between mb-12">
             
             {/* Left Side - App Info with Buttons */}
             <div className="flex-1 text-center lg:text-left">
@@ -113,12 +113,12 @@ export default function LandingPage() {
               </div>
             </div>
             
-            {/* Right Side - Phone Image */}
-            <div className="flex-shrink-0">
+            {/* Right Side - Phone Image (larger and centered) */}
+            <div className="flex-1 flex items-center justify-center">
               <img 
                 src={appHeroPhone} 
                 alt="GreenHunt App Screenshot" 
-                className="h-64 md:h-80 lg:h-96 w-auto object-contain"
+                className="h-80 md:h-[450px] lg:h-[550px] w-auto object-contain"
                 loading="lazy"
               />
             </div>
@@ -126,8 +126,8 @@ export default function LandingPage() {
           
           {/* Centered App Store Badges */}
           <div className="flex flex-col items-center justify-center mb-4">
-            <img src={appStoreBadges} alt="Available on App Store and Google Play" className="h-48 md:h-60 w-auto opacity-60" />
-            <p className="font-sedgwick-ave text-subtitle-styled text-2xl mt-2">
+            <img src={appStoreBadges} alt="Available on App Store and Google Play" className="h-16 md:h-20 w-auto" />
+            <p className="font-sedgwick-ave text-subtitle-styled text-2xl mt-4">
               Coming Soon
             </p>
           </div>
