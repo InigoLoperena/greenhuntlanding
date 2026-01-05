@@ -96,9 +96,9 @@ export default function LandingPage() {
       <section className="bg-black px-4 py-0">
         <div className="container mx-auto max-w-6xl">
           {/* Title Row with Phone Image */}
-          <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-center justify-between mb-12">
+          <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-center justify-between">
             
-            {/* Left Side - App Info with Buttons */}
+            {/* Left Side - App Info with Buttons and Badges */}
             <div className="flex-1 text-center lg:text-left">
               <h2 className="font-permanent-marker text-3xl md:text-4xl lg:text-5xl mb-4" style={{
                 color: '#6ea151'
@@ -110,7 +110,7 @@ export default function LandingPage() {
               </p>
               
               {/* CTA Buttons - Below Description */}
-              <div className="flex flex-row gap-3 items-center justify-center lg:justify-start">
+              <div className="flex flex-row gap-3 items-center justify-center lg:justify-start mb-8">
                 <Button onClick={() => setWaitlistOpen(true)} className="bg-accent hover:bg-accent/90 font-permanent-marker text-sm px-4 py-2 h-auto" style={{
                   color: '#611a5a'
                 }}>
@@ -122,22 +122,22 @@ export default function LandingPage() {
                   Trailer
                 </Button>
               </div>
+              
+              {/* App Store Badges - Directly under buttons */}
+              <div className="flex flex-col items-center lg:items-start">
+                <img src={appStoreBadges} alt="Available on App Store and Google Play" className="w-[280px] md:w-[320px] h-auto" />
+                <p style={{
+                  color: '#97c26c'
+                }} className="font-sedgwick-ave text-2xl md:text-3xl mt-2">
+                  coming soon
+                </p>
+              </div>
             </div>
             
-            {/* Right Side - Phone Image (larger and centered) */}
+            {/* Right Side - Phone Image */}
             <div className="flex-1 flex items-center justify-center">
               <img src={appHeroPhone} alt="GreenHunt App Screenshot" className="h-80 md:h-[450px] lg:h-[550px] w-auto object-contain" loading="lazy" />
             </div>
-          </div>
-          
-          {/* Centered App Store Badges */}
-          <div className="flex flex-col items-center justify-center py-8">
-            <img src={appStoreBadges} alt="Available on App Store and Google Play" className="w-[320px] md:w-[380px] lg:w-[420px] h-auto" />
-            <p style={{
-              color: '#97c26c'
-            }} className="font-sedgwick-ave text-3xl md:text-4xl mt-4 py-0 my-0">
-              coming soon
-            </p>
           </div>
         </div>
       </section>
