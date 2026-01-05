@@ -287,7 +287,7 @@ export default function WasteManagerPage() {
             <Button className="bg-accent hover:bg-accent/90 font-permanent-marker text-xl px-12 py-6" style={{
             color: '#611a5a'
           }}>
-              Join the Waitlist
+              Get Beta
             </Button>
           </Link>
         </div>

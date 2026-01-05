@@ -66,6 +66,17 @@ export default function LandingPage() {
       } else {
         toast.success(t('landing.beta.success'));
         setEmail("");
+        
+        // Send welcome email
+        try {
+          await supabase.functions.invoke('send-welcome-email', {
+            body: { email: email.toLowerCase().trim() }
+          });
+          console.log('Welcome email sent successfully');
+        } catch (emailError) {
+          console.error('Error sending welcome email:', emailError);
+          // Don't show error to user - they're already registered
+        }
       }
     } catch (error) {
       console.error('Error adding to waitlist:', error);
@@ -103,7 +114,7 @@ export default function LandingPage() {
                 <Button onClick={() => setWaitlistOpen(true)} className="bg-accent hover:bg-accent/90 font-permanent-marker text-sm px-4 py-2 h-auto" style={{
                   color: '#611a5a'
                 }}>
-                  {language === 'en' ? 'Join Beta' : 'Únete a Beta'}
+                  {language === 'en' ? 'Get Beta' : 'Obtén Beta'}
                 </Button>
                 
                 <Button onClick={() => setTrailerOpen(true)} variant="outline" className="font-permanent-marker text-sm px-4 py-2 h-auto border border-white text-white hover:bg-white hover:text-black">
