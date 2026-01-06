@@ -449,10 +449,10 @@ export default function AmbassadorPage() {
                             onChange={(e) => setFullName(e.target.value)}
                             placeholder={language === 'en' ? 'John Doe' : 'Juan Pérez'}
                             required
-                            className="mt-1"
+                            className="mt-1 text-[#b4fa74] bg-black/50 border-primary/40 placeholder:text-gray-500"
                             maxLength={100}
                           />
-                          <p className="text-xs text-muted-foreground mt-1 font-sedgwick-ave">
+                          <p className="text-xs mt-1 font-sedgwick-ave" style={{ color: '#97c26c' }}>
                             {language === 'en' 
                               ? 'Your legal name for payment processing' 
                               : 'Tu nombre legal para el procesamiento de pagos'
@@ -471,10 +471,10 @@ export default function AmbassadorPage() {
                             onChange={(e) => setProfileNickname(e.target.value)}
                             placeholder={language === 'en' ? 'Your display name' : 'Tu nombre público'}
                             required
-                            className="mt-1"
+                            className="mt-1 text-[#b4fa74] bg-black/50 border-primary/40 placeholder:text-gray-500"
                             maxLength={50}
                           />
-                          <p className="text-xs text-muted-foreground mt-1 font-sedgwick-ave">
+                          <p className="text-xs mt-1 font-sedgwick-ave" style={{ color: '#97c26c' }}>
                             {language === 'en' 
                               ? 'This name will appear on the public leaderboard showing top ambassadors' 
                               : 'Este nombre aparecerá en el ranking público mostrando los mejores embajadores'
@@ -503,7 +503,7 @@ export default function AmbassadorPage() {
                             id="accountType"
                             value={accountType}
                             onChange={(e) => setAccountType(e.target.value)}
-                            className="w-full mt-1 px-3 py-2 rounded-md border border-input bg-background text-foreground font-sedgwick-ave"
+                            className="w-full mt-1 px-3 py-2 rounded-md border border-primary/40 bg-black/50 text-[#b4fa74] font-sedgwick-ave"
                             required
                           >
                             <option value="USD">USD</option>
@@ -524,7 +524,7 @@ export default function AmbassadorPage() {
                                 onChange={(e) => setAccountNumber(e.target.value)}
                                 placeholder="000123456789"
                                 required
-                                className="mt-1"
+                                className="mt-1 text-[#b4fa74] bg-black/50 border-primary/40 placeholder:text-gray-500"
                                 maxLength={17}
                               />
                             </div>
@@ -540,7 +540,7 @@ export default function AmbassadorPage() {
                                 onChange={(e) => setRoutingNumber(e.target.value)}
                                 placeholder="021000021"
                                 required
-                                className="mt-1"
+                                className="mt-1 text-[#b4fa74] bg-black/50 border-primary/40 placeholder:text-gray-500"
                                 maxLength={9}
                                 pattern="[0-9]{9}"
                               />
@@ -560,10 +560,10 @@ export default function AmbassadorPage() {
                               onChange={(e) => setIban(e.target.value.toUpperCase())}
                               placeholder="ES12 3456 7890 1234 5678 9012"
                               required
-                              className="mt-1"
+                              className="mt-1 text-[#b4fa74] bg-black/50 border-primary/40 placeholder:text-gray-500"
                               maxLength={34}
                             />
-                            <p className="text-xs text-muted-foreground mt-1 font-sedgwick-ave">
+                            <p className="text-xs mt-1 font-sedgwick-ave" style={{ color: '#97c26c' }}>
                               {language === 'en' 
                                 ? 'International Bank Account Number for EUR transfers' 
                                 : 'Número de cuenta bancaria internacional para transferencias en EUR'
