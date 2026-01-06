@@ -106,12 +106,14 @@ export default function LandingPage() {
         aria-hidden="true" 
       />
       
-      {/* Content container - above the pattern */}
+      {/* Content container with black center and transparent margins */}
       <div className="relative z-10">
-      <StructuredData />
-      
-      {/* Hero Section */}
-      <HeroSection className="my-0 py-[80px]" />
+        {/* Black background only for content area */}
+        <div className="mx-4 md:mx-12 lg:mx-24 xl:mx-32 bg-black min-h-screen">
+          <StructuredData />
+          
+          {/* Hero Section */}
+          <HeroSection className="my-0 py-[80px]" />
 
       {/* App Promo & CTA Section */}
       <section className="px-4 py-0">
@@ -570,6 +572,7 @@ export default function LandingPage() {
           {language === 'en' ? 'ES' : 'EN'}
         </Button>
       </div>
+        </div>
       </div>
       
     </div>;
