@@ -103,7 +103,8 @@ export default function LandingPage() {
           backgroundRepeat: 'repeat-y',
           backgroundPosition: 'center top',
           backgroundSize: 'contain',
-          zIndex: 5
+          zIndex: 5,
+          opacity: 0.18
         }}
         aria-hidden="true" 
       />
@@ -116,7 +117,8 @@ export default function LandingPage() {
           backgroundRepeat: 'repeat-y',
           backgroundPosition: 'center top',
           backgroundSize: 'contain',
-          zIndex: 5
+          zIndex: 5,
+          opacity: 0.18
         }}
         aria-hidden="true" 
       />
