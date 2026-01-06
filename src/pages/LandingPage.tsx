@@ -27,6 +27,8 @@ import appStoreBadges from "@/assets/app-store-badges.png";
 import wasteManagementFlow from "@/assets/waste-management-flow.png";
 import playForPlanetScreen from "@/assets/play-for-planet-screen.png";
 import appHeroPhone from "@/assets/app-hero-phone.png";
+import strategicPartner from "@/assets/strategic-partner.png";
+import ambassadorCharacter from "@/assets/ambassador-character.png";
 const emailSchema = z.string().email();
 export default function LandingPage() {
   const {
@@ -399,6 +401,27 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Strategic Partners Section */}
+      <section className="py-20 px-4 bg-black relative">
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2 lg:order-1">
+              <h2 className="text-3xl md:text-5xl font-permanent-marker mb-6 leading-tight" style={{
+                color: '#699e4b'
+              }}>
+                {t('landing.strategic.title')}
+              </h2>
+              <p className="text-lg md:text-xl text-subtitle-styled font-sedgwick-ave">
+                {t('landing.strategic.subtitle')}
+              </p>
+            </div>
+            <div className="order-1 lg:order-2 flex justify-center">
+              <img src={strategicPartner} alt="Strategic Partner" className="w-full max-w-xs lg:max-w-sm h-auto" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Ambassador Program Section */}
       <section className="py-20 px-4 bg-black relative">
         <div className="container mx-auto max-w-6xl relative z-10">
@@ -420,8 +443,8 @@ export default function LandingPage() {
                 </Button>
               </Link>
             </div>
-            <div className="order-1 lg:order-2">
-              <img src="/lovable-uploads/ambassador-program.png" alt="GreenHunt Ambassador Program" className="w-full max-w-md mx-auto lg:ml-auto h-auto rounded-lg" loading="lazy" />
+            <div className="order-1 lg:order-2 flex justify-center">
+              <img src={ambassadorCharacter} alt="GreenHunt Ambassador Program" className="w-full max-w-xs lg:max-w-sm h-auto" loading="lazy" />
             </div>
           </div>
         </div>
