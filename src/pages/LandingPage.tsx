@@ -97,7 +97,7 @@ export default function LandingPage() {
   return <div className="min-h-screen bg-black text-white overflow-x-hidden relative">
       {/* Left margin background - fixed, repeating vertically */}
       <div 
-        className="fixed left-0 top-0 bottom-0 w-16 md:w-24 lg:w-32 xl:w-40 hidden md:block"
+        className="fixed left-0 top-0 bottom-0 w-8 sm:w-12 md:w-24 lg:w-32 xl:w-40"
         style={{
           backgroundImage: `url(${bgLeftMargin})`,
           backgroundRepeat: 'repeat-y',
@@ -111,7 +111,7 @@ export default function LandingPage() {
       
       {/* Right margin background - fixed, repeating vertically */}
       <div 
-        className="fixed right-0 top-0 bottom-0 w-16 md:w-24 lg:w-32 xl:w-40 hidden md:block"
+        className="fixed right-0 top-0 bottom-0 w-8 sm:w-12 md:w-24 lg:w-32 xl:w-40"
         style={{
           backgroundImage: `url(${bgRightMargin})`,
           backgroundRepeat: 'repeat-y',
