@@ -29,6 +29,7 @@ import playForPlanetScreen from "@/assets/play-for-planet-screen.png";
 import appHeroPhone from "@/assets/app-hero-phone.png";
 import strategicPartner from "@/assets/strategic-partner.png";
 import ambassadorCharacter from "@/assets/ambassador-character.png";
+import trashPatternBg from "@/assets/trash-pattern-bg.png";
 const emailSchema = z.string().email();
 export default function LandingPage() {
   const {
@@ -93,9 +94,7 @@ export default function LandingPage() {
     }
   };
   return <div className="min-h-screen bg-black text-white overflow-x-hidden relative">
-      {/* Trash pattern background */}
-      <div className="trash-pattern-bg" aria-hidden="true" />
-      
+      {/* Content container */}
       <div className="relative z-10">
       <StructuredData />
       
@@ -560,5 +559,18 @@ export default function LandingPage() {
         </Button>
       </div>
       </div>
+      
+      {/* Trash pattern overlay - positioned on top of all content */}
+      <div 
+        className="fixed inset-0 pointer-events-none"
+        style={{
+          backgroundImage: `url(${trashPatternBg})`,
+          backgroundRepeat: 'repeat',
+          backgroundSize: '900px 900px',
+          opacity: 0.18,
+          zIndex: 20
+        }}
+        aria-hidden="true" 
+      />
     </div>;
 }
