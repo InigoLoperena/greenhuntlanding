@@ -337,7 +337,7 @@ export default function AmbassadorPage() {
                           value={nickname} 
                           onChange={e => setNickname(e.target.value)} 
                           required 
-                          className="text-black text-sm h-9 px-3" 
+                          className="text-white bg-black/50 border-primary/40 text-sm h-9 px-3 placeholder:text-gray-400" 
                           maxLength={50} 
                         />
                       </div>}
@@ -350,7 +350,7 @@ export default function AmbassadorPage() {
                         value={email} 
                         onChange={e => setEmail(e.target.value)} 
                         required 
-                        className="text-black text-sm h-9 px-3" 
+                        className="text-white bg-black/50 border-primary/40 text-sm h-9 px-3 placeholder:text-gray-400" 
                         maxLength={255} 
                       />
                     </div>
@@ -363,7 +363,7 @@ export default function AmbassadorPage() {
                         value={password} 
                         onChange={e => setPassword(e.target.value)} 
                         required 
-                        className="text-black text-sm h-9 px-3" 
+                        className="text-white bg-black/50 border-primary/40 text-sm h-9 px-3 placeholder:text-gray-400" 
                         minLength={6} 
                       />
                     </div>
