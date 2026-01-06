@@ -94,7 +94,19 @@ export default function LandingPage() {
     }
   };
   return <div className="min-h-screen bg-black text-white overflow-x-hidden relative">
-      {/* Content container */}
+      {/* Trash pattern background - positioned behind all content */}
+      <div 
+        className="fixed inset-0"
+        style={{
+          backgroundImage: `url(${trashPatternBg})`,
+          backgroundRepeat: 'repeat',
+          backgroundSize: '900px 900px',
+          zIndex: 0
+        }}
+        aria-hidden="true" 
+      />
+      
+      {/* Content container - above the pattern */}
       <div className="relative z-10">
       <StructuredData />
       
@@ -102,7 +114,7 @@ export default function LandingPage() {
       <HeroSection className="my-0 py-[80px]" />
 
       {/* App Promo & CTA Section */}
-      <section className="bg-black px-4 py-0">
+      <section className="px-4 py-0">
         <div className="container mx-auto max-w-6xl">
           {/* Title Row with Phone Image */}
           <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-center justify-between">
@@ -180,7 +192,7 @@ export default function LandingPage() {
       </Dialog>
 
       {/* Beta Form Before Stooping */}
-      <section className="py-12 px-4 bg-black">
+      <section className="py-12 px-4">
         <div className="container mx-auto max-w-4xl text-center">
           <div className="max-w-md mx-auto bg-black/60 backdrop-blur-sm p-8 rounded-lg border border-white/20">
             <h2 className="text-2xl font-permanent-marker mb-2" style={{
@@ -206,7 +218,7 @@ export default function LandingPage() {
       </section>
 
       {/* Tutorial Section */}
-      <section className="py-16 md:py-20 px-4 bg-black relative">
+      <section className="py-16 md:py-20 px-4 relative">
         <div className="container mx-auto max-w-6xl relative z-10">
           <h2 style={{
             color: '#699e4b'
@@ -249,7 +261,7 @@ export default function LandingPage() {
       </section>
 
       {/* Local Phygital Thrifting Section */}
-      <section className="py-16 md:py-20 px-4 bg-black relative">
+      <section className="py-16 md:py-20 px-4 relative">
         <div className="container mx-auto max-w-6xl relative z-10">
           <h2 className="text-3xl md:text-5xl font-permanent-marker mb-12 text-center" style={{
             color: '#699e4b'
@@ -292,7 +304,7 @@ export default function LandingPage() {
       </section>
 
       {/* Junk Removal Section */}
-      <section className="py-16 md:py-20 px-4 bg-black relative">
+      <section className="py-16 md:py-20 px-4 relative">
         <div className="container mx-auto max-w-6xl relative z-10">
           <h2 className="text-3xl md:text-5xl font-permanent-marker mb-12 text-center" style={{
             color: '#699e4b'
@@ -335,7 +347,7 @@ export default function LandingPage() {
       </section>
 
       {/* Waste Management Section */}
-      <section className="py-16 md:py-20 px-4 bg-black relative">
+      <section className="py-16 md:py-20 px-4 relative">
         <div className="container mx-auto max-w-6xl relative z-10">
           <h2 className="text-3xl md:text-5xl font-permanent-marker mb-8 text-center" style={{
             color: '#699e4b'
@@ -383,7 +395,7 @@ export default function LandingPage() {
       </section>
 
       {/* Play for the Planet Section */}
-      <section className="py-20 px-4 bg-black relative">
+      <section className="py-20 px-4 relative">
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -404,7 +416,7 @@ export default function LandingPage() {
       </section>
 
       {/* Strategic Partners Section */}
-      <section className="py-20 px-4 bg-black relative">
+      <section className="py-20 px-4 relative">
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
@@ -425,7 +437,7 @@ export default function LandingPage() {
       </section>
 
       {/* Ambassador Program Section */}
-      <section className="py-20 px-4 bg-black relative">
+      <section className="py-20 px-4 relative">
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
@@ -453,7 +465,7 @@ export default function LandingPage() {
       </section>
 
       {/* Join Beta Section */}
-      <section id="waitlist" className="relative py-20 px-4 bg-black">
+      <section id="waitlist" className="relative py-20 px-4">
         <div className="container mx-auto max-w-4xl text-center relative z-10">
           <div className="max-w-md mx-auto bg-black/60 backdrop-blur-sm p-8 rounded-lg border border-white/20">
             <h2 className="text-2xl font-permanent-marker mb-2" style={{
@@ -479,14 +491,14 @@ export default function LandingPage() {
       </section>
 
       {/* Separator Line */}
-      <div className="w-full flex justify-center py-8 bg-black">
+      <div className="w-full flex justify-center py-8">
         <div className="w-[95%] h-px" style={{
           backgroundColor: '#b4fa74'
         }} />
       </div>
 
       {/* Footer */}
-      <footer className="bg-black py-12 px-4">
+      <footer className="py-12 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col items-center justify-center mb-8">
             <img src={greenhuntLogoNew} alt="GreenHunt" className="h-32 sm:h-40 lg:h-48 w-auto mb-4" loading="lazy" />
@@ -560,17 +572,5 @@ export default function LandingPage() {
       </div>
       </div>
       
-      {/* Trash pattern overlay - positioned on top of all content */}
-      <div 
-        className="fixed inset-0 pointer-events-none"
-        style={{
-          backgroundImage: `url(${trashPatternBg})`,
-          backgroundRepeat: 'repeat',
-          backgroundSize: '900px 900px',
-          opacity: 0.18,
-          zIndex: 20
-        }}
-        aria-hidden="true" 
-      />
     </div>;
 }
