@@ -93,6 +93,9 @@ export default function LandingPage() {
     }
   };
   return <div className="min-h-screen bg-black text-white overflow-x-hidden relative">
+      {/* Trash pattern background */}
+      <div className="trash-pattern-bg" aria-hidden="true" />
+      
       <div className="relative z-10">
       <StructuredData />
       
