@@ -468,6 +468,7 @@ export default function LandingPage() {
               <p className="text-lg text-subtitle-styled font-sedgwick-ave mb-8">
                 {t('landing.ambassador.description')}
               </p>
+              {/* Ambassador button temporarily hidden
               <Link to="/ambassador-program">
                 <Button className="bg-accent hover:bg-accent/90 font-permanent-marker text-lg px-8 py-6" style={{
                   color: '#611a5a'
@@ -475,6 +476,7 @@ export default function LandingPage() {
                   {t('landing.ambassador.button')}
                 </Button>
               </Link>
+              */}
             </div>
             <div className="order-1 lg:order-2 flex justify-center">
               <img src={ambassadorCharacter} alt="GreenHunt Ambassador Program" className="w-full max-w-xs lg:max-w-sm h-auto" loading="lazy" />
