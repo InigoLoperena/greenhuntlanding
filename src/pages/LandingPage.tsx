@@ -562,12 +562,12 @@ export default function LandingPage() {
 
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2">
-              <span className="text-white font-sedgwick-ave text-sm">{t('landing.footer.madeWith')}</span>
-              <span className="text-lg">💚</span>
-              <span className="text-white font-sedgwick-ave text-sm">{t('landing.footer.forPlanet')}</span>
-              <span className="text-lg">🌍</span>
+              <span className="text-white font-sedgwick-ave text-lg">{t('landing.footer.madeWith')}</span>
+              <span className="text-xl">💚</span>
+              <span className="text-white font-sedgwick-ave text-lg">{t('landing.footer.forPlanet')}</span>
+              <span className="text-xl">🌍</span>
             </div>
-            <a href="mailto:hello@greenhunt.net" className="text-white font-sedgwick-ave text-sm hover:text-accent transition-colors">hello@greenhunt.net</a>
+            <a href="mailto:hello@greenhunt.net" className="text-white font-sedgwick-ave text-lg hover:text-accent transition-colors">hello@greenhunt.net</a>
           </div>
         </div>
       </footer>
