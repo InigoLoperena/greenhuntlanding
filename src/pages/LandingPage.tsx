@@ -23,6 +23,7 @@ import wasteStep3 from "@/assets/circular-market-delivery.png";
 import junkStep1 from "@/assets/junk-step-1.jpg";
 import junkStep2 from "@/assets/junk-step-2.png";
 import junkStep3 from "@/assets/junk-step-3.png";
+import junkRemovalFlow from "@/assets/junk-removal-flow.png";
 import appStoreBadges from "@/assets/app-store-badges.png";
 import wasteManagementFlow from "@/assets/waste-management-flow.png";
 import playForPlanetScreen from "@/assets/play-for-planet-screen.png";
@@ -325,11 +326,16 @@ export default function LandingPage() {
       {/* Junk Removal Section */}
       <section className="py-16 md:py-20 px-4 relative">
         <div className="container mx-auto max-w-6xl relative z-10">
-          <h2 className="text-3xl md:text-5xl font-permanent-marker mb-12 text-center" style={{
+          <h2 className="text-3xl md:text-5xl font-permanent-marker mb-8 text-center" style={{
             color: '#699e4b'
           }}>
             {t('landing.junk.title')}
           </h2>
+          
+          {/* Junk Removal Flow Diagram */}
+          <div className="mb-12 flex justify-center">
+            <img src={junkRemovalFlow} alt="Junk Removal Flow" className="w-full max-w-4xl rounded-lg" loading="lazy" />
+          </div>
           
           <div className="grid md:grid-cols-3 gap-8 md:gap-12">
             {/* Step 1 */}
