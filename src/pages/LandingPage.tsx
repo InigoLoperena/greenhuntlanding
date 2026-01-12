@@ -102,8 +102,8 @@ export default function LandingPage() {
         style={{
           backgroundImage: `url(${bgLeftMargin})`,
           backgroundRepeat: 'repeat-y',
-          backgroundPosition: 'left top',
-          backgroundSize: '100% auto',
+          backgroundPosition: 'center top',
+          backgroundSize: '140px auto',
           zIndex: 5,
           opacity: 0.18
         }}
@@ -116,8 +116,8 @@ export default function LandingPage() {
         style={{
           backgroundImage: `url(${bgRightMargin})`,
           backgroundRepeat: 'repeat-y',
-          backgroundPosition: 'right top',
-          backgroundSize: '100% auto',
+          backgroundPosition: 'center top',
+          backgroundSize: '140px auto',
           zIndex: 5,
           opacity: 0.18
         }}
