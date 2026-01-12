@@ -234,7 +234,7 @@ const translations: Record<Language, Record<string, string>> = {
     'landing.waste.step1': 'Comparte las coordenadas de objetos valiosos con tu equipo con solo pulsar un botón.',
     'landing.waste.step2': 'Ve a ubicaciones exactas con una ruta optimizada para recoger cosas valiosas.',
     'landing.waste.step3': 'Dónalo a tiendas locales o véndelo en tu mercado circular phygital.',
-    'landing.junk.title': 'ELIMINACIÓN DE BASURA',
+    'landing.junk.title': 'RECOGIDA DE OBJETOS NO DESEADOS',
     'landing.junk.step1': 'Toma fotos de tu basura y completa el formulario.',
     'landing.junk.step2': 'Otros usuarios pujan para pagarte o cobrarte por retirar la basura.',
     'landing.junk.step3': 'Acepta la oferta que quieras y programa la recogida.',
