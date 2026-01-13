@@ -310,15 +310,15 @@ button, a {
 .margin-bg-left {
   left: 0;
   width: 56px; /* w-14 */
-  background-position: right center;
-  background-size: 56px auto;
+  background-position: center top;
+  background-size: contain;
 }
 
 .margin-bg-right {
   right: 0;
   width: 56px; /* w-14 */
-  background-position: left center;
-  background-size: 56px auto;
+  background-position: center top;
+  background-size: contain;
 }
 
 /* sm breakpoint: 640px */
@@ -326,7 +326,6 @@ button, a {
   .margin-bg-left,
   .margin-bg-right {
     width: 80px; /* w-20 */
-    background-size: 80px auto;
   }
 }
 
@@ -335,7 +334,6 @@ button, a {
   .margin-bg-left,
   .margin-bg-right {
     width: 96px; /* w-24 */
-    background-size: 96px auto;
   }
 }
 
@@ -344,7 +342,6 @@ button, a {
   .margin-bg-left,
   .margin-bg-right {
     width: 128px; /* w-32 */
-    background-size: 128px auto;
   }
 }
 
@@ -353,6 +350,5 @@ button, a {
   .margin-bg-left,
   .margin-bg-right {
     width: 160px; /* w-40 */
-    background-size: 160px auto;
   }
 }
