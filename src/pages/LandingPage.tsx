@@ -30,8 +30,7 @@ import playForPlanetScreen from "@/assets/play-for-planet-screen.png";
 import appHeroPhone from "@/assets/app-hero-phone.png";
 import strategicPartner from "@/assets/strategic-partner.png";
 import ambassadorCharacter from "@/assets/ambassador-character.png";
-import bgLeftMargin from "@/assets/bg-left-margin.png";
-import bgRightMargin from "@/assets/bg-right-margin.png";
+import { MarginBackgrounds } from "@/components/MarginBackgrounds";
 const emailSchema = z.string().email();
 export default function LandingPage() {
   const {
@@ -96,33 +95,7 @@ export default function LandingPage() {
     }
   };
   return <div className="min-h-screen bg-black text-white overflow-x-hidden relative">
-      {/* Left margin background - fixed, repeating vertically */}
-      <div 
-        className="fixed left-0 top-0 bottom-0 w-14 sm:w-20 md:w-24 lg:w-32 xl:w-40"
-        style={{
-          backgroundImage: `url(${bgLeftMargin})`,
-          backgroundRepeat: 'repeat-y',
-          backgroundPosition: 'right center',
-          backgroundSize: '56px auto',
-          zIndex: 5,
-          opacity: 0.18
-        }}
-        aria-hidden="true" 
-      />
-      
-      {/* Right margin background - fixed, repeating vertically */}
-      <div 
-        className="fixed right-0 top-0 bottom-0 w-14 sm:w-20 md:w-24 lg:w-32 xl:w-40"
-        style={{
-          backgroundImage: `url(${bgRightMargin})`,
-          backgroundRepeat: 'repeat-y',
-          backgroundPosition: 'left center',
-          backgroundSize: '56px auto',
-          zIndex: 5,
-          opacity: 0.18
-        }}
-        aria-hidden="true" 
-      />
+      <MarginBackgrounds />
       
       {/* Content container with black center and transparent margins */}
       <div className="relative z-10">

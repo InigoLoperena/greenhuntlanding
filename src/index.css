@@ -295,3 +295,64 @@ button, a {
     scroll-behavior: auto !important;
   }
 }
+
+/* Margin background images - responsive sizing */
+.margin-bg {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background-repeat: repeat-y;
+  z-index: 5;
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+.margin-bg-left {
+  left: 0;
+  width: 56px; /* w-14 */
+  background-position: right center;
+  background-size: 56px auto;
+}
+
+.margin-bg-right {
+  right: 0;
+  width: 56px; /* w-14 */
+  background-position: left center;
+  background-size: 56px auto;
+}
+
+/* sm breakpoint: 640px */
+@media (min-width: 640px) {
+  .margin-bg-left,
+  .margin-bg-right {
+    width: 80px; /* w-20 */
+    background-size: 80px auto;
+  }
+}
+
+/* md breakpoint: 768px */
+@media (min-width: 768px) {
+  .margin-bg-left,
+  .margin-bg-right {
+    width: 96px; /* w-24 */
+    background-size: 96px auto;
+  }
+}
+
+/* lg breakpoint: 1024px */
+@media (min-width: 1024px) {
+  .margin-bg-left,
+  .margin-bg-right {
+    width: 128px; /* w-32 */
+    background-size: 128px auto;
+  }
+}
+
+/* xl breakpoint: 1280px */
+@media (min-width: 1280px) {
+  .margin-bg-left,
+  .margin-bg-right {
+    width: 160px; /* w-40 */
+    background-size: 160px auto;
+  }
+}
