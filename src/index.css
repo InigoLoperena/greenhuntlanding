@@ -311,26 +311,26 @@ html {
   pointer-events: none;
 }
 
+/* Mobile: imágenes pequeñas pero completas */
 .margin-bg-left {
   left: 0;
-  width: 80px;
-  background-position: left top;
-  background-size: 80px auto;
+  width: 50px;
+  background-position: center top;
+  background-size: contain;
 }
 
 .margin-bg-right {
   right: 0;
-  width: 80px;
-  background-position: right top;
-  background-size: 80px auto;
+  width: 50px;
+  background-position: center top;
+  background-size: contain;
 }
 
 /* sm breakpoint: 640px */
 @media (min-width: 640px) {
   .margin-bg-left,
   .margin-bg-right {
-    width: 100px;
-    background-size: 100px auto;
+    width: 70px;
   }
 }
 
@@ -338,8 +338,7 @@ html {
 @media (min-width: 768px) {
   .margin-bg-left,
   .margin-bg-right {
-    width: 120px;
-    background-size: 120px auto;
+    width: 100px;
   }
 }
 
@@ -347,8 +346,7 @@ html {
 @media (min-width: 1024px) {
   .margin-bg-left,
   .margin-bg-right {
-    width: 150px;
-    background-size: 150px auto;
+    width: 140px;
   }
 }
 
@@ -357,6 +355,5 @@ html {
   .margin-bg-left,
   .margin-bg-right {
     width: 180px;
-    background-size: 180px auto;
   }
 }
