@@ -296,63 +296,7 @@ button, a {
   }
 }
 
-/* Margin background images - responsive sizing */
+/* Prevent horizontal scroll */
 html {
   overflow-x: hidden;
-}
-
-.margin-bg {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  z-index: 5;
-  opacity: 0.18;
-  pointer-events: none;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-
-/* Mobile: 50px width */
-.margin-bg-left {
-  left: 0;
-  width: 50px;
-  background-position: left top;
-}
-
-.margin-bg-right {
-  right: 0;
-  width: 50px;
-  background-position: right top;
-}
-
-/* sm breakpoint: 640px */
-@media (min-width: 640px) {
-  .margin-bg-left,
-  .margin-bg-right {
-    width: 70px;
-  }
-}
-
-/* md breakpoint: 768px */
-@media (min-width: 768px) {
-  .margin-bg-left,
-  .margin-bg-right {
-    width: 100px;
-  }
-}
-
-/* lg breakpoint: 1024px */
-@media (min-width: 1024px) {
-  .margin-bg-left,
-  .margin-bg-right {
-    width: 140px;
-  }
-}
-
-/* xl breakpoint: 1280px */
-@media (min-width: 1280px) {
-  .margin-bg-left,
-  .margin-bg-right {
-    width: 180px;
-  }
 }
