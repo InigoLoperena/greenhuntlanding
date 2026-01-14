@@ -311,14 +311,14 @@ button, a {
   left: 0;
   width: 56px; /* w-14 */
   background-position: center top;
-  background-size: contain;
+  background-size: 100% auto;
 }
 
 .margin-bg-right {
   right: 0;
   width: 56px; /* w-14 */
   background-position: center top;
-  background-size: contain;
+  background-size: 100% auto;
 }
 
 /* sm breakpoint: 640px */
