@@ -305,25 +305,24 @@ html {
   position: fixed;
   top: 0;
   bottom: 0;
-  background-repeat: repeat-y;
   z-index: 5;
   opacity: 0.18;
   pointer-events: none;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
-/* Mobile: imágenes pequeñas pero completas */
+/* Mobile: 50px width */
 .margin-bg-left {
   left: 0;
   width: 50px;
-  background-position: center top;
-  background-size: contain;
+  background-position: left top;
 }
 
 .margin-bg-right {
   right: 0;
   width: 50px;
-  background-position: center top;
-  background-size: contain;
+  background-position: right top;
 }
 
 /* sm breakpoint: 640px */
