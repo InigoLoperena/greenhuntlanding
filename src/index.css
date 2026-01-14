@@ -297,6 +297,10 @@ button, a {
 }
 
 /* Margin background images - responsive sizing */
+html {
+  overflow-x: hidden;
+}
+
 .margin-bg {
   position: fixed;
   top: 0;
@@ -309,23 +313,24 @@ button, a {
 
 .margin-bg-left {
   left: 0;
-  width: 56px; /* w-14 */
-  background-position: center top;
-  background-size: 100% auto;
+  width: 80px;
+  background-position: left top;
+  background-size: 80px auto;
 }
 
 .margin-bg-right {
   right: 0;
-  width: 56px; /* w-14 */
-  background-position: center top;
-  background-size: 100% auto;
+  width: 80px;
+  background-position: right top;
+  background-size: 80px auto;
 }
 
 /* sm breakpoint: 640px */
 @media (min-width: 640px) {
   .margin-bg-left,
   .margin-bg-right {
-    width: 80px; /* w-20 */
+    width: 100px;
+    background-size: 100px auto;
   }
 }
 
@@ -333,7 +338,8 @@ button, a {
 @media (min-width: 768px) {
   .margin-bg-left,
   .margin-bg-right {
-    width: 96px; /* w-24 */
+    width: 120px;
+    background-size: 120px auto;
   }
 }
 
@@ -341,7 +347,8 @@ button, a {
 @media (min-width: 1024px) {
   .margin-bg-left,
   .margin-bg-right {
-    width: 128px; /* w-32 */
+    width: 150px;
+    background-size: 150px auto;
   }
 }
 
@@ -349,6 +356,7 @@ button, a {
 @media (min-width: 1280px) {
   .margin-bg-left,
   .margin-bg-right {
-    width: 160px; /* w-40 */
+    width: 180px;
+    background-size: 180px auto;
   }
 }
