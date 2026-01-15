@@ -300,3 +300,59 @@ button, a {
 html {
   overflow-x: hidden;
 }
+
+/* Margin backgrounds - responsive sizing */
+.margin-bg-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  opacity: 0.18;
+  pointer-events: none;
+  background-repeat: repeat-y;
+  /* Mobile: small icons that fit in 50px margin */
+  width: 50px;
+  background-size: 50px auto;
+}
+
+.margin-bg-left {
+  left: 0;
+  background-position: left top;
+}
+
+.margin-bg-right {
+  right: 0;
+  background-position: right top;
+}
+
+/* sm: 640px */
+@media (min-width: 640px) {
+  .margin-bg-container {
+    width: 70px;
+    background-size: 70px auto;
+  }
+}
+
+/* md: 768px */
+@media (min-width: 768px) {
+  .margin-bg-container {
+    width: 100px;
+    background-size: 100px auto;
+  }
+}
+
+/* lg: 1024px */
+@media (min-width: 1024px) {
+  .margin-bg-container {
+    width: 140px;
+    background-size: 140px auto;
+  }
+}
+
+/* xl: 1280px */
+@media (min-width: 1280px) {
+  .margin-bg-container {
+    width: 180px;
+    background-size: 180px auto;
+  }
+}
