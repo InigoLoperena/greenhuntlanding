@@ -301,7 +301,7 @@ html {
   overflow-x: hidden;
 }
 
-/* Margin backgrounds - responsive sizing */
+/* Margin backgrounds - scale to fit container width completely */
 .margin-bg-container {
   position: fixed;
   top: 0;
@@ -310,26 +310,26 @@ html {
   opacity: 0.18;
   pointer-events: none;
   background-repeat: repeat-y;
-  /* Mobile: small icons that fit in 50px margin */
+  /* Scale image to 100% of container width, height auto maintains aspect ratio */
+  background-size: 100% auto;
+  /* Responsive widths for margins */
   width: 50px;
-  background-size: 50px auto;
 }
 
 .margin-bg-left {
   left: 0;
-  background-position: left top;
+  background-position: center top;
 }
 
 .margin-bg-right {
   right: 0;
-  background-position: right top;
+  background-position: center top;
 }
 
 /* sm: 640px */
 @media (min-width: 640px) {
   .margin-bg-container {
     width: 70px;
-    background-size: 70px auto;
   }
 }
 
@@ -337,7 +337,6 @@ html {
 @media (min-width: 768px) {
   .margin-bg-container {
     width: 100px;
-    background-size: 100px auto;
   }
 }
 
@@ -345,7 +344,6 @@ html {
 @media (min-width: 1024px) {
   .margin-bg-container {
     width: 140px;
-    background-size: 140px auto;
   }
 }
 
@@ -353,6 +351,5 @@ html {
 @media (min-width: 1280px) {
   .margin-bg-container {
     width: 180px;
-    background-size: 180px auto;
   }
 }
