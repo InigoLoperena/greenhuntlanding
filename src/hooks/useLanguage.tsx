@@ -125,7 +125,7 @@ const translations: Record<Language, Record<string, string>> = {
     'landing.playPlanet.title': 'Play for the planet',
     'landing.playPlanet.subtitle': 'For fun or for money, company or individual, play for the planet and measure the impact of the treasures you saved from the landfill',
     'landing.strategic.title': 'Seeking Strategic Partners',
-    'landing.strategic.subtitle': 'We are looking for innovative companies in waste management, junk removal, or the thrift and antique industry. If you are interested in what we are building and want to co-create with us, we offer the opportunity to partner and invest in Greenhunt to own a piece of the company'
+    'landing.strategic.subtitle': 'We are seeking innovative companies in waste management, junk removal, or the resale and antique sectors. If our vision resonates with you and you\'re ready to innovate and co-create, let\'s explore a partnership.'
   },
   es: {
     'landing.hero.cta.abandoned': 'ENCUENTRA MUEBLES ABANDONADOS',
@@ -243,7 +243,7 @@ const translations: Record<Language, Record<string, string>> = {
     'landing.playPlanet.title': 'Juega por el planeta',
     'landing.playPlanet.subtitle': 'Por diversión o por dinero, empresa o particular, juega por el planeta y mide el impacto de los tesoros que salvaste del vertedero',
     'landing.strategic.title': 'Buscamos Socios Estratégicos',
-    'landing.strategic.subtitle': 'Buscamos empresas innovadoras en gestión de residuos, recogida de trastos o la industria de antigüedades y segunda mano. Si te interesa lo que estamos construyendo y quieres co-crear con nosotros, ofrecemos la oportunidad de asociarse e invertir en Greenhunt para ser parte de la empresa'
+    'landing.strategic.subtitle': 'Buscamos empresas innovadoras en gestión de residuos, recogida de trastos o el sector de reventa y antigüedades. Si nuestra visión te inspira y estás listo para innovar y co-crear, exploremos una colaboración.'
   }
 };
 
