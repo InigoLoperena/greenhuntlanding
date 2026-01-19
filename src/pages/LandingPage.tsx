@@ -115,8 +115,8 @@ export default function LandingPage() {
             {/* Left Side - App Info with Buttons */}
             <div className="flex-1 text-center lg:text-left">
               <h2 className="font-permanent-marker text-3xl md:text-4xl lg:text-5xl mb-4" style={{
-                color: '#6ea151'
-              }}>
+                  color: '#6ea151'
+                }}>
                 {t('landing.app.title')}
               </h2>
               <p className="font-sedgwick-ave text-subtitle-styled text-xl md:text-2xl max-w-xl mx-auto lg:mx-0 mb-6">
@@ -139,8 +139,8 @@ export default function LandingPage() {
               <div className="flex flex-col items-center lg:items-center mt-10">
                 <img src={appStoreBadges} alt="Available on App Store and Google Play" className="w-[280px] md:w-[320px] h-auto" />
                 <p style={{
-                  color: '#97c26c'
-                }} className="font-sedgwick-ave text-2xl md:text-3xl mt-2">
+                    color: '#97c26c'
+                  }} className="font-sedgwick-ave text-2xl md:text-3xl mt-2">
                   coming soon
                 </p>
               </div>
@@ -159,16 +159,16 @@ export default function LandingPage() {
         <DialogContent className="sm:max-w-md bg-black border-accent/20">
           <div className="text-center">
             <h3 className="font-permanent-marker text-2xl mb-4" style={{
-              color: '#b4fa74'
-            }}>
+                color: '#b4fa74'
+              }}>
               {language === 'en' ? 'Get the Beta' : 'Obtén la Beta'}
             </h3>
           </div>
           <form onSubmit={handleWaitlistSubmit} className="space-y-4">
             <Input type="email" placeholder={language === 'en' ? 'Enter your email' : 'Ingresa tu email'} value={email} onChange={e => setEmail(e.target.value)} required className="font-sedgwick-ave bg-black/50 border-accent/30 text-white" />
             <Button type="submit" disabled={loading} className="w-full bg-[#a2c041] hover:bg-[#8da836] font-permanent-marker text-lg" style={{
-              color: '#611a5a'
-            }}>
+                color: '#611a5a'
+              }}>
               {loading ? language === 'en' ? 'Sending...' : 'Enviando...' : language === 'en' ? 'GET BETA' : 'OBTÉN BETA'}
             </Button>
           </form>
@@ -189,8 +189,8 @@ export default function LandingPage() {
         <div className="container mx-auto max-w-4xl text-center">
           <div className="max-w-md mx-auto bg-black/60 backdrop-blur-sm p-8 rounded-lg border border-white/20">
             <h2 className="text-2xl font-permanent-marker mb-2" style={{
-              color: '#699e4b'
-            }}>
+                color: '#699e4b'
+              }}>
               {t('landing.beta.title')}
             </h2>
             <p className="text-white font-sedgwick-ave mb-6">
@@ -198,11 +198,11 @@ export default function LandingPage() {
             </p>
             <form onSubmit={handleWaitlistSubmit} className="space-y-4">
               <Input type="email" placeholder={t('landing.beta.placeholder')} value={email} onChange={e => setEmail(e.target.value)} required disabled={loading} className="w-full bg-white/90 font-permanent-marker text-xl" style={{
-                color: '#6ea151'
-              }} />
+                  color: '#6ea151'
+                }} />
               <Button type="submit" disabled={loading} className="w-full bg-accent hover:bg-accent/90 font-permanent-marker" style={{
-                color: '#611a5a'
-              }}>
+                  color: '#611a5a'
+                }}>
                 {loading ? t('landing.beta.joining') : t('landing.beta.button')}
               </Button>
             </form>
@@ -214,8 +214,8 @@ export default function LandingPage() {
       <section className="py-16 md:py-20 px-4 relative">
         <div className="container mx-auto max-w-6xl relative z-10">
           <h2 style={{
-            color: '#699e4b'
-          }} className="text-3xl font-permanent-marker mb-12 text-center md:text-5xl">
+              color: '#699e4b'
+            }} className="text-3xl font-permanent-marker mb-12 text-center md:text-5xl">
             {t('landing.tutorial.title')}
           </h2>
           
@@ -257,8 +257,8 @@ export default function LandingPage() {
       <section className="py-16 md:py-20 px-4 relative">
         <div className="container mx-auto max-w-6xl relative z-10">
           <h2 className="text-3xl md:text-5xl font-permanent-marker mb-12 text-center" style={{
-            color: '#699e4b'
-          }}>
+              color: '#699e4b'
+            }}>
             {t('landing.thrifting.title')}
           </h2>
           
@@ -266,7 +266,7 @@ export default function LandingPage() {
             {/* Step 1 */}
             <div className="flex flex-col items-center text-center">
               <div className="mb-6">
-                <img alt="Explore thrift store catalogs" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" src="/lovable-uploads/a6d30d46-5c10-4aa8-92c3-e2125445a269.png" />
+                <img alt="Explore thrift store catalogs" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" src="/lovable-uploads/199aa279-e2d7-4396-99dc-312cdf60c3d6.png" />
               </div>
               <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
                 {t('landing.thrifting.step1')}
@@ -300,8 +300,8 @@ export default function LandingPage() {
       <section className="py-16 md:py-20 px-4 relative">
         <div className="container mx-auto max-w-6xl relative z-10">
           <h2 className="text-3xl md:text-5xl font-permanent-marker mb-8 text-center" style={{
-            color: '#699e4b'
-          }}>
+              color: '#699e4b'
+            }}>
             {t('landing.junk.title')}
           </h2>
           
@@ -348,8 +348,8 @@ export default function LandingPage() {
       <section className="py-16 md:py-20 px-4 relative">
         <div className="container mx-auto max-w-6xl relative z-10">
           <h2 className="text-3xl md:text-5xl font-permanent-marker mb-8 text-center" style={{
-            color: '#699e4b'
-          }}>
+              color: '#699e4b'
+            }}>
             {t('landing.waste.title')}
           </h2>
           
@@ -398,8 +398,8 @@ export default function LandingPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-5xl font-permanent-marker mb-6 leading-tight" style={{
-                color: '#699e4b'
-              }}>
+                  color: '#699e4b'
+                }}>
                 {t('landing.playPlanet.title')}
               </h2>
               <p className="text-xl md:text-2xl text-subtitle-styled font-sedgwick-ave">
@@ -419,8 +419,8 @@ export default function LandingPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
               <h2 className="text-3xl md:text-5xl font-permanent-marker mb-6 leading-tight" style={{
-                color: '#699e4b'
-              }}>
+                  color: '#699e4b'
+                }}>
                 {t('landing.strategic.title')}
               </h2>
               <p className="text-lg md:text-xl text-subtitle-styled font-sedgwick-ave">
@@ -440,22 +440,22 @@ export default function LandingPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
               <h2 className="text-3xl md:text-5xl font-permanent-marker mb-6 leading-tight" style={{
-                color: '#699e4b'
-              }}>
+                  color: '#699e4b'
+                }}>
                 {t('landing.ambassador.title')}
               </h2>
               <p className="text-lg text-subtitle-styled font-sedgwick-ave mb-8">
                 {t('landing.ambassador.description')}
               </p>
               {/* Ambassador button temporarily hidden
-              <Link to="/ambassador-program">
+               <Link to="/ambassador-program">
                 <Button className="bg-accent hover:bg-accent/90 font-permanent-marker text-lg px-8 py-6" style={{
                   color: '#611a5a'
                 }}>
                   {t('landing.ambassador.button')}
                 </Button>
-              </Link>
-              */}
+               </Link>
+               */}
             </div>
             <div className="order-1 lg:order-2 flex justify-center">
               <img src={ambassadorCharacter} alt="GreenHunt Ambassador Program" className="w-full max-w-xs lg:max-w-sm h-auto" loading="lazy" />
@@ -469,8 +469,8 @@ export default function LandingPage() {
         <div className="container mx-auto max-w-4xl text-center relative z-10">
           <div className="max-w-md mx-auto bg-black/60 backdrop-blur-sm p-8 rounded-lg border border-white/20">
             <h2 className="text-2xl font-permanent-marker mb-2" style={{
-              color: '#699e4b'
-            }}>
+                color: '#699e4b'
+              }}>
               {t('landing.beta.title')}
             </h2>
             <p className="text-white font-sedgwick-ave mb-6">
@@ -478,11 +478,11 @@ export default function LandingPage() {
             </p>
             <form onSubmit={handleWaitlistSubmit} className="space-y-4">
               <Input type="email" placeholder={t('landing.beta.placeholder')} value={email} onChange={e => setEmail(e.target.value)} required disabled={loading} className="w-full bg-white/90 font-permanent-marker text-xl" style={{
-                color: '#6ea151'
-              }} />
+                  color: '#6ea151'
+                }} />
               <Button type="submit" disabled={loading} className="w-full bg-accent hover:bg-accent/90 font-permanent-marker" style={{
-                color: '#611a5a'
-              }}>
+                  color: '#611a5a'
+                }}>
                 {loading ? t('landing.beta.joining') : t('landing.beta.button')}
               </Button>
             </form>
@@ -493,8 +493,8 @@ export default function LandingPage() {
       {/* Separator Line */}
       <div className="w-full flex justify-center py-8">
         <div className="w-[95%] h-px" style={{
-          backgroundColor: '#b4fa74'
-        }} />
+            backgroundColor: '#b4fa74'
+          }} />
       </div>
 
       {/* Footer */}
@@ -556,17 +556,17 @@ export default function LandingPage() {
       {/* Bottom Right Buttons */}
       <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
         <Button onClick={() => window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        })} className="bg-accent hover:bg-accent/90 font-permanent-marker shadow-rebel px-3 py-2 h-auto text-lg" style={{
-          color: '#611a5a'
-        }} aria-label={language === 'en' ? 'Go to top' : 'Ir al principio'}>
+            top: 0,
+            behavior: 'smooth'
+          })} className="bg-accent hover:bg-accent/90 font-permanent-marker shadow-rebel px-3 py-2 h-auto text-lg" style={{
+            color: '#611a5a'
+          }} aria-label={language === 'en' ? 'Go to top' : 'Ir al principio'}>
           <ArrowUp className="h-5 w-5" />
         </Button>
         
         <Button onClick={() => setLanguage(language === 'en' ? 'es' : 'en')} className="bg-accent hover:bg-accent/90 font-permanent-marker shadow-rebel px-3 py-2 h-auto text-lg" style={{
-          color: '#611a5a'
-        }}>
+            color: '#611a5a'
+          }}>
           {language === 'en' ? 'ES' : 'EN'}
         </Button>
       </div>
