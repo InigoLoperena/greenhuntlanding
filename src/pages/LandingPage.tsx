@@ -296,54 +296,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Junk Removal Section */}
-      <section className="py-16 md:py-20 px-4 relative">
-        <div className="container mx-auto max-w-6xl relative z-10">
-          <h2 className="text-3xl md:text-5xl font-permanent-marker mb-8 text-center" style={{
-              color: '#699e4b'
-            }}>
-            {t('landing.junk.title')}
-          </h2>
-          
-          {/* Junk Removal Flow Diagram */}
-          <div className="mb-12 flex justify-center">
-            <img src={junkRemovalFlow} alt="Junk Removal Flow" className="w-full max-w-4xl rounded-lg" loading="lazy" />
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
-            {/* Step 1 */}
-            <div className="flex flex-col items-center text-center">
-              <div className="mb-6">
-                <img alt="Take photos of junk" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" src="/lovable-uploads/ddb40b3c-aada-427a-ae3c-992bf6263692.png" />
-              </div>
-              <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
-                {t('landing.junk.step1')}
-              </p>
-            </div>
-
-            {/* Step 2 */}
-            <div className="flex flex-col items-center text-center">
-              <div className="mb-6">
-                <img alt="Users bid for removal" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" src="/lovable-uploads/7af001b6-bb85-47b6-bc77-636a2a117ade.png" />
-              </div>
-              <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
-                {t('landing.junk.step2')}
-              </p>
-            </div>
-
-            {/* Step 3 */}
-            <div className="flex flex-col items-center text-center">
-              <div className="mb-6">
-                <img src={junkStep3} alt="Accept bid and schedule" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" />
-              </div>
-              <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
-                {t('landing.junk.step3')}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Waste Management Section */}
       <section className="py-16 md:py-20 px-4 relative">
         <div className="container mx-auto max-w-6xl relative z-10">
@@ -386,6 +338,54 @@ export default function LandingPage() {
               </div>
               <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
                 {t('landing.waste.step3')}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Junk Removal Section */}
+      <section className="py-16 md:py-20 px-4 relative">
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <h2 className="text-3xl md:text-5xl font-permanent-marker mb-8 text-center" style={{
+              color: '#699e4b'
+            }}>
+            {t('landing.junk.title')}
+          </h2>
+          
+          {/* Junk Removal Flow Diagram */}
+          <div className="mb-12 flex justify-center">
+            <img src={junkRemovalFlow} alt="Junk Removal Flow" className="w-full max-w-4xl rounded-lg" loading="lazy" />
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+            {/* Step 1 */}
+            <div className="flex flex-col items-center text-center">
+              <div className="mb-6">
+                <img alt="Take photos of junk" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" src="/lovable-uploads/ddb40b3c-aada-427a-ae3c-992bf6263692.png" />
+              </div>
+              <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
+                {t('landing.junk.step1')}
+              </p>
+            </div>
+
+            {/* Step 2 */}
+            <div className="flex flex-col items-center text-center">
+              <div className="mb-6">
+                <img alt="Users bid for removal" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" src="/lovable-uploads/7af001b6-bb85-47b6-bc77-636a2a117ade.png" />
+              </div>
+              <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
+                {t('landing.junk.step2')}
+              </p>
+            </div>
+
+            {/* Step 3 */}
+            <div className="flex flex-col items-center text-center">
+              <div className="mb-6">
+                <img src={junkStep3} alt="Accept bid and schedule" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" />
+              </div>
+              <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
+                {t('landing.junk.step3')}
               </p>
             </div>
           </div>
