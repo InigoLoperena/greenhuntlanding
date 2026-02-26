@@ -108,7 +108,7 @@ export const HeroSection = ({
           </DialogHeader>
           <form onSubmit={handleWaitlistSubmit} className="space-y-4">
             <Input type="email" placeholder={language === 'en' ? 'Enter your email' : 'Ingresa tu email'} value={email} onChange={e => setEmail(e.target.value)} required className="font-sedgwick-ave" />
-            <Button type="submit" disabled={loading} className="w-full bg-accent hover:bg-accent/90 font-permanent-marker !text-[#611a5a]">
+            <Button type="submit" disabled={loading} className="w-full bg-accent hover:bg-accent/90 font-permanent-marker btn-purple-text">
               {loading ? language === 'en' ? 'Sending...' : 'Enviando...' : language === 'en' ? 'Get Beta' : 'Obtén Beta'}
             </Button>
           </form>

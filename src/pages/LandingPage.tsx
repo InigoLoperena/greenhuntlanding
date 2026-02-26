@@ -125,7 +125,7 @@ export default function LandingPage() {
               
               {/* CTA Buttons - Below Description */}
               <div className="flex flex-row gap-4 items-center justify-center lg:justify-start">
-                <Button onClick={() => setWaitlistOpen(true)} className="bg-[#a2c041] hover:bg-[#8da836] text-[#611a5a] font-permanent-marker text-xl px-8 py-6 rounded-xl transform rotate-1 hover:rotate-0 transition-all shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)]">
+                <Button onClick={() => setWaitlistOpen(true)} className="bg-[#a2c041] hover:bg-[#8da836] btn-purple-text font-permanent-marker text-xl px-8 py-6 rounded-xl transform rotate-1 hover:rotate-0 transition-all shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)]">
                   {language === 'en' ? 'GET BETA' : 'OBTÉN BETA'}
                 </Button>
                 
@@ -166,7 +166,7 @@ export default function LandingPage() {
           </div>
           <form onSubmit={handleWaitlistSubmit} className="space-y-4">
             <Input type="email" placeholder={language === 'en' ? 'Enter your email' : 'Ingresa tu email'} value={email} onChange={(e) => setEmail(e.target.value)} required className="font-sedgwick-ave bg-black/50 border-accent/30 text-white" />
-            <Button type="submit" disabled={loading} className="w-full bg-[#a2c041] hover:bg-[#8da836] font-permanent-marker text-lg !text-[#611a5a]">
+            <Button type="submit" disabled={loading} className="w-full bg-[#a2c041] hover:bg-[#8da836] font-permanent-marker text-lg btn-purple-text">
               {loading ? language === 'en' ? 'Sending...' : 'Enviando...' : language === 'en' ? 'GET BETA' : 'OBTÉN BETA'}
             </Button>
           </form>
@@ -198,7 +198,7 @@ export default function LandingPage() {
               <Input type="email" placeholder={t('landing.beta.placeholder')} value={email} onChange={(e) => setEmail(e.target.value)} required disabled={loading} className="w-full bg-white/90 font-permanent-marker text-xl" style={{
                   color: '#6ea151'
                 }} />
-              <Button type="submit" disabled={loading} className="w-full bg-accent hover:bg-accent/90 font-permanent-marker !text-[#611a5a]">
+              <Button type="submit" disabled={loading} className="w-full bg-accent hover:bg-accent/90 font-permanent-marker btn-purple-text">
                 {loading ? t('landing.beta.joining') : t('landing.beta.button')}
               </Button>
             </form>
@@ -476,7 +476,7 @@ export default function LandingPage() {
               <Input type="email" placeholder={t('landing.beta.placeholder')} value={email} onChange={(e) => setEmail(e.target.value)} required disabled={loading} className="w-full bg-white/90 font-permanent-marker text-xl" style={{
                   color: '#6ea151'
                 }} />
-              <Button type="submit" disabled={loading} className="w-full bg-accent hover:bg-accent/90 font-permanent-marker !text-[#611a5a]">
+              <Button type="submit" disabled={loading} className="w-full bg-accent hover:bg-accent/90 font-permanent-marker btn-purple-text">
                 {loading ? t('landing.beta.joining') : t('landing.beta.button')}
               </Button>
             </form>
@@ -552,11 +552,11 @@ export default function LandingPage() {
         <Button onClick={() => window.scrollTo({
             top: 0,
             behavior: 'smooth'
-          })} className="bg-accent hover:bg-accent/90 font-permanent-marker shadow-rebel px-3 py-2 h-auto text-lg !text-[#611a5a]" aria-label={language === 'en' ? 'Go to top' : 'Ir al principio'}>
+          })} className="bg-accent hover:bg-accent/90 font-permanent-marker shadow-rebel px-3 py-2 h-auto text-lg btn-purple-text" aria-label={language === 'en' ? 'Go to top' : 'Ir al principio'}>
           <ArrowUp className="h-5 w-5" />
         </Button>
         
-        <Button onClick={() => setLanguage(language === 'en' ? 'es' : 'en')} className="bg-accent hover:bg-accent/90 font-permanent-marker shadow-rebel px-3 py-2 h-auto text-lg !text-[#611a5a]">
+        <Button onClick={() => setLanguage(language === 'en' ? 'es' : 'en')} className="bg-accent hover:bg-accent/90 font-permanent-marker shadow-rebel px-3 py-2 h-auto text-lg btn-purple-text">
           {language === 'en' ? 'ES' : 'EN'}
         </Button>
       </div>

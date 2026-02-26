@@ -372,7 +372,7 @@ export default function AmbassadorPage() {
                       type="submit" 
                       disabled={loading} 
                       size="sm"
-                      className="w-full bg-accent hover:bg-accent/90 font-permanent-marker text-sm h-9 !text-[#611a5a]"
+                      className="w-full bg-accent hover:bg-accent/90 font-permanent-marker text-sm h-9 btn-purple-text"
                     >
                       {loading ? t('ambassador.loading') : isLogin ? t('ambassador.loginBtn') : t('ambassador.signupBtn')}
                     </Button>
@@ -388,7 +388,7 @@ export default function AmbassadorPage() {
               <div className="mb-8 flex gap-4">
                 {!showForm && !showProfile && (
                   <>
-                    <Button onClick={() => setShowForm(true)} className="bg-accent hover:bg-accent/90 font-permanent-marker text-lg px-8 py-4 !text-[#611a5a]">
+                    <Button onClick={() => setShowForm(true)} className="bg-accent hover:bg-accent/90 font-permanent-marker text-lg px-8 py-4 btn-purple-text">
                       <Plus className="mr-2 h-5 w-5" />
                       {t('ambassador.gotStore')}
                     </Button>
@@ -570,7 +570,7 @@ export default function AmbassadorPage() {
                       <Button 
                         type="submit" 
                         disabled={loading}
-                        className="w-full bg-accent hover:bg-accent/90 font-permanent-marker !text-[#611a5a]"
+                        className="w-full bg-accent hover:bg-accent/90 font-permanent-marker btn-purple-text"
                       >
                         {loading 
                           ? (language === 'en' ? 'Saving...' : 'Guardando...') 

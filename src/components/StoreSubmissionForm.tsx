@@ -132,7 +132,7 @@ export function StoreSubmissionForm({ onSuccess, onCancel }: StoreSubmissionForm
             <Button
               type="submit"
               disabled={loading}
-              className="flex-1 bg-accent hover:bg-accent/90 font-permanent-marker !text-[#611a5a]"
+              className="flex-1 bg-accent hover:bg-accent/90 font-permanent-marker btn-purple-text"
             >
               {loading ? t('ambassador.loading') : t('ambassador.form.submit')}
             </Button>

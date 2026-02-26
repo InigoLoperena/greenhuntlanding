@@ -29,7 +29,7 @@ export default function WasteManagerPage() {
             <img src={greenhuntLogoNew} alt="GreenHunt Logo" className="h-16 sm:h-20 w-auto" />
           </Link>
           <Link to="/">
-            <Button className="bg-accent hover:bg-accent/90 font-permanent-marker !text-[#611a5a]">
+            <Button className="bg-accent hover:bg-accent/90 font-permanent-marker btn-purple-text">
               Back to Home
             </Button>
           </Link>
@@ -282,7 +282,7 @@ export default function WasteManagerPage() {
             Join GreenHunt and be part of the circular economy revolution. Connect with your community and save valuable items from landfills.
           </p>
           <Link to="/#waitlist">
-            <Button className="bg-accent hover:bg-accent/90 font-permanent-marker text-xl px-12 py-6 !text-[#611a5a]">
+            <Button className="bg-accent hover:bg-accent/90 font-permanent-marker text-xl px-12 py-6 btn-purple-text">
               Get Beta
             </Button>
           </Link>
