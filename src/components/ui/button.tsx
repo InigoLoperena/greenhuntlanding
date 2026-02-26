@@ -42,7 +42,11 @@ export interface ButtonProps
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, style, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
-    const shouldForcePurpleText = typeof className === "string" && className.includes("btn-purple-text")
+    const shouldForcePurpleText = typeof className === "string" && (
+      className.includes("btn-purple-text") ||
+      className.includes("bg-accent") ||
+      className.includes("bg-[#a2c041]")
+    )
 
     return (
       <Comp
