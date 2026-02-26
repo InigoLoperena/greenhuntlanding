@@ -148,7 +148,7 @@ export default function LandingPage() {
             
             {/* Right Side - Phone Image */}
             <div className="flex-1 flex items-center justify-center">
-              <img src={appHeroPhone} alt="GreenHunt App Screenshot" className="h-96 md:h-[550px] lg:h-[700px] w-auto object-contain" loading="lazy" />
+              <img alt="GreenHunt App Screenshot" className="h-96 md:h-[550px] lg:h-[700px] w-auto object-contain" loading="lazy" src="/lovable-uploads/8759250d-dd73-492b-977a-129c0e98d572.png" />
             </div>
           </div>
         </div>
@@ -165,7 +165,7 @@ export default function LandingPage() {
             </h3>
           </div>
           <form onSubmit={handleWaitlistSubmit} className="space-y-4">
-            <Input type="email" placeholder={language === 'en' ? 'Enter your email' : 'Ingresa tu email'} value={email} onChange={e => setEmail(e.target.value)} required className="font-sedgwick-ave bg-black/50 border-accent/30 text-white" />
+            <Input type="email" placeholder={language === 'en' ? 'Enter your email' : 'Ingresa tu email'} value={email} onChange={(e) => setEmail(e.target.value)} required className="font-sedgwick-ave bg-black/50 border-accent/30 text-white" />
             <Button type="submit" disabled={loading} className="w-full bg-[#a2c041] hover:bg-[#8da836] font-permanent-marker text-lg" style={{
                 color: '#611a5a'
               }}>
@@ -197,7 +197,7 @@ export default function LandingPage() {
               {t('landing.beta.description')}
             </p>
             <form onSubmit={handleWaitlistSubmit} className="space-y-4">
-              <Input type="email" placeholder={t('landing.beta.placeholder')} value={email} onChange={e => setEmail(e.target.value)} required disabled={loading} className="w-full bg-white/90 font-permanent-marker text-xl" style={{
+              <Input type="email" placeholder={t('landing.beta.placeholder')} value={email} onChange={(e) => setEmail(e.target.value)} required disabled={loading} className="w-full bg-white/90 font-permanent-marker text-xl" style={{
                   color: '#6ea151'
                 }} />
               <Button type="submit" disabled={loading} className="w-full bg-accent hover:bg-accent/90 font-permanent-marker" style={{
@@ -448,14 +448,14 @@ export default function LandingPage() {
                 {t('landing.ambassador.description')}
               </p>
               {/* Ambassador button temporarily hidden
-               <Link to="/ambassador-program">
-                <Button className="bg-accent hover:bg-accent/90 font-permanent-marker text-lg px-8 py-6" style={{
-                  color: '#611a5a'
-                }}>
-                  {t('landing.ambassador.button')}
-                </Button>
-               </Link>
-               */}
+                  <Link to="/ambassador-program">
+                   <Button className="bg-accent hover:bg-accent/90 font-permanent-marker text-lg px-8 py-6" style={{
+                     color: '#611a5a'
+                   }}>
+                     {t('landing.ambassador.button')}
+                   </Button>
+                  </Link>
+                  */}
             </div>
             <div className="order-1 lg:order-2 flex justify-center">
               <img src={ambassadorCharacter} alt="GreenHunt Ambassador Program" className="w-full max-w-xs lg:max-w-sm h-auto" loading="lazy" />
@@ -477,7 +477,7 @@ export default function LandingPage() {
               {t('landing.beta.description')}
             </p>
             <form onSubmit={handleWaitlistSubmit} className="space-y-4">
-              <Input type="email" placeholder={t('landing.beta.placeholder')} value={email} onChange={e => setEmail(e.target.value)} required disabled={loading} className="w-full bg-white/90 font-permanent-marker text-xl" style={{
+              <Input type="email" placeholder={t('landing.beta.placeholder')} value={email} onChange={(e) => setEmail(e.target.value)} required disabled={loading} className="w-full bg-white/90 font-permanent-marker text-xl" style={{
                   color: '#6ea151'
                 }} />
               <Button type="submit" disabled={loading} className="w-full bg-accent hover:bg-accent/90 font-permanent-marker" style={{
