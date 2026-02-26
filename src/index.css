@@ -298,15 +298,23 @@ button, a {
   }
 }
 
-/* Force purple text/icons on green CTA buttons */
+/* Force purple text/icons on all app buttons */
 .btn-purple-text,
-.btn-purple-text * {
+.btn-purple-text *,
+button,
+button *,
+[role="button"],
+[role="button"] * {
   color: hsl(var(--button-green-foreground)) !important;
   -webkit-text-fill-color: hsl(var(--button-green-foreground)) !important;
 }
 
 .btn-purple-text svg,
-.btn-purple-text svg * {
+.btn-purple-text svg *,
+button svg,
+button svg *,
+[role="button"] svg,
+[role="button"] svg * {
   stroke: hsl(var(--button-green-foreground)) !important;
   fill: hsl(var(--button-green-foreground)) !important;
 }
