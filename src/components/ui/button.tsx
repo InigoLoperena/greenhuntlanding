@@ -50,7 +50,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     return (
       <Comp
-        className={cn(buttonVariants({ variant, size, className }))}
+        className={cn(buttonVariants({ variant, size, className }), shouldForcePurpleText && "btn-purple-text")}
         style={shouldForcePurpleText ? {
           color: "hsl(var(--button-green-foreground))",
           WebkitTextFillColor: "hsl(var(--button-green-foreground))",
