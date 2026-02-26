@@ -42,20 +42,11 @@ export interface ButtonProps
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, style, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
-    const shouldForcePurpleText = typeof className === "string" && (
-      className.includes("btn-purple-text") ||
-      className.includes("bg-accent") ||
-      className.includes("bg-[#a2c041]")
-    )
 
     return (
       <Comp
-        className={cn(buttonVariants({ variant, size, className }), shouldForcePurpleText && "btn-purple-text")}
-        style={shouldForcePurpleText ? {
-          color: "hsl(var(--button-green-foreground))",
-          WebkitTextFillColor: "hsl(var(--button-green-foreground))",
-          ...style,
-        } : style}
+        className={cn(buttonVariants({ variant, size, className }), "btn-purple-text")}
+        style={style}
         ref={ref}
         {...props}
       />
