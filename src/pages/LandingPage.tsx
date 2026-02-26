@@ -552,12 +552,12 @@ export default function LandingPage() {
         <Button onClick={() => window.scrollTo({
             top: 0,
             behavior: 'smooth'
-          })} className="bg-accent hover:bg-accent/90 font-permanent-marker shadow-rebel px-3 py-2 h-auto text-lg btn-purple-text" aria-label={language === 'en' ? 'Go to top' : 'Ir al principio'}>
-          <ArrowUp className="h-5 w-5" />
+          })} className="bg-accent hover:bg-accent/90 font-permanent-marker shadow-rebel px-3 py-2 h-auto text-lg btn-purple-text" style={{ color: 'hsl(var(--button-green-foreground))', WebkitTextFillColor: 'hsl(var(--button-green-foreground))' }} aria-label={language === 'en' ? 'Go to top' : 'Ir al principio'}>
+          <ArrowUp className="h-5 w-5" style={{ color: 'hsl(var(--button-green-foreground))', stroke: 'hsl(var(--button-green-foreground))' }} />
         </Button>
         
-        <Button onClick={() => setLanguage(language === 'en' ? 'es' : 'en')} className="bg-accent hover:bg-accent/90 font-permanent-marker shadow-rebel px-3 py-2 h-auto text-lg btn-purple-text">
-          {language === 'en' ? 'ES' : 'EN'}
+        <Button onClick={() => setLanguage(language === 'en' ? 'es' : 'en')} className="bg-accent hover:bg-accent/90 font-permanent-marker shadow-rebel px-3 py-2 h-auto text-lg btn-purple-text" style={{ color: 'hsl(var(--button-green-foreground))', WebkitTextFillColor: 'hsl(var(--button-green-foreground))' }}>
+          <span style={{ color: 'hsl(var(--button-green-foreground))', WebkitTextFillColor: 'hsl(var(--button-green-foreground))' }}>{language === 'en' ? 'ES' : 'EN'}</span>
         </Button>
       </div>
         </div>
