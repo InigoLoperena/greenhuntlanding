@@ -34,6 +34,7 @@ Underground, urban and rebellious brand style with Impact font and uppercase tex
 
     --accent: 82 52% 41%; /* Color 2: Verde claro #729f31 */
     --accent-foreground: 0 0% 100%;
+    --button-green-foreground: 307 57% 24%; /* #611a5a for text/icons on green buttons */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -297,10 +298,17 @@ button, a {
   }
 }
 
-/* Force purple text on green CTA buttons */
+/* Force purple text/icons on green CTA buttons */
 .btn-purple-text,
-.btn-purple-text svg {
-  color: #611a5a !important;
+.btn-purple-text * {
+  color: hsl(var(--button-green-foreground)) !important;
+  -webkit-text-fill-color: hsl(var(--button-green-foreground)) !important;
+}
+
+.btn-purple-text svg,
+.btn-purple-text svg * {
+  stroke: hsl(var(--button-green-foreground)) !important;
+  fill: hsl(var(--button-green-foreground)) !important;
 }
 
 /* Prevent horizontal scroll */
