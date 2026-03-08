@@ -229,7 +229,7 @@ export default function LandingPage() {
             {/* Step 2 */}
             <div className="flex flex-col items-center text-center">
               <div className="mb-6">
-                <img src={tutorialStep2} alt="Make money when someone unlocks coordinates" className="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy" />
+                <img src={tutorialStep2} alt="Make money when someone unlocks coordinates" className="w-full max-w-md rounded-2xl shadow-lg" loading="lazy" />
               </div>
               <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
                 {t('landing.tutorial.step2')}
