@@ -219,7 +219,7 @@ export default function LandingPage() {
             {/* Step 1 */}
             <div className="flex flex-col items-center text-center">
               <div className="mb-6">
-                <img alt="Take photos of street finds" className="w-full max-w-xs rounded-2xl shadow-lg object-fill" loading="lazy" src="/lovable-uploads/6e2785a1-8490-48ea-b1d6-260236ac0d74.png" />
+                <img alt="Take photos of street finds" className="w-full max-w-xs rounded-2xl shadow-lg object-fill" loading="lazy" src="/lovable-uploads/b2d445b9-fc2c-40d6-8b6f-4947539b949f.png" />
               </div>
               <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
                 {t('landing.tutorial.step1')}
@@ -444,14 +444,14 @@ export default function LandingPage() {
                 {t('landing.ambassador.description')}
               </p>
               {/* Ambassador button temporarily hidden
-                                    <Link to="/ambassador-program">
-                                     <Button className="bg-accent hover:bg-accent/90 font-permanent-marker text-lg px-8 py-6" style={{
-                                       color: '#611a5a'
-                                     }}>
-                                       {t('landing.ambassador.button')}
-                                     </Button>
-                                    </Link>
-                                    */}
+                                       <Link to="/ambassador-program">
+                                        <Button className="bg-accent hover:bg-accent/90 font-permanent-marker text-lg px-8 py-6" style={{
+                                          color: '#611a5a'
+                                        }}>
+                                          {t('landing.ambassador.button')}
+                                        </Button>
+                                       </Link>
+                                       */}
             </div>
             <div className="order-1 lg:order-2 flex justify-center">
               <img src={ambassadorCharacter} alt="GreenHunt Ambassador Program" className="w-full max-w-xs lg:max-w-sm h-auto" loading="lazy" />
