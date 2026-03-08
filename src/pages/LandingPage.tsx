@@ -219,7 +219,7 @@ export default function LandingPage() {
             {/* Step 1 */}
             <div className="flex flex-col items-center text-center">
               <div className="mb-6">
-                <img alt="Take photos of street finds" className="w-full max-w-sm rounded-2xl shadow-lg object-cover" loading="lazy" src="/lovable-uploads/b2d445b9-fc2c-40d6-8b6f-4947539b949f.png" />
+                <img alt="Take photos of street finds" className="w-full max-w-md rounded-2xl shadow-lg object-cover" loading="lazy" src="/lovable-uploads/b2d445b9-fc2c-40d6-8b6f-4947539b949f.png" />
               </div>
               <p className="font-sedgwick-ave text-subtitle-styled text-3xl">
                 {t('landing.tutorial.step1')}
