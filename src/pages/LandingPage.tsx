@@ -174,8 +174,27 @@ export default function LandingPage() {
           <SectionDivider />
 
           {/* ═══════════════ App Promo & CTA ═══════════════ */}
-          <section className="px-4 py-16">
-            <div className="container mx-auto max-w-6xl">
+          <section className="px-4 py-16 relative overflow-hidden">
+            {/* Circular economy animated background */}
+            <div className="absolute inset-0 pointer-events-none">
+              {/* Large rotating ring - represents circular flow */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] md:w-[900px] md:h-[900px] rounded-full border border-[#b4fa74]/[0.06] border-dashed" style={{ animation: 'float-particle-1 25s linear infinite', transformOrigin: 'center' }} />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] md:w-[650px] md:h-[650px] rounded-full border border-[#b4fa74]/[0.08] border-dashed" style={{ animation: 'float-particle-2 20s linear infinite reverse', transformOrigin: 'center' }} />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] md:w-[400px] md:h-[400px] rounded-full border border-[#b4fa74]/[0.04]" style={{ animation: 'pulse-glow 4s ease-in-out infinite alternate' }} />
+              {/* Orbiting dots on the rings */}
+              {[0, 1, 2, 3, 4, 5].map(i => (
+                <div key={i} className="absolute top-1/2 left-1/2 w-2 h-2 md:w-3 md:h-3 rounded-full" style={{
+                  backgroundColor: '#b4fa74',
+                  opacity: 0.15 + i * 0.05,
+                  transform: `translate(-50%, -50%) rotate(${i * 60}deg) translateX(${200 + i * 40}px)`,
+                  animation: `pulse-glow ${3 + i * 0.5}s ease-in-out ${i * 0.4}s infinite alternate`
+                }} />
+              ))}
+            </div>
+            <FloatingParticles count={10} />
+            <PulsingOrb size={220} top="-80px" left="-100px" delay={0} />
+            <PulsingOrb size={160} bottom="-60px" right="-80px" delay={1.5} />
+            <div className="container mx-auto max-w-6xl relative z-10">
               <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center justify-between">
                 {/* Left */}
                 <div className="flex-1 text-center lg:text-left">
@@ -277,7 +296,8 @@ export default function LandingPage() {
           <SectionDivider />
 
           {/* ═══════════════ Beta CTA Strip ═══════════════ */}
-          <section className="py-10 px-4">
+          <section className="py-10 px-4 relative">
+            <FloatingParticles count={4} />
             <div className="container mx-auto max-w-3xl">
               <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-[#141414] to-[#1a1a1a] p-8 md:p-10">
                 {/* Glow accent */}
@@ -592,6 +612,8 @@ export default function LandingPage() {
 
           {/* ═══════════════ Final Beta CTA ═══════════════ */}
           <section id="waitlist" className="relative py-20 px-4">
+            <FloatingParticles count={6} />
+            <PulsingOrb size={150} top="10%" right="-50px" delay={0.8} />
             <div className="container mx-auto max-w-3xl text-center relative z-10">
               <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#141414] via-[#111] to-[#0d1a0d] p-10 md:p-14">
                 {/* Decorative glows */}
@@ -628,7 +650,8 @@ export default function LandingPage() {
           </section>
 
           {/* ═══════════════ Footer ═══════════════ */}
-          <footer className="py-16 px-4 border-t border-white/5">
+          <footer className="py-16 px-4 border-t border-white/5 relative">
+            <FloatingParticles count={3} />
             <div className="container mx-auto max-w-6xl">
               <div className="flex flex-col items-center justify-center mb-10">
                 <img src={greenhuntLogoNew} alt="GreenHunt" className="h-28 sm:h-36 lg:h-44 w-auto mb-4 opacity-90" loading="lazy" />
