@@ -59,13 +59,46 @@ const PulsingOrb = ({ size = 120, top, left, right, bottom, delay = 0 }: {size?:
 
 
 
-/* ─── Reusable section divider ─── */
-const SectionDivider = () =>
-<div className="flex items-center justify-center py-4">
-    <div className="flex-1 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-    <div className="mx-4 w-2 h-2 rounded-full animate-[pulse_3s_ease-in-out_infinite]" style={{ backgroundColor: '#b4fa74' }} />
-    <div className="flex-1 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-  </div>;
+/* ─── Dynamic animated dots background overlay ─── */
+const DynamicDotsOverlay = ({ variant = 0 }: { variant?: number }) => {
+  const offsets = [
+    { nodes: [[15,30],[40,70],[70,20],[85,60],[25,80],[60,45]], paths: 'M150,300 Q400,100 700,200 Q850,600 250,800' },
+    { nodes: [[20,25],[55,75],[80,35],[35,65],[65,15],[90,55]], paths: 'M200,250 Q500,700 800,350 Q600,100 300,600' },
+    { nodes: [[10,50],[45,20],[75,70],[30,40],[60,80],[85,30]], paths: 'M100,500 Q350,200 750,700 Q900,300 200,400' },
+  ];
+  const o = offsets[variant % 3];
+  return (
+    <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+      <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice">
+        {/* Animated traveling particle along path */}
+        <path d={o.paths} fill="none" stroke="#b4fa74" strokeWidth="0.8" opacity="0.06" strokeDasharray="6 8">
+          <animate attributeName="stroke-dashoffset" from="0" to="-100" dur={`${6 + variant}s`} repeatCount="indefinite" />
+        </path>
+        <circle r="2.5" fill="#b4fa74" opacity="0.4">
+          <animateMotion dur={`${7 + variant * 2}s`} repeatCount="indefinite" path={o.paths} />
+          <animate attributeName="opacity" values="0.1;0.5;0.1" dur={`${7 + variant * 2}s`} repeatCount="indefinite" />
+        </circle>
+        <circle r="2" fill="#b4fa74" opacity="0.3">
+          <animateMotion dur={`${9 + variant}s`} repeatCount="indefinite" path={o.paths} begin={`${2 + variant}s`} />
+          <animate attributeName="opacity" values="0.05;0.4;0.05" dur={`${9 + variant}s`} repeatCount="indefinite" />
+        </circle>
+        {/* Pulsing scattered dots */}
+        {o.nodes.map(([cx, cy], i) => (
+          <g key={i}>
+            <circle cx={`${cx}%`} cy={`${cy}%`} r={2 + i % 3} fill="#b4fa74" opacity={0.04 + i % 4 * 0.03}>
+              <animate attributeName="opacity" values={`${0.03 + i % 3 * 0.02};${0.12 + i % 2 * 0.06};${0.03 + i % 3 * 0.02}`} dur={`${3 + i * 0.7}s`} repeatCount="indefinite" />
+              <animate attributeName="r" values={`${2 + i % 3};${4 + i % 3};${2 + i % 3}`} dur={`${4 + i * 0.5}s`} repeatCount="indefinite" />
+            </circle>
+            <circle cx={`${cx}%`} cy={`${cy}%`} r={8 + i * 2} fill="none" stroke="#b4fa74" strokeWidth="0.4" opacity={0.03 + i % 3 * 0.015}>
+              <animate attributeName="r" values={`${8 + i * 2};${14 + i * 2};${8 + i * 2}`} dur={`${5 + i * 0.6}s`} repeatCount="indefinite" />
+              <animate attributeName="opacity" values={`${0.04};${0.01};${0.04}`} dur={`${5 + i * 0.6}s`} repeatCount="indefinite" />
+            </circle>
+          </g>
+        ))}
+      </svg>
+    </div>
+  );
+};
 
 
 /* ─── Step card component ─── */
@@ -171,7 +204,8 @@ export default function LandingPage() {
           {/* Hero Section */}
           <HeroSection className="my-0 py-[80px]" />
 
-          <SectionDivider />
+
+
 
           {/* ═══════════════ App Promo & CTA ═══════════════ */}
           <section className="px-4 py-16 relative overflow-hidden">
@@ -406,7 +440,8 @@ export default function LandingPage() {
             </DialogContent>
           </Dialog>
 
-          <SectionDivider />
+
+
 
           {/* ═══════════════ Beta CTA Strip ═══════════════ */}
           
@@ -445,10 +480,12 @@ export default function LandingPage() {
 
           
 
-          <SectionDivider />
+
+
 
           {/* ═══════════════ Tutorial / Stooping ═══════════════ */}
-          <section className="py-16 md:py-24 px-4 relative">
+          <section className="py-16 md:py-24 px-4 relative overflow-hidden">
+            <DynamicDotsOverlay variant={0} />
             <FloatingParticles count={8} />
             <PulsingOrb size={160} top="-40px" right="-60px" delay={0} />
             <div className="container mx-auto max-w-6xl relative z-10">
@@ -482,7 +519,8 @@ export default function LandingPage() {
             </div>
           </section>
 
-          <SectionDivider />
+
+
 
           {/* ═══════════════ Local Phygital Thrifting ═══════════════ */}
           <section className="py-16 md:py-24 px-4 relative">
@@ -519,7 +557,8 @@ export default function LandingPage() {
             </div>
           </section>
 
-          <SectionDivider />
+
+
 
           {/* ═══════════════ Waste Management ═══════════════ */}
           <section className="py-16 md:py-24 px-4 relative">
@@ -563,10 +602,12 @@ export default function LandingPage() {
             </div>
           </section>
 
-          <SectionDivider />
+
+
 
           {/* ═══════════════ Junk Removal ═══════════════ */}
-          <section className="py-16 md:py-24 px-4 relative">
+          <section className="py-16 md:py-24 px-4 relative overflow-hidden">
+            <DynamicDotsOverlay variant={1} />
             <FloatingParticles count={6} />
             <PulsingOrb size={150} bottom="10%" left="-40px" delay={2} />
             <div className="container mx-auto max-w-6xl relative z-10">
@@ -607,7 +648,8 @@ export default function LandingPage() {
             </div>
           </section>
 
-          <SectionDivider />
+
+
 
           {/* ═══════════════ Play for the Planet ═══════════════ */}
           <section className="py-20 md:py-28 px-4 relative">
@@ -623,10 +665,12 @@ export default function LandingPage() {
             </div>
           </section>
 
-          <SectionDivider />
+
+
 
           {/* ═══════════════ Strategic Partners ═══════════════ */}
-          <section className="py-20 md:py-28 px-4 relative">
+          <section className="py-20 md:py-28 px-4 relative overflow-hidden">
+            <DynamicDotsOverlay variant={2} />
             <FloatingParticles count={8} />
             <PulsingOrb size={200} top="10%" left="-60px" delay={0} />
             <PulsingOrb size={120} bottom="20%" right="-40px" delay={2} />
@@ -721,7 +765,7 @@ export default function LandingPage() {
             </div>
           </section>
 
-          <SectionDivider />
+          
 
           {/* ═══════════════ Final Beta CTA ═══════════════ */}
           <section id="waitlist" className="relative py-20 px-4">
