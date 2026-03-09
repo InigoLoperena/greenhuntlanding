@@ -22,11 +22,48 @@ import { MarginBackgrounds } from "@/components/MarginBackgrounds";
 
 const emailSchema = z.string().email();
 
+/* ─── Floating particles background ─── */
+const FloatingParticles = ({ count = 6, color = '#b4fa74' }: { count?: number; color?: string }) => (
+  <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    {Array.from({ length: count }).map((_, i) => (
+      <div
+        key={i}
+        className="absolute rounded-full"
+        style={{
+          width: `${3 + (i % 4) * 2}px`,
+          height: `${3 + (i % 4) * 2}px`,
+          backgroundColor: color,
+          opacity: 0.08 + (i % 3) * 0.06,
+          left: `${10 + (i * 17) % 80}%`,
+          top: `${5 + (i * 23) % 90}%`,
+          animation: `float-particle-${i % 3} ${8 + i * 2}s ease-in-out infinite`,
+        }}
+      />
+    ))}
+  </div>
+);
+
+/* ─── Pulsing orb accent ─── */
+const PulsingOrb = ({ size = 120, top, left, right, bottom, delay = 0 }: { size?: number; top?: string; left?: string; right?: string; bottom?: string; delay?: number }) => (
+  <div
+    className="absolute rounded-full pointer-events-none"
+    style={{
+      width: size,
+      height: size,
+      backgroundColor: '#b4fa74',
+      opacity: 0.06,
+      filter: `blur(${size / 2}px)`,
+      top, left, right, bottom,
+      animation: `pulse-glow 4s ease-in-out ${delay}s infinite alternate`,
+    }}
+  />
+);
+
 /* ─── Reusable section divider ─── */
 const SectionDivider = () => (
   <div className="flex items-center justify-center py-4">
     <div className="flex-1 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-    <div className="mx-4 w-2 h-2 rounded-full" style={{ backgroundColor: '#b4fa74' }} />
+    <div className="mx-4 w-2 h-2 rounded-full animate-[pulse_3s_ease-in-out_infinite]" style={{ backgroundColor: '#b4fa74' }} />
     <div className="flex-1 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
   </div>
 );
