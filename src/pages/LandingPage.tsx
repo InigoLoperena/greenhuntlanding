@@ -162,7 +162,7 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white overflow-x-hidden relative">
-      <MarginBackgrounds />
+      
       
       <div className="relative z-10">
         <div className="mx-4 md:mx-12 lg:mx-24 xl:mx-32 bg-[#0a0a0a] min-h-screen">
