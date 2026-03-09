@@ -376,3 +376,25 @@ html {
     width: 180px;
   }
 }
+
+/* ─── Dynamic animated effects ─── */
+@keyframes float-particle-0 {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  25% { transform: translateY(-20px) translateX(10px); }
+  50% { transform: translateY(-8px) translateX(-15px); }
+  75% { transform: translateY(-25px) translateX(5px); }
+}
+@keyframes float-particle-1 {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  33% { transform: translateY(-15px) translateX(-12px); }
+  66% { transform: translateY(-30px) translateX(8px); }
+}
+@keyframes float-particle-2 {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  40% { transform: translateY(-22px) translateX(15px); }
+  80% { transform: translateY(-10px) translateX(-10px); }
+}
+@keyframes pulse-glow {
+  0% { opacity: 0.04; transform: scale(0.95); }
+  100% { opacity: 0.12; transform: scale(1.05); }
+}
