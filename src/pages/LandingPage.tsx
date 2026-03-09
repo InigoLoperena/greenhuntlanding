@@ -884,22 +884,31 @@ export default function LandingPage() {
 
           {/* Bottom Right Buttons */}
           <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
-            <Button
+            {/* Scroll to top - solid green fill style (like GET BETA) */}
+            <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="bg-[#a2c041] hover:bg-[#8da836] border-2 border-[#b4fa74] font-permanent-marker shadow-lg shadow-[#b4fa74]/30 px-3 py-2 h-auto text-lg rounded-xl hover:scale-110 transition-all"
-              style={{ color: '#611a5a' }}
+              className="font-permanent-marker px-4 py-3 rounded-xl hover:scale-105 transition-all"
+              style={{
+                backgroundColor: '#b4fa74',
+                color: '#611a5a',
+                boxShadow: '0 0 15px rgba(180, 250, 116, 0.3)',
+              }}
               aria-label={language === 'en' ? 'Go to top' : 'Ir al principio'}>
-              
               <ArrowUp className="h-5 w-5" style={{ color: '#611a5a', stroke: '#611a5a' }} />
-            </Button>
+            </button>
             
-            <Button
+            {/* Language toggle - outlined style (like TRAILER) */}
+            <button
               onClick={() => setLanguage(language === 'en' ? 'es' : 'en')}
-              className="bg-[#a2c041] hover:bg-[#8da836] border-2 border-[#b4fa74] font-permanent-marker shadow-lg shadow-[#b4fa74]/30 px-3 py-2 h-auto text-lg rounded-xl hover:scale-110 transition-all"
-              style={{ color: '#611a5a' }}>
-              
-              <span style={{ color: '#611a5a', WebkitTextFillColor: '#611a5a' }}>{language === 'en' ? 'ES' : 'EN'}</span>
-            </Button>
+              className="font-permanent-marker px-4 py-3 rounded-xl hover:scale-105 transition-all tracking-wider text-sm"
+              style={{
+                backgroundColor: 'transparent',
+                color: '#b4fa74',
+                border: '2px solid #b4fa74',
+                boxShadow: '0 0 15px rgba(180, 250, 116, 0.15), inset 0 0 15px rgba(180, 250, 116, 0.05)',
+              }}>
+              {language === 'en' ? 'ES' : 'EN'}
+            </button>
           </div>
         </div>
       </div>
