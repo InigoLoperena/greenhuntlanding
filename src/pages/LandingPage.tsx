@@ -15,7 +15,7 @@ import tutorialStep2 from "@/assets/tutorial-step-2.png";
 import thriftingStep2 from "@/assets/thrifting-step-2.png";
 import thriftingStep3 from "@/assets/thrifting-step-3.png";
 import junkStep3 from "@/assets/junk-step-3.png";
-import junkRemovalFlow from "@/assets/junk-removal-flow-new.png";
+import junkRemovalFlow from "@/assets/junk-removal-flow.png";
 import appStoreBadges from "@/assets/app-store-badges.png";
 import playForPlanetScreen from "@/assets/play-for-planet-screen.png";
 import { MarginBackgrounds } from "@/components/MarginBackgrounds";
