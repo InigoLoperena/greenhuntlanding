@@ -816,14 +816,14 @@ export default function LandingPage() {
                 ))}
               </div>
 
-              <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-6 border-t border-white/5">
+              <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-6 border-t border-[#b4fa74]/20">
                 <div className="flex items-center gap-2">
-                  <span className="text-white/40 font-sedgwick-ave text-base">{t('landing.footer.madeWith')}</span>
+                  <span className="font-sedgwick-ave text-base" style={{ color: '#a2c041' }}>{t('landing.footer.madeWith')}</span>
                   <span className="text-lg">💚</span>
-                  <span className="text-white/40 font-sedgwick-ave text-base">{t('landing.footer.forPlanet')}</span>
+                  <span className="font-sedgwick-ave text-base" style={{ color: '#a2c041' }}>{t('landing.footer.forPlanet')}</span>
                   <span className="text-lg">🌍</span>
                 </div>
-                <a href="mailto:hello@greenhunt.net" className="text-white/40 font-sedgwick-ave text-base hover:text-[#b4fa74] transition-colors">
+                <a href="mailto:hello@greenhunt.net" className="font-sedgwick-ave text-base hover:scale-105 transition-all" style={{ color: '#b4fa74' }}>
                   hello@greenhunt.net
                 </a>
               </div>
