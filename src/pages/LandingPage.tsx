@@ -478,6 +478,8 @@ export default function LandingPage() {
 
           {/* ═══════════════ Play for the Planet ═══════════════ */}
           <section className="py-20 md:py-28 px-4 relative">
+            <FloatingParticles count={4} />
+            <PulsingOrb size={130} top="-20px" left="30%" delay={1} />
             <div className="container mx-auto max-w-6xl relative z-10">
               <FeatureRow 
                 title={t('landing.playPlanet.title')} 
