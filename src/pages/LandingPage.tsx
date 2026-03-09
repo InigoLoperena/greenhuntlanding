@@ -18,8 +18,6 @@ import junkStep3 from "@/assets/junk-step-3.png";
 import junkRemovalFlow from "@/assets/junk-removal-flow.png";
 import appStoreBadges from "@/assets/app-store-badges.png";
 import playForPlanetScreen from "@/assets/play-for-planet-screen.png";
-import strategicPartner from "@/assets/strategic-partner.png";
-import ambassadorCharacter from "@/assets/ambassador-character.png";
 import { MarginBackgrounds } from "@/components/MarginBackgrounds";
 
 const emailSchema = z.string().email();
@@ -450,28 +448,51 @@ export default function LandingPage() {
           {/* ═══════════════ Strategic Partners ═══════════════ */}
           <section className="py-20 md:py-28 px-4 relative">
             <div className="container mx-auto max-w-6xl relative z-10">
-              <FeatureRow 
-                title={t('landing.strategic.title')} 
-                subtitle={t('landing.strategic.subtitle')} 
-                image={strategicPartner} 
-                alt="Strategic Partner" 
-                reverse 
-              />
-            </div>
-          </section>
-
-          <SectionDivider />
-
-          {/* ═══════════════ Ambassador Program ═══════════════ */}
-          <section className="py-20 md:py-28 px-4 relative">
-            <div className="container mx-auto max-w-6xl relative z-10">
-              <FeatureRow 
-                title={t('landing.ambassador.title')} 
-                subtitle={t('landing.ambassador.description')} 
-                image={ambassadorCharacter} 
-                alt="GreenHunt Ambassador Program" 
-                reverse 
-              />
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div className="order-2 lg:order-1">
+                  <h2 className="text-3xl md:text-5xl font-permanent-marker mb-5 leading-tight" style={{ color: '#b4fa74' }}>
+                    {t('landing.strategic.title')}
+                  </h2>
+                  <div className="w-16 h-1 rounded-full mb-6" style={{ backgroundColor: '#b4fa74', opacity: 0.5 }} />
+                  <p className="text-lg md:text-xl text-subtitle-styled font-sedgwick-ave leading-relaxed">
+                    {t('landing.strategic.subtitle')}
+                  </p>
+                </div>
+                <div className="order-1 lg:order-2 flex justify-center">
+                  {/* Abstract icon design */}
+                  <div className="relative w-64 h-64 md:w-80 md:h-80">
+                    {/* Glow */}
+                    <div className="absolute inset-0 rounded-full opacity-10 blur-3xl" style={{ backgroundColor: '#b4fa74' }} />
+                    {/* Outer ring */}
+                    <div className="absolute inset-0 rounded-full border-2 border-dashed border-white/10 animate-[spin_30s_linear_infinite]" />
+                    {/* Inner ring */}
+                    <div className="absolute inset-6 rounded-full border border-white/5" />
+                    {/* Center icon cluster */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="relative">
+                        {/* Handshake / partnership visual */}
+                        <div className="w-28 h-28 md:w-36 md:h-36 rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.06] to-transparent flex items-center justify-center shadow-[0_0_40px_rgba(180,250,116,0.1)]" style={{ transform: 'rotate(-3deg)' }}>
+                          <svg viewBox="0 0 64 64" className="w-16 h-16 md:w-20 md:h-20" fill="none" stroke="#b4fa74" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            {/* Handshake icon */}
+                            <path d="M8 32 L20 20 L28 20 L36 12 L44 20 L56 20" />
+                            <path d="M8 32 L16 40 L28 40 L36 48" />
+                            <path d="M56 20 L48 28 L40 28 L36 32 L40 36 L36 40 L40 44" />
+                            <circle cx="14" cy="28" r="3" fill="#b4fa74" opacity="0.3" />
+                            <circle cx="50" cy="18" r="3" fill="#b4fa74" opacity="0.3" />
+                          </svg>
+                        </div>
+                        {/* Floating accent dots */}
+                        <div className="absolute -top-4 -right-4 w-6 h-6 rounded-full border border-white/20 flex items-center justify-center">
+                          <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#b4fa74' }} />
+                        </div>
+                        <div className="absolute -bottom-3 -left-5 w-8 h-8 rounded-full border border-white/10 flex items-center justify-center">
+                          <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#b4fa74', opacity: 0.5 }} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
 
