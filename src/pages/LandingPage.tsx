@@ -606,7 +606,8 @@ export default function LandingPage() {
 
 
           {/* ═══════════════ Junk Removal ═══════════════ */}
-          <section className="py-16 md:py-24 px-4 relative">
+          <section className="py-16 md:py-24 px-4 relative overflow-hidden">
+            <DynamicDotsOverlay variant={1} />
             <FloatingParticles count={6} />
             <PulsingOrb size={150} bottom="10%" left="-40px" delay={2} />
             <div className="container mx-auto max-w-6xl relative z-10">
