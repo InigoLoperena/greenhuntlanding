@@ -23,79 +23,79 @@ import { MarginBackgrounds } from "@/components/MarginBackgrounds";
 const emailSchema = z.string().email();
 
 /* ─── Floating particles background ─── */
-const FloatingParticles = ({ count = 6, color = '#b4fa74' }: { count?: number; color?: string }) => (
-  <div className="absolute inset-0 overflow-hidden pointer-events-none">
-    {Array.from({ length: count }).map((_, i) => (
-      <div
-        key={i}
-        className="absolute rounded-full"
-        style={{
-          width: `${3 + (i % 4) * 2}px`,
-          height: `${3 + (i % 4) * 2}px`,
-          backgroundColor: color,
-          opacity: 0.08 + (i % 3) * 0.06,
-          left: `${10 + (i * 17) % 80}%`,
-          top: `${5 + (i * 23) % 90}%`,
-          animation: `float-particle-${i % 3} ${8 + i * 2}s ease-in-out infinite`,
-        }}
-      />
-    ))}
-  </div>
-);
+const FloatingParticles = ({ count = 6, color = '#b4fa74' }: {count?: number;color?: string;}) =>
+<div className="absolute inset-0 overflow-hidden pointer-events-none">
+    {Array.from({ length: count }).map((_, i) =>
+  <div
+    key={i}
+    className="absolute rounded-full"
+    style={{
+      width: `${3 + i % 4 * 2}px`,
+      height: `${3 + i % 4 * 2}px`,
+      backgroundColor: color,
+      opacity: 0.08 + i % 3 * 0.06,
+      left: `${10 + i * 17 % 80}%`,
+      top: `${5 + i * 23 % 90}%`,
+      animation: `float-particle-${i % 3} ${8 + i * 2}s ease-in-out infinite`
+    }} />
+
+  )}
+  </div>;
+
 
 /* ─── Pulsing orb accent ─── */
-const PulsingOrb = ({ size = 120, top, left, right, bottom, delay = 0 }: { size?: number; top?: string; left?: string; right?: string; bottom?: string; delay?: number }) => (
-  <div
-    className="absolute rounded-full pointer-events-none"
-    style={{
-      width: size,
-      height: size,
-      backgroundColor: '#b4fa74',
-      opacity: 0.06,
-      filter: `blur(${size / 2}px)`,
-      top, left, right, bottom,
-      animation: `pulse-glow 4s ease-in-out ${delay}s infinite alternate`,
-    }}
-  />
-);
+const PulsingOrb = ({ size = 120, top, left, right, bottom, delay = 0 }: {size?: number;top?: string;left?: string;right?: string;bottom?: string;delay?: number;}) =>
+<div
+  className="absolute rounded-full pointer-events-none"
+  style={{
+    width: size,
+    height: size,
+    backgroundColor: '#b4fa74',
+    opacity: 0.06,
+    filter: `blur(${size / 2}px)`,
+    top, left, right, bottom,
+    animation: `pulse-glow 4s ease-in-out ${delay}s infinite alternate`
+  }} />;
+
+
 
 /* ─── Reusable section divider ─── */
-const SectionDivider = () => (
-  <div className="flex items-center justify-center py-4">
+const SectionDivider = () =>
+<div className="flex items-center justify-center py-4">
     <div className="flex-1 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
     <div className="mx-4 w-2 h-2 rounded-full animate-[pulse_3s_ease-in-out_infinite]" style={{ backgroundColor: '#b4fa74' }} />
     <div className="flex-1 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-  </div>
-);
+  </div>;
+
 
 /* ─── Step card component ─── */
-const StepCard = ({ number, image, alt, text }: { number: number; image: string; alt: string; text: string }) => (
-  <div className="group relative flex flex-col items-center text-center">
+const StepCard = ({ number, image, alt, text }: {number: number;image: string;alt: string;text: string;}) =>
+<div className="group relative flex flex-col items-center text-center">
     {/* Step number badge */}
-    <div className="absolute -top-4 -left-2 z-20 w-10 h-10 rounded-full flex items-center justify-center font-permanent-marker text-lg border-2" 
-      style={{ backgroundColor: '#1a1a1a', borderColor: '#b4fa74', color: '#b4fa74' }}>
+    <div className="absolute -top-4 -left-2 z-20 w-10 h-10 rounded-full flex items-center justify-center font-permanent-marker text-lg border-2"
+  style={{ backgroundColor: '#1a1a1a', borderColor: '#b4fa74', color: '#b4fa74' }}>
       {number}
     </div>
     {/* Card */}
     <div className="relative w-full rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-b from-white/[0.04] to-transparent p-1 transition-all duration-300 group-hover:border-white/20 group-hover:shadow-[0_0_30px_rgba(180,250,116,0.08)]">
-      <img 
-        alt={alt} 
-        className="w-full rounded-xl object-contain" 
-        loading="lazy" 
-        src={image} 
-      />
+      <img
+      alt={alt}
+      className="w-full rounded-xl object-contain"
+      loading="lazy"
+      src={image} />
+    
     </div>
     <p className="font-sedgwick-ave text-subtitle-styled text-xl md:text-2xl mt-5 leading-relaxed px-2">
       {text}
     </p>
-  </div>
-);
+  </div>;
+
 
 /* ─── Feature row (alternating layout) ─── */
-const FeatureRow = ({ title, subtitle, image, alt, reverse = false }: { 
-  title: string; subtitle: string; image: string; alt: string; reverse?: boolean 
-}) => (
-  <div className="grid lg:grid-cols-2 gap-12 items-center">
+const FeatureRow = ({ title, subtitle, image, alt, reverse = false
+
+}: {title: string;subtitle: string;image: string;alt: string;reverse?: boolean;}) =>
+<div className="grid lg:grid-cols-2 gap-12 items-center">
     <div className={reverse ? 'order-2 lg:order-1' : ''}>
       <h2 className="text-3xl md:text-5xl font-permanent-marker mb-5 leading-tight" style={{ color: '#b4fa74' }}>
         {title}
@@ -108,8 +108,8 @@ const FeatureRow = ({ title, subtitle, image, alt, reverse = false }: {
     <div className={`${reverse ? 'order-1 lg:order-2' : ''} flex justify-center`}>
       <img src={image} alt={alt} className="w-full max-w-xs lg:max-w-sm h-auto drop-shadow-2xl" loading="lazy" />
     </div>
-  </div>
-);
+  </div>;
+
 
 export default function LandingPage() {
   const { t, language, setLanguage } = useLanguage();
@@ -129,10 +129,10 @@ export default function LandingPage() {
     try {
       // @ts-ignore - beta_testers table exists but types may not be updated
       const { error } = await supabase
-        // @ts-ignore
-        .from('beta_testers')
-        // @ts-ignore
-        .insert([{ email: email.toLowerCase().trim() }]);
+      // @ts-ignore
+      .from('beta_testers')
+      // @ts-ignore
+      .insert([{ email: email.toLowerCase().trim() }]);
       if (error) {
         if (error.code === '23505') {
           toast.error(t('landing.beta.emailExists'));
@@ -289,13 +289,13 @@ export default function LandingPage() {
 
                 {/* Small scattered dots - represent activity */}
                 {[
-                  [150, 350], [300, 500], [450, 300], [750, 550], [850, 250], [400, 150], [700, 700], [100, 500], [900, 600], [500, 550],
-                  [350, 250], [800, 350], [250, 600], [650, 450], [1000, 300]
-                ].map(([cx, cy], i) => (
-                  <circle key={i} cx={cx} cy={cy} r={1 + (i % 3)} fill="#b4fa74" opacity={0.05 + (i % 5) * 0.03}>
-                    <animate attributeName="opacity" values={`${0.03 + (i % 4) * 0.02};${0.15 + (i % 3) * 0.05};${0.03 + (i % 4) * 0.02}`} dur={`${3 + i * 0.3}s`} repeatCount="indefinite" />
+                [150, 350], [300, 500], [450, 300], [750, 550], [850, 250], [400, 150], [700, 700], [100, 500], [900, 600], [500, 550],
+                [350, 250], [800, 350], [250, 600], [650, 450], [1000, 300]].
+                map(([cx, cy], i) =>
+                <circle key={i} cx={cx} cy={cy} r={1 + i % 3} fill="#b4fa74" opacity={0.05 + i % 5 * 0.03}>
+                    <animate attributeName="opacity" values={`${0.03 + i % 4 * 0.02};${0.15 + i % 3 * 0.05};${0.03 + i % 4 * 0.02}`} dur={`${3 + i * 0.3}s`} repeatCount="indefinite" />
                   </circle>
-                ))}
+                )}
               </svg>
 
               {/* Radial glow behind center */}
@@ -318,21 +318,21 @@ export default function LandingPage() {
                   
                   {/* CTA Buttons */}
                   <div className="flex flex-row gap-4 items-center justify-center lg:justify-start">
-                    <Button 
-                      onClick={() => setWaitlistOpen(true)} 
+                    <Button
+                      onClick={() => setWaitlistOpen(true)}
                       className="bg-[#b4fa74] hover:bg-[#a2e866] font-permanent-marker text-xl px-8 py-6 rounded-xl transition-all shadow-[0_0_25px_rgba(180,250,116,0.25)] hover:shadow-[0_0_40px_rgba(180,250,116,0.35)]"
-                      style={{ color: '#0a0a0a' }}
-                    >
+                      style={{ color: '#0a0a0a' }}>
+                      
                       {language === 'en' ? 'GET BETA' : 'OBTÉN BETA'}
                       <ChevronRight className="ml-1 h-5 w-5" style={{ color: '#0a0a0a', stroke: '#0a0a0a' }} />
                     </Button>
                     
-                    <Button 
-                      onClick={() => setTrailerOpen(true)} 
-                      variant="outline" 
+                    <Button
+                      onClick={() => setTrailerOpen(true)}
+                      variant="outline"
                       className="font-permanent-marker text-sm px-5 py-3 h-auto rounded-xl border-white/20 hover:border-white/40 hover:bg-white/5"
-                      style={{ color: '#fff' }}
-                    >
+                      style={{ color: '#fff' }}>
+                      
                       <Video className="mr-1 h-4 w-4" style={{ color: '#fff', stroke: '#fff' }} />
                       <span style={{ color: '#fff' }}>Trailer</span>
                     </Button>
@@ -351,13 +351,13 @@ export default function LandingPage() {
                 <div className="flex-1 flex items-center justify-center">
                   <div className="relative">
                     <div className="absolute -inset-8 rounded-full opacity-10 blur-3xl" style={{ backgroundColor: '#b4fa74' }} />
-                    <img 
-                      alt="GreenHunt App Screenshot" 
-                      className="relative h-96 md:h-[550px] lg:h-[700px] w-auto object-contain drop-shadow-2xl" 
-                      loading="lazy" 
-                      src="/lovable-uploads/8759250d-dd73-492b-977a-129c0e98d572.png" 
-                      style={{ mixBlendMode: 'screen' }}
-                    />
+                    <img
+                      alt="GreenHunt App Screenshot"
+                      className="relative h-96 md:h-[550px] lg:h-[700px] w-auto object-contain drop-shadow-2xl"
+                      loading="lazy"
+                      src="/lovable-uploads/8759250d-dd73-492b-977a-129c0e98d572.png"
+                      style={{ mixBlendMode: 'screen' }} />
+                    
                   </div>
                 </div>
               </div>
@@ -376,20 +376,20 @@ export default function LandingPage() {
                 </p>
               </div>
               <form onSubmit={handleWaitlistSubmit} className="space-y-4">
-                <Input 
-                  type="email" 
-                  placeholder={language === 'en' ? 'Enter your email' : 'Ingresa tu email'} 
-                  value={email} 
-                  onChange={(e) => setEmail(e.target.value)} 
-                  required 
-                  className="font-sedgwick-ave bg-white/5 border-white/15 text-white placeholder:text-white/30 focus:border-[#b4fa74]/50 rounded-xl" 
-                />
-                <Button 
-                  type="submit" disabled={loading} 
+                <Input
+                  type="email"
+                  placeholder={language === 'en' ? 'Enter your email' : 'Ingresa tu email'}
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  className="font-sedgwick-ave bg-white/5 border-white/15 text-white placeholder:text-white/30 focus:border-[#b4fa74]/50 rounded-xl" />
+                
+                <Button
+                  type="submit" disabled={loading}
                   className="w-full bg-[#b4fa74] hover:bg-[#a2e866] font-permanent-marker text-lg rounded-xl shadow-[0_0_20px_rgba(180,250,116,0.2)]"
-                  style={{ color: '#0a0a0a' }}
-                >
-                  {loading ? (language === 'en' ? 'Sending...' : 'Enviando...') : (language === 'en' ? 'GET BETA' : 'OBTÉN BETA')}
+                  style={{ color: '#0a0a0a' }}>
+                  
+                  {loading ? language === 'en' ? 'Sending...' : 'Enviando...' : language === 'en' ? 'GET BETA' : 'OBTÉN BETA'}
                 </Button>
               </form>
             </DialogContent>
@@ -422,19 +422,19 @@ export default function LandingPage() {
                     {t('landing.beta.description')}
                   </p>
                   <form onSubmit={handleWaitlistSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-                    <Input 
-                      type="email" 
-                      placeholder={t('landing.beta.placeholder')} 
-                      value={email} 
-                      onChange={(e) => setEmail(e.target.value)} 
-                      required disabled={loading} 
-                      className="flex-1 bg-white/5 border-white/15 text-white placeholder:text-white/30 rounded-xl font-sedgwick-ave" 
-                    />
-                    <Button 
-                      type="submit" disabled={loading} 
+                    <Input
+                      type="email"
+                      placeholder={t('landing.beta.placeholder')}
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required disabled={loading}
+                      className="flex-1 bg-white/5 border-white/15 text-white placeholder:text-white/30 rounded-xl font-sedgwick-ave" />
+                    
+                    <Button
+                      type="submit" disabled={loading}
                       className="bg-[#b4fa74] hover:bg-[#a2e866] font-permanent-marker rounded-xl px-6 whitespace-nowrap"
-                      style={{ color: '#0a0a0a' }}
-                    >
+                      style={{ color: '#0a0a0a' }}>
+                      
                       {loading ? t('landing.beta.joining') : t('landing.beta.button')}
                     </Button>
                   </form>
@@ -458,24 +458,24 @@ export default function LandingPage() {
               </div>
               
               <div className="grid md:grid-cols-3 gap-8 md:gap-10">
-                <StepCard 
-                  number={1} 
-                  image="/lovable-uploads/b2d445b9-fc2c-40d6-8b6f-4947539b949f.png" 
-                  alt="Take photos of street finds" 
-                  text={t('landing.tutorial.step1')} 
-                />
-                <StepCard 
-                  number={2} 
-                  image={tutorialStep2} 
-                  alt="Make money when someone unlocks coordinates" 
-                  text={t('landing.tutorial.step2')} 
-                />
-                <StepCard 
-                  number={3} 
-                  image="/lovable-uploads/c1d89d6c-343e-495a-8f4a-58d9ff2876f5.png" 
-                  alt="Buy coordinates and get valuable items" 
-                  text={t('landing.tutorial.disclaimer')} 
-                />
+                <StepCard
+                  number={1}
+                  image="/lovable-uploads/b2d445b9-fc2c-40d6-8b6f-4947539b949f.png"
+                  alt="Take photos of street finds"
+                  text={t('landing.tutorial.step1')} />
+                
+                <StepCard
+                  number={2}
+                  image={tutorialStep2}
+                  alt="Make money when someone unlocks coordinates"
+                  text={t('landing.tutorial.step2')} />
+                
+                <StepCard
+                  number={3}
+                  image="/lovable-uploads/c1d89d6c-343e-495a-8f4a-58d9ff2876f5.png"
+                  alt="Buy coordinates and get valuable items"
+                  text={t('landing.tutorial.disclaimer')} />
+                
               </div>
             </div>
           </section>
@@ -495,24 +495,24 @@ export default function LandingPage() {
               </div>
               
               <div className="grid md:grid-cols-3 gap-8 md:gap-10">
-                <StepCard 
-                  number={1} 
-                  image="/lovable-uploads/199aa279-e2d7-4396-99dc-312cdf60c3d6.png" 
-                  alt="Explore thrift store catalogs" 
-                  text={t('landing.thrifting.step1')} 
-                />
-                <StepCard 
-                  number={2} 
-                  image={thriftingStep2} 
-                  alt="Request pickup for donations" 
-                  text={t('landing.thrifting.step2')} 
-                />
-                <StepCard 
-                  number={3} 
-                  image={thriftingStep3} 
-                  alt="Create your own garage sale" 
-                  text={t('landing.thrifting.step3')} 
-                />
+                <StepCard
+                  number={1}
+                  image="/lovable-uploads/199aa279-e2d7-4396-99dc-312cdf60c3d6.png"
+                  alt="Explore thrift store catalogs"
+                  text={t('landing.thrifting.step1')} />
+                
+                <StepCard
+                  number={2}
+                  image={thriftingStep2}
+                  alt="Request pickup for donations"
+                  text={t('landing.thrifting.step2')} />
+                
+                <StepCard
+                  number={3}
+                  image={thriftingStep3}
+                  alt="Create your own garage sale"
+                  text={t('landing.thrifting.step3')} />
+                
               </div>
             </div>
           </section>
@@ -539,24 +539,24 @@ export default function LandingPage() {
               </div>
               
               <div className="grid md:grid-cols-3 gap-8 md:gap-10">
-                <StepCard 
-                  number={1} 
-                  image="/lovable-uploads/746cc348-3ec5-4283-8ede-3caa2807ada7.png" 
-                  alt="Share coordinates with team" 
-                  text={t('landing.waste.step1')} 
-                />
-                <StepCard 
-                  number={2} 
-                  image="/lovable-uploads/4d4b3cc6-477f-46d2-b66e-1849b04e2072.png" 
-                  alt="Optimized route navigation" 
-                  text={t('landing.waste.step2')} 
-                />
-                <StepCard 
-                  number={3} 
-                  image="/lovable-uploads/318700f9-052e-424f-bb23-94c7e893031c.png" 
-                  alt="Donate to local stores" 
-                  text={t('landing.waste.step3')} 
-                />
+                <StepCard
+                  number={1}
+                  image="/lovable-uploads/746cc348-3ec5-4283-8ede-3caa2807ada7.png"
+                  alt="Share coordinates with team"
+                  text={t('landing.waste.step1')} />
+                
+                <StepCard
+                  number={2}
+                  image="/lovable-uploads/4d4b3cc6-477f-46d2-b66e-1849b04e2072.png"
+                  alt="Optimized route navigation"
+                  text={t('landing.waste.step2')} />
+                
+                <StepCard
+                  number={3}
+                  image="/lovable-uploads/318700f9-052e-424f-bb23-94c7e893031c.png"
+                  alt="Donate to local stores"
+                  text={t('landing.waste.step3')} />
+                
               </div>
             </div>
           </section>
@@ -578,29 +578,29 @@ export default function LandingPage() {
               {/* Flow Diagram */}
               <div className="mb-14 flex justify-center">
                 <div className="relative rounded-2xl overflow-hidden border border-white/10 p-1 bg-gradient-to-b from-white/[0.03] to-transparent">
-                  <img src={junkRemovalFlow} alt="Junk Removal Flow" className="w-full max-w-4xl rounded-xl" loading="lazy" />
+                  <img alt="Junk Removal Flow" className="w-full max-w-4xl rounded-xl" loading="lazy" src="/lovable-uploads/fd42b8ee-56ad-4bff-8554-28276f6de959.png" />
                 </div>
               </div>
               
               <div className="grid md:grid-cols-3 gap-8 md:gap-10">
-                <StepCard 
-                  number={1} 
-                  image="/lovable-uploads/ddb40b3c-aada-427a-ae3c-992bf6263692.png" 
-                  alt="Take photos of junk" 
-                  text={t('landing.junk.step1')} 
-                />
-                <StepCard 
-                  number={2} 
-                  image="/lovable-uploads/7af001b6-bb85-47b6-bc77-636a2a117ade.png" 
-                  alt="Users bid for removal" 
-                  text={t('landing.junk.step2')} 
-                />
-                <StepCard 
-                  number={3} 
-                  image={junkStep3} 
-                  alt="Accept bid and schedule" 
-                  text={t('landing.junk.step3')} 
-                />
+                <StepCard
+                  number={1}
+                  image="/lovable-uploads/ddb40b3c-aada-427a-ae3c-992bf6263692.png"
+                  alt="Take photos of junk"
+                  text={t('landing.junk.step1')} />
+                
+                <StepCard
+                  number={2}
+                  image="/lovable-uploads/7af001b6-bb85-47b6-bc77-636a2a117ade.png"
+                  alt="Users bid for removal"
+                  text={t('landing.junk.step2')} />
+                
+                <StepCard
+                  number={3}
+                  image={junkStep3}
+                  alt="Accept bid and schedule"
+                  text={t('landing.junk.step3')} />
+                
               </div>
             </div>
           </section>
@@ -612,12 +612,12 @@ export default function LandingPage() {
             <FloatingParticles count={4} />
             <PulsingOrb size={130} top="-20px" left="30%" delay={1} />
             <div className="container mx-auto max-w-6xl relative z-10">
-              <FeatureRow 
-                title={t('landing.playPlanet.title')} 
-                subtitle={t('landing.playPlanet.subtitle')} 
-                image={playForPlanetScreen} 
-                alt="Play for the Planet - GreenHunt App" 
-              />
+              <FeatureRow
+                title={t('landing.playPlanet.title')}
+                subtitle={t('landing.playPlanet.subtitle')}
+                image={playForPlanetScreen}
+                alt="Play for the Planet - GreenHunt App" />
+              
             </div>
           </section>
 
@@ -652,14 +652,14 @@ export default function LandingPage() {
                     <div className="absolute inset-16 rounded-full border border-white/[0.03]" />
                     
                     {/* Network nodes orbiting */}
-                    {[0, 60, 120, 180, 240, 300].map((deg, i) => (
-                      <div key={i} className="absolute inset-0 animate-[spin_25s_linear_infinite]" style={{ animationDelay: `${-i * 4.17}s` }}>
+                    {[0, 60, 120, 180, 240, 300].map((deg, i) =>
+                    <div key={i} className="absolute inset-0 animate-[spin_25s_linear_infinite]" style={{ animationDelay: `${-i * 4.17}s` }}>
                         <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 md:w-5 md:h-5 rounded-full border border-white/20 flex items-center justify-center"
-                          style={{ animation: `pulse-glow 3s ease-in-out ${i * 0.5}s infinite alternate` }}>
-                          <div className="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full" style={{ backgroundColor: '#b4fa74', opacity: 0.6 + (i % 3) * 0.15 }} />
+                      style={{ animation: `pulse-glow 3s ease-in-out ${i * 0.5}s infinite alternate` }}>
+                          <div className="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full" style={{ backgroundColor: '#b4fa74', opacity: 0.6 + i % 3 * 0.15 }} />
                         </div>
                       </div>
-                    ))}
+                    )}
 
                     {/* Center icon - Network/Partnership */}
                     <div className="absolute inset-0 flex items-center justify-center">
@@ -739,19 +739,19 @@ export default function LandingPage() {
                     {t('landing.beta.description')}
                   </p>
                   <form onSubmit={handleWaitlistSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-                    <Input 
-                      type="email" 
-                      placeholder={t('landing.beta.placeholder')} 
-                      value={email} 
-                      onChange={(e) => setEmail(e.target.value)} 
-                      required disabled={loading} 
-                      className="flex-1 bg-white/5 border-white/15 text-white placeholder:text-white/30 rounded-xl font-sedgwick-ave text-lg" 
-                    />
-                    <Button 
-                      type="submit" disabled={loading} 
+                    <Input
+                      type="email"
+                      placeholder={t('landing.beta.placeholder')}
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required disabled={loading}
+                      className="flex-1 bg-white/5 border-white/15 text-white placeholder:text-white/30 rounded-xl font-sedgwick-ave text-lg" />
+                    
+                    <Button
+                      type="submit" disabled={loading}
                       className="bg-[#b4fa74] hover:bg-[#a2e866] font-permanent-marker rounded-xl px-8 text-lg shadow-[0_0_25px_rgba(180,250,116,0.2)]"
-                      style={{ color: '#0a0a0a' }}
-                    >
+                      style={{ color: '#0a0a0a' }}>
+                      
                       {loading ? t('landing.beta.joining') : t('landing.beta.button')}
                     </Button>
                   </form>
@@ -774,48 +774,48 @@ export default function LandingPage() {
               {/* Links legales */}
               <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 mb-8">
                 {[
-                  { to: '/privacy', label: t('landing.footer.privacy') },
-                  { to: '/legal', label: t('landing.footer.terms') },
-                  { to: '/cookies', label: t('landing.footer.cookies') },
-                ].map(link => (
-                  <Link 
-                    key={link.to} 
-                    to={link.to} 
-                    className="text-white/40 hover:text-white/80 transition-colors font-permanent-marker text-base"
-                  >
+                { to: '/privacy', label: t('landing.footer.privacy') },
+                { to: '/legal', label: t('landing.footer.terms') },
+                { to: '/cookies', label: t('landing.footer.cookies') }].
+                map((link) =>
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  className="text-white/40 hover:text-white/80 transition-colors font-permanent-marker text-base">
+                  
                     {link.label}
                   </Link>
-                ))}
+                )}
               </div>
 
               {/* Redes sociales */}
               <div className="flex items-center justify-center gap-6 sm:gap-8 mb-8">
                 {[
-                  { href: "https://www.instagram.com/greenhuntstoopingapp/", icon: <Instagram className="h-8 w-8 sm:h-9 sm:w-9" /> },
-                  { href: "https://www.tiktok.com/@greenhuntstoopingapp", icon: (
-                    <svg className="h-8 w-8 sm:h-9 sm:w-9" viewBox="0 0 24 24" fill="currentColor">
+                { href: "https://www.instagram.com/greenhuntstoopingapp/", icon: <Instagram className="h-8 w-8 sm:h-9 sm:w-9" /> },
+                { href: "https://www.tiktok.com/@greenhuntstoopingapp", icon:
+                  <svg className="h-8 w-8 sm:h-9 sm:w-9" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-.88-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z" />
                     </svg>
-                  )},
-                  { href: "https://www.youtube.com/@GreenHuntStoopingApp", icon: <Youtube className="h-8 w-8 sm:h-9 sm:w-9" /> },
-                  { href: "https://x.com/StoopingApp", icon: (
-                    <svg className="h-8 w-8 sm:h-9 sm:w-9" viewBox="0 0 24 24" fill="currentColor">
+                },
+                { href: "https://www.youtube.com/@GreenHuntStoopingApp", icon: <Youtube className="h-8 w-8 sm:h-9 sm:w-9" /> },
+                { href: "https://x.com/StoopingApp", icon:
+                  <svg className="h-8 w-8 sm:h-9 sm:w-9" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                     </svg>
-                  )},
-                  { href: "https://www.linkedin.com/company/greenhunt", icon: <Linkedin className="h-8 w-8 sm:h-9 sm:w-9" /> },
-                ].map((social, i) => (
-                  <a 
-                    key={i} 
-                    href={social.href} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="hover:scale-125 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(180,250,116,0.6)]"
-                    style={{ color: '#b4fa74' }}
-                  >
+                },
+                { href: "https://www.linkedin.com/company/greenhunt", icon: <Linkedin className="h-8 w-8 sm:h-9 sm:w-9" /> }].
+                map((social, i) =>
+                <a
+                  key={i}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:scale-125 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(180,250,116,0.6)]"
+                  style={{ color: '#b4fa74' }}>
+                  
                     {social.icon}
                   </a>
-                ))}
+                )}
               </div>
 
               {/* Línea divisora verde */}
@@ -838,25 +838,25 @@ export default function LandingPage() {
 
           {/* Bottom Right Buttons */}
           <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
-            <Button 
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
+            <Button
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="bg-[#a2c041] hover:bg-[#8da836] border-2 border-[#b4fa74] font-permanent-marker shadow-lg shadow-[#b4fa74]/30 px-3 py-2 h-auto text-lg rounded-xl hover:scale-110 transition-all"
               style={{ color: '#611a5a' }}
-              aria-label={language === 'en' ? 'Go to top' : 'Ir al principio'}
-            >
+              aria-label={language === 'en' ? 'Go to top' : 'Ir al principio'}>
+              
               <ArrowUp className="h-5 w-5" style={{ color: '#611a5a', stroke: '#611a5a' }} />
             </Button>
             
-            <Button 
-              onClick={() => setLanguage(language === 'en' ? 'es' : 'en')} 
+            <Button
+              onClick={() => setLanguage(language === 'en' ? 'es' : 'en')}
               className="bg-[#a2c041] hover:bg-[#8da836] border-2 border-[#b4fa74] font-permanent-marker shadow-lg shadow-[#b4fa74]/30 px-3 py-2 h-auto text-lg rounded-xl hover:scale-110 transition-all"
-              style={{ color: '#611a5a' }}
-            >
+              style={{ color: '#611a5a' }}>
+              
               <span style={{ color: '#611a5a', WebkitTextFillColor: '#611a5a' }}>{language === 'en' ? 'ES' : 'EN'}</span>
             </Button>
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>);
+
 }
