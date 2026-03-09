@@ -834,19 +834,19 @@ export default function LandingPage() {
           <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
             <Button 
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
-              className="bg-[#1a1a1a] hover:bg-[#222] border border-white/10 font-permanent-marker shadow-lg px-3 py-2 h-auto text-lg rounded-xl"
-              style={{ color: '#b4fa74' }}
+              className="bg-[#a2c041] hover:bg-[#8da836] border-2 border-[#b4fa74] font-permanent-marker shadow-lg shadow-[#b4fa74]/30 px-3 py-2 h-auto text-lg rounded-xl hover:scale-110 transition-all"
+              style={{ color: '#611a5a' }}
               aria-label={language === 'en' ? 'Go to top' : 'Ir al principio'}
             >
-              <ArrowUp className="h-5 w-5" style={{ color: '#b4fa74', stroke: '#b4fa74' }} />
+              <ArrowUp className="h-5 w-5" style={{ color: '#611a5a', stroke: '#611a5a' }} />
             </Button>
             
             <Button 
               onClick={() => setLanguage(language === 'en' ? 'es' : 'en')} 
-              className="bg-[#1a1a1a] hover:bg-[#222] border border-white/10 font-permanent-marker shadow-lg px-3 py-2 h-auto text-lg rounded-xl"
-              style={{ color: '#b4fa74' }}
+              className="bg-[#a2c041] hover:bg-[#8da836] border-2 border-[#b4fa74] font-permanent-marker shadow-lg shadow-[#b4fa74]/30 px-3 py-2 h-auto text-lg rounded-xl hover:scale-110 transition-all"
+              style={{ color: '#611a5a' }}
             >
-              <span style={{ color: '#b4fa74', WebkitTextFillColor: '#b4fa74' }}>{language === 'en' ? 'ES' : 'EN'}</span>
+              <span style={{ color: '#611a5a', WebkitTextFillColor: '#611a5a' }}>{language === 'en' ? 'ES' : 'EN'}</span>
             </Button>
           </div>
         </div>
