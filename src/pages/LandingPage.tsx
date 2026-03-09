@@ -296,7 +296,8 @@ export default function LandingPage() {
           <SectionDivider />
 
           {/* ═══════════════ Beta CTA Strip ═══════════════ */}
-          <section className="py-10 px-4">
+          <section className="py-10 px-4 relative">
+            <FloatingParticles count={4} />
             <div className="container mx-auto max-w-3xl">
               <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-[#141414] to-[#1a1a1a] p-8 md:p-10">
                 {/* Glow accent */}
