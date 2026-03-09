@@ -390,6 +390,8 @@ export default function LandingPage() {
 
           {/* ═══════════════ Waste Management ═══════════════ */}
           <section className="py-16 md:py-24 px-4 relative">
+            <PulsingOrb size={180} top="20%" right="-80px" delay={0.5} />
+            <FloatingParticles count={7} />
             <div className="container mx-auto max-w-6xl relative z-10">
               <div className="text-center mb-10">
                 <h2 className="text-3xl md:text-5xl font-permanent-marker mb-3" style={{ color: '#b4fa74' }}>
