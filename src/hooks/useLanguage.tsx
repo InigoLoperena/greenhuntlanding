@@ -112,7 +112,7 @@ const translations: Record<Language, Record<string, string>> = {
     'landing.thrifting.step1': 'Explore catalogs of local thrift stores and garage sales. Chat and negotiate.',
     'landing.thrifting.step2': 'Ask them to come to your house to collect your unwanted items instead of throwing them in the trash.',
     'landing.thrifting.step3': 'Create your own circular market on your garage for free, make money with unwanted stuff.',
-    'landing.waste.title': 'WASTE MANAGEMENT',
+    'landing.waste.title': 'WASTE VALORIZATION',
     'landing.waste.step1': 'Share valuable item coordinates with your team with a push of a button.',
     'landing.waste.step2': 'Go to exact locations with an optimized route to pick up valuable stuff.',
     'landing.waste.step3': 'Donate it to local stores or sell it on your phygital circular market.',
