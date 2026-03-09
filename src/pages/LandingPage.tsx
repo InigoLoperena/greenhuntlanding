@@ -669,7 +669,8 @@ export default function LandingPage() {
 
 
           {/* ═══════════════ Strategic Partners ═══════════════ */}
-          <section className="py-20 md:py-28 px-4 relative">
+          <section className="py-20 md:py-28 px-4 relative overflow-hidden">
+            <DynamicDotsOverlay variant={2} />
             <FloatingParticles count={8} />
             <PulsingOrb size={200} top="10%" left="-60px" delay={0} />
             <PulsingOrb size={120} bottom="20%" right="-40px" delay={2} />
