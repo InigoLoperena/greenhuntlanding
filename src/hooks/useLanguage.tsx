@@ -230,7 +230,7 @@ const translations: Record<Language, Record<string, string>> = {
     'landing.thrifting.step1': 'Explora catálogos de tiendas de segunda mano y ventas de garaje locales. Chatea y negocia.',
     'landing.thrifting.step2': 'Pídeles que vengan a tu casa a recoger tus objetos no deseados en lugar de tirarlos a la basura.',
     'landing.thrifting.step3': 'Crea tu propio mercado circular en tu garaje gratis, gana dinero con cosas no deseadas.',
-    'landing.waste.title': 'GESTIÓN DE RESIDUOS',
+    'landing.waste.title': 'VALORIZACIÓN DE RESIDUOS',
     'landing.waste.step1': 'Comparte las coordenadas de objetos valiosos con tu equipo con solo pulsar un botón.',
     'landing.waste.step2': 'Ve a ubicaciones exactas con una ruta optimizada para recoger cosas valiosas.',
     'landing.waste.step3': 'Dónalo a tiendas locales o véndelo en tu mercado circular phygital.',
