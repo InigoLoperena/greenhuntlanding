@@ -340,7 +340,7 @@ export default function LandingPage() {
                   
                   {/* App Store Badges */}
                   <div className="flex flex-col items-center lg:items-start mt-10">
-                    <img src={appStoreBadges} alt="Available on App Store and Google Play" className="w-[280px] md:w-[320px] h-auto opacity-80" />
+                    <img src={appStoreBadges} alt="Available on App Store and Google Play" className="w-[280px] md:w-[320px] h-auto opacity-80" style={{ mixBlendMode: 'screen' }} />
                     <p style={{ color: '#b4fa74' }} className="font-sedgwick-ave text-2xl md:text-3xl mt-2 opacity-70">
                       coming soon
                     </p>
