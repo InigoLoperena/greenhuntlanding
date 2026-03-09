@@ -204,7 +204,8 @@ export default function LandingPage() {
           {/* Hero Section */}
           <HeroSection className="my-0 py-[80px]" />
 
-          <SectionDivider />
+
+
 
           {/* ═══════════════ App Promo & CTA ═══════════════ */}
           <section className="px-4 py-16 relative overflow-hidden">
