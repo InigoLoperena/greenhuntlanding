@@ -494,6 +494,9 @@ export default function LandingPage() {
 
           {/* ═══════════════ Strategic Partners ═══════════════ */}
           <section className="py-20 md:py-28 px-4 relative">
+            <FloatingParticles count={8} />
+            <PulsingOrb size={200} top="10%" left="-60px" delay={0} />
+            <PulsingOrb size={120} bottom="20%" right="-40px" delay={2} />
             <div className="container mx-auto max-w-6xl relative z-10">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div className="order-2 lg:order-1">
@@ -506,34 +509,76 @@ export default function LandingPage() {
                   </p>
                 </div>
                 <div className="order-1 lg:order-2 flex justify-center">
-                  {/* Abstract icon design */}
-                  <div className="relative w-64 h-64 md:w-80 md:h-80">
+                  {/* Partnership network visual */}
+                  <div className="relative w-72 h-72 md:w-96 md:h-96">
                     {/* Glow */}
                     <div className="absolute inset-0 rounded-full opacity-10 blur-3xl" style={{ backgroundColor: '#b4fa74' }} />
-                    {/* Outer ring */}
+                    {/* Outer rotating ring */}
                     <div className="absolute inset-0 rounded-full border-2 border-dashed border-white/10 animate-[spin_30s_linear_infinite]" />
+                    {/* Middle counter-rotating ring */}
+                    <div className="absolute inset-8 rounded-full border border-white/5 animate-[spin_20s_linear_infinite_reverse]" />
                     {/* Inner ring */}
-                    <div className="absolute inset-6 rounded-full border border-white/5" />
-                    {/* Center icon cluster */}
+                    <div className="absolute inset-16 rounded-full border border-white/[0.03]" />
+                    
+                    {/* Network nodes orbiting */}
+                    {[0, 60, 120, 180, 240, 300].map((deg, i) => (
+                      <div key={i} className="absolute inset-0 animate-[spin_25s_linear_infinite]" style={{ animationDelay: `${-i * 4.17}s` }}>
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 md:w-5 md:h-5 rounded-full border border-white/20 flex items-center justify-center"
+                          style={{ animation: `pulse-glow 3s ease-in-out ${i * 0.5}s infinite alternate` }}>
+                          <div className="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full" style={{ backgroundColor: '#b4fa74', opacity: 0.6 + (i % 3) * 0.15 }} />
+                        </div>
+                      </div>
+                    ))}
+
+                    {/* Center icon - Network/Partnership */}
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="relative">
-                        {/* Handshake / partnership visual */}
-                        <div className="w-28 h-28 md:w-36 md:h-36 rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.06] to-transparent flex items-center justify-center shadow-[0_0_40px_rgba(180,250,116,0.1)]" style={{ transform: 'rotate(-3deg)' }}>
-                          <svg viewBox="0 0 64 64" className="w-16 h-16 md:w-20 md:h-20" fill="none" stroke="#b4fa74" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            {/* Handshake icon */}
-                            <path d="M8 32 L20 20 L28 20 L36 12 L44 20 L56 20" />
-                            <path d="M8 32 L16 40 L28 40 L36 48" />
-                            <path d="M56 20 L48 28 L40 28 L36 32 L40 36 L36 40 L40 44" />
-                            <circle cx="14" cy="28" r="3" fill="#b4fa74" opacity="0.3" />
-                            <circle cx="50" cy="18" r="3" fill="#b4fa74" opacity="0.3" />
+                        <div className="w-32 h-32 md:w-40 md:h-40 rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.06] to-transparent flex items-center justify-center shadow-[0_0_50px_rgba(180,250,116,0.12)]" style={{ transform: 'rotate(-3deg)' }}>
+                          <svg viewBox="0 0 80 80" className="w-20 h-20 md:w-24 md:h-24" fill="none" stroke="#b4fa74" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                            {/* Central hub */}
+                            <circle cx="40" cy="40" r="8" fill="#b4fa74" opacity="0.15" stroke="#b4fa74" strokeWidth="1.5" />
+                            <circle cx="40" cy="40" r="3" fill="#b4fa74" opacity="0.5" />
+                            
+                            {/* Partner nodes */}
+                            <circle cx="18" cy="18" r="6" fill="#b4fa74" opacity="0.08" stroke="#b4fa74" />
+                            <circle cx="62" cy="18" r="6" fill="#b4fa74" opacity="0.08" stroke="#b4fa74" />
+                            <circle cx="18" cy="62" r="6" fill="#b4fa74" opacity="0.08" stroke="#b4fa74" />
+                            <circle cx="62" cy="62" r="6" fill="#b4fa74" opacity="0.08" stroke="#b4fa74" />
+                            <circle cx="40" cy="12" r="5" fill="#b4fa74" opacity="0.08" stroke="#b4fa74" />
+                            <circle cx="40" cy="68" r="5" fill="#b4fa74" opacity="0.08" stroke="#b4fa74" />
+                            
+                            {/* Connection lines from center to nodes */}
+                            <line x1="40" y1="40" x2="18" y2="18" stroke="#b4fa74" opacity="0.3" strokeDasharray="3 3" />
+                            <line x1="40" y1="40" x2="62" y2="18" stroke="#b4fa74" opacity="0.3" strokeDasharray="3 3" />
+                            <line x1="40" y1="40" x2="18" y2="62" stroke="#b4fa74" opacity="0.3" strokeDasharray="3 3" />
+                            <line x1="40" y1="40" x2="62" y2="62" stroke="#b4fa74" opacity="0.3" strokeDasharray="3 3" />
+                            <line x1="40" y1="40" x2="40" y2="12" stroke="#b4fa74" opacity="0.3" strokeDasharray="3 3" />
+                            <line x1="40" y1="40" x2="40" y2="68" stroke="#b4fa74" opacity="0.3" strokeDasharray="3 3" />
+                            
+                            {/* Cross-connections between nodes */}
+                            <line x1="18" y1="18" x2="62" y2="18" stroke="#b4fa74" opacity="0.12" />
+                            <line x1="18" y1="62" x2="62" y2="62" stroke="#b4fa74" opacity="0.12" />
+                            <line x1="18" y1="18" x2="18" y2="62" stroke="#b4fa74" opacity="0.12" />
+                            <line x1="62" y1="18" x2="62" y2="62" stroke="#b4fa74" opacity="0.12" />
+                            
+                            {/* Small dots on nodes */}
+                            <circle cx="18" cy="18" r="2.5" fill="#b4fa74" opacity="0.5" />
+                            <circle cx="62" cy="18" r="2.5" fill="#b4fa74" opacity="0.5" />
+                            <circle cx="18" cy="62" r="2.5" fill="#b4fa74" opacity="0.5" />
+                            <circle cx="62" cy="62" r="2.5" fill="#b4fa74" opacity="0.5" />
+                            <circle cx="40" cy="12" r="2" fill="#b4fa74" opacity="0.5" />
+                            <circle cx="40" cy="68" r="2" fill="#b4fa74" opacity="0.5" />
                           </svg>
                         </div>
-                        {/* Floating accent dots */}
-                        <div className="absolute -top-4 -right-4 w-6 h-6 rounded-full border border-white/20 flex items-center justify-center">
-                          <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#b4fa74' }} />
+                        {/* Floating accent elements */}
+                        <div className="absolute -top-6 -right-6 w-8 h-8 rounded-full border border-white/20 flex items-center justify-center" style={{ animation: 'pulse-glow 3s ease-in-out infinite alternate' }}>
+                          <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#b4fa74' }} />
                         </div>
-                        <div className="absolute -bottom-3 -left-5 w-8 h-8 rounded-full border border-white/10 flex items-center justify-center">
-                          <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#b4fa74', opacity: 0.5 }} />
+                        <div className="absolute -bottom-5 -left-7 w-10 h-10 rounded-full border border-white/10 flex items-center justify-center" style={{ animation: 'pulse-glow 3s ease-in-out 1.5s infinite alternate' }}>
+                          <div className="w-4 h-4 rounded-full" style={{ backgroundColor: '#b4fa74', opacity: 0.4 }} />
+                        </div>
+                        <div className="absolute top-1/2 -right-10 w-6 h-6 rounded-full border border-white/15 flex items-center justify-center" style={{ animation: 'pulse-glow 3s ease-in-out 0.8s infinite alternate' }}>
+                          <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#b4fa74', opacity: 0.6 }} />
                         </div>
                       </div>
                     </div>
