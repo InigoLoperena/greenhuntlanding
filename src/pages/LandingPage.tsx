@@ -808,7 +808,8 @@ export default function LandingPage() {
                     href={social.href} 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="text-white/30 hover:text-[#b4fa74] transition-colors duration-300"
+                    className="hover:scale-110 transition-all duration-300"
+                    style={{ color: '#b4fa74' }}
                   >
                     {social.icon}
                   </a>
