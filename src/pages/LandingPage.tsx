@@ -766,7 +766,7 @@ export default function LandingPage() {
             <div className="container mx-auto max-w-6xl">
               <div className="flex flex-col items-center justify-center mb-10">
                 <img src={greenhuntLogoNew} alt="GreenHunt" className="h-28 sm:h-36 lg:h-44 w-auto mb-4 opacity-90" loading="lazy" />
-                <p className="font-sedgwick-ave text-lg text-center" style={{ color: '#b4fa74', opacity: 0.6 }}>
+                <p className="font-sedgwick-ave text-xl text-center" style={{ color: '#b4fa74', opacity: 0.9 }}>
                   {t('landing.footer.tagline')}
                 </p>
               </div>
@@ -808,21 +808,22 @@ export default function LandingPage() {
                     href={social.href} 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="text-white/30 hover:text-[#b4fa74] transition-colors duration-300"
+                    className="hover:scale-110 transition-all duration-300"
+                    style={{ color: '#b4fa74' }}
                   >
                     {social.icon}
                   </a>
                 ))}
               </div>
 
-              <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-6 border-t border-white/5">
+              <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-6 border-t border-[#b4fa74]/20">
                 <div className="flex items-center gap-2">
-                  <span className="text-white/40 font-sedgwick-ave text-base">{t('landing.footer.madeWith')}</span>
+                  <span className="font-sedgwick-ave text-base" style={{ color: '#a2c041' }}>{t('landing.footer.madeWith')}</span>
                   <span className="text-lg">💚</span>
-                  <span className="text-white/40 font-sedgwick-ave text-base">{t('landing.footer.forPlanet')}</span>
+                  <span className="font-sedgwick-ave text-base" style={{ color: '#a2c041' }}>{t('landing.footer.forPlanet')}</span>
                   <span className="text-lg">🌍</span>
                 </div>
-                <a href="mailto:hello@greenhunt.net" className="text-white/40 font-sedgwick-ave text-base hover:text-[#b4fa74] transition-colors">
+                <a href="mailto:hello@greenhunt.net" className="font-sedgwick-ave text-base hover:scale-105 transition-all" style={{ color: '#b4fa74' }}>
                   hello@greenhunt.net
                 </a>
               </div>
@@ -833,19 +834,19 @@ export default function LandingPage() {
           <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
             <Button 
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
-              className="bg-[#1a1a1a] hover:bg-[#222] border border-white/10 font-permanent-marker shadow-lg px-3 py-2 h-auto text-lg rounded-xl"
-              style={{ color: '#b4fa74' }}
+              className="bg-[#a2c041] hover:bg-[#8da836] border-2 border-[#b4fa74] font-permanent-marker shadow-lg shadow-[#b4fa74]/30 px-3 py-2 h-auto text-lg rounded-xl hover:scale-110 transition-all"
+              style={{ color: '#611a5a' }}
               aria-label={language === 'en' ? 'Go to top' : 'Ir al principio'}
             >
-              <ArrowUp className="h-5 w-5" style={{ color: '#b4fa74', stroke: '#b4fa74' }} />
+              <ArrowUp className="h-5 w-5" style={{ color: '#611a5a', stroke: '#611a5a' }} />
             </Button>
             
             <Button 
               onClick={() => setLanguage(language === 'en' ? 'es' : 'en')} 
-              className="bg-[#1a1a1a] hover:bg-[#222] border border-white/10 font-permanent-marker shadow-lg px-3 py-2 h-auto text-lg rounded-xl"
-              style={{ color: '#b4fa74' }}
+              className="bg-[#a2c041] hover:bg-[#8da836] border-2 border-[#b4fa74] font-permanent-marker shadow-lg shadow-[#b4fa74]/30 px-3 py-2 h-auto text-lg rounded-xl hover:scale-110 transition-all"
+              style={{ color: '#611a5a' }}
             >
-              <span style={{ color: '#b4fa74', WebkitTextFillColor: '#b4fa74' }}>{language === 'en' ? 'ES' : 'EN'}</span>
+              <span style={{ color: '#611a5a', WebkitTextFillColor: '#611a5a' }}>{language === 'en' ? 'ES' : 'EN'}</span>
             </Button>
           </div>
         </div>
