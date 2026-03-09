@@ -766,7 +766,7 @@ export default function LandingPage() {
             <div className="container mx-auto max-w-6xl">
               <div className="flex flex-col items-center justify-center mb-10">
                 <img src={greenhuntLogoNew} alt="GreenHunt" className="h-28 sm:h-36 lg:h-44 w-auto mb-4 opacity-90" loading="lazy" />
-                <p className="font-sedgwick-ave text-lg text-center" style={{ color: '#b4fa74', opacity: 0.6 }}>
+                <p className="font-sedgwick-ave text-xl text-center" style={{ color: '#b4fa74', opacity: 0.9 }}>
                   {t('landing.footer.tagline')}
                 </p>
               </div>
