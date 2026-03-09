@@ -762,7 +762,7 @@ export default function LandingPage() {
             </div>
           </section>
 
-          <SectionDivider />
+          
 
           {/* ═══════════════ Final Beta CTA ═══════════════ */}
           <section id="waitlist" className="relative py-20 px-4">
