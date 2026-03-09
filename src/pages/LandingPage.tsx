@@ -330,11 +330,11 @@ export default function LandingPage() {
                     <button
                       onClick={() => setTrailerOpen(true)}
                       className="font-permanent-marker text-sm px-6 py-3 h-auto rounded-xl border-2 bg-transparent hover:bg-[#b4fa74]/10 transition-all duration-300 flex items-center gap-2 cursor-pointer"
-                      style={{ 
-                        borderColor: '#b4fa74', 
-                        boxShadow: '0 0 15px rgba(180, 250, 116, 0.25), inset 0 0 15px rgba(180, 250, 116, 0.05)',
-                      }}
-                    >
+                      style={{
+                        borderColor: '#b4fa74',
+                        boxShadow: '0 0 15px rgba(180, 250, 116, 0.25), inset 0 0 15px rgba(180, 250, 116, 0.05)'
+                      }}>
+                      
                       <Video className="h-5 w-5" style={{ color: '#611a5a', fill: '#611a5a', stroke: '#611a5a' }} />
                       <span className="tracking-wider" style={{ color: '#b4fa74' }}>TRAILER</span>
                     </button>
@@ -409,41 +409,41 @@ export default function LandingPage() {
           <SectionDivider />
 
           {/* ═══════════════ Beta CTA Strip ═══════════════ */}
-          <section className="py-10 px-4 relative">
-            <FloatingParticles count={4} />
-            <div className="container mx-auto max-w-3xl">
-              <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-[#141414] to-[#1a1a1a] p-8 md:p-10">
-                {/* Glow accent */}
-                <div className="absolute top-0 right-0 w-40 h-40 rounded-full opacity-10 blur-3xl" style={{ backgroundColor: '#b4fa74' }} />
-                
-                <div className="relative z-10 text-center">
-                  <h2 className="text-2xl md:text-3xl font-permanent-marker mb-2" style={{ color: '#b4fa74' }}>
-                    {t('landing.beta.title')}
-                  </h2>
-                  <p className="text-white/60 font-sedgwick-ave mb-6 text-lg">
-                    {t('landing.beta.description')}
-                  </p>
-                  <form onSubmit={handleWaitlistSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-                    <Input
-                      type="email"
-                      placeholder={t('landing.beta.placeholder')}
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      required disabled={loading}
-                      className="flex-1 bg-white/5 border-white/15 text-white placeholder:text-white/30 rounded-xl font-sedgwick-ave" />
-                    
-                    <Button
-                      type="submit" disabled={loading}
-                      className="bg-[#b4fa74] hover:bg-[#a2e866] font-permanent-marker rounded-xl px-6 whitespace-nowrap"
-                      style={{ color: '#0a0a0a' }}>
-                      
-                      {loading ? t('landing.beta.joining') : t('landing.beta.button')}
-                    </Button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </section>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
 
           <SectionDivider />
 
