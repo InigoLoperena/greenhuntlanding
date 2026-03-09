@@ -480,7 +480,8 @@ export default function LandingPage() {
 
           
 
-          <SectionDivider />
+
+
 
           {/* ═══════════════ Tutorial / Stooping ═══════════════ */}
           <section className="py-16 md:py-24 px-4 relative">
