@@ -45,7 +45,7 @@ const StepCard = ({ number, image, alt, text }: { number: number; image: string;
     <div className="relative w-full rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-b from-white/[0.04] to-transparent p-1 transition-all duration-300 group-hover:border-white/20 group-hover:shadow-[0_0_30px_rgba(180,250,116,0.08)]">
       <img 
         alt={alt} 
-        className="w-full rounded-xl object-cover aspect-[4/3]" 
+        className="w-full rounded-xl object-contain" 
         loading="lazy" 
         src={image} 
       />
