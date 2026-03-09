@@ -327,15 +327,17 @@ export default function LandingPage() {
                       <ChevronRight className="ml-1 h-5 w-5" style={{ color: '#0a0a0a', stroke: '#0a0a0a' }} />
                     </Button>
                     
-                    <Button
+                    <button
                       onClick={() => setTrailerOpen(true)}
-                      variant="outline"
-                      className="font-permanent-marker text-sm px-5 py-3 h-auto rounded-xl border-white/20 hover:border-white/40 hover:bg-white/5"
-                      style={{ color: '#fff' }}>
-                      
-                      <Video className="mr-1 h-4 w-4" style={{ color: '#fff', stroke: '#fff' }} />
-                      <span style={{ color: '#fff' }}>Trailer</span>
-                    </Button>
+                      className="font-permanent-marker text-sm px-6 py-3 h-auto rounded-xl border-2 bg-transparent hover:bg-[#b4fa74]/10 transition-all duration-300 flex items-center gap-2 cursor-pointer"
+                      style={{ 
+                        borderColor: '#b4fa74', 
+                        boxShadow: '0 0 15px rgba(180, 250, 116, 0.25), inset 0 0 15px rgba(180, 250, 116, 0.05)',
+                      }}
+                    >
+                      <Video className="h-5 w-5" style={{ color: '#611a5a', fill: '#611a5a', stroke: '#611a5a' }} />
+                      <span className="tracking-wider" style={{ color: '#b4fa74' }}>TRAILER</span>
+                    </button>
                   </div>
                   
                   {/* App Store Badges */}
