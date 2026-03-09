@@ -353,6 +353,8 @@ export default function LandingPage() {
 
           {/* ═══════════════ Local Phygital Thrifting ═══════════════ */}
           <section className="py-16 md:py-24 px-4 relative">
+            <FloatingParticles count={5} />
+            <PulsingOrb size={140} bottom="-30px" left="-50px" delay={1.5} />
             <div className="container mx-auto max-w-6xl relative z-10">
               <div className="text-center mb-14">
                 <h2 className="text-3xl md:text-5xl font-permanent-marker mb-3" style={{ color: '#b4fa74' }}>
