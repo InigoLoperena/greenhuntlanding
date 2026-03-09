@@ -771,7 +771,8 @@ export default function LandingPage() {
                 </p>
               </div>
 
-              <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 mb-10">
+              {/* Links legales */}
+              <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 mb-8">
                 {[
                   { to: '/privacy', label: t('landing.footer.privacy') },
                   { to: '/legal', label: t('landing.footer.terms') },
@@ -787,18 +788,22 @@ export default function LandingPage() {
                 ))}
               </div>
 
-              <div className="flex items-center justify-center gap-5 mb-10">
+              {/* Línea divisora verde */}
+              <div className="w-full h-px mb-8" style={{ background: 'linear-gradient(90deg, transparent, #b4fa74, #a2c041, #b4fa74, transparent)' }} />
+
+              {/* Redes sociales - iconos grandes */}
+              <div className="flex items-center justify-center gap-6 sm:gap-8 mb-8">
                 {[
-                  { href: "https://www.linkedin.com/company/greenhunt", icon: <Linkedin className="h-6 w-6" /> },
-                  { href: "https://www.instagram.com/greenhuntstoopingapp/", icon: <Instagram className="h-6 w-6" /> },
+                  { href: "https://www.linkedin.com/company/greenhunt", icon: <Linkedin className="h-9 w-9 sm:h-10 sm:w-10" /> },
+                  { href: "https://www.instagram.com/greenhuntstoopingapp/", icon: <Instagram className="h-9 w-9 sm:h-10 sm:w-10" /> },
                   { href: "https://x.com/StoopingApp", icon: (
-                    <svg className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                    <svg className="h-9 w-9 sm:h-10 sm:w-10" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                     </svg>
                   )},
-                  { href: "https://www.youtube.com/@GreenHuntStoopingApp", icon: <Youtube className="h-6 w-6" /> },
+                  { href: "https://www.youtube.com/@GreenHuntStoopingApp", icon: <Youtube className="h-9 w-9 sm:h-10 sm:w-10" /> },
                   { href: "https://www.tiktok.com/@greenhuntstoopingapp", icon: (
-                    <svg className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                    <svg className="h-9 w-9 sm:h-10 sm:w-10" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-.88-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z" />
                     </svg>
                   )},
@@ -808,7 +813,7 @@ export default function LandingPage() {
                     href={social.href} 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="hover:scale-110 transition-all duration-300"
+                    className="p-3 rounded-xl border border-[#b4fa74]/30 hover:border-[#b4fa74] hover:scale-110 hover:shadow-[0_0_15px_rgba(180,250,116,0.3)] transition-all duration-300"
                     style={{ color: '#b4fa74' }}
                   >
                     {social.icon}
@@ -816,14 +821,18 @@ export default function LandingPage() {
                 ))}
               </div>
 
-              <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-6 border-t border-[#b4fa74]/20">
+              {/* Línea divisora verde inferior */}
+              <div className="w-full h-px mb-6" style={{ background: 'linear-gradient(90deg, transparent, #a2c041, #b4fa74, #a2c041, transparent)' }} />
+
+              {/* Eslogan y email */}
+              <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-2">
                 <div className="flex items-center gap-2">
-                  <span className="font-sedgwick-ave text-base" style={{ color: '#a2c041' }}>{t('landing.footer.madeWith')}</span>
-                  <span className="text-lg">💚</span>
-                  <span className="font-sedgwick-ave text-base" style={{ color: '#a2c041' }}>{t('landing.footer.forPlanet')}</span>
-                  <span className="text-lg">🌍</span>
+                  <span className="font-sedgwick-ave text-lg" style={{ color: '#b4fa74' }}>{t('landing.footer.madeWith')}</span>
+                  <span className="text-xl">💚</span>
+                  <span className="font-sedgwick-ave text-lg" style={{ color: '#b4fa74' }}>{t('landing.footer.forPlanet')}</span>
+                  <span className="text-xl">🌍</span>
                 </div>
-                <a href="mailto:hello@greenhunt.net" className="font-sedgwick-ave text-base hover:scale-105 transition-all" style={{ color: '#b4fa74' }}>
+                <a href="mailto:hello@greenhunt.net" className="font-sedgwick-ave text-lg hover:scale-105 transition-all" style={{ color: '#a2c041' }}>
                   hello@greenhunt.net
                 </a>
               </div>
