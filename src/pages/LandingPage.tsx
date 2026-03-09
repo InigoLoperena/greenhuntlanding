@@ -434,6 +434,8 @@ export default function LandingPage() {
 
           {/* ═══════════════ Junk Removal ═══════════════ */}
           <section className="py-16 md:py-24 px-4 relative">
+            <FloatingParticles count={6} />
+            <PulsingOrb size={150} bottom="10%" left="-40px" delay={2} />
             <div className="container mx-auto max-w-6xl relative z-10">
               <div className="text-center mb-10">
                 <h2 className="text-3xl md:text-5xl font-permanent-marker mb-3" style={{ color: '#b4fa74' }}>
