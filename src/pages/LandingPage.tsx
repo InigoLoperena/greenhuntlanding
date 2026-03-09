@@ -440,7 +440,8 @@ export default function LandingPage() {
             </DialogContent>
           </Dialog>
 
-          <SectionDivider />
+
+
 
           {/* ═══════════════ Beta CTA Strip ═══════════════ */}
           
