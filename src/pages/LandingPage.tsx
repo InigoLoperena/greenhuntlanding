@@ -484,7 +484,8 @@ export default function LandingPage() {
 
 
           {/* ═══════════════ Tutorial / Stooping ═══════════════ */}
-          <section className="py-16 md:py-24 px-4 relative">
+          <section className="py-16 md:py-24 px-4 relative overflow-hidden">
+            <DynamicDotsOverlay variant={0} />
             <FloatingParticles count={8} />
             <PulsingOrb size={160} top="-40px" right="-60px" delay={0} />
             <div className="container mx-auto max-w-6xl relative z-10">
