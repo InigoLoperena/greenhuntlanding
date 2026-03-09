@@ -556,7 +556,8 @@ export default function LandingPage() {
             </div>
           </section>
 
-          <SectionDivider />
+
+
 
           {/* ═══════════════ Waste Management ═══════════════ */}
           <section className="py-16 md:py-24 px-4 relative">
