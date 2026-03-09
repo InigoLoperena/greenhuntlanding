@@ -663,7 +663,8 @@ export default function LandingPage() {
             </div>
           </section>
 
-          <SectionDivider />
+
+
 
           {/* ═══════════════ Strategic Partners ═══════════════ */}
           <section className="py-20 md:py-28 px-4 relative">
