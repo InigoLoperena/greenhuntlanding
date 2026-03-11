@@ -10,8 +10,8 @@ export const useDebounce = <T,>(
   }
 ): T => {
   const [debouncedValue, setDebouncedValue] = useState<T>(value);
-  const timeoutRef = useRef<NodeJS.Timeout>();
-  const maxTimeoutRef = useRef<NodeJS.Timeout>();
+  const timeoutRef = useRef<ReturnType<typeof setTimeout>>();
+  const maxTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
   const lastCallTimeRef = useRef<number>();
   const leadingRef = useRef<boolean>(true);
 
@@ -84,7 +84,7 @@ export const useDebouncedCallback = <T extends (...args: any[]) => any>(
   delay: number,
   deps: React.DependencyList = []
 ): T => {
-  const timeoutRef = useRef<NodeJS.Timeout>();
+  const timeoutRef = useRef<ReturnType<typeof setTimeout>>();
 
   const debouncedCallback = useCallback((...args: Parameters<T>) => {
     if (timeoutRef.current) {

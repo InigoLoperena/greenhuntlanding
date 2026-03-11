@@ -9,7 +9,7 @@ export const useScrollThrottle = (threshold: number, delay: number = 100) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    let timeoutId: NodeJS.Timeout | null = null;
+    let timeoutId: ReturnType<typeof setTimeout> | null = null;
     let ticking = false;
 
     const handleScroll = () => {
