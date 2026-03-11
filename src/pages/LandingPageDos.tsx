@@ -7,12 +7,18 @@ import { useLanguage } from "@/hooks/useLanguage";
 import { useState } from "react";
 import { StructuredData } from "@/components/StructuredData";
 import { HeroSection } from "@/components/HeroSection";
+import greenhuntLogoNew from "@/assets/greenhunt-logo-new.svg";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { z } from "zod";
 import tutorialStep2 from "@/assets/tutorial-step-2.png";
+import thriftingStep2 from "@/assets/thrifting-step-2.png";
+import thriftingStep3 from "@/assets/thrifting-step-3.png";
+import junkStep3 from "@/assets/junk-step-3.png";
+import junkRemovalFlow from "@/assets/junk-removal-flow.png";
 import appStoreBadges from "@/assets/app-store-badges.png";
 import playForPlanetScreen from "@/assets/play-for-planet-screen.png";
+import { MarginBackgrounds } from "@/components/MarginBackgrounds";
 
 const emailSchema = z.string().email();
 
@@ -197,6 +203,9 @@ export default function LandingPage() {
           
           {/* Hero Section */}
           <HeroSection className="my-0 py-[80px]" />
+
+
+
 
           {/* ═══════════════ App Promo & CTA ═══════════════ */}
           <section className="px-4 py-16 relative overflow-hidden">
@@ -431,6 +440,49 @@ export default function LandingPage() {
             </DialogContent>
           </Dialog>
 
+
+
+
+          {/* ═══════════════ Beta CTA Strip ═══════════════ */}
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+
+
           {/* ═══════════════ Tutorial / Stooping ═══════════════ */}
           <section className="py-16 md:py-24 px-4 relative overflow-hidden">
             <DynamicDotsOverlay variant={0} />
@@ -462,24 +514,258 @@ export default function LandingPage() {
                   image="/lovable-uploads/c1d89d6c-343e-495a-8f4a-58d9ff2876f5.png"
                   alt="Buy coordinates and get valuable items"
                   text={t('landing.tutorial.disclaimer')} />
+                
               </div>
             </div>
           </section>
 
+
+
+
+          {/* ═══════════════ Local Phygital Thrifting ═══════════════ */}
+          <section className="py-16 md:py-24 px-4 relative">
+            <FloatingParticles count={5} />
+            <PulsingOrb size={140} bottom="-30px" left="-50px" delay={1.5} />
+            <div className="container mx-auto max-w-6xl relative z-10">
+              <div className="text-center mb-14">
+                <h2 className="text-3xl md:text-5xl font-permanent-marker mb-3" style={{ color: '#b4fa74' }}>
+                  {t('landing.thrifting.title')}
+                </h2>
+                <div className="w-20 h-1 rounded-full mx-auto" style={{ backgroundColor: '#b4fa74', opacity: 0.4 }} />
+              </div>
+              
+              <div className="grid md:grid-cols-3 gap-8 md:gap-10">
+                <StepCard
+                  number={1}
+                  image="/lovable-uploads/199aa279-e2d7-4396-99dc-312cdf60c3d6.png"
+                  alt="Explore thrift store catalogs"
+                  text={t('landing.thrifting.step1')} />
+                
+                <StepCard
+                  number={2}
+                  image={thriftingStep2}
+                  alt="Request pickup for donations"
+                  text={t('landing.thrifting.step2')} />
+                
+                <StepCard
+                  number={3}
+                  image={thriftingStep3}
+                  alt="Create your own garage sale"
+                  text={t('landing.thrifting.step3')} />
+                
+              </div>
+            </div>
+          </section>
+
+
+
+
+          {/* ═══════════════ Waste Management ═══════════════ */}
+          <section className="py-16 md:py-24 px-4 relative">
+            <PulsingOrb size={180} top="20%" right="-80px" delay={0.5} />
+            <FloatingParticles count={7} />
+            <div className="container mx-auto max-w-6xl relative z-10">
+              <div className="text-center mb-10">
+                <h2 className="text-3xl md:text-5xl font-permanent-marker mb-3" style={{ color: '#b4fa74' }}>
+                  {t('landing.waste.title')}
+                </h2>
+                <div className="w-20 h-1 rounded-full mx-auto" style={{ backgroundColor: '#b4fa74', opacity: 0.4 }} />
+              </div>
+              
+              {/* Flow Diagram */}
+              <div className="mb-14 flex justify-center">
+                <div className="relative rounded-2xl overflow-hidden border border-white/10 p-1 bg-gradient-to-b from-white/[0.03] to-transparent">
+                  <img alt="Waste Management Flow" className="w-full max-w-4xl rounded-xl" loading="lazy" src="/lovable-uploads/a1848cb5-8abc-4f8a-bf63-c40c183e6fde.png" />
+                </div>
+              </div>
+              
+              <div className="grid md:grid-cols-3 gap-8 md:gap-10">
+                <StepCard
+                  number={1}
+                  image="/lovable-uploads/746cc348-3ec5-4283-8ede-3caa2807ada7.png"
+                  alt="Share coordinates with team"
+                  text={t('landing.waste.step1')} />
+                
+                <StepCard
+                  number={2}
+                  image="/lovable-uploads/4d4b3cc6-477f-46d2-b66e-1849b04e2072.png"
+                  alt="Optimized route navigation"
+                  text={t('landing.waste.step2')} />
+                
+                <StepCard
+                  number={3}
+                  image="/lovable-uploads/318700f9-052e-424f-bb23-94c7e893031c.png"
+                  alt="Donate to local stores"
+                  text={t('landing.waste.step3')} />
+                
+              </div>
+            </div>
+          </section>
+
+
+
+
+          {/* ═══════════════ Junk Removal ═══════════════ */}
+          <section className="py-16 md:py-24 px-4 relative overflow-hidden">
+            <DynamicDotsOverlay variant={1} />
+            <FloatingParticles count={6} />
+            <PulsingOrb size={150} bottom="10%" left="-40px" delay={2} />
+            <div className="container mx-auto max-w-6xl relative z-10">
+              <div className="text-center mb-10">
+                <h2 className="text-3xl md:text-5xl font-permanent-marker mb-3" style={{ color: '#b4fa74' }}>
+                  {t('landing.junk.title')}
+                </h2>
+                <div className="w-20 h-1 rounded-full mx-auto" style={{ backgroundColor: '#b4fa74', opacity: 0.4 }} />
+              </div>
+              
+              {/* Flow Diagram */}
+              <div className="mb-14 flex justify-center">
+                <div className="relative rounded-2xl overflow-hidden border border-white/10 p-1 bg-gradient-to-b from-white/[0.03] to-transparent">
+                  <img alt="Junk Removal Flow" className="w-full max-w-4xl rounded-xl" loading="lazy" src="/lovable-uploads/fd42b8ee-56ad-4bff-8554-28276f6de959.png" />
+                </div>
+              </div>
+              
+              <div className="grid md:grid-cols-3 gap-8 md:gap-10">
+                <StepCard
+                  number={1}
+                  image="/lovable-uploads/ddb40b3c-aada-427a-ae3c-992bf6263692.png"
+                  alt="Take photos of junk"
+                  text={t('landing.junk.step1')} />
+                
+                <StepCard
+                  number={2}
+                  image="/lovable-uploads/7af001b6-bb85-47b6-bc77-636a2a117ade.png"
+                  alt="Users bid for removal"
+                  text={t('landing.junk.step2')} />
+                
+                <StepCard
+                  number={3}
+                  image={junkStep3}
+                  alt="Accept bid and schedule"
+                  text={t('landing.junk.step3')} />
+                
+              </div>
+            </div>
+          </section>
+
+
+
+
           {/* ═══════════════ Play for the Planet ═══════════════ */}
-          <section className="py-20 md:py-28 px-4 relative overflow-hidden">
-            <DynamicDotsOverlay variant={2} />
-            <FloatingParticles count={8} />
-            <PulsingOrb size={200} top="10%" left="-60px" delay={0} />
-            <PulsingOrb size={120} bottom="20%" right="-40px" delay={2} />
+          <section className="py-20 md:py-28 px-4 relative">
+            <FloatingParticles count={4} />
+            <PulsingOrb size={130} top="-20px" left="30%" delay={1} />
             <div className="container mx-auto max-w-6xl relative z-10">
               <FeatureRow
                 title={t('landing.playPlanet.title')}
                 subtitle={t('landing.playPlanet.subtitle')}
                 image={playForPlanetScreen}
                 alt="Play for the Planet - GreenHunt App" />
+              
             </div>
           </section>
+
+
+
+
+          {/* ═══════════════ Strategic Partners ═══════════════ */}
+          <section className="py-20 md:py-28 px-4 relative overflow-hidden">
+            <DynamicDotsOverlay variant={2} />
+            <FloatingParticles count={8} />
+            <PulsingOrb size={200} top="10%" left="-60px" delay={0} />
+            <PulsingOrb size={120} bottom="20%" right="-40px" delay={2} />
+            <div className="container mx-auto max-w-6xl relative z-10">
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div className="order-2 lg:order-1">
+                  <h2 className="text-3xl md:text-5xl font-permanent-marker mb-5 leading-tight" style={{ color: '#b4fa74' }}>
+                    {t('landing.strategic.title')}
+                  </h2>
+                  <div className="w-16 h-1 rounded-full mb-6" style={{ backgroundColor: '#b4fa74', opacity: 0.5 }} />
+                  <p className="text-lg md:text-xl text-subtitle-styled font-sedgwick-ave leading-relaxed">
+                    {t('landing.strategic.subtitle')}
+                  </p>
+                </div>
+                <div className="order-1 lg:order-2 flex justify-center">
+                  {/* Partnership network visual */}
+                  <div className="relative w-72 h-72 md:w-96 md:h-96">
+                    {/* Glow */}
+                    <div className="absolute inset-0 rounded-full opacity-10 blur-3xl" style={{ backgroundColor: '#b4fa74' }} />
+                    {/* Outer rotating ring */}
+                    <div className="absolute inset-0 rounded-full border-2 border-dashed border-white/10 animate-[spin_30s_linear_infinite]" />
+                    {/* Middle counter-rotating ring */}
+                    <div className="absolute inset-8 rounded-full border border-white/5 animate-[spin_20s_linear_infinite_reverse]" />
+                    {/* Inner ring */}
+                    <div className="absolute inset-16 rounded-full border border-white/[0.03]" />
+                    
+                    {/* Network nodes orbiting */}
+                    {[0, 60, 120, 180, 240, 300].map((deg, i) =>
+                    <div key={i} className="absolute inset-0 animate-[spin_25s_linear_infinite]" style={{ animationDelay: `${-i * 4.17}s` }}>
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 md:w-5 md:h-5 rounded-full border border-white/20 flex items-center justify-center"
+                      style={{ animation: `pulse-glow 3s ease-in-out ${i * 0.5}s infinite alternate` }}>
+                          <div className="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full" style={{ backgroundColor: '#b4fa74', opacity: 0.6 + i % 3 * 0.15 }} />
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Center icon - Network/Partnership */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="relative">
+                        <div className="w-32 h-32 md:w-40 md:h-40 rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.06] to-transparent flex items-center justify-center shadow-[0_0_50px_rgba(180,250,116,0.12)]" style={{ transform: 'rotate(-3deg)' }}>
+                          <svg viewBox="0 0 80 80" className="w-20 h-20 md:w-24 md:h-24" fill="none" stroke="#b4fa74" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                            {/* Central hub */}
+                            <circle cx="40" cy="40" r="8" fill="#b4fa74" opacity="0.15" stroke="#b4fa74" strokeWidth="1.5" />
+                            <circle cx="40" cy="40" r="3" fill="#b4fa74" opacity="0.5" />
+                            
+                            {/* Partner nodes */}
+                            <circle cx="18" cy="18" r="6" fill="#b4fa74" opacity="0.08" stroke="#b4fa74" />
+                            <circle cx="62" cy="18" r="6" fill="#b4fa74" opacity="0.08" stroke="#b4fa74" />
+                            <circle cx="18" cy="62" r="6" fill="#b4fa74" opacity="0.08" stroke="#b4fa74" />
+                            <circle cx="62" cy="62" r="6" fill="#b4fa74" opacity="0.08" stroke="#b4fa74" />
+                            <circle cx="40" cy="12" r="5" fill="#b4fa74" opacity="0.08" stroke="#b4fa74" />
+                            <circle cx="40" cy="68" r="5" fill="#b4fa74" opacity="0.08" stroke="#b4fa74" />
+                            
+                            {/* Connection lines from center to nodes */}
+                            <line x1="40" y1="40" x2="18" y2="18" stroke="#b4fa74" opacity="0.3" strokeDasharray="3 3" />
+                            <line x1="40" y1="40" x2="62" y2="18" stroke="#b4fa74" opacity="0.3" strokeDasharray="3 3" />
+                            <line x1="40" y1="40" x2="18" y2="62" stroke="#b4fa74" opacity="0.3" strokeDasharray="3 3" />
+                            <line x1="40" y1="40" x2="62" y2="62" stroke="#b4fa74" opacity="0.3" strokeDasharray="3 3" />
+                            <line x1="40" y1="40" x2="40" y2="12" stroke="#b4fa74" opacity="0.3" strokeDasharray="3 3" />
+                            <line x1="40" y1="40" x2="40" y2="68" stroke="#b4fa74" opacity="0.3" strokeDasharray="3 3" />
+                            
+                            {/* Cross-connections between nodes */}
+                            <line x1="18" y1="18" x2="62" y2="18" stroke="#b4fa74" opacity="0.12" />
+                            <line x1="18" y1="62" x2="62" y2="62" stroke="#b4fa74" opacity="0.12" />
+                            <line x1="18" y1="18" x2="18" y2="62" stroke="#b4fa74" opacity="0.12" />
+                            <line x1="62" y1="18" x2="62" y2="62" stroke="#b4fa74" opacity="0.12" />
+                            
+                            {/* Small dots on nodes */}
+                            <circle cx="18" cy="18" r="2.5" fill="#b4fa74" opacity="0.5" />
+                            <circle cx="62" cy="18" r="2.5" fill="#b4fa74" opacity="0.5" />
+                            <circle cx="18" cy="62" r="2.5" fill="#b4fa74" opacity="0.5" />
+                            <circle cx="62" cy="62" r="2.5" fill="#b4fa74" opacity="0.5" />
+                            <circle cx="40" cy="12" r="2" fill="#b4fa74" opacity="0.5" />
+                            <circle cx="40" cy="68" r="2" fill="#b4fa74" opacity="0.5" />
+                          </svg>
+                        </div>
+                        {/* Floating accent elements */}
+                        <div className="absolute -top-6 -right-6 w-8 h-8 rounded-full border border-white/20 flex items-center justify-center" style={{ animation: 'pulse-glow 3s ease-in-out infinite alternate' }}>
+                          <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#b4fa74' }} />
+                        </div>
+                        <div className="absolute -bottom-5 -left-7 w-10 h-10 rounded-full border border-white/10 flex items-center justify-center" style={{ animation: 'pulse-glow 3s ease-in-out 1.5s infinite alternate' }}>
+                          <div className="w-4 h-4 rounded-full" style={{ backgroundColor: '#b4fa74', opacity: 0.4 }} />
+                        </div>
+                        <div className="absolute top-1/2 -right-10 w-6 h-6 rounded-full border border-white/15 flex items-center justify-center" style={{ animation: 'pulse-glow 3s ease-in-out 0.8s infinite alternate' }}>
+                          <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#b4fa74', opacity: 0.6 }} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          
 
           {/* ═══════════════ Final Beta CTA ═══════════════ */}
           <section id="waitlist" className="relative py-20 px-4">
@@ -511,7 +797,8 @@ export default function LandingPage() {
                       type="submit" disabled={loading}
                       className="bg-[#b4fa74] hover:bg-[#a2e866] font-permanent-marker rounded-xl px-8 text-lg shadow-[0_0_25px_rgba(180,250,116,0.2)]"
                       style={{ color: '#0a0a0a' }}>
-                      {loading ? t('landing.beta.loading') : t('landing.beta.cta')}
+                      
+                      {loading ? t('landing.beta.joining') : t('landing.beta.button')}
                     </Button>
                   </form>
                 </div>
@@ -519,17 +806,26 @@ export default function LandingPage() {
             </div>
           </section>
 
-          {/* Footer */}
-          <footer className="relative py-14 px-4 border-t border-white/5">
-            <div className="container mx-auto max-w-5xl">
-              <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 mb-8">
+          {/* ═══════════════ Footer ═══════════════ */}
+          <footer className="py-16 px-4 border-t border-white/5 relative">
+            <FloatingParticles count={3} />
+            <div className="container mx-auto max-w-6xl">
+              <div className="flex flex-col items-center justify-center mb-10">
+                <img src={greenhuntLogoNew} alt="GreenHunt" className="h-28 sm:h-36 lg:h-44 w-auto mb-4 opacity-90" loading="lazy" />
+                <p className="font-sedgwick-ave text-xl text-center" style={{ color: '#b4fa74', opacity: 0.9 }}>
+                  {t('landing.footer.tagline')}
+                </p>
+              </div>
+
+              {/* Links legales */}
+              <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 mb-8">
                 {[
-                { to: "/legal", label: t('landing.footer.legal') },
-                { to: "/privacy", label: t('landing.footer.privacy') },
-                { to: "/cookies", label: t('landing.footer.cookies') }].
-                map((link, i) =>
+                { to: '/privacy', label: t('landing.footer.privacy') },
+                { to: '/legal', label: t('landing.footer.terms') },
+                { to: '/cookies', label: t('landing.footer.cookies') }].
+                map((link) =>
                 <Link
-                  key={i}
+                  key={link.to}
                   to={link.to}
                   className="text-white/40 hover:text-white/80 transition-colors font-permanent-marker text-base">
                   
@@ -616,6 +912,6 @@ export default function LandingPage() {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>);
+
 }
