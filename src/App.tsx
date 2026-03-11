@@ -63,6 +63,7 @@ const App = () => (
                 <Route path="/admin" element={<AdminPage />} />
                 <Route path="/waste-managers" element={<WasteManagerPage />} />
                 <Route path="/test-page" element={<TestPage />} />
+                <Route path="/landing-dos" element={<LandingPageDos />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>
