@@ -337,12 +337,12 @@ export default function LandingPage() {
                     {t('landing.app.title')}
                   </h2>
                   <div className="w-16 h-1 rounded-full mx-auto lg:mx-0 mb-5" style={{ backgroundColor: '#b4fa74', opacity: 0.5 }} />
-                  <p className="font-sedgwick-ave text-subtitle-styled text-xl md:text-2xl max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed my-0">
+                  <p className="font-sedgwick-ave text-subtitle-styled text-xl md:text-2xl max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed whitespace-pre-line">
                     {t('landing.app.subtitle')}
                   </p>
                   
                   {/* CTA Buttons */}
-                  <div className="flex flex-row gap-4 items-center justify-center lg:justify-start">
+                  <div className="flex flex-row gap-4 items-center justify-center lg:justify-start mt-4">
                     <Button
                       onClick={() => setWaitlistOpen(true)}
                       className="bg-[#b4fa74] hover:bg-[#a2e866] font-permanent-marker text-xl px-8 py-6 rounded-xl transition-all shadow-[0_0_25px_rgba(180,250,116,0.25)] hover:shadow-[0_0_40px_rgba(180,250,116,0.35)]"
