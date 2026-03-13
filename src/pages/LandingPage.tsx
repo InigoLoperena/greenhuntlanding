@@ -54,12 +54,12 @@ const PulsingOrb = ({ size = 120, top, left, right, bottom, delay = 0 }: {size?:
 
 
 /* ─── Dynamic animated dots background overlay ─── */
-const DynamicDotsOverlay = ({ variant = 0 }: { variant?: number }) => {
+const DynamicDotsOverlay = ({ variant = 0 }: {variant?: number;}) => {
   const offsets = [
-    { nodes: [[15,30],[40,70],[70,20],[85,60],[25,80],[60,45]], paths: 'M150,300 Q400,100 700,200 Q850,600 250,800' },
-    { nodes: [[20,25],[55,75],[80,35],[35,65],[65,15],[90,55]], paths: 'M200,250 Q500,700 800,350 Q600,100 300,600' },
-    { nodes: [[10,50],[45,20],[75,70],[30,40],[60,80],[85,30]], paths: 'M100,500 Q350,200 750,700 Q900,300 200,400' },
-  ];
+  { nodes: [[15, 30], [40, 70], [70, 20], [85, 60], [25, 80], [60, 45]], paths: 'M150,300 Q400,100 700,200 Q850,600 250,800' },
+  { nodes: [[20, 25], [55, 75], [80, 35], [35, 65], [65, 15], [90, 55]], paths: 'M200,250 Q500,700 800,350 Q600,100 300,600' },
+  { nodes: [[10, 50], [45, 20], [75, 70], [30, 40], [60, 80], [85, 30]], paths: 'M100,500 Q350,200 750,700 Q900,300 200,400' }];
+
   const o = offsets[variant % 3];
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
@@ -77,8 +77,8 @@ const DynamicDotsOverlay = ({ variant = 0 }: { variant?: number }) => {
           <animate attributeName="opacity" values="0.05;0.4;0.05" dur={`${9 + variant}s`} repeatCount="indefinite" />
         </circle>
         {/* Pulsing scattered dots */}
-        {o.nodes.map(([cx, cy], i) => (
-          <g key={i}>
+        {o.nodes.map(([cx, cy], i) =>
+        <g key={i}>
             <circle cx={`${cx}%`} cy={`${cy}%`} r={2 + i % 3} fill="#b4fa74" opacity={0.04 + i % 4 * 0.03}>
               <animate attributeName="opacity" values={`${0.03 + i % 3 * 0.02};${0.12 + i % 2 * 0.06};${0.03 + i % 3 * 0.02}`} dur={`${3 + i * 0.7}s`} repeatCount="indefinite" />
               <animate attributeName="r" values={`${2 + i % 3};${4 + i % 3};${2 + i % 3}`} dur={`${4 + i * 0.5}s`} repeatCount="indefinite" />
@@ -88,10 +88,10 @@ const DynamicDotsOverlay = ({ variant = 0 }: { variant?: number }) => {
               <animate attributeName="opacity" values={`${0.04};${0.01};${0.04}`} dur={`${5 + i * 0.6}s`} repeatCount="indefinite" />
             </circle>
           </g>
-        ))}
+        )}
       </svg>
-    </div>
-  );
+    </div>);
+
 };
 
 
@@ -337,7 +337,7 @@ export default function LandingPage() {
                     {t('landing.app.title')}
                   </h2>
                   <div className="w-16 h-1 rounded-full mx-auto lg:mx-0 mb-5" style={{ backgroundColor: '#b4fa74', opacity: 0.5 }} />
-                  <p className="font-sedgwick-ave text-subtitle-styled text-xl md:text-2xl max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+                  <p className="font-sedgwick-ave text-subtitle-styled text-xl md:text-2xl max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed my-0">
                     {t('landing.app.subtitle')}
                   </p>
                   
@@ -481,9 +481,9 @@ export default function LandingPage() {
                   <div className="absolute inset-8 rounded-full border border-white/5 animate-[spin_20s_linear_infinite_reverse]" />
                   <div className="absolute inset-16 rounded-full border border-white/[0.03]" />
                   {[0, 60, 120, 180, 240, 300].map((deg, i) =>
-                    <div key={i} className="absolute inset-0 animate-[spin_25s_linear_infinite]" style={{ animationDelay: `${-i * 4.17}s` }}>
+                  <div key={i} className="absolute inset-0 animate-[spin_25s_linear_infinite]" style={{ animationDelay: `${-i * 4.17}s` }}>
                       <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 md:w-5 md:h-5 rounded-full border border-white/20 flex items-center justify-center"
-                        style={{ animation: `pulse-glow 3s ease-in-out ${i * 0.5}s infinite alternate` }}>
+                    style={{ animation: `pulse-glow 3s ease-in-out ${i * 0.5}s infinite alternate` }}>
                         <div className="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full" style={{ backgroundColor: '#b4fa74', opacity: 0.6 + i % 3 * 0.15 }} />
                       </div>
                     </div>
@@ -653,7 +653,7 @@ export default function LandingPage() {
               style={{
                 backgroundColor: '#b4fa74',
                 color: '#611a5a',
-                boxShadow: '0 0 15px rgba(180, 250, 116, 0.3)',
+                boxShadow: '0 0 15px rgba(180, 250, 116, 0.3)'
               }}
               aria-label={language === 'en' ? 'Go to top' : 'Ir al principio'}>
               <ArrowUp className="h-5 w-5" style={{ color: '#611a5a', stroke: '#611a5a' }} />
@@ -667,13 +667,13 @@ export default function LandingPage() {
                 backgroundColor: 'transparent',
                 color: '#b4fa74',
                 border: '2px solid #b4fa74',
-                boxShadow: '0 0 15px rgba(180, 250, 116, 0.15), inset 0 0 15px rgba(180, 250, 116, 0.05)',
+                boxShadow: '0 0 15px rgba(180, 250, 116, 0.15), inset 0 0 15px rgba(180, 250, 116, 0.05)'
               }}>
               {language === 'en' ? 'ES' : 'EN'}
             </button>
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>);
+
 }
