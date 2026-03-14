@@ -238,7 +238,7 @@ const translations: Record<Language, Record<string, string>> = {
     'landing.junk.step1': 'Toma fotos de tus objetos y completa el formulario.',
     'landing.junk.step2': 'Otros usuarios pujan para pagarte o cobrarte por retirarlos.',
     'landing.junk.step3': 'Acepta la oferta que quieras y programa la recogida.',
-    'landing.app.title': 'Stooping - App y juego circular',
+    'landing.app.title': 'Stooping  juego del mundo real',
     'landing.app.subtitle': 'Tu ciudad es un juego de mesa donde de repente aparecen cosas valiosas gratis tiradas.\n\nComparte fotos y coordenadas o ve por ellas y salvalas del vertedero.',
     'landing.playPlanet.title': 'Juega por el planeta',
     'landing.playPlanet.subtitle': 'Por diversión o por dinero, empresa o particular, juega por el planeta y mide el impacto de los tesoros que salvaste del vertedero',
