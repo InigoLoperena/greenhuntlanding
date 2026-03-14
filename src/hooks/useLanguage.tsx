@@ -107,7 +107,7 @@ const translations: Record<Language, Record<string, string>> = {
     'landing.valueProp1.title': 'SNAP & SAVE',
     'landing.valueProp1.text': 'Save the planet by snapping photos of discarded street finds.',
     'landing.valueProp2.title': 'GRAB & RESCUE',
-    'landing.valueProp2.text': 'Get free stuff in your city and keep it out of the landfill.',
+    'landing.valueProp2.text': 'Get free stuff in the streets and keep it out of the landfill.',
     'landing.valueProp3.title': 'TRACK & COMPETE',
     'landing.valueProp3.text': 'Track your impact and compete with other local players.',
     'landing.thrifting.title': 'Local Phygital Thrifting',
