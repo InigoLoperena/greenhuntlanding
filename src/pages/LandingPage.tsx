@@ -382,8 +382,8 @@ export default function LandingPage() {
                       alt="GreenHunt App Screenshot"
                       className="relative h-96 md:h-[550px] lg:h-[700px] w-auto object-contain drop-shadow-2xl"
                       loading="lazy"
-                      src="/lovable-uploads/8759250d-dd73-492b-977a-129c0e98d572.png"
-                      style={{ mixBlendMode: 'screen' }} />
+                      src="/src/assets/app-map-screen-new.png"
+                    />
                     
                   </div>
                 </div>
