@@ -13,6 +13,9 @@ import { z } from "zod";
 import tutorialStep2 from "@/assets/tutorial-step-2.png";
 import appStoreBadges from "@/assets/app-store-badges.png";
 import playForPlanetScreen from "@/assets/play-for-planet-screen.png";
+import valueProp1 from "@/assets/value-prop-1.png";
+import valueProp2 from "@/assets/value-prop-2.png";
+import valueProp3 from "@/assets/value-prop-3.png";
 
 const emailSchema = z.string().email();
 
@@ -431,11 +434,13 @@ export default function LandingPage() {
             </DialogContent>
           </Dialog>
 
-          {/* ═══════════════ Tutorial / Stooping ═══════════════ */}
+          {/* ═══════════════ Value Propositions ═══════════════ */}
+          {/* --- Value Prop 1: Snap & Save --- */}
           <section className="py-16 md:py-24 px-4 relative overflow-hidden">
             <DynamicDotsOverlay variant={0} />
-            <FloatingParticles count={8} />
-            <PulsingOrb size={160} top="-40px" right="-60px" delay={0} />
+            <FloatingParticles count={10} />
+            <PulsingOrb size={180} top="-50px" right="-70px" delay={0} />
+            <PulsingOrb size={100} bottom="10%" left="-40px" delay={1.5} />
             <div className="container mx-auto max-w-6xl relative z-10">
               <div className="text-center mb-14">
                 <h2 style={{ color: '#b4fa74' }} className="text-3xl md:text-5xl font-permanent-marker mb-3">
@@ -443,25 +448,71 @@ export default function LandingPage() {
                 </h2>
                 <div className="w-20 h-1 rounded-full mx-auto" style={{ backgroundColor: '#b4fa74', opacity: 0.4 }} />
               </div>
-              
-              <div className="grid md:grid-cols-3 gap-8 md:gap-10">
-                <StepCard
-                  number={1}
-                  image="/lovable-uploads/b2d445b9-fc2c-40d6-8b6f-4947539b949f.png"
-                  alt="Take photos of street finds"
-                  text={t('landing.tutorial.step1')} />
-                
-                <StepCard
-                  number={2}
-                  image={tutorialStep2}
-                  alt="Make money when someone unlocks coordinates"
-                  text={t('landing.tutorial.step2')} />
-                
-                <StepCard
-                  number={3}
-                  image="/lovable-uploads/c1d89d6c-343e-495a-8f4a-58d9ff2876f5.png"
-                  alt="Buy coordinates and get valuable items"
-                  text={t('landing.tutorial.disclaimer')} />
+
+              <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+                <div className="flex-1 order-2 md:order-1">
+                  <h3 className="text-2xl md:text-4xl font-permanent-marker mb-4" style={{ color: '#b4fa74' }}>
+                    {t('landing.valueProp1.title')}
+                  </h3>
+                  <p className="text-subtitle-styled text-xl md:text-3xl leading-relaxed">
+                    {t('landing.valueProp1.text')}
+                  </p>
+                </div>
+                <div className="flex-1 order-1 md:order-2 max-w-sm md:max-w-md">
+                  <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-b from-white/[0.04] to-transparent p-1 group hover:border-white/20 hover:shadow-[0_0_30px_rgba(180,250,116,0.08)] transition-all duration-300">
+                    <img src={valueProp1} alt="Save the planet by snapping photos" className="w-full rounded-xl object-cover" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* --- Value Prop 2: Grab & Rescue --- */}
+          <section className="py-16 md:py-24 px-4 relative overflow-hidden">
+            <DynamicDotsOverlay variant={1} />
+            <FloatingParticles count={8} />
+            <PulsingOrb size={140} top="20%" left="-50px" delay={0.5} />
+            <PulsingOrb size={120} bottom="-30px" right="-40px" delay={2} />
+            <div className="container mx-auto max-w-6xl relative z-10">
+              <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+                <div className="flex-1 max-w-xs md:max-w-sm">
+                  <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-b from-white/[0.04] to-transparent p-1 group hover:border-white/20 hover:shadow-[0_0_30px_rgba(180,250,116,0.08)] transition-all duration-300">
+                    <img src={valueProp2} alt="Get free stuff in your city" className="w-full rounded-xl object-cover" />
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl md:text-4xl font-permanent-marker mb-4" style={{ color: '#b4fa74' }}>
+                    {t('landing.valueProp2.title')}
+                  </h3>
+                  <p className="text-subtitle-styled text-xl md:text-3xl leading-relaxed">
+                    {t('landing.valueProp2.text')}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* --- Value Prop 3: Track & Compete --- */}
+          <section className="py-16 md:py-24 px-4 relative overflow-hidden">
+            <DynamicDotsOverlay variant={2} />
+            <FloatingParticles count={8} />
+            <PulsingOrb size={160} top="-40px" left="30%" delay={0} />
+            <PulsingOrb size={100} bottom="15%" right="-50px" delay={1} />
+            <div className="container mx-auto max-w-6xl relative z-10">
+              <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+                <div className="flex-1 order-2 md:order-1">
+                  <h3 className="text-2xl md:text-4xl font-permanent-marker mb-4" style={{ color: '#b4fa74' }}>
+                    {t('landing.valueProp3.title')}
+                  </h3>
+                  <p className="text-subtitle-styled text-xl md:text-3xl leading-relaxed">
+                    {t('landing.valueProp3.text')}
+                  </p>
+                </div>
+                <div className="flex-1 order-1 md:order-2 max-w-xs md:max-w-sm">
+                  <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-b from-white/[0.04] to-transparent p-1 group hover:border-white/20 hover:shadow-[0_0_30px_rgba(180,250,116,0.08)] transition-all duration-300">
+                    <img src={valueProp3} alt="Track your impact and compete" className="w-full rounded-xl object-cover" />
+                  </div>
+                </div>
               </div>
             </div>
           </section>
