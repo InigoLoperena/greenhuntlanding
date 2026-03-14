@@ -109,7 +109,7 @@ const translations: Record<Language, Record<string, string>> = {
     'landing.valueProp2.title': 'GRAB & RESCUE',
     'landing.valueProp2.text': 'Get free stuff in the streets and keep it out of the landfill.',
     'landing.valueProp3.title': 'TRACK & COMPETE',
-    'landing.valueProp3.text': 'Track your impact and compete with other local players.',
+    'landing.valueProp3.text': 'Track your impact earn rewards and compete with other local players.',
     'landing.thrifting.title': 'Local Phygital Thrifting',
     'landing.thrifting.step1': 'Explore catalogs of local thrift stores and garage sales. Chat and negotiate.',
     'landing.thrifting.step2': 'Ask them to come to your house to collect your unwanted items instead of throwing them in the trash.',
