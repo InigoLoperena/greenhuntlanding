@@ -229,7 +229,7 @@ const translations: Record<Language, Record<string, string>> = {
     'landing.valueProp2.title': 'RECOGE Y RESCATA',
     'landing.valueProp2.text': 'Consigue cosas gratis en tu ciudad y evita que acaben en el vertedero.',
     'landing.valueProp3.title': 'MIDE Y COMPITE',
-    'landing.valueProp3.text': 'Mide tu impacto y compite con otros jugadores locales.',
+    'landing.valueProp3.text': 'Mide tu impacto, gana recompensas y compite con otros jugadores locales.',
     'landing.thrifting.title': 'Thrifting Phygital Local',
     'landing.thrifting.step1': 'Explora catálogos de tiendas de segunda mano y ventas de garaje locales. Chatea y negocia.',
     'landing.thrifting.step2': 'Pídeles que vengan a tu casa a recoger tus objetos no deseados en lugar de tirarlos a la basura.',
