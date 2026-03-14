@@ -13,6 +13,9 @@ import { z } from "zod";
 import tutorialStep2 from "@/assets/tutorial-step-2.png";
 import appStoreBadges from "@/assets/app-store-badges.png";
 import playForPlanetScreen from "@/assets/play-for-planet-screen.png";
+import valueProp1 from "@/assets/value-prop-1.png";
+import valueProp2 from "@/assets/value-prop-2.png";
+import valueProp3 from "@/assets/value-prop-3.png";
 
 const emailSchema = z.string().email();
 
