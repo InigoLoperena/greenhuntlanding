@@ -386,7 +386,7 @@ export default function LandingPage() {
                       alt="GreenHunt App Screenshot"
                       className="relative h-96 md:h-[550px] lg:h-[700px] w-auto object-contain drop-shadow-2xl"
                       loading="lazy"
-                      src="/src/assets/app-map-screen-new.png"
+                      src={appMapScreen}
                     />
                     
                   </div>
