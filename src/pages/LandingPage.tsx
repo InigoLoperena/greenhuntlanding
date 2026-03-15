@@ -20,38 +20,127 @@ import appMapScreen from "@/assets/app-map-screen-new.png";
 
 const emailSchema = z.string().email();
 
-/* ─── Corner bolts decoration ─── */
-const CornerBolts = () => (
-  <>
-    {/* Top-left */}
-    <div className="absolute top-2 left-2 w-3 h-3 rounded-full z-10"
-      style={{ background: 'radial-gradient(circle at 40% 35%, hsl(35, 15%, 58%), hsl(35, 20%, 38%))', border: '1px solid hsl(30, 10%, 28%)', boxShadow: 'inset 0 1px 2px rgba(255,255,255,0.25), 0 1px 2px rgba(0,0,0,0.4)' }} />
-    {/* Top-right */}
-    <div className="absolute top-2 right-2 w-3 h-3 rounded-full z-10"
-      style={{ background: 'radial-gradient(circle at 40% 35%, hsl(35, 15%, 58%), hsl(35, 20%, 38%))', border: '1px solid hsl(30, 10%, 28%)', boxShadow: 'inset 0 1px 2px rgba(255,255,255,0.25), 0 1px 2px rgba(0,0,0,0.4)' }} />
-    {/* Bottom-left */}
-    <div className="absolute bottom-2 left-2 w-3 h-3 rounded-full z-10"
-      style={{ background: 'radial-gradient(circle at 40% 35%, hsl(35, 15%, 58%), hsl(35, 20%, 38%))', border: '1px solid hsl(30, 10%, 28%)', boxShadow: 'inset 0 1px 2px rgba(255,255,255,0.25), 0 1px 2px rgba(0,0,0,0.4)' }} />
-    {/* Bottom-right */}
-    <div className="absolute bottom-2 right-2 w-3 h-3 rounded-full z-10"
-      style={{ background: 'radial-gradient(circle at 40% 35%, hsl(35, 15%, 58%), hsl(35, 20%, 38%))', border: '1px solid hsl(30, 10%, 28%)', boxShadow: 'inset 0 1px 2px rgba(255,255,255,0.25), 0 1px 2px rgba(0,0,0,0.4)' }} />
-  </>
-);
+/* ─── Floating particles background ─── */
+const FloatingParticles = ({ count = 6, color = '#b4fa74' }: {count?: number;color?: string;}) =>
+<div className="absolute inset-0 overflow-hidden pointer-events-none">
+    {Array.from({ length: count }).map((_, i) =>
+  <div
+    key={i}
+    className="absolute rounded-full"
+    style={{
+      width: `${3 + i % 4 * 2}px`,
+      height: `${3 + i % 4 * 2}px`,
+      backgroundColor: color,
+      opacity: 0.08 + i % 3 * 0.06,
+      left: `${10 + i * 17 % 80}%`,
+      top: `${5 + i * 23 % 90}%`,
+      animation: `float-particle-${i % 3} ${8 + i * 2}s ease-in-out infinite`
+    }} />
 
-/* ─── Wooden sign title ─── */
-const WoodenSign = ({ children, className = '' }: { children: React.ReactNode; className?: string }) => (
-  <div className={`wooden-sign ${className}`}>
-    {children}
-  </div>
-);
+  )}
+  </div>;
 
-/* ─── Section with wooden frame ─── */
-const FramedSection = ({ children, className = '' }: { children: React.ReactNode; className?: string }) => (
-  <div className={`wooden-frame relative p-6 md:p-10 ${className}`}>
-    <CornerBolts />
-    {children}
-  </div>
-);
+
+/* ─── Pulsing orb accent ─── */
+const PulsingOrb = ({ size = 120, top, left, right, bottom, delay = 0 }: {size?: number;top?: string;left?: string;right?: string;bottom?: string;delay?: number;}) =>
+<div
+  className="absolute rounded-full pointer-events-none"
+  style={{
+    width: size,
+    height: size,
+    backgroundColor: '#b4fa74',
+    opacity: 0.06,
+    filter: `blur(${size / 2}px)`,
+    top, left, right, bottom,
+    animation: `pulse-glow 4s ease-in-out ${delay}s infinite alternate`
+  }} />;
+
+
+
+/* ─── Dynamic animated dots background overlay ─── */
+const DynamicDotsOverlay = ({ variant = 0 }: {variant?: number;}) => {
+  const offsets = [
+  { nodes: [[15, 30], [40, 70], [70, 20], [85, 60], [25, 80], [60, 45]], paths: 'M150,300 Q400,100 700,200 Q850,600 250,800' },
+  { nodes: [[20, 25], [55, 75], [80, 35], [35, 65], [65, 15], [90, 55]], paths: 'M200,250 Q500,700 800,350 Q600,100 300,600' },
+  { nodes: [[10, 50], [45, 20], [75, 70], [30, 40], [60, 80], [85, 30]], paths: 'M100,500 Q350,200 750,700 Q900,300 200,400' }];
+
+  const o = offsets[variant % 3];
+  return (
+    <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+      <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice">
+        {/* Animated traveling particle along path */}
+        <path d={o.paths} fill="none" stroke="#b4fa74" strokeWidth="0.8" opacity="0.06" strokeDasharray="6 8">
+          <animate attributeName="stroke-dashoffset" from="0" to="-100" dur={`${6 + variant}s`} repeatCount="indefinite" />
+        </path>
+        <circle r="2.5" fill="#b4fa74" opacity="0.4">
+          <animateMotion dur={`${7 + variant * 2}s`} repeatCount="indefinite" path={o.paths} />
+          <animate attributeName="opacity" values="0.1;0.5;0.1" dur={`${7 + variant * 2}s`} repeatCount="indefinite" />
+        </circle>
+        <circle r="2" fill="#b4fa74" opacity="0.3">
+          <animateMotion dur={`${9 + variant}s`} repeatCount="indefinite" path={o.paths} begin={`${2 + variant}s`} />
+          <animate attributeName="opacity" values="0.05;0.4;0.05" dur={`${9 + variant}s`} repeatCount="indefinite" />
+        </circle>
+        {/* Pulsing scattered dots */}
+        {o.nodes.map(([cx, cy], i) =>
+        <g key={i}>
+            <circle cx={`${cx}%`} cy={`${cy}%`} r={2 + i % 3} fill="#b4fa74" opacity={0.04 + i % 4 * 0.03}>
+              <animate attributeName="opacity" values={`${0.03 + i % 3 * 0.02};${0.12 + i % 2 * 0.06};${0.03 + i % 3 * 0.02}`} dur={`${3 + i * 0.7}s`} repeatCount="indefinite" />
+              <animate attributeName="r" values={`${2 + i % 3};${4 + i % 3};${2 + i % 3}`} dur={`${4 + i * 0.5}s`} repeatCount="indefinite" />
+            </circle>
+            <circle cx={`${cx}%`} cy={`${cy}%`} r={8 + i * 2} fill="none" stroke="#b4fa74" strokeWidth="0.4" opacity={0.03 + i % 3 * 0.015}>
+              <animate attributeName="r" values={`${8 + i * 2};${14 + i * 2};${8 + i * 2}`} dur={`${5 + i * 0.6}s`} repeatCount="indefinite" />
+              <animate attributeName="opacity" values={`${0.04};${0.01};${0.04}`} dur={`${5 + i * 0.6}s`} repeatCount="indefinite" />
+            </circle>
+          </g>
+        )}
+      </svg>
+    </div>);
+
+};
+
+
+/* ─── Step card component ─── */
+const StepCard = ({ number, image, alt, text }: {number: number;image: string;alt: string;text: string;}) =>
+<div className="group relative flex flex-col items-center text-center">
+    {/* Step number badge */}
+    <div className="absolute -top-4 -left-2 z-20 w-10 h-10 rounded-full flex items-center justify-center font-permanent-marker text-lg border-2"
+  style={{ backgroundColor: '#1a1a1a', borderColor: '#b4fa74', color: '#b4fa74' }}>
+      {number}
+    </div>
+    {/* Card */}
+    <div className="relative w-full rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-b from-white/[0.04] to-transparent p-1 transition-all duration-300 group-hover:border-white/20 group-hover:shadow-[0_0_30px_rgba(180,250,116,0.08)]">
+      <img
+      alt={alt}
+      className="w-full rounded-xl object-contain"
+      loading="lazy"
+      src={image} />
+    
+    </div>
+    <p className="font-sedgwick-ave text-subtitle-styled text-xl md:text-2xl mt-5 leading-relaxed px-2">
+      {text}
+    </p>
+  </div>;
+
+
+/* ─── Feature row (alternating layout) ─── */
+const FeatureRow = ({ title, subtitle, image, alt, reverse = false
+
+}: {title: string;subtitle: string;image: string;alt: string;reverse?: boolean;}) =>
+<div className="grid lg:grid-cols-2 gap-12 items-center">
+    <div className={reverse ? 'order-2 lg:order-1' : ''}>
+      <h2 className="text-3xl md:text-5xl font-permanent-marker mb-5 leading-tight" style={{ color: '#b4fa74' }}>
+        {title}
+      </h2>
+      <div className="w-16 h-1 rounded-full mb-6" style={{ backgroundColor: '#b4fa74', opacity: 0.5 }} />
+      <p className="text-lg md:text-xl text-subtitle-styled font-sedgwick-ave leading-relaxed">
+        {subtitle}
+      </p>
+    </div>
+    <div className={`${reverse ? 'order-1 lg:order-2' : ''} flex justify-center`}>
+      <img src={image} alt={alt} className="w-full max-w-xs lg:max-w-sm h-auto drop-shadow-2xl" loading="lazy" />
+    </div>
+  </div>;
+
 
 export default function LandingPage() {
   const { t, language, setLanguage } = useLanguage();
@@ -103,55 +192,187 @@ export default function LandingPage() {
   };
 
   return (
-    <div className="min-h-screen overflow-x-hidden relative" style={{ background: 'linear-gradient(180deg, hsl(25, 15%, 10%) 0%, hsl(30, 12%, 8%) 50%, hsl(25, 15%, 10%) 100%)' }}>
-      {/* Subtle noise texture overlay */}
-      <div className="fixed inset-0 pointer-events-none z-0 opacity-[0.03]"
-        style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E")` }} />
-
+    <div className="min-h-screen bg-[#0a0a0a] text-white overflow-x-hidden relative">
+      
+      
       <div className="relative z-10">
-        <div className="mx-4 md:mx-12 lg:mx-24 xl:mx-32 min-h-screen">
+        <div className="mx-4 md:mx-12 lg:mx-24 xl:mx-32 bg-[#0a0a0a] min-h-screen">
           <StructuredData />
           
           {/* Hero Section */}
           <HeroSection className="my-0 py-[80px]" />
 
           {/* ═══════════════ App Promo & CTA ═══════════════ */}
-          <section className="px-4 py-16 relative">
-            <FramedSection>
+          <section className="px-4 py-16 relative overflow-hidden">
+            {/* Circular economy animated background - collaboration network */}
+            <div className="absolute inset-0 pointer-events-none">
+              {/* Large SVG animated network representing local collaboration */}
+              <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+                {/* Rotating outer ring */}
+                <g style={{ transformOrigin: '600px 400px', animation: 'spin-slow 60s linear infinite' }}>
+                  <circle cx="600" cy="400" r="340" fill="none" stroke="#b4fa74" strokeWidth="1" opacity="0.08" strokeDasharray="20 10" />
+                  <circle cx="600" cy="400" r="280" fill="none" stroke="#b4fa74" strokeWidth="0.8" opacity="0.06" strokeDasharray="8 16" />
+                </g>
+                <g style={{ transformOrigin: '600px 400px', animation: 'spin-slow 45s linear infinite reverse' }}>
+                  <circle cx="600" cy="400" r="220" fill="none" stroke="#b4fa74" strokeWidth="1.2" opacity="0.1" strokeDasharray="12 8" />
+                </g>
+
+                {/* Animated connection paths between "actors" */}
+                {/* Path 1: Hunter → Store */}
+                <path d="M200,200 Q400,100 600,180" fill="none" stroke="#b4fa74" strokeWidth="1.5" opacity="0.15" strokeDasharray="6 4">
+                  <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="4s" repeatCount="indefinite" />
+                </path>
+                {/* Path 2: Store → Recycler */}
+                <path d="M600,180 Q800,250 950,400" fill="none" stroke="#b4fa74" strokeWidth="1.5" opacity="0.12" strokeDasharray="6 4">
+                  <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="5s" repeatCount="indefinite" />
+                </path>
+                {/* Path 3: Recycler → Community */}
+                <path d="M950,400 Q850,600 600,650" fill="none" stroke="#b4fa74" strokeWidth="1.5" opacity="0.12" strokeDasharray="6 4">
+                  <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="4.5s" repeatCount="indefinite" />
+                </path>
+                {/* Path 4: Community → Hunter (closing the circle) */}
+                <path d="M600,650 Q350,600 200,200" fill="none" stroke="#b4fa74" strokeWidth="1.5" opacity="0.15" strokeDasharray="6 4">
+                  <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="5.5s" repeatCount="indefinite" />
+                </path>
+                {/* Cross paths - inner collaboration */}
+                <path d="M200,200 Q500,400 950,400" fill="none" stroke="#b4fa74" strokeWidth="0.8" opacity="0.06" strokeDasharray="4 8">
+                  <animate attributeName="stroke-dashoffset" from="0" to="-80" dur="6s" repeatCount="indefinite" />
+                </path>
+                <path d="M600,180 Q500,450 600,650" fill="none" stroke="#b4fa74" strokeWidth="0.8" opacity="0.06" strokeDasharray="4 8">
+                  <animate attributeName="stroke-dashoffset" from="0" to="-80" dur="7s" repeatCount="indefinite" />
+                </path>
+
+                {/* Node hubs - represent different actors */}
+                {/* Hunter node */}
+                <g>
+                  <circle cx="200" cy="200" r="18" fill="#b4fa74" opacity="0.08">
+                    <animate attributeName="r" values="16;22;16" dur="3s" repeatCount="indefinite" />
+                    <animate attributeName="opacity" values="0.06;0.15;0.06" dur="3s" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="200" cy="200" r="6" fill="#b4fa74" opacity="0.3" />
+                  <circle cx="200" cy="200" r="30" fill="none" stroke="#b4fa74" opacity="0.08" strokeWidth="0.5">
+                    <animate attributeName="r" values="28;38;28" dur="4s" repeatCount="indefinite" />
+                    <animate attributeName="opacity" values="0.08;0.02;0.08" dur="4s" repeatCount="indefinite" />
+                  </circle>
+                </g>
+                {/* Store node */}
+                <g>
+                  <circle cx="600" cy="180" r="18" fill="#b4fa74" opacity="0.08">
+                    <animate attributeName="r" values="16;22;16" dur="3.5s" repeatCount="indefinite" />
+                    <animate attributeName="opacity" values="0.06;0.15;0.06" dur="3.5s" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="600" cy="180" r="6" fill="#b4fa74" opacity="0.3" />
+                  <circle cx="600" cy="180" r="30" fill="none" stroke="#b4fa74" opacity="0.08" strokeWidth="0.5">
+                    <animate attributeName="r" values="28;38;28" dur="4.5s" repeatCount="indefinite" />
+                  </circle>
+                </g>
+                {/* Recycler node */}
+                <g>
+                  <circle cx="950" cy="400" r="18" fill="#b4fa74" opacity="0.08">
+                    <animate attributeName="r" values="16;24;16" dur="4s" repeatCount="indefinite" />
+                    <animate attributeName="opacity" values="0.06;0.15;0.06" dur="4s" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="950" cy="400" r="7" fill="#b4fa74" opacity="0.25" />
+                  <circle cx="950" cy="400" r="32" fill="none" stroke="#b4fa74" opacity="0.06" strokeWidth="0.5">
+                    <animate attributeName="r" values="30;42;30" dur="5s" repeatCount="indefinite" />
+                  </circle>
+                </g>
+                {/* Community node */}
+                <g>
+                  <circle cx="600" cy="650" r="20" fill="#b4fa74" opacity="0.08">
+                    <animate attributeName="r" values="18;26;18" dur="3.8s" repeatCount="indefinite" />
+                    <animate attributeName="opacity" values="0.06;0.14;0.06" dur="3.8s" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="600" cy="650" r="7" fill="#b4fa74" opacity="0.25" />
+                  <circle cx="600" cy="650" r="34" fill="none" stroke="#b4fa74" opacity="0.06" strokeWidth="0.5">
+                    <animate attributeName="r" values="32;44;32" dur="4.2s" repeatCount="indefinite" />
+                  </circle>
+                </g>
+
+                {/* Traveling particles along paths - represent exchanges */}
+                <circle r="3" fill="#b4fa74" opacity="0.5">
+                  <animateMotion dur="4s" repeatCount="indefinite" path="M200,200 Q400,100 600,180" />
+                  <animate attributeName="opacity" values="0.1;0.6;0.1" dur="4s" repeatCount="indefinite" />
+                </circle>
+                <circle r="3" fill="#b4fa74" opacity="0.5">
+                  <animateMotion dur="5s" repeatCount="indefinite" path="M600,180 Q800,250 950,400" />
+                  <animate attributeName="opacity" values="0.1;0.6;0.1" dur="5s" repeatCount="indefinite" />
+                </circle>
+                <circle r="3" fill="#b4fa74" opacity="0.5">
+                  <animateMotion dur="4.5s" repeatCount="indefinite" path="M950,400 Q850,600 600,650" />
+                  <animate attributeName="opacity" values="0.1;0.6;0.1" dur="4.5s" repeatCount="indefinite" />
+                </circle>
+                <circle r="3" fill="#b4fa74" opacity="0.5">
+                  <animateMotion dur="5.5s" repeatCount="indefinite" path="M600,650 Q350,600 200,200" />
+                  <animate attributeName="opacity" values="0.1;0.6;0.1" dur="5.5s" repeatCount="indefinite" />
+                </circle>
+                {/* Extra traveling particles for density */}
+                <circle r="2" fill="#b4fa74" opacity="0.3">
+                  <animateMotion dur="6s" repeatCount="indefinite" path="M200,200 Q500,400 950,400" />
+                  <animate attributeName="opacity" values="0.05;0.4;0.05" dur="6s" repeatCount="indefinite" />
+                </circle>
+                <circle r="2" fill="#b4fa74" opacity="0.3">
+                  <animateMotion dur="7s" repeatCount="indefinite" path="M600,180 Q500,450 600,650" />
+                  <animate attributeName="opacity" values="0.05;0.4;0.05" dur="7s" repeatCount="indefinite" />
+                </circle>
+
+                {/* Small scattered dots - represent activity */}
+                {[
+                [150, 350], [300, 500], [450, 300], [750, 550], [850, 250], [400, 150], [700, 700], [100, 500], [900, 600], [500, 550],
+                [350, 250], [800, 350], [250, 600], [650, 450], [1000, 300]].
+                map(([cx, cy], i) =>
+                <circle key={i} cx={cx} cy={cy} r={1 + i % 3} fill="#b4fa74" opacity={0.05 + i % 5 * 0.03}>
+                    <animate attributeName="opacity" values={`${0.03 + i % 4 * 0.02};${0.15 + i % 3 * 0.05};${0.03 + i % 4 * 0.02}`} dur={`${3 + i * 0.3}s`} repeatCount="indefinite" />
+                  </circle>
+                )}
+              </svg>
+
+              {/* Radial glow behind center */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] md:w-[800px] md:h-[800px] rounded-full opacity-[0.04]" style={{ background: 'radial-gradient(circle, #b4fa74 0%, transparent 70%)' }} />
+            </div>
+            <FloatingParticles count={10} />
+            <PulsingOrb size={220} top="-80px" left="-100px" delay={0} />
+            <PulsingOrb size={160} bottom="-60px" right="-80px" delay={1.5} />
+            <div className="container mx-auto max-w-6xl relative z-10">
               <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center justify-between">
                 {/* Left */}
                 <div className="flex-1 text-center lg:text-left">
-                  <WoodenSign className="mb-6">
-                    <h2 className="font-permanent-marker text-2xl md:text-3xl lg:text-4xl" style={{ color: 'hsl(38, 35%, 78%)' }}>
-                      {t('landing.app.title')}
-                    </h2>
-                  </WoodenSign>
-                  <div className="rusty-divider w-16 mx-auto lg:mx-0 mb-5" />
+                  <h2 className="font-permanent-marker text-3xl md:text-4xl lg:text-5xl mb-4" style={{ color: '#b4fa74' }}>
+                    {t('landing.app.title')}
+                  </h2>
+                  <div className="w-16 h-1 rounded-full mx-auto lg:mx-0 mb-5" style={{ backgroundColor: '#b4fa74', opacity: 0.5 }} />
                   <p className="font-sedgwick-ave text-subtitle-styled text-xl md:text-2xl max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed whitespace-pre-line">
                     {t('landing.app.subtitle')}
                   </p>
                   
                   {/* CTA Buttons */}
                   <div className="flex flex-row gap-4 items-center justify-center lg:justify-start mt-4">
-                    <button
+                    <Button
                       onClick={() => setWaitlistOpen(true)}
-                      className="game-button font-permanent-marker text-xl px-8 py-3 flex items-center gap-2 cursor-pointer">
+                      className="bg-[#b4fa74] hover:bg-[#a2e866] font-permanent-marker text-xl px-8 py-6 rounded-xl transition-all shadow-[0_0_25px_rgba(180,250,116,0.25)] hover:shadow-[0_0_40px_rgba(180,250,116,0.35)]"
+                      style={{ color: '#0a0a0a' }}>
+                      
                       {language === 'en' ? 'GET BETA' : 'OBTÉN BETA'}
-                      <ChevronRight className="h-5 w-5" />
-                    </button>
+                      <ChevronRight className="ml-1 h-5 w-5" style={{ color: '#0a0a0a', stroke: '#0a0a0a' }} />
+                    </Button>
                     
                     <button
                       onClick={() => setTrailerOpen(true)}
-                      className="game-button-outline font-permanent-marker text-sm px-6 py-3 flex items-center gap-2 cursor-pointer">
-                      <Video className="h-5 w-5" />
-                      <span className="tracking-wider">TRAILER</span>
+                      className="font-permanent-marker text-sm px-6 py-3 h-auto rounded-xl border-2 bg-transparent hover:bg-[#b4fa74]/10 transition-all duration-300 flex items-center gap-2 cursor-pointer"
+                      style={{
+                        borderColor: '#b4fa74',
+                        boxShadow: '0 0 15px rgba(180, 250, 116, 0.25), inset 0 0 15px rgba(180, 250, 116, 0.05)'
+                      }}>
+                      
+                      <Video className="h-5 w-5" style={{ color: '#611a5a', fill: '#611a5a', stroke: '#611a5a' }} />
+                      <span className="tracking-wider" style={{ color: '#b4fa74' }}>TRAILER</span>
                     </button>
                   </div>
                   
                   {/* App Store Badges */}
                   <div className="flex flex-col items-center lg:items-start mt-10">
                     <img src={appStoreBadges} alt="Available on App Store and Google Play" className="w-[280px] md:w-[320px] h-auto opacity-80" style={{ mixBlendMode: 'screen' }} />
-                    <p className="font-sedgwick-ave text-2xl md:text-3xl mt-2 opacity-70" style={{ color: 'hsl(80, 40%, 50%)' }}>
+                    <p style={{ color: '#b4fa74' }} className="font-sedgwick-ave text-2xl md:text-3xl mt-2 opacity-70">
                       coming soon
                     </p>
                   </div>
@@ -159,29 +380,29 @@ export default function LandingPage() {
                 
                 {/* Right - Phone */}
                 <div className="flex-1 flex items-center justify-center">
-                  <div className="worn-photo-frame">
+                  <div className="relative">
+                    <div className="absolute -inset-8 rounded-full opacity-10 blur-3xl" style={{ backgroundColor: '#b4fa74' }} />
                     <img
                       alt="GreenHunt App Screenshot"
-                      className="relative h-80 md:h-[500px] lg:h-[600px] w-auto object-contain rounded"
+                      className="relative h-96 md:h-[550px] lg:h-[700px] w-auto object-contain drop-shadow-2xl"
                       loading="lazy"
                       src={appMapScreen}
                     />
+                    
                   </div>
                 </div>
               </div>
-            </FramedSection>
+            </div>
           </section>
 
           {/* Waitlist Dialog */}
           <Dialog open={waitlistOpen} onOpenChange={setWaitlistOpen}>
-            <DialogContent className="sm:max-w-md border-2" style={{ background: 'linear-gradient(145deg, hsl(30, 20%, 14%), hsl(25, 18%, 10%))', borderColor: 'hsl(25, 35%, 22%)' }}>
+            <DialogContent className="sm:max-w-md bg-[#141414] border border-white/10 shadow-[0_0_60px_rgba(180,250,116,0.08)]">
               <div className="text-center">
-                <WoodenSign className="mb-4">
-                  <h3 className="font-permanent-marker text-2xl" style={{ color: 'hsl(38, 35%, 78%)' }}>
-                    {language === 'en' ? 'Get the Beta' : 'Obtén la Beta'}
-                  </h3>
-                </WoodenSign>
-                <p className="font-sedgwick-ave text-subtitle-styled text-sm mb-4">
+                <h3 className="font-permanent-marker text-2xl mb-1" style={{ color: '#b4fa74' }}>
+                  {language === 'en' ? 'Get the Beta' : 'Obtén la Beta'}
+                </h3>
+                <p className="font-sedgwick-ave text-white/50 text-sm mb-4">
                   {t('landing.beta.description')}
                 </p>
               </div>
@@ -192,21 +413,22 @@ export default function LandingPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="font-sedgwick-ave border-2 text-white placeholder:text-white/30 rounded-md"
-                  style={{ background: 'hsl(30, 15%, 15%)', borderColor: 'hsl(30, 20%, 25%)' }} />
+                  className="font-sedgwick-ave bg-white/5 border-white/15 text-white placeholder:text-white/30 focus:border-[#b4fa74]/50 rounded-xl" />
                 
-                <button
+                <Button
                   type="submit" disabled={loading}
-                  className="game-button w-full font-permanent-marker text-lg px-8 py-3 cursor-pointer disabled:opacity-50">
+                  className="w-full bg-[#b4fa74] hover:bg-[#a2e866] font-permanent-marker text-lg rounded-xl shadow-[0_0_20px_rgba(180,250,116,0.2)]"
+                  style={{ color: '#0a0a0a' }}>
+                  
                   {loading ? language === 'en' ? 'Sending...' : 'Enviando...' : language === 'en' ? 'GET BETA' : 'OBTÉN BETA'}
-                </button>
+                </Button>
               </form>
             </DialogContent>
           </Dialog>
 
           {/* Trailer Dialog */}
           <Dialog open={trailerOpen} onOpenChange={setTrailerOpen}>
-            <DialogContent className="sm:max-w-4xl p-0 bg-black border-2" style={{ borderColor: 'hsl(25, 35%, 22%)' }}>
+            <DialogContent className="sm:max-w-4xl p-0 bg-black border-white/10">
               <div className="aspect-video">
                 <iframe width="100%" height="100%" src={trailerOpen ? "https://www.youtube.com/embed/RHj_lCvC9xw?autoplay=1" : ""} title="GreenHunt Trailer" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="rounded-lg" />
               </div>
@@ -214,146 +436,201 @@ export default function LandingPage() {
           </Dialog>
 
           {/* ═══════════════ Value Propositions ═══════════════ */}
-          
           {/* --- Value Prop 1: Snap & Save --- */}
-          <section className="py-16 md:py-24 px-4">
-            <FramedSection>
-              <div className="text-center mb-10">
-                <WoodenSign>
-                  <h2 className="text-2xl md:text-4xl font-permanent-marker" style={{ color: 'hsl(38, 35%, 78%)' }}>
-                    {t('landing.tutorial.title')}
-                  </h2>
-                </WoodenSign>
-                <div className="rusty-divider w-20 mx-auto mt-4" />
+          <section className="py-16 md:py-24 px-4 relative overflow-hidden">
+            <DynamicDotsOverlay variant={0} />
+            <FloatingParticles count={10} />
+            <PulsingOrb size={180} top="-50px" right="-70px" delay={0} />
+            <PulsingOrb size={100} bottom="10%" left="-40px" delay={1.5} />
+            <div className="container mx-auto max-w-6xl relative z-10">
+              <div className="text-center mb-14">
+                <h2 style={{ color: '#b4fa74' }} className="text-3xl md:text-5xl font-permanent-marker mb-3">
+                  {t('landing.tutorial.title')}
+                </h2>
+                <div className="w-20 h-1 rounded-full mx-auto" style={{ backgroundColor: '#b4fa74', opacity: 0.4 }} />
               </div>
 
               <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
                 <div className="flex-1 order-2 md:order-1">
-                  <div className="parchment-card p-6 md:p-8">
-                    <h3 className="text-2xl md:text-4xl font-permanent-marker mb-4" style={{ color: 'hsl(25, 35%, 20%)' }}>
-                      {t('landing.valueProp1.title')}
-                    </h3>
-                    <p className="font-sedgwick-ave text-xl md:text-2xl leading-relaxed" style={{ color: 'hsl(25, 25%, 30%)' }}>
-                      {t('landing.valueProp1.text')}
-                    </p>
-                  </div>
+                  <h3 className="text-2xl md:text-4xl font-permanent-marker mb-4" style={{ color: '#b4fa74' }}>
+                    {t('landing.valueProp1.title')}
+                  </h3>
+                  <p className="text-subtitle-styled text-xl md:text-3xl leading-relaxed">
+                    {t('landing.valueProp1.text')}
+                  </p>
                 </div>
                 <div className="flex-1 order-1 md:order-2 max-w-sm md:max-w-md">
-                  <div className="worn-photo-frame">
-                    <img src={valueProp1} alt="Save the planet by snapping photos" className="w-full rounded object-cover" />
+                  <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-b from-white/[0.04] to-transparent p-1 group hover:border-white/20 hover:shadow-[0_0_30px_rgba(180,250,116,0.08)] transition-all duration-300">
+                    <img src={valueProp1} alt="Save the planet by snapping photos" className="w-full rounded-xl object-cover" />
                   </div>
                 </div>
               </div>
-            </FramedSection>
+            </div>
           </section>
 
           {/* --- Value Prop 2: Grab & Rescue --- */}
-          <section className="py-16 md:py-24 px-4">
-            <FramedSection>
+          <section className="py-16 md:py-24 px-4 relative overflow-hidden">
+            <DynamicDotsOverlay variant={1} />
+            <FloatingParticles count={8} />
+            <PulsingOrb size={140} top="20%" left="-50px" delay={0.5} />
+            <PulsingOrb size={120} bottom="-30px" right="-40px" delay={2} />
+            <div className="container mx-auto max-w-6xl relative z-10">
               <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
                 <div className="flex-1 max-w-xs md:max-w-sm">
-                  <div className="worn-photo-frame">
-                    <img src={valueProp2} alt="Get free stuff in your city" className="w-full rounded object-cover" />
+                  <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-b from-white/[0.04] to-transparent p-1 group hover:border-white/20 hover:shadow-[0_0_30px_rgba(180,250,116,0.08)] transition-all duration-300">
+                    <img src={valueProp2} alt="Get free stuff in your city" className="w-full rounded-xl object-cover" />
                   </div>
                 </div>
                 <div className="flex-1">
-                  <div className="parchment-card p-6 md:p-8">
-                    <h3 className="text-2xl md:text-4xl font-permanent-marker mb-4" style={{ color: 'hsl(25, 35%, 20%)' }}>
-                      {t('landing.valueProp2.title')}
-                    </h3>
-                    <p className="font-sedgwick-ave text-xl md:text-2xl leading-relaxed" style={{ color: 'hsl(25, 25%, 30%)' }}>
-                      {t('landing.valueProp2.text')}
-                    </p>
-                  </div>
+                  <h3 className="text-2xl md:text-4xl font-permanent-marker mb-4" style={{ color: '#b4fa74' }}>
+                    {t('landing.valueProp2.title')}
+                  </h3>
+                  <p className="text-subtitle-styled text-xl md:text-3xl leading-relaxed">
+                    {t('landing.valueProp2.text')}
+                  </p>
                 </div>
               </div>
-            </FramedSection>
+            </div>
           </section>
 
           {/* --- Value Prop 3: Track & Compete --- */}
-          <section className="py-16 md:py-24 px-4">
-            <FramedSection>
+          <section className="py-16 md:py-24 px-4 relative overflow-hidden">
+            <DynamicDotsOverlay variant={2} />
+            <FloatingParticles count={8} />
+            <PulsingOrb size={160} top="-40px" left="30%" delay={0} />
+            <PulsingOrb size={100} bottom="15%" right="-50px" delay={1} />
+            <div className="container mx-auto max-w-6xl relative z-10">
               <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
                 <div className="flex-1 order-2 md:order-1">
-                  <div className="parchment-card p-6 md:p-8">
-                    <h3 className="text-2xl md:text-4xl font-permanent-marker mb-4" style={{ color: 'hsl(25, 35%, 20%)' }}>
-                      {t('landing.valueProp3.title')}
-                    </h3>
-                    <p className="font-sedgwick-ave text-xl md:text-2xl leading-relaxed" style={{ color: 'hsl(25, 25%, 30%)' }}>
-                      {t('landing.valueProp3.text')}
-                    </p>
-                  </div>
+                  <h3 className="text-2xl md:text-4xl font-permanent-marker mb-4" style={{ color: '#b4fa74' }}>
+                    {t('landing.valueProp3.title')}
+                  </h3>
+                  <p className="text-subtitle-styled text-xl md:text-3xl leading-relaxed">
+                    {t('landing.valueProp3.text')}
+                  </p>
                 </div>
                 <div className="flex-1 order-1 md:order-2 max-w-xs md:max-w-sm">
-                  <div className="worn-photo-frame">
-                    <img src={valueProp3} alt="Track your impact and compete" className="w-full rounded object-cover" />
+                  <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-b from-white/[0.04] to-transparent p-1 group hover:border-white/20 hover:shadow-[0_0_30px_rgba(180,250,116,0.08)] transition-all duration-300">
+                    <img src={valueProp3} alt="Track your impact and compete" className="w-full rounded-xl object-cover" />
                   </div>
                 </div>
               </div>
-            </FramedSection>
+            </div>
           </section>
 
           {/* ═══════════════ Play for the Planet ═══════════════ */}
-          <section className="py-20 md:py-28 px-4">
-            <FramedSection>
-              <div className="text-center mb-12">
-                <WoodenSign>
-                  <h2 className="text-2xl md:text-4xl font-permanent-marker" style={{ color: 'hsl(38, 35%, 78%)' }}>
-                    {t('landing.playPlanet.title')}
-                  </h2>
-                </WoodenSign>
-                <div className="rusty-divider w-20 mx-auto mt-4" />
-              </div>
-              
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                  <div className="parchment-card p-6 md:p-8">
-                    <p className="font-sedgwick-ave text-xl md:text-2xl leading-relaxed" style={{ color: 'hsl(25, 25%, 30%)' }}>
-                      {t('landing.playPlanet.subtitle')}
-                    </p>
+          <section className="py-20 md:py-28 px-4 relative overflow-hidden">
+            <DynamicDotsOverlay variant={2} />
+            <FloatingParticles count={8} />
+            <PulsingOrb size={200} top="10%" left="-60px" delay={0} />
+            <PulsingOrb size={120} bottom="20%" right="-40px" delay={2} />
+            <div className="container mx-auto max-w-6xl relative z-10">
+              {/* Network hub visual behind title */}
+              <div className="flex justify-center mb-12">
+                <div className="relative w-72 h-72 md:w-96 md:h-96">
+                  <div className="absolute inset-0 rounded-full opacity-10 blur-3xl" style={{ backgroundColor: '#b4fa74' }} />
+                  <div className="absolute inset-0 rounded-full border-2 border-dashed border-white/10 animate-[spin_30s_linear_infinite]" />
+                  <div className="absolute inset-8 rounded-full border border-white/5 animate-[spin_20s_linear_infinite_reverse]" />
+                  <div className="absolute inset-16 rounded-full border border-white/[0.03]" />
+                  {[0, 60, 120, 180, 240, 300].map((deg, i) =>
+                  <div key={i} className="absolute inset-0 animate-[spin_25s_linear_infinite]" style={{ animationDelay: `${-i * 4.17}s` }}>
+                      <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 md:w-5 md:h-5 rounded-full border border-white/20 flex items-center justify-center"
+                    style={{ animation: `pulse-glow 3s ease-in-out ${i * 0.5}s infinite alternate` }}>
+                        <div className="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full" style={{ backgroundColor: '#b4fa74', opacity: 0.6 + i % 3 * 0.15 }} />
+                      </div>
+                    </div>
+                  )}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="relative">
+                      <div className="w-32 h-32 md:w-40 md:h-40 rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.06] to-transparent flex items-center justify-center shadow-[0_0_50px_rgba(180,250,116,0.12)]" style={{ transform: 'rotate(-3deg)' }}>
+                        <svg viewBox="0 0 80 80" className="w-20 h-20 md:w-24 md:h-24" fill="none" stroke="#b4fa74" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                          <circle cx="40" cy="40" r="8" fill="#b4fa74" opacity="0.15" stroke="#b4fa74" strokeWidth="1.5" />
+                          <circle cx="40" cy="40" r="3" fill="#b4fa74" opacity="0.5" />
+                          <circle cx="18" cy="18" r="6" fill="#b4fa74" opacity="0.08" stroke="#b4fa74" />
+                          <circle cx="62" cy="18" r="6" fill="#b4fa74" opacity="0.08" stroke="#b4fa74" />
+                          <circle cx="18" cy="62" r="6" fill="#b4fa74" opacity="0.08" stroke="#b4fa74" />
+                          <circle cx="62" cy="62" r="6" fill="#b4fa74" opacity="0.08" stroke="#b4fa74" />
+                          <circle cx="40" cy="12" r="5" fill="#b4fa74" opacity="0.08" stroke="#b4fa74" />
+                          <circle cx="40" cy="68" r="5" fill="#b4fa74" opacity="0.08" stroke="#b4fa74" />
+                          <line x1="40" y1="40" x2="18" y2="18" stroke="#b4fa74" opacity="0.3" strokeDasharray="3 3" />
+                          <line x1="40" y1="40" x2="62" y2="18" stroke="#b4fa74" opacity="0.3" strokeDasharray="3 3" />
+                          <line x1="40" y1="40" x2="18" y2="62" stroke="#b4fa74" opacity="0.3" strokeDasharray="3 3" />
+                          <line x1="40" y1="40" x2="62" y2="62" stroke="#b4fa74" opacity="0.3" strokeDasharray="3 3" />
+                          <line x1="40" y1="40" x2="40" y2="12" stroke="#b4fa74" opacity="0.3" strokeDasharray="3 3" />
+                          <line x1="40" y1="40" x2="40" y2="68" stroke="#b4fa74" opacity="0.3" strokeDasharray="3 3" />
+                          <line x1="18" y1="18" x2="62" y2="18" stroke="#b4fa74" opacity="0.12" />
+                          <line x1="18" y1="62" x2="62" y2="62" stroke="#b4fa74" opacity="0.12" />
+                          <line x1="18" y1="18" x2="18" y2="62" stroke="#b4fa74" opacity="0.12" />
+                          <line x1="62" y1="18" x2="62" y2="62" stroke="#b4fa74" opacity="0.12" />
+                          <circle cx="18" cy="18" r="2.5" fill="#b4fa74" opacity="0.5" />
+                          <circle cx="62" cy="18" r="2.5" fill="#b4fa74" opacity="0.5" />
+                          <circle cx="18" cy="62" r="2.5" fill="#b4fa74" opacity="0.5" />
+                          <circle cx="62" cy="62" r="2.5" fill="#b4fa74" opacity="0.5" />
+                          <circle cx="40" cy="12" r="2" fill="#b4fa74" opacity="0.5" />
+                          <circle cx="40" cy="68" r="2" fill="#b4fa74" opacity="0.5" />
+                        </svg>
+                      </div>
+                      <div className="absolute -top-6 -right-6 w-8 h-8 rounded-full border border-white/20 flex items-center justify-center" style={{ animation: 'pulse-glow 3s ease-in-out infinite alternate' }}>
+                        <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#b4fa74' }} />
+                      </div>
+                      <div className="absolute -bottom-5 -left-7 w-10 h-10 rounded-full border border-white/10 flex items-center justify-center" style={{ animation: 'pulse-glow 3s ease-in-out 1.5s infinite alternate' }}>
+                        <div className="w-4 h-4 rounded-full" style={{ backgroundColor: '#b4fa74', opacity: 0.4 }} />
+                      </div>
+                      <div className="absolute top-1/2 -right-10 w-6 h-6 rounded-full border border-white/15 flex items-center justify-center" style={{ animation: 'pulse-glow 3s ease-in-out 0.8s infinite alternate' }}>
+                        <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#b4fa74', opacity: 0.6 }} />
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div className="flex justify-center">
-                  <div className="worn-photo-frame">
-                    <img src={playForPlanetScreen} alt="Play for the Planet - GreenHunt App" className="w-full max-w-xs lg:max-w-sm h-auto rounded" loading="lazy" />
-                  </div>
-                </div>
               </div>
-            </FramedSection>
+              <FeatureRow
+                title={t('landing.playPlanet.title')}
+                subtitle={t('landing.playPlanet.subtitle')}
+                image={playForPlanetScreen}
+                alt="Play for the Planet - GreenHunt App" />
+            </div>
           </section>
 
           {/* ═══════════════ Final Beta CTA ═══════════════ */}
           <section id="waitlist" className="relative py-20 px-4">
-            <FramedSection className="text-center">
-              <WoodenSign className="mb-6">
-                <h2 className="text-2xl md:text-3xl font-permanent-marker" style={{ color: 'hsl(38, 35%, 78%)' }}>
-                  {t('landing.beta.title')}
-                </h2>
-              </WoodenSign>
-              <p className="text-subtitle-styled font-sedgwick-ave mb-8 text-lg">
-                {t('landing.beta.description')}
-              </p>
-              <form onSubmit={handleWaitlistSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-                <Input
-                  type="email"
-                  placeholder={t('landing.beta.placeholder')}
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required disabled={loading}
-                  className="flex-1 font-sedgwick-ave text-lg text-white placeholder:text-white/30 border-2 rounded-md"
-                  style={{ background: 'hsl(30, 15%, 15%)', borderColor: 'hsl(30, 20%, 25%)' }} />
+            <FloatingParticles count={6} />
+            <PulsingOrb size={150} top="10%" right="-50px" delay={0.8} />
+            <div className="container mx-auto max-w-3xl text-center relative z-10">
+              <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#141414] via-[#111] to-[#0d1a0d] p-10 md:p-14">
+                {/* Decorative glows */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-60 h-40 rounded-full opacity-10 blur-3xl" style={{ backgroundColor: '#b4fa74' }} />
+                <div className="absolute bottom-0 right-0 w-32 h-32 rounded-full opacity-5 blur-2xl" style={{ backgroundColor: '#b4fa74' }} />
                 
-                <button
-                  type="submit" disabled={loading}
-                  className="game-button font-permanent-marker px-8 py-3 text-lg cursor-pointer disabled:opacity-50">
-                  {loading ? t('landing.beta.loading') : t('landing.beta.cta')}
-                </button>
-              </form>
-            </FramedSection>
+                <div className="relative z-10">
+                  <h2 className="text-3xl md:text-4xl font-permanent-marker mb-3" style={{ color: '#b4fa74' }}>
+                    {t('landing.beta.title')}
+                  </h2>
+                  <p className="text-white/50 font-sedgwick-ave mb-8 text-lg">
+                    {t('landing.beta.description')}
+                  </p>
+                  <form onSubmit={handleWaitlistSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                    <Input
+                      type="email"
+                      placeholder={t('landing.beta.placeholder')}
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required disabled={loading}
+                      className="flex-1 bg-white/5 border-white/15 text-white placeholder:text-white/30 rounded-xl font-sedgwick-ave text-lg" />
+                    
+                    <Button
+                      type="submit" disabled={loading}
+                      className="bg-[#b4fa74] hover:bg-[#a2e866] font-permanent-marker rounded-xl px-8 text-lg shadow-[0_0_25px_rgba(180,250,116,0.2)]"
+                      style={{ color: '#0a0a0a' }}>
+                      {loading ? t('landing.beta.loading') : t('landing.beta.cta')}
+                    </Button>
+                  </form>
+                </div>
+              </div>
+            </div>
           </section>
 
           {/* Footer */}
-          <footer className="relative py-14 px-4" style={{ borderTop: '3px solid hsl(25, 35%, 22%)' }}>
+          <footer className="relative py-14 px-4 border-t border-white/5">
             <div className="container mx-auto max-w-5xl">
               <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 mb-8">
                 {[
@@ -364,10 +641,8 @@ export default function LandingPage() {
                 <Link
                   key={i}
                   to={link.to}
-                  className="transition-colors font-permanent-marker text-base"
-                  style={{ color: 'hsl(40, 25%, 50%)' }}
-                  onMouseEnter={e => (e.currentTarget.style.color = 'hsl(38, 35%, 78%)')}
-                  onMouseLeave={e => (e.currentTarget.style.color = 'hsl(40, 25%, 50%)')}>
+                  className="text-white/40 hover:text-white/80 transition-colors font-permanent-marker text-base">
+                  
                     {link.label}
                   </Link>
                 )}
@@ -395,25 +670,26 @@ export default function LandingPage() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:scale-125 transition-all duration-300"
-                  style={{ color: 'hsl(80, 40%, 50%)' }}>
+                  className="hover:scale-125 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(180,250,116,0.6)]"
+                  style={{ color: '#b4fa74' }}>
+                  
                     {social.icon}
                   </a>
                 )}
               </div>
 
-              {/* Línea divisora */}
-              <div className="rusty-divider w-full mb-6" />
+              {/* Línea divisora verde */}
+              <div className="w-full h-px mb-6" style={{ background: 'linear-gradient(90deg, transparent, #a2c041, #b4fa74, #a2c041, transparent)' }} />
 
               {/* Eslogan y email */}
               <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-2">
                 <div className="flex items-center gap-2">
-                  <span className="font-sedgwick-ave text-lg" style={{ color: 'hsl(80, 40%, 50%)' }}>{t('landing.footer.madeWith')}</span>
+                  <span className="font-sedgwick-ave text-lg" style={{ color: '#b4fa74' }}>{t('landing.footer.madeWith')}</span>
                   <span className="text-xl">💚</span>
-                  <span className="font-sedgwick-ave text-lg" style={{ color: 'hsl(80, 40%, 50%)' }}>{t('landing.footer.forPlanet')}</span>
+                  <span className="font-sedgwick-ave text-lg" style={{ color: '#b4fa74' }}>{t('landing.footer.forPlanet')}</span>
                   <span className="text-xl">🌍</span>
                 </div>
-                <a href="mailto:hello@greenhunt.net" className="font-sedgwick-ave text-lg hover:scale-105 transition-all" style={{ color: 'hsl(80, 35%, 45%)' }}>
+                <a href="mailto:hello@greenhunt.net" className="font-sedgwick-ave text-lg hover:scale-105 transition-all" style={{ color: '#a2c041' }}>
                   hello@greenhunt.net
                 </a>
               </div>
@@ -422,20 +698,34 @@ export default function LandingPage() {
 
           {/* Bottom Right Buttons */}
           <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+            {/* Scroll to top - solid green fill style (like GET BETA) */}
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="game-button px-4 py-3 rounded-md cursor-pointer"
+              className="font-permanent-marker px-4 py-3 rounded-xl hover:scale-105 transition-all"
+              style={{
+                backgroundColor: '#b4fa74',
+                color: '#611a5a',
+                boxShadow: '0 0 15px rgba(180, 250, 116, 0.3)'
+              }}
               aria-label={language === 'en' ? 'Go to top' : 'Ir al principio'}>
-              <ArrowUp className="h-5 w-5" />
+              <ArrowUp className="h-5 w-5" style={{ color: '#611a5a', stroke: '#611a5a' }} />
             </button>
             
+            {/* Language toggle - outlined style (like TRAILER) */}
             <button
               onClick={() => setLanguage(language === 'en' ? 'es' : 'en')}
-              className="game-button-outline font-permanent-marker px-4 py-3 rounded-md cursor-pointer tracking-wider text-sm">
+              className="font-permanent-marker px-4 py-3 rounded-xl hover:scale-105 transition-all tracking-wider text-sm"
+              style={{
+                backgroundColor: 'transparent',
+                color: '#b4fa74',
+                border: '2px solid #b4fa74',
+                boxShadow: '0 0 15px rgba(180, 250, 116, 0.15), inset 0 0 15px rgba(180, 250, 116, 0.05)'
+              }}>
               {language === 'en' ? 'ES' : 'EN'}
             </button>
           </div>
         </div>
       </div>
     </div>);
+
 }

@@ -66,12 +66,7 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				'price-blue': 'hsl(var(--price-blue))',
-				'wood-dark': 'hsl(var(--wood-dark))',
-				'wood-medium': 'hsl(var(--wood-medium))',
-				'wood-light': 'hsl(var(--wood-light))',
-				'parchment': 'hsl(var(--parchment))',
-				'rust': 'hsl(var(--rust))',
+				'price-blue': 'hsl(var(--price-blue))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
