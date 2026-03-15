@@ -16,6 +16,7 @@ import playForPlanetScreen from "@/assets/play-for-planet-screen.png";
 import valueProp1 from "@/assets/value-prop-1.png";
 import valueProp2 from "@/assets/value-prop-2.png";
 import valueProp3 from "@/assets/value-prop-3.png";
+import appMapScreen from "@/assets/app-map-screen-new.png";
 
 const emailSchema = z.string().email();
 
@@ -385,7 +386,7 @@ export default function LandingPage() {
                       alt="GreenHunt App Screenshot"
                       className="relative h-96 md:h-[550px] lg:h-[700px] w-auto object-contain drop-shadow-2xl"
                       loading="lazy"
-                      src="/src/assets/app-map-screen-new.png"
+                      src={appMapScreen}
                     />
                     
                   </div>
