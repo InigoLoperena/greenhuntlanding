@@ -3,106 +3,93 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-Underground, urban and rebellious brand style with Impact font and uppercase text.
-*/
+/* ═══════════════════════════════════════════════════
+   GreenHunt Design System — Post-Apocalyptic Game UI
+   ═══════════════════════════════════════════════════ */
 
 @layer base {
   :root {
-    /* Nueva nomenclatura de colores de marca:
-       Color 1: Verde oscuro #17503a (primary)
-       Color 2: Verde claro #729f31 (accent)  
-       Color 3: Gris (muted) */
-    --background: 0 0% 13%; /* Dark background #212121 */
-    --foreground: 82 52% 41%; /* Accent green for text */
+    --background: 30 15% 8%;
+    --foreground: 40 30% 75%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 124 63% 20%;
+    --card: 30 20% 14%;
+    --card-foreground: 40 30% 80%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 124 63% 20%;
+    --popover: 30 20% 12%;
+    --popover-foreground: 40 30% 80%;
 
-    --primary: 82 43% 45%; /* #72a241 para header y menú */
-    --primary-foreground: 0 0% 100%;
+    --primary: 80 40% 35%;
+    --primary-foreground: 30 30% 10%;
 
-    --secondary: 81 28% 7%; /* Color actualizado: #142113 */
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 30 25% 12%;
+    --secondary-foreground: 40 25% 80%;
 
-    --muted: 200 3% 12%; /* Color 3: Gris oscuro #1d2122 */
-    --muted-foreground: 124 63% 20%;
+    --muted: 30 10% 16%;
+    --muted-foreground: 40 15% 55%;
 
-    --accent: 82 52% 41%; /* Color 2: Verde claro #729f31 */
-    --accent-foreground: 0 0% 100%;
-    --button-green-foreground: 307 57% 24%; /* #611a5a for text/icons on green buttons */
+    --accent: 80 45% 40%;
+    --accent-foreground: 30 30% 10%;
+    --button-green-foreground: 30 40% 15%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 65% 45%;
+    --destructive-foreground: 0 0% 95%;
 
-    --border: 200 3% 20%; /* Color 3: Gris para bordes */
-    --input: 82 20% 90%;
-    --ring: 124 63% 20%; /* Color 1: Verde oscuro para focus */
-    
-    --price-blue: 220 85% 30%; /* Dark blue for prices */
+    --border: 30 20% 22%;
+    --input: 30 15% 20%;
+    --ring: 80 40% 35%;
 
+    --price-blue: 220 85% 30%;
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Post-apocalyptic palette */
+    --wood-dark: 25 35% 18%;
+    --wood-medium: 30 30% 28%;
+    --wood-light: 35 25% 38%;
+    --parchment: 38 35% 78%;
+    --parchment-dark: 35 25% 62%;
+    --rust: 15 55% 35%;
+    --metal: 35 10% 45%;
+    --rivet: 35 15% 55%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
+    --sidebar-background: 30 15% 10%;
+    --sidebar-foreground: 40 30% 75%;
+    --sidebar-primary: 80 40% 35%;
     --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 30 20% 18%;
+    --sidebar-accent-foreground: 40 30% 80%;
+    --sidebar-border: 30 20% 20%;
+    --sidebar-ring: 80 40% 35%;
   }
 
   .dark {
-    --background: 124 63% 8%; /* Very dark version of Color 1 */
-    --foreground: 0 0% 95%;
-
-    --card: 124 63% 10%;
-    --card-foreground: 0 0% 95%;
-
-    --popover: 124 63% 10%;
-    --popover-foreground: 0 0% 95%;
-
-    --primary: 124 63% 20%; /* Color 1: Verde oscuro mantiene consistencia */
-    --primary-foreground: 0 0% 95%;
-
-    --secondary: 124 63% 15%;
-    --secondary-foreground: 0 0% 95%;
-
-    --muted: 200 3% 12%; /* Color 3: Gris oscuro #1d2122 */
-    --muted-foreground: 210 11% 65%;
-
-    --accent: 82 52% 50%; /* Color 2: Verde claro más brillante para dark mode */
-    --accent-foreground: 124 63% 8%;
-
+    --background: 30 15% 6%;
+    --foreground: 40 30% 75%;
+    --card: 30 20% 10%;
+    --card-foreground: 40 30% 80%;
+    --popover: 30 20% 10%;
+    --popover-foreground: 40 30% 80%;
+    --primary: 80 40% 35%;
+    --primary-foreground: 30 30% 10%;
+    --secondary: 30 25% 12%;
+    --secondary-foreground: 40 25% 80%;
+    --muted: 30 10% 14%;
+    --muted-foreground: 40 15% 50%;
+    --accent: 80 45% 42%;
+    --accent-foreground: 30 30% 10%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 210 11% 20%; /* Color 3: Gris oscuro para bordes */
-    --input: 210 11% 20%;
-    --ring: 124 63% 20%; /* Color 1: Verde oscuro para focus */
-    
-    --price-blue: 220 85% 40%; /* Lighter dark blue for dark mode */
-    
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --destructive-foreground: 0 0% 95%;
+    --border: 30 15% 18%;
+    --input: 30 15% 18%;
+    --ring: 80 40% 35%;
+    --price-blue: 220 85% 40%;
+    --sidebar-background: 30 15% 8%;
+    --sidebar-foreground: 40 30% 75%;
+    --sidebar-primary: 80 40% 35%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 30 20% 15%;
+    --sidebar-accent-foreground: 40 30% 80%;
+    --sidebar-border: 30 15% 16%;
+    --sidebar-ring: 80 40% 35%;
   }
 }
 
@@ -110,274 +97,240 @@ Underground, urban and rebellious brand style with Impact font and uppercase tex
   * {
     @apply border-border;
   }
-
   body {
     @apply bg-background text-foreground;
     font-family: 'Impact', 'Arial Black', sans-serif;
   }
 }
 
+/* ─── Post-Apocalyptic UI Components ─── */
+@layer components {
+  /* Wooden frame container */
+  .wooden-frame {
+    position: relative;
+    border: 4px solid hsl(25, 35%, 22%);
+    border-radius: 8px;
+    background: linear-gradient(145deg, hsl(30, 20%, 12%) 0%, hsl(25, 18%, 9%) 100%);
+    box-shadow:
+      inset 0 2px 4px rgba(255, 220, 150, 0.06),
+      inset 0 -2px 4px rgba(0, 0, 0, 0.4),
+      0 4px 20px rgba(0, 0, 0, 0.6),
+      0 0 0 1px hsl(25, 30%, 16%);
+  }
+
+  /* Wooden sign for titles */
+  .wooden-sign {
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    background: linear-gradient(180deg, hsl(30, 30%, 28%) 0%, hsl(25, 35%, 20%) 40%, hsl(25, 30%, 18%) 100%);
+    border: 3px solid hsl(25, 30%, 25%);
+    border-radius: 6px;
+    box-shadow:
+      inset 0 1px 2px rgba(255, 220, 150, 0.1),
+      inset 0 -2px 4px rgba(0, 0, 0, 0.3),
+      0 4px 12px rgba(0, 0, 0, 0.5);
+    position: relative;
+  }
+  .wooden-sign::before,
+  .wooden-sign::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: radial-gradient(circle, hsl(35, 15%, 58%) 30%, hsl(35, 20%, 40%) 70%);
+    border: 1px solid hsl(35, 10%, 35%);
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.4);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .wooden-sign::before { left: 8px; }
+  .wooden-sign::after { right: 8px; }
+
+  /* Parchment card for content */
+  .parchment-card {
+    background: linear-gradient(145deg, hsl(38, 30%, 72%) 0%, hsl(35, 25%, 65%) 50%, hsl(33, 20%, 60%) 100%);
+    border: 2px solid hsl(30, 20%, 45%);
+    border-radius: 6px;
+    color: hsl(25, 30%, 15%);
+    box-shadow:
+      inset 0 2px 6px rgba(255, 255, 255, 0.15),
+      inset 0 -2px 6px rgba(0, 0, 0, 0.1),
+      0 3px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+  }
+  .parchment-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 4px;
+    background: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+    pointer-events: none;
+    opacity: 0.3;
+  }
+
+  /* Metal bolt decoration */
+  .metal-bolt {
+    position: relative;
+  }
+  .metal-bolt::before,
+  .metal-bolt::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 40% 35%, hsl(35, 15%, 60%) 0%, hsl(35, 15%, 42%) 60%, hsl(30, 15%, 30%) 100%);
+    border: 1px solid hsl(30, 10%, 28%);
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.25), 0 1px 3px rgba(0, 0, 0, 0.5);
+    z-index: 5;
+  }
+
+  /* Game-style button */
+  .game-button {
+    background: linear-gradient(180deg, hsl(80, 45%, 45%) 0%, hsl(80, 50%, 35%) 50%, hsl(80, 45%, 30%) 100%);
+    border: 2px solid hsl(80, 35%, 28%);
+    border-radius: 6px;
+    color: hsl(30, 35%, 12%) !important;
+    font-family: 'Permanent Marker', cursive;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow:
+      inset 0 1px 2px rgba(255, 255, 255, 0.2),
+      inset 0 -2px 4px rgba(0, 0, 0, 0.2),
+      0 3px 8px rgba(0, 0, 0, 0.4);
+    transition: all 0.2s ease;
+    -webkit-text-fill-color: hsl(30, 35%, 12%) !important;
+  }
+  .game-button:hover {
+    background: linear-gradient(180deg, hsl(80, 50%, 50%) 0%, hsl(80, 50%, 40%) 50%, hsl(80, 45%, 35%) 100%);
+    box-shadow:
+      inset 0 1px 2px rgba(255, 255, 255, 0.25),
+      inset 0 -2px 4px rgba(0, 0, 0, 0.15),
+      0 4px 15px rgba(107, 142, 35, 0.3);
+    transform: translateY(-1px);
+  }
+  .game-button svg,
+  .game-button svg * {
+    stroke: hsl(30, 35%, 12%) !important;
+    fill: hsl(30, 35%, 12%) !important;
+    color: hsl(30, 35%, 12%) !important;
+  }
+
+  /* Outline game button */
+  .game-button-outline {
+    background: linear-gradient(180deg, rgba(107, 142, 35, 0.15) 0%, rgba(107, 142, 35, 0.05) 100%);
+    border: 2px solid hsl(80, 40%, 35%);
+    border-radius: 6px;
+    color: hsl(40, 30%, 75%) !important;
+    font-family: 'Permanent Marker', cursive;
+    box-shadow:
+      inset 0 1px 2px rgba(107, 142, 35, 0.1),
+      0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+    -webkit-text-fill-color: hsl(40, 30%, 75%) !important;
+  }
+  .game-button-outline:hover {
+    background: linear-gradient(180deg, rgba(107, 142, 35, 0.25) 0%, rgba(107, 142, 35, 0.1) 100%);
+    box-shadow:
+      inset 0 1px 2px rgba(107, 142, 35, 0.15),
+      0 3px 10px rgba(107, 142, 35, 0.2);
+  }
+  .game-button-outline svg,
+  .game-button-outline svg * {
+    stroke: hsl(40, 30%, 75%) !important;
+    fill: hsl(40, 30%, 75%) !important;
+    color: hsl(40, 30%, 75%) !important;
+  }
+
+  /* Section divider - rusty pipe */
+  .rusty-divider {
+    height: 6px;
+    background: linear-gradient(90deg,
+      transparent 0%,
+      hsl(25, 40%, 25%) 15%,
+      hsl(30, 30%, 35%) 30%,
+      hsl(35, 25%, 40%) 50%,
+      hsl(30, 30%, 35%) 70%,
+      hsl(25, 40%, 25%) 85%,
+      transparent 100%
+    );
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    position: relative;
+  }
+
+  /* Image frame - like a worn photo */
+  .worn-photo-frame {
+    border: 3px solid hsl(30, 20%, 30%);
+    border-radius: 4px;
+    box-shadow:
+      inset 0 0 10px rgba(0, 0, 0, 0.3),
+      0 4px 15px rgba(0, 0, 0, 0.5);
+    background: hsl(30, 15%, 18%);
+    padding: 6px;
+  }
+}
+
+/* ─── Utility classes ─── */
 @layer utilities {
   .animate-fade-in {
     animation: fadeIn 0.6s ease-out;
   }
-  
-  .animate-fade-in.delay-100 {
-    animation-delay: 0.1s;
-    animation-fill-mode: both;
-  }
-  
-  .animate-fade-in.delay-200 {
-    animation-delay: 0.2s;
-    animation-fill-mode: both;
-  }
-  
-  .animate-fade-in.delay-300 {
-    animation-delay: 0.3s;
-    animation-fill-mode: both;
-  }
-  
+  .animate-fade-in.delay-100 { animation-delay: 0.1s; animation-fill-mode: both; }
+  .animate-fade-in.delay-200 { animation-delay: 0.2s; animation-fill-mode: both; }
+  .animate-fade-in.delay-300 { animation-delay: 0.3s; animation-fill-mode: both; }
+
   .font-impact {
     font-family: 'Impact', 'Arial Black', sans-serif;
   }
-  
   .text-rebel {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     font-weight: 900;
   }
-  
   .bg-urban {
     background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
   }
-  
   .shadow-rebel {
     box-shadow: 0 8px 25px -5px hsl(var(--primary) / 0.4), 0 0 0 1px hsl(var(--primary) / 0.1);
   }
-  
   .text-shadow-sm {
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
   }
-  
   .text-subtitle-styled {
     font-family: 'Sedgwick Ave', cursive;
     text-transform: lowercase;
-    color: #a2c041;
+    color: hsl(38, 30%, 65%);
   }
 
-}
+  /* Line clamp */
+  .line-clamp-1 { overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1; }
+  .line-clamp-2 { overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
 
-/* Line clamp utilities for text truncation */
-@layer utilities {
-  .line-clamp-1 {
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
-  }
-  
-  .line-clamp-2 {
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Performance optimizations */
-@layer utilities {
-  /* Optimize images for better loading */
-  .optimize-image {
-    content-visibility: auto;
-    contain-intrinsic-size: auto 400px;
-  }
-
-  /* Improve scroll performance */
-  .smooth-scroll {
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  /* Hardware acceleration for animations */
-  .gpu-accelerate {
-    transform: translateZ(0);
-    will-change: transform;
-    backface-visibility: hidden;
-    perspective: 1000px;
-  }
-
-  /* Reduce layout shifts */
-  .layout-stable {
-    contain: layout style paint;
-  }
-
-  /* Optimize font rendering */
-  .optimize-text {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-    font-feature-settings: "kern" 1;
-    font-kerning: normal;
-  }
-  
-  /* Optimize button interactions */
-  .optimize-button {
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
-    user-select: none;
-  }
-  
-  /* Lazy loading placeholders */
+  /* Performance */
+  .optimize-image { content-visibility: auto; contain-intrinsic-size: auto 400px; }
+  .smooth-scroll { scroll-behavior: smooth; -webkit-overflow-scrolling: touch; }
+  .gpu-accelerate { transform: translateZ(0); will-change: transform; backface-visibility: hidden; perspective: 1000px; }
+  .layout-stable { contain: layout style paint; }
+  .optimize-text { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; font-feature-settings: "kern" 1; font-kerning: normal; }
+  .optimize-button { -webkit-tap-highlight-color: transparent; touch-action: manipulation; user-select: none; }
   .lazy-placeholder {
-    background: linear-gradient(
-      90deg,
-      hsl(var(--muted)) 0%,
-      hsl(var(--muted) / 0.8) 50%,
-      hsl(var(--muted)) 100%
-    );
+    background: linear-gradient(90deg, hsl(var(--muted)) 0%, hsl(var(--muted) / 0.8) 50%, hsl(var(--muted)) 100%);
     background-size: 200% 100%;
     animation: shimmer 1.5s infinite;
   }
 }
 
+/* ─── Keyframes ─── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 @keyframes shimmer {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }
-
-/* Apply optimizations globally */
-html {
-  @apply smooth-scroll;
-  scroll-padding-top: 80px; /* For anchor links with fixed headers */
-}
-
-body {
-  @apply optimize-text;
-  overscroll-behavior-y: none; /* Prevent pull-to-refresh */
-}
-
-
-img {
-  @apply optimize-image;
-}
-
-button, a {
-  @apply optimize-button;
-}
-
-/* Accessibility improvements */
-:focus-visible {
-  outline: 2px solid hsl(var(--primary));
-  outline-offset: 2px;
-}
-
-/* Reduced motion support */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-/* Force purple text/icons on all app buttons */
-.btn-purple-text,
-.btn-purple-text *,
-button,
-button *,
-[role="button"],
-[role="button"] * {
-  color: hsl(var(--button-green-foreground)) !important;
-  -webkit-text-fill-color: hsl(var(--button-green-foreground)) !important;
-}
-
-.btn-purple-text svg,
-.btn-purple-text svg *,
-button svg,
-button svg *,
-[role="button"] svg,
-[role="button"] svg * {
-  stroke: hsl(var(--button-green-foreground)) !important;
-  fill: hsl(var(--button-green-foreground)) !important;
-}
-
-/* Prevent horizontal scroll */
-html {
-  overflow-x: hidden;
-}
-
-/* Margin backgrounds - scale to fit container width completely */
-.margin-bg-container {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  z-index: 0;
-  opacity: 0.18;
-  pointer-events: none;
-  background-repeat: repeat-y;
-  /* Scale image to 100% of container width, height auto maintains aspect ratio */
-  background-size: 100% auto;
-  /* Responsive widths for margins */
-  width: 50px;
-}
-
-.margin-bg-left {
-  left: 0;
-  background-position: center top;
-}
-
-.margin-bg-right {
-  right: 0;
-  background-position: center top;
-}
-
-/* sm: 640px */
-@media (min-width: 640px) {
-  .margin-bg-container {
-    width: 70px;
-  }
-}
-
-/* md: 768px */
-@media (min-width: 768px) {
-  .margin-bg-container {
-    width: 100px;
-  }
-}
-
-/* lg: 1024px */
-@media (min-width: 1024px) {
-  .margin-bg-container {
-    width: 140px;
-  }
-}
-
-/* xl: 1280px */
-@media (min-width: 1280px) {
-  .margin-bg-container {
-    width: 180px;
-  }
-}
-
-/* ─── Dynamic animated effects ─── */
 @keyframes float-particle-0 {
   0%, 100% { transform: translateY(0) translateX(0); }
   25% { transform: translateY(-20px) translateX(10px); }
@@ -402,3 +355,58 @@ html {
   from { transform: translate(-50%, -50%) rotate(0deg); }
   to { transform: translate(-50%, -50%) rotate(360deg); }
 }
+
+/* ─── Global element styles ─── */
+html {
+  @apply smooth-scroll;
+  scroll-padding-top: 80px;
+  overflow-x: hidden;
+}
+body {
+  @apply optimize-text;
+  overscroll-behavior-y: none;
+}
+img { @apply optimize-image; }
+button, a { @apply optimize-button; }
+
+/* Accessibility */
+:focus-visible {
+  outline: 2px solid hsl(var(--primary));
+  outline-offset: 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Button color overrides for game-button only */
+.game-button,
+.game-button * {
+  color: hsl(30, 35%, 12%) !important;
+  -webkit-text-fill-color: hsl(30, 35%, 12%) !important;
+}
+.game-button svg,
+.game-button svg * {
+  stroke: hsl(30, 35%, 12%) !important;
+  fill: hsl(30, 35%, 12%) !important;
+}
+
+/* Margin backgrounds */
+.margin-bg-container {
+  position: fixed; top: 0; bottom: 0; z-index: 0;
+  opacity: 0.18; pointer-events: none;
+  background-repeat: repeat-y; background-size: 100% auto;
+  width: 50px;
+}
+.margin-bg-left { left: 0; background-position: center top; }
+.margin-bg-right { right: 0; background-position: center top; }
+@media (min-width: 640px) { .margin-bg-container { width: 70px; } }
+@media (min-width: 768px) { .margin-bg-container { width: 100px; } }
+@media (min-width: 1024px) { .margin-bg-container { width: 140px; } }
+@media (min-width: 1280px) { .margin-bg-container { width: 180px; } }
