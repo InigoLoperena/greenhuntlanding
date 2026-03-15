@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import greenhuntLogoNew from "@/assets/greenhunt-logo-new.svg";
@@ -59,9 +58,9 @@ export const HeroSection = ({ className }: HeroSectionProps) => {
   return (
     <>
       <section className={`relative w-full min-h-[80vh] md:min-h-[90vh] flex items-center overflow-hidden px-4 md:px-8 ${className || ''}`}>
-        {/* Subtle grid pattern overlay */}
-        <div className="absolute inset-0 opacity-[0.03]" style={{
-          backgroundImage: 'linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)',
+        {/* Subtle worn grid overlay */}
+        <div className="absolute inset-0 opacity-[0.02]" style={{
+          backgroundImage: 'linear-gradient(rgba(200,180,140,.15) 1px, transparent 1px), linear-gradient(90deg, rgba(200,180,140,.15) 1px, transparent 1px)',
           backgroundSize: '60px 60px'
         }} />
 
@@ -75,27 +74,27 @@ export const HeroSection = ({ className }: HeroSectionProps) => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             {/* Left Side - Title */}
             <div className="flex flex-col gap-6">
-              <h1 
-                style={{ color: '#b4fa74' }} 
-                className="font-permanent-marker text-2xl md:text-3xl lg:text-4xl leading-tight"
-              >
-                {language === 'en' 
-                  ? 'This is what waste managers do with hundreds of tons of high valuable dumped stuff daily' 
-                  : 'Esto es lo que hacen los gestores de residuos con cientos de toneladas de cosas valiosas tiradas a diario'}
-              </h1>
+              <div className="wooden-sign inline-block self-start">
+                <h1 
+                  style={{ color: 'hsl(38, 35%, 78%)' }} 
+                  className="font-permanent-marker text-xl md:text-2xl lg:text-3xl leading-tight"
+                >
+                  {language === 'en' 
+                    ? 'This is what waste managers do with hundreds of tons of high valuable dumped stuff daily' 
+                    : 'Esto es lo que hacen los gestores de residuos con cientos de toneladas de cosas valiosas tiradas a diario'}
+                </h1>
+              </div>
               
-              {/* Accent line */}
-              <div className="w-24 h-1 rounded-full" style={{ backgroundColor: '#b4fa74' }} />
+              {/* Accent line - rusty divider */}
+              <div className="rusty-divider w-24" />
             </div>
 
             {/* Right Side - Video */}
             <div className="flex justify-center lg:justify-end">
-              <div className="relative">
-                {/* Glow effect behind video */}
-                <div className="absolute -inset-4 rounded-3xl opacity-20 blur-2xl" style={{ backgroundColor: '#6ea151' }} />
+              <div className="worn-photo-frame">
                 <video 
                   autoPlay loop muted playsInline
-                  className="relative w-full max-w-md lg:max-w-lg rounded-2xl shadow-2xl border border-white/10"
+                  className="relative w-full max-w-md lg:max-w-lg rounded"
                 >
                   <source src={heroVideo} type="video/mp4" />
                 </video>
@@ -107,9 +106,9 @@ export const HeroSection = ({ className }: HeroSectionProps) => {
 
       {/* Waitlist Dialog */}
       <Dialog open={waitlistOpen} onOpenChange={setWaitlistOpen}>
-        <DialogContent className="sm:max-w-md bg-[#1a1a1a] border border-white/10">
+        <DialogContent className="sm:max-w-md border-2" style={{ background: 'linear-gradient(145deg, hsl(30, 20%, 14%), hsl(25, 18%, 10%))', borderColor: 'hsl(25, 35%, 22%)' }}>
           <DialogHeader>
-            <DialogTitle className="font-permanent-marker text-2xl" style={{ color: '#b4fa74' }}>
+            <DialogTitle className="font-permanent-marker text-2xl" style={{ color: 'hsl(38, 35%, 78%)' }}>
               {language === 'en' ? 'Get the Beta' : 'Obtén la Beta'}
             </DialogTitle>
           </DialogHeader>
@@ -120,20 +119,21 @@ export const HeroSection = ({ className }: HeroSectionProps) => {
               value={email} 
               onChange={e => setEmail(e.target.value)} 
               required 
-              className="font-sedgwick-ave bg-white/5 border-white/20 text-white placeholder:text-white/40" 
+              className="font-sedgwick-ave border-2 text-white placeholder:text-white/40"
+              style={{ background: 'hsl(30, 15%, 15%)', borderColor: 'hsl(30, 20%, 25%)' }}
             />
-            <Button type="submit" disabled={loading} className="w-full bg-[#a2c041] hover:bg-[#8da836] font-permanent-marker btn-purple-text text-lg">
+            <button type="submit" disabled={loading} className="game-button w-full font-permanent-marker text-lg px-8 py-3 cursor-pointer disabled:opacity-50">
               {loading 
                 ? (language === 'en' ? 'Sending...' : 'Enviando...') 
                 : (language === 'en' ? 'GET BETA' : 'OBTÉN BETA')}
-            </Button>
+            </button>
           </form>
         </DialogContent>
       </Dialog>
 
       {/* Trailer Dialog */}
       <Dialog open={trailerOpen} onOpenChange={setTrailerOpen}>
-        <DialogContent className="sm:max-w-4xl p-0 bg-black border-white/10">
+        <DialogContent className="sm:max-w-4xl p-0 bg-black border-2" style={{ borderColor: 'hsl(25, 35%, 22%)' }}>
           <div className="aspect-video">
             <iframe 
               width="100%" height="100%" 
