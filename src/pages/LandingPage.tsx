@@ -334,79 +334,61 @@ export default function LandingPage() {
             <PulsingOrb size={220} top="-80px" left="-100px" delay={0} />
             <PulsingOrb size={160} bottom="-60px" right="-80px" delay={1.5} />
             <div className="container mx-auto max-w-6xl relative z-10">
-              {/* Section metal frame wrapper */}
-              <div className="gh-section-metal-frame p-6 md:p-10 lg:p-14">
-                <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center justify-between">
-                  {/* Left */}
-                  <div className="flex-1 text-center lg:text-left">
-                    {/* Title in weathered wood panel */}
-                    <div className="gh-wood-panel px-6 py-4 md:px-8 md:py-5 mb-6 inline-block">
-                      <div className="gh-wood-nails-bottom relative">
-                        <h2 className="font-permanent-marker text-3xl md:text-4xl lg:text-5xl gh-text-branded">
-                          {t('landing.app.title')}
-                        </h2>
-                      </div>
-                    </div>
-                    
-                    <div className="gh-divider-rust w-24 mx-auto lg:mx-0 mb-5" />
-                    
-                    {/* Subtitle in parchment style */}
-                    <div className="gh-card-parchment px-5 py-4 mb-10 max-w-xl mx-auto lg:mx-0">
-                      <p className="font-sedgwick-ave gh-text-ink text-xl md:text-2xl leading-relaxed whitespace-pre-line">
-                        {t('landing.app.subtitle')}
-                      </p>
-                      {/* Small vine accent */}
-                      <div className="gh-divider-vine mt-3" />
-                    </div>
-                    
-                    {/* CTA Buttons - Mad Max styled */}
-                    <div className="flex flex-row gap-4 items-center justify-center lg:justify-start mt-4">
-                      <Button
-                        onClick={() => setWaitlistOpen(true)}
-                        className="gh-btn-neon font-permanent-marker text-xl px-8 py-6 rounded-sm">
-                        
-                        {language === 'en' ? 'GET BETA' : 'OBTÉN BETA'}
-                        <ChevronRight className="ml-1 h-5 w-5" />
-                      </Button>
+              <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center justify-between">
+                {/* Left */}
+                <div className="flex-1 text-center lg:text-left">
+                  <h2 className="font-permanent-marker text-3xl md:text-4xl lg:text-5xl mb-4" style={{ color: '#b4fa74' }}>
+                    {t('landing.app.title')}
+                  </h2>
+                  <div className="w-16 h-1 rounded-full mx-auto lg:mx-0 mb-5" style={{ backgroundColor: '#b4fa74', opacity: 0.5 }} />
+                  <p className="font-sedgwick-ave text-subtitle-styled text-xl md:text-2xl max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed whitespace-pre-line">
+                    {t('landing.app.subtitle')}
+                  </p>
+                  
+                  {/* CTA Buttons */}
+                  <div className="flex flex-row gap-4 items-center justify-center lg:justify-start mt-4">
+                    <Button
+                      onClick={() => setWaitlistOpen(true)}
+                      className="bg-[#b4fa74] hover:bg-[#a2e866] font-permanent-marker text-xl px-8 py-6 rounded-xl transition-all shadow-[0_0_25px_rgba(180,250,116,0.25)] hover:shadow-[0_0_40px_rgba(180,250,116,0.35)]"
+                      style={{ color: '#0a0a0a' }}>
                       
-                      <button
-                        onClick={() => setTrailerOpen(true)}
-                        className="gh-btn-metal font-permanent-marker text-sm px-6 py-3 h-auto rounded-sm flex items-center gap-2 cursor-pointer">
-                        
-                        <Video className="h-5 w-5" />
-                        <span className="tracking-wider">TRAILER</span>
-                      </button>
-                    </div>
+                      {language === 'en' ? 'GET BETA' : 'OBTÉN BETA'}
+                      <ChevronRight className="ml-1 h-5 w-5" style={{ color: '#0a0a0a', stroke: '#0a0a0a' }} />
+                    </Button>
                     
-                    {/* App Store Badges */}
-                    <div className="flex flex-col items-center lg:items-start mt-10">
-                      <img src={appStoreBadges} alt="Available on App Store and Google Play" className="w-[280px] md:w-[320px] h-auto opacity-80" style={{ mixBlendMode: 'screen' }} />
-                      <p className="font-sedgwick-ave text-2xl md:text-3xl mt-2 opacity-70 gh-text-neon">
-                        coming soon
-                      </p>
-                    </div>
+                    <button
+                      onClick={() => setTrailerOpen(true)}
+                      className="font-permanent-marker text-sm px-6 py-3 h-auto rounded-xl border-2 bg-transparent hover:bg-[#b4fa74]/10 transition-all duration-300 flex items-center gap-2 cursor-pointer"
+                      style={{
+                        borderColor: '#b4fa74',
+                        boxShadow: '0 0 15px rgba(180, 250, 116, 0.25), inset 0 0 15px rgba(180, 250, 116, 0.05)'
+                      }}>
+                      
+                      <Video className="h-5 w-5" style={{ color: '#611a5a', fill: '#611a5a', stroke: '#611a5a' }} />
+                      <span className="tracking-wider" style={{ color: '#b4fa74' }}>TRAILER</span>
+                    </button>
                   </div>
                   
-                  {/* Right - Phone in rusted metal frame */}
-                  <div className="flex-1 flex items-center justify-center">
-                    <div className="relative">
-                      <div className="absolute -inset-8 rounded-full opacity-10 blur-3xl" style={{ backgroundColor: '#b4fa74' }} />
-                      {/* Metal card frame around phone */}
-                      <div className="gh-card-metal p-3 md:p-4 gh-corner-brackets">
-                        <img
-                          alt="GreenHunt App Screenshot"
-                          className="relative h-96 md:h-[550px] lg:h-[700px] w-auto object-contain drop-shadow-2xl"
-                          loading="lazy"
-                          src={appMapScreen}
-                        />
-                      </div>
-                      {/* Vine accent on corner */}
-                      <div className="gh-vine-border absolute -top-2 -right-2 w-8 h-8" />
-                      {/* Rust badge */}
-                      <div className="gh-badge-rust absolute -bottom-3 left-4 font-permanent-marker text-xs">
-                        📍 REAL WORLD GAME
-                      </div>
-                    </div>
+                  {/* App Store Badges */}
+                  <div className="flex flex-col items-center lg:items-start mt-10">
+                    <img src={appStoreBadges} alt="Available on App Store and Google Play" className="w-[280px] md:w-[320px] h-auto opacity-80" style={{ mixBlendMode: 'screen' }} />
+                    <p style={{ color: '#b4fa74' }} className="font-sedgwick-ave text-2xl md:text-3xl mt-2 opacity-70">
+                      coming soon
+                    </p>
+                  </div>
+                </div>
+                
+                {/* Right - Phone */}
+                <div className="flex-1 flex items-center justify-center">
+                  <div className="relative">
+                    <div className="absolute -inset-8 rounded-full opacity-10 blur-3xl" style={{ backgroundColor: '#b4fa74' }} />
+                    <img
+                      alt="GreenHunt App Screenshot"
+                      className="relative h-96 md:h-[550px] lg:h-[700px] w-auto object-contain drop-shadow-2xl"
+                      loading="lazy"
+                      src={appMapScreen}
+                    />
+                    
                   </div>
                 </div>
               </div>
