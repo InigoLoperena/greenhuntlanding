@@ -204,148 +204,79 @@ export default function LandingPage() {
           {/* Hero Section */}
           <HeroSection className="my-0 py-[80px]" />
 
-          {/* ═══════════════ App Promo & CTA ═══════════════ */}
-          <section className="px-4 py-16 relative overflow-hidden">
-            {/* Circular economy animated background - collaboration network */}
-            <div className="absolute inset-0 pointer-events-none">
-              {/* Large SVG animated network representing local collaboration */}
-              <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
-                {/* Rotating outer ring */}
-                <g style={{ transformOrigin: '600px 400px', animation: 'spin-slow 60s linear infinite' }}>
-                  <circle cx="600" cy="400" r="340" fill="none" stroke="#b4fa74" strokeWidth="1" opacity="0.08" strokeDasharray="20 10" />
-                  <circle cx="600" cy="400" r="280" fill="none" stroke="#b4fa74" strokeWidth="0.8" opacity="0.06" strokeDasharray="8 16" />
-                </g>
-                <g style={{ transformOrigin: '600px 400px', animation: 'spin-slow 45s linear infinite reverse' }}>
-                  <circle cx="600" cy="400" r="220" fill="none" stroke="#b4fa74" strokeWidth="1.2" opacity="0.1" strokeDasharray="12 8" />
-                </g>
-
-                {/* Animated connection paths between "actors" */}
-                {/* Path 1: Hunter → Store */}
-                <path d="M200,200 Q400,100 600,180" fill="none" stroke="#b4fa74" strokeWidth="1.5" opacity="0.15" strokeDasharray="6 4">
-                  <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="4s" repeatCount="indefinite" />
-                </path>
-                {/* Path 2: Store → Recycler */}
-                <path d="M600,180 Q800,250 950,400" fill="none" stroke="#b4fa74" strokeWidth="1.5" opacity="0.12" strokeDasharray="6 4">
-                  <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="5s" repeatCount="indefinite" />
-                </path>
-                {/* Path 3: Recycler → Community */}
-                <path d="M950,400 Q850,600 600,650" fill="none" stroke="#b4fa74" strokeWidth="1.5" opacity="0.12" strokeDasharray="6 4">
-                  <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="4.5s" repeatCount="indefinite" />
-                </path>
-                {/* Path 4: Community → Hunter (closing the circle) */}
-                <path d="M600,650 Q350,600 200,200" fill="none" stroke="#b4fa74" strokeWidth="1.5" opacity="0.15" strokeDasharray="6 4">
-                  <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="5.5s" repeatCount="indefinite" />
-                </path>
-                {/* Cross paths - inner collaboration */}
-                <path d="M200,200 Q500,400 950,400" fill="none" stroke="#b4fa74" strokeWidth="0.8" opacity="0.06" strokeDasharray="4 8">
-                  <animate attributeName="stroke-dashoffset" from="0" to="-80" dur="6s" repeatCount="indefinite" />
-                </path>
-                <path d="M600,180 Q500,450 600,650" fill="none" stroke="#b4fa74" strokeWidth="0.8" opacity="0.06" strokeDasharray="4 8">
-                  <animate attributeName="stroke-dashoffset" from="0" to="-80" dur="7s" repeatCount="indefinite" />
-                </path>
-
-                {/* Node hubs - represent different actors */}
-                {/* Hunter node */}
-                <g>
-                  <circle cx="200" cy="200" r="18" fill="#b4fa74" opacity="0.08">
-                    <animate attributeName="r" values="16;22;16" dur="3s" repeatCount="indefinite" />
-                    <animate attributeName="opacity" values="0.06;0.15;0.06" dur="3s" repeatCount="indefinite" />
-                  </circle>
-                  <circle cx="200" cy="200" r="6" fill="#b4fa74" opacity="0.3" />
-                  <circle cx="200" cy="200" r="30" fill="none" stroke="#b4fa74" opacity="0.08" strokeWidth="0.5">
-                    <animate attributeName="r" values="28;38;28" dur="4s" repeatCount="indefinite" />
-                    <animate attributeName="opacity" values="0.08;0.02;0.08" dur="4s" repeatCount="indefinite" />
-                  </circle>
-                </g>
-                {/* Store node */}
-                <g>
-                  <circle cx="600" cy="180" r="18" fill="#b4fa74" opacity="0.08">
-                    <animate attributeName="r" values="16;22;16" dur="3.5s" repeatCount="indefinite" />
-                    <animate attributeName="opacity" values="0.06;0.15;0.06" dur="3.5s" repeatCount="indefinite" />
-                  </circle>
-                  <circle cx="600" cy="180" r="6" fill="#b4fa74" opacity="0.3" />
-                  <circle cx="600" cy="180" r="30" fill="none" stroke="#b4fa74" opacity="0.08" strokeWidth="0.5">
-                    <animate attributeName="r" values="28;38;28" dur="4.5s" repeatCount="indefinite" />
-                  </circle>
-                </g>
-                {/* Recycler node */}
-                <g>
-                  <circle cx="950" cy="400" r="18" fill="#b4fa74" opacity="0.08">
-                    <animate attributeName="r" values="16;24;16" dur="4s" repeatCount="indefinite" />
-                    <animate attributeName="opacity" values="0.06;0.15;0.06" dur="4s" repeatCount="indefinite" />
-                  </circle>
-                  <circle cx="950" cy="400" r="7" fill="#b4fa74" opacity="0.25" />
-                  <circle cx="950" cy="400" r="32" fill="none" stroke="#b4fa74" opacity="0.06" strokeWidth="0.5">
-                    <animate attributeName="r" values="30;42;30" dur="5s" repeatCount="indefinite" />
-                  </circle>
-                </g>
-                {/* Community node */}
-                <g>
-                  <circle cx="600" cy="650" r="20" fill="#b4fa74" opacity="0.08">
-                    <animate attributeName="r" values="18;26;18" dur="3.8s" repeatCount="indefinite" />
-                    <animate attributeName="opacity" values="0.06;0.14;0.06" dur="3.8s" repeatCount="indefinite" />
-                  </circle>
-                  <circle cx="600" cy="650" r="7" fill="#b4fa74" opacity="0.25" />
-                  <circle cx="600" cy="650" r="34" fill="none" stroke="#b4fa74" opacity="0.06" strokeWidth="0.5">
-                    <animate attributeName="r" values="32;44;32" dur="4.2s" repeatCount="indefinite" />
-                  </circle>
-                </g>
-
-                {/* Traveling particles along paths - represent exchanges */}
-                <circle r="3" fill="#b4fa74" opacity="0.5">
-                  <animateMotion dur="4s" repeatCount="indefinite" path="M200,200 Q400,100 600,180" />
-                  <animate attributeName="opacity" values="0.1;0.6;0.1" dur="4s" repeatCount="indefinite" />
-                </circle>
-                <circle r="3" fill="#b4fa74" opacity="0.5">
-                  <animateMotion dur="5s" repeatCount="indefinite" path="M600,180 Q800,250 950,400" />
-                  <animate attributeName="opacity" values="0.1;0.6;0.1" dur="5s" repeatCount="indefinite" />
-                </circle>
-                <circle r="3" fill="#b4fa74" opacity="0.5">
-                  <animateMotion dur="4.5s" repeatCount="indefinite" path="M950,400 Q850,600 600,650" />
-                  <animate attributeName="opacity" values="0.1;0.6;0.1" dur="4.5s" repeatCount="indefinite" />
-                </circle>
-                <circle r="3" fill="#b4fa74" opacity="0.5">
-                  <animateMotion dur="5.5s" repeatCount="indefinite" path="M600,650 Q350,600 200,200" />
-                  <animate attributeName="opacity" values="0.1;0.6;0.1" dur="5.5s" repeatCount="indefinite" />
-                </circle>
-                {/* Extra traveling particles for density */}
-                <circle r="2" fill="#b4fa74" opacity="0.3">
-                  <animateMotion dur="6s" repeatCount="indefinite" path="M200,200 Q500,400 950,400" />
-                  <animate attributeName="opacity" values="0.05;0.4;0.05" dur="6s" repeatCount="indefinite" />
-                </circle>
-                <circle r="2" fill="#b4fa74" opacity="0.3">
-                  <animateMotion dur="7s" repeatCount="indefinite" path="M600,180 Q500,450 600,650" />
-                  <animate attributeName="opacity" values="0.05;0.4;0.05" dur="7s" repeatCount="indefinite" />
-                </circle>
-
-                {/* Small scattered dots - represent activity */}
-                {[
-                [150, 350], [300, 500], [450, 300], [750, 550], [850, 250], [400, 150], [700, 700], [100, 500], [900, 600], [500, 550],
-                [350, 250], [800, 350], [250, 600], [650, 450], [1000, 300]].
-                map(([cx, cy], i) =>
-                <circle key={i} cx={cx} cy={cy} r={1 + i % 3} fill="#b4fa74" opacity={0.05 + i % 5 * 0.03}>
-                    <animate attributeName="opacity" values={`${0.03 + i % 4 * 0.02};${0.15 + i % 3 * 0.05};${0.03 + i % 4 * 0.02}`} dur={`${3 + i * 0.3}s`} repeatCount="indefinite" />
-                  </circle>
-                )}
-              </svg>
-
-              {/* Radial glow behind center */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] md:w-[800px] md:h-[800px] rounded-full opacity-[0.04]" style={{ background: 'radial-gradient(circle, #b4fa74 0%, transparent 70%)' }} />
+          {/* ═══════════════ App Promo & CTA - Mad Max Style ═══════════════ */}
+          <section className="relative overflow-hidden">
+            {/* Mad Max Background */}
+            <div className="absolute inset-0">
+              <img src={madMaxCityBg} alt="" className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-black/50" />
+              <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-transparent to-[#0a0a0a]" />
             </div>
-            <FloatingParticles count={10} />
-            <PulsingOrb size={220} top="-80px" left="-100px" delay={0} />
-            <PulsingOrb size={160} bottom="-60px" right="-80px" delay={1.5} />
-            <div className="container mx-auto max-w-6xl relative z-10">
+
+            <div className="container mx-auto max-w-6xl relative z-10 px-4 py-20 md:py-28">
               <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center justify-between">
                 {/* Left */}
                 <div className="flex-1 text-center lg:text-left">
-                  <h2 className="font-permanent-marker text-3xl md:text-4xl lg:text-5xl mb-4" style={{ color: '#b4fa74' }}>
-                    {t('landing.app.title')}
-                  </h2>
-                  <div className="w-16 h-1 rounded-full mx-auto lg:mx-0 mb-5" style={{ backgroundColor: '#b4fa74', opacity: 0.5 }} />
-                  <p className="font-sedgwick-ave text-subtitle-styled text-xl md:text-2xl max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed whitespace-pre-line">
-                    {t('landing.app.subtitle')}
-                  </p>
+                  {/* Logo in wooden sign */}
+                  <div className="inline-block mb-8 relative">
+                    <div className="relative px-6 py-4 rounded-lg border-4 border-[#5a3a1a]"
+                      style={{
+                        background: 'linear-gradient(135deg, #4a2e12 0%, #6b4423 30%, #3d2410 60%, #5a3a1a 100%)',
+                        boxShadow: '0 8px 30px rgba(0,0,0,0.6), inset 0 2px 4px rgba(255,255,255,0.1), inset 0 -2px 4px rgba(0,0,0,0.3)',
+                      }}>
+                      {/* Wood grain texture overlay */}
+                      <div className="absolute inset-0 rounded-lg opacity-20" style={{
+                        backgroundImage: 'repeating-linear-gradient(90deg, transparent, transparent 8px, rgba(0,0,0,0.15) 8px, rgba(0,0,0,0.15) 9px)',
+                      }} />
+                      {/* Nails */}
+                      <div className="absolute top-2 left-3 w-3 h-3 rounded-full bg-[#8a8a8a] shadow-inner" style={{ boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.5), 0 1px 1px rgba(255,255,255,0.1)' }} />
+                      <div className="absolute top-2 right-3 w-3 h-3 rounded-full bg-[#8a8a8a] shadow-inner" style={{ boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.5), 0 1px 1px rgba(255,255,255,0.1)' }} />
+                      <div className="absolute bottom-2 left-3 w-3 h-3 rounded-full bg-[#7a7a7a] shadow-inner" style={{ boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.5)' }} />
+                      <div className="absolute bottom-2 right-3 w-3 h-3 rounded-full bg-[#7a7a7a] shadow-inner" style={{ boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.5)' }} />
+                      <img src={greenhuntLogoNew} alt="GreenHunt Logo" className="relative h-16 sm:h-20 w-auto" />
+                    </div>
+                  </div>
+
+                  {/* Title in metal sign */}
+                  <div className="relative mb-6 inline-block">
+                    <div className="relative px-6 py-4 md:px-8 md:py-5 rounded-md border-2"
+                      style={{
+                        background: 'linear-gradient(180deg, #5a4a3a 0%, #3d2e1f 40%, #2a1e12 100%)',
+                        borderColor: '#6b4a2a',
+                        boxShadow: '0 6px 20px rgba(0,0,0,0.5), inset 0 1px 3px rgba(255,255,255,0.08), inset 0 -2px 4px rgba(0,0,0,0.4)',
+                      }}>
+                      {/* Rust spots */}
+                      <div className="absolute top-1 right-4 w-5 h-3 rounded-full bg-[#8b4513] opacity-20 blur-[1px]" />
+                      <div className="absolute bottom-2 left-6 w-7 h-4 rounded-full bg-[#a0522d] opacity-15 blur-[2px]" />
+                      <h2 className="relative font-permanent-marker text-3xl md:text-4xl lg:text-5xl leading-tight"
+                        style={{ 
+                          color: '#e8d5b0',
+                          textShadow: '2px 2px 4px rgba(0,0,0,0.6), 0 0 20px rgba(180,250,116,0.15)'
+                        }}>
+                        {t('landing.app.title')}
+                      </h2>
+                    </div>
+                    {/* Small vine decoration */}
+                    <div className="absolute -top-3 -right-3 text-2xl" style={{ filter: 'drop-shadow(0 2px 3px rgba(0,0,0,0.5))' }}>🌿</div>
+                  </div>
+
+                  {/* Subtitle in weathered stone/parchment */}
+                  <div className="relative mb-10 max-w-xl mx-auto lg:mx-0">
+                    <div className="relative px-6 py-5 rounded-md"
+                      style={{
+                        background: 'linear-gradient(135deg, #d4c5a9 0%, #c4b393 30%, #b8a882 60%, #cfc0a5 100%)',
+                        boxShadow: '0 4px 15px rgba(0,0,0,0.4), inset 0 1px 2px rgba(255,255,255,0.3)',
+                        border: '1px solid #a89870',
+                      }}>
+                      {/* Cracks/wear */}
+                      <div className="absolute top-0 left-1/4 w-px h-full bg-[#8a7a5a] opacity-10" />
+                      <div className="absolute top-0 left-3/4 w-px h-full bg-[#8a7a5a] opacity-8" />
+                      <p className="relative font-sedgwick-ave text-xl md:text-2xl leading-relaxed whitespace-pre-line"
+                        style={{ color: '#3a2e1e', textShadow: '0 1px 1px rgba(255,255,255,0.3)' }}>
+                        {t('landing.app.subtitle')}
+                      </p>
+                    </div>
+                  </div>
                   
                   {/* CTA Buttons */}
                   <div className="flex flex-row gap-4 items-center justify-center lg:justify-start mt-4">
@@ -353,7 +284,6 @@ export default function LandingPage() {
                       onClick={() => setWaitlistOpen(true)}
                       className="bg-[#b4fa74] hover:bg-[#a2e866] font-permanent-marker text-xl px-8 py-6 rounded-xl transition-all shadow-[0_0_25px_rgba(180,250,116,0.25)] hover:shadow-[0_0_40px_rgba(180,250,116,0.35)]"
                       style={{ color: '#0a0a0a' }}>
-                      
                       {language === 'en' ? 'GET BETA' : 'OBTÉN BETA'}
                       <ChevronRight className="ml-1 h-5 w-5" style={{ color: '#0a0a0a', stroke: '#0a0a0a' }} />
                     </Button>
@@ -365,7 +295,6 @@ export default function LandingPage() {
                         borderColor: '#b4fa74',
                         boxShadow: '0 0 15px rgba(180, 250, 116, 0.25), inset 0 0 15px rgba(180, 250, 116, 0.05)'
                       }}>
-                      
                       <Video className="h-5 w-5" style={{ color: '#611a5a', fill: '#611a5a', stroke: '#611a5a' }} />
                       <span className="tracking-wider" style={{ color: '#b4fa74' }}>TRAILER</span>
                     </button>
@@ -390,7 +319,6 @@ export default function LandingPage() {
                       loading="lazy"
                       src={appMapScreen}
                     />
-                    
                   </div>
                 </div>
               </div>
