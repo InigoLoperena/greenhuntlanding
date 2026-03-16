@@ -7,6 +7,7 @@ import { useLanguage } from "@/hooks/useLanguage";
 import { useState } from "react";
 import { StructuredData } from "@/components/StructuredData";
 import { HeroSection } from "@/components/HeroSection";
+import { ApocalypticBackground } from "@/components/ApocalypticBackground";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { z } from "zod";
@@ -192,11 +193,11 @@ export default function LandingPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white overflow-x-hidden relative">
-      
+    <div className="min-h-screen text-white overflow-x-hidden relative">
+      <ApocalypticBackground />
       
       <div className="relative z-10">
-        <div className="mx-4 md:mx-12 lg:mx-24 xl:mx-32 bg-[#0a0a0a] min-h-screen">
+        <div className="mx-4 md:mx-12 lg:mx-24 xl:mx-32 min-h-screen">
           <StructuredData />
           
           {/* Hero Section */}
