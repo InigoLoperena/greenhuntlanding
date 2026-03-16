@@ -306,10 +306,6 @@ export default function LandingPage() {
 
           {/* ═══════════════ Play for the Planet ═══════════════ */}
           <section className="py-20 md:py-28 px-4 relative overflow-hidden">
-            <DynamicDotsOverlay variant={2} />
-            <FloatingParticles count={8} />
-            <PulsingOrb size={200} top="10%" left="-60px" delay={0} />
-            <PulsingOrb size={120} bottom="20%" right="-40px" delay={2} />
             <div className="container mx-auto max-w-6xl relative z-10">
               {/* Network hub visual behind title */}
               <div className="flex justify-center mb-12">
