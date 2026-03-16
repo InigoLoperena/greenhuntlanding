@@ -8,12 +8,12 @@ export const ApocalypticBackground = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${apocalypticBg})`,
-          filter: 'blur(3px) brightness(0.25)',
+          filter: 'blur(2px) brightness(0.35)',
         }}
       />
 
       {/* Dark overlay for readability */}
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-black/30" />
 
       {/* Animated floating particles - debris/dust */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
