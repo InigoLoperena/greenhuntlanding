@@ -285,10 +285,6 @@ export default function LandingPage() {
 
           {/* --- Value Prop 3: Track & Compete --- */}
           <section className="py-16 md:py-24 px-4 relative overflow-hidden">
-            <DynamicDotsOverlay variant={2} />
-            <FloatingParticles count={8} />
-            <PulsingOrb size={160} top="-40px" left="30%" delay={0} />
-            <PulsingOrb size={100} bottom="15%" right="-50px" delay={1} />
             <div className="container mx-auto max-w-6xl relative z-10">
               <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
                 <div className="flex-1 order-2 md:order-1">
