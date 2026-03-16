@@ -8,7 +8,7 @@ export const ApocalypticBackground = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${apocalypticBg})`,
-          filter: 'blur(2px) brightness(0.35)',
+          filter: 'brightness(0.45)',
         }}
       />
 
