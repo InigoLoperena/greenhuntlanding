@@ -236,10 +236,6 @@ export default function LandingPage() {
           {/* ═══════════════ Value Propositions ═══════════════ */}
           {/* --- Value Prop 1: Snap & Save --- */}
           <section className="py-16 md:py-24 px-4 relative overflow-hidden">
-            <DynamicDotsOverlay variant={0} />
-            <FloatingParticles count={10} />
-            <PulsingOrb size={180} top="-50px" right="-70px" delay={0} />
-            <PulsingOrb size={100} bottom="10%" left="-40px" delay={1.5} />
             <div className="container mx-auto max-w-6xl relative z-10">
               <div className="text-center mb-14">
                 <h2 style={{ color: '#b4fa74' }} className="text-3xl md:text-5xl font-permanent-marker mb-3">
