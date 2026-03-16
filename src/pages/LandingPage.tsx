@@ -375,8 +375,6 @@ export default function LandingPage() {
 
           {/* ═══════════════ Final Beta CTA ═══════════════ */}
           <section id="waitlist" className="relative py-20 px-4">
-            <FloatingParticles count={6} />
-            <PulsingOrb size={150} top="10%" right="-50px" delay={0.8} />
             <div className="container mx-auto max-w-3xl text-center relative z-10">
               <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#141414] via-[#111] to-[#0d1a0d] p-10 md:p-14">
                 {/* Decorative glows */}
