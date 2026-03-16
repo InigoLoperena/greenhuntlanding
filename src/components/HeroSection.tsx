@@ -57,12 +57,30 @@ export const HeroSection = ({ className }: HeroSectionProps) => {
 
   return (
     <>
-      <section className={`relative w-full ${className || ''}`}>
+      <section className={`relative w-full min-h-[60vh] md:min-h-[80vh] lg:min-h-screen overflow-hidden ${className || ''}`}>
+        {/* Full-screen background image */}
         <img 
-          src={heroBanner} 
+          src={heroBannerClean} 
           alt="GreenHunt - Stooping Real World Game" 
-          className="w-full h-auto block"
+          className="absolute inset-0 w-full h-full object-cover"
         />
+        
+        {/* H1 text positioned over the blank sign */}
+        <h1 
+          className="absolute font-permanent-marker text-center leading-tight"
+          style={{
+            top: '52%',
+            left: '24%',
+            transform: 'translate(-50%, -50%)',
+            fontSize: 'clamp(0.9rem, 2.5vw, 2.2rem)',
+            color: '#3a2a1a',
+            textShadow: '1px 1px 2px rgba(0,0,0,0.15)',
+            maxWidth: '30%',
+            letterSpacing: '0.02em',
+          }}
+        >
+          Stooping Real World Game
+        </h1>
       </section>
 
       {/* Waitlist Dialog */}
