@@ -2,8 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
-import greenhuntLogoNew from "@/assets/greenhunt-logo-new.svg";
-import heroVideo from "@/assets/hero-video.mp4";
+import heroBanner from "@/assets/hero-banner.png";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { z } from "zod";
@@ -58,51 +57,12 @@ export const HeroSection = ({ className }: HeroSectionProps) => {
 
   return (
     <>
-      <section className={`relative w-full min-h-[80vh] md:min-h-[90vh] flex items-center overflow-hidden px-4 md:px-8 ${className || ''}`}>
-        {/* Subtle grid pattern overlay */}
-        <div className="absolute inset-0 opacity-[0.03]" style={{
-          backgroundImage: 'linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)',
-          backgroundSize: '60px 60px'
-        }} />
-
-        <div className="container mx-auto max-w-7xl relative z-10">
-          {/* Logo */}
-          <div className="mb-6 md:mb-10">
-            <img src={greenhuntLogoNew} alt="GreenHunt Logo" className="h-28 sm:h-36 lg:h-44 w-auto" />
-          </div>
-
-          {/* Two Column Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-            {/* Left Side - Title */}
-            <div className="flex flex-col gap-6">
-              <h1 
-                style={{ color: '#b4fa74' }} 
-                className="font-permanent-marker text-2xl md:text-3xl lg:text-4xl leading-tight"
-              >
-                {language === 'en' 
-                  ? 'This is what waste managers do with hundreds of tons of high valuable dumped stuff daily' 
-                  : 'Esto es lo que hacen los gestores de residuos con cientos de toneladas de cosas valiosas tiradas a diario'}
-              </h1>
-              
-              {/* Accent line */}
-              <div className="w-24 h-1 rounded-full" style={{ backgroundColor: '#b4fa74' }} />
-            </div>
-
-            {/* Right Side - Video */}
-            <div className="flex justify-center lg:justify-end">
-              <div className="relative">
-                {/* Glow effect behind video */}
-                <div className="absolute -inset-4 rounded-3xl opacity-20 blur-2xl" style={{ backgroundColor: '#6ea151' }} />
-                <video 
-                  autoPlay loop muted playsInline
-                  className="relative w-full max-w-md lg:max-w-lg rounded-2xl shadow-2xl border border-white/10"
-                >
-                  <source src={heroVideo} type="video/mp4" />
-                </video>
-              </div>
-            </div>
-          </div>
-        </div>
+      <section className={`relative w-full ${className || ''}`}>
+        <img 
+          src={heroBanner} 
+          alt="GreenHunt - Stooping Real World Game" 
+          className="w-full h-auto block"
+        />
       </section>
 
       {/* Waitlist Dialog */}
