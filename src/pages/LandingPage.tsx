@@ -264,10 +264,6 @@ export default function LandingPage() {
 
           {/* --- Value Prop 2: Grab & Rescue --- */}
           <section className="py-16 md:py-24 px-4 relative overflow-hidden">
-            <DynamicDotsOverlay variant={1} />
-            <FloatingParticles count={8} />
-            <PulsingOrb size={140} top="20%" left="-50px" delay={0.5} />
-            <PulsingOrb size={120} bottom="-30px" right="-40px" delay={2} />
             <div className="container mx-auto max-w-6xl relative z-10">
               <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
                 <div className="flex-1 max-w-xs md:max-w-sm">
