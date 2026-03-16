@@ -19,8 +19,9 @@ import valueProp3 from "@/assets/value-prop-3.png";
 import appMapScreen from "@/assets/app-map-screen-new.png";
 import madMaxCityBg from "@/assets/mad-max-city-bg.jpg";
 import greenhuntLogoNew from "@/assets/greenhunt-logo-new.svg";
-import woodenSignTexture from "@/assets/wooden-sign-texture.png";
-import metalSignTexture from "@/assets/metal-sign-texture.png";
+import signWoodLogo from "@/assets/sign-wood-logo.png";
+import signWoodTitle from "@/assets/sign-wood-title.png";
+import signStoneSubtitle from "@/assets/sign-stone-subtitle.png";
 
 const emailSchema = z.string().email();
 
