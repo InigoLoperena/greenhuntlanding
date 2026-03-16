@@ -21,83 +21,7 @@ import appMapScreen from "@/assets/app-map-screen-new.png";
 
 const emailSchema = z.string().email();
 
-/* ─── Floating particles background ─── */
-const FloatingParticles = ({ count = 6, color = '#b4fa74' }: {count?: number;color?: string;}) =>
-<div className="absolute inset-0 overflow-hidden pointer-events-none">
-    {Array.from({ length: count }).map((_, i) =>
-  <div
-    key={i}
-    className="absolute rounded-full"
-    style={{
-      width: `${3 + i % 4 * 2}px`,
-      height: `${3 + i % 4 * 2}px`,
-      backgroundColor: color,
-      opacity: 0.08 + i % 3 * 0.06,
-      left: `${10 + i * 17 % 80}%`,
-      top: `${5 + i * 23 % 90}%`,
-      animation: `float-particle-${i % 3} ${8 + i * 2}s ease-in-out infinite`
-    }} />
 
-  )}
-  </div>;
-
-
-/* ─── Pulsing orb accent ─── */
-const PulsingOrb = ({ size = 120, top, left, right, bottom, delay = 0 }: {size?: number;top?: string;left?: string;right?: string;bottom?: string;delay?: number;}) =>
-<div
-  className="absolute rounded-full pointer-events-none"
-  style={{
-    width: size,
-    height: size,
-    backgroundColor: '#b4fa74',
-    opacity: 0.06,
-    filter: `blur(${size / 2}px)`,
-    top, left, right, bottom,
-    animation: `pulse-glow 4s ease-in-out ${delay}s infinite alternate`
-  }} />;
-
-
-
-/* ─── Dynamic animated dots background overlay ─── */
-const DynamicDotsOverlay = ({ variant = 0 }: {variant?: number;}) => {
-  const offsets = [
-  { nodes: [[15, 30], [40, 70], [70, 20], [85, 60], [25, 80], [60, 45]], paths: 'M150,300 Q400,100 700,200 Q850,600 250,800' },
-  { nodes: [[20, 25], [55, 75], [80, 35], [35, 65], [65, 15], [90, 55]], paths: 'M200,250 Q500,700 800,350 Q600,100 300,600' },
-  { nodes: [[10, 50], [45, 20], [75, 70], [30, 40], [60, 80], [85, 30]], paths: 'M100,500 Q350,200 750,700 Q900,300 200,400' }];
-
-  const o = offsets[variant % 3];
-  return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-      <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice">
-        {/* Animated traveling particle along path */}
-        <path d={o.paths} fill="none" stroke="#b4fa74" strokeWidth="0.8" opacity="0.06" strokeDasharray="6 8">
-          <animate attributeName="stroke-dashoffset" from="0" to="-100" dur={`${6 + variant}s`} repeatCount="indefinite" />
-        </path>
-        <circle r="2.5" fill="#b4fa74" opacity="0.4">
-          <animateMotion dur={`${7 + variant * 2}s`} repeatCount="indefinite" path={o.paths} />
-          <animate attributeName="opacity" values="0.1;0.5;0.1" dur={`${7 + variant * 2}s`} repeatCount="indefinite" />
-        </circle>
-        <circle r="2" fill="#b4fa74" opacity="0.3">
-          <animateMotion dur={`${9 + variant}s`} repeatCount="indefinite" path={o.paths} begin={`${2 + variant}s`} />
-          <animate attributeName="opacity" values="0.05;0.4;0.05" dur={`${9 + variant}s`} repeatCount="indefinite" />
-        </circle>
-        {/* Pulsing scattered dots */}
-        {o.nodes.map(([cx, cy], i) =>
-        <g key={i}>
-            <circle cx={`${cx}%`} cy={`${cy}%`} r={2 + i % 3} fill="#b4fa74" opacity={0.04 + i % 4 * 0.03}>
-              <animate attributeName="opacity" values={`${0.03 + i % 3 * 0.02};${0.12 + i % 2 * 0.06};${0.03 + i % 3 * 0.02}`} dur={`${3 + i * 0.7}s`} repeatCount="indefinite" />
-              <animate attributeName="r" values={`${2 + i % 3};${4 + i % 3};${2 + i % 3}`} dur={`${4 + i * 0.5}s`} repeatCount="indefinite" />
-            </circle>
-            <circle cx={`${cx}%`} cy={`${cy}%`} r={8 + i * 2} fill="none" stroke="#b4fa74" strokeWidth="0.4" opacity={0.03 + i % 3 * 0.015}>
-              <animate attributeName="r" values={`${8 + i * 2};${14 + i * 2};${8 + i * 2}`} dur={`${5 + i * 0.6}s`} repeatCount="indefinite" />
-              <animate attributeName="opacity" values={`${0.04};${0.01};${0.04}`} dur={`${5 + i * 0.6}s`} repeatCount="indefinite" />
-            </circle>
-          </g>
-        )}
-      </svg>
-    </div>);
-
-};
 
 
 /* ─── Step card component ─── */
@@ -207,135 +131,6 @@ export default function LandingPage() {
 
           {/* ═══════════════ App Promo & CTA ═══════════════ */}
           <section className="px-4 py-16 relative overflow-hidden">
-            {/* Circular economy animated background - collaboration network */}
-            <div className="absolute inset-0 pointer-events-none">
-              {/* Large SVG animated network representing local collaboration */}
-              <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
-                {/* Rotating outer ring */}
-                <g style={{ transformOrigin: '600px 400px', animation: 'spin-slow 60s linear infinite' }}>
-                  <circle cx="600" cy="400" r="340" fill="none" stroke="#b4fa74" strokeWidth="1" opacity="0.08" strokeDasharray="20 10" />
-                  <circle cx="600" cy="400" r="280" fill="none" stroke="#b4fa74" strokeWidth="0.8" opacity="0.06" strokeDasharray="8 16" />
-                </g>
-                <g style={{ transformOrigin: '600px 400px', animation: 'spin-slow 45s linear infinite reverse' }}>
-                  <circle cx="600" cy="400" r="220" fill="none" stroke="#b4fa74" strokeWidth="1.2" opacity="0.1" strokeDasharray="12 8" />
-                </g>
-
-                {/* Animated connection paths between "actors" */}
-                {/* Path 1: Hunter → Store */}
-                <path d="M200,200 Q400,100 600,180" fill="none" stroke="#b4fa74" strokeWidth="1.5" opacity="0.15" strokeDasharray="6 4">
-                  <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="4s" repeatCount="indefinite" />
-                </path>
-                {/* Path 2: Store → Recycler */}
-                <path d="M600,180 Q800,250 950,400" fill="none" stroke="#b4fa74" strokeWidth="1.5" opacity="0.12" strokeDasharray="6 4">
-                  <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="5s" repeatCount="indefinite" />
-                </path>
-                {/* Path 3: Recycler → Community */}
-                <path d="M950,400 Q850,600 600,650" fill="none" stroke="#b4fa74" strokeWidth="1.5" opacity="0.12" strokeDasharray="6 4">
-                  <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="4.5s" repeatCount="indefinite" />
-                </path>
-                {/* Path 4: Community → Hunter (closing the circle) */}
-                <path d="M600,650 Q350,600 200,200" fill="none" stroke="#b4fa74" strokeWidth="1.5" opacity="0.15" strokeDasharray="6 4">
-                  <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="5.5s" repeatCount="indefinite" />
-                </path>
-                {/* Cross paths - inner collaboration */}
-                <path d="M200,200 Q500,400 950,400" fill="none" stroke="#b4fa74" strokeWidth="0.8" opacity="0.06" strokeDasharray="4 8">
-                  <animate attributeName="stroke-dashoffset" from="0" to="-80" dur="6s" repeatCount="indefinite" />
-                </path>
-                <path d="M600,180 Q500,450 600,650" fill="none" stroke="#b4fa74" strokeWidth="0.8" opacity="0.06" strokeDasharray="4 8">
-                  <animate attributeName="stroke-dashoffset" from="0" to="-80" dur="7s" repeatCount="indefinite" />
-                </path>
-
-                {/* Node hubs - represent different actors */}
-                {/* Hunter node */}
-                <g>
-                  <circle cx="200" cy="200" r="18" fill="#b4fa74" opacity="0.08">
-                    <animate attributeName="r" values="16;22;16" dur="3s" repeatCount="indefinite" />
-                    <animate attributeName="opacity" values="0.06;0.15;0.06" dur="3s" repeatCount="indefinite" />
-                  </circle>
-                  <circle cx="200" cy="200" r="6" fill="#b4fa74" opacity="0.3" />
-                  <circle cx="200" cy="200" r="30" fill="none" stroke="#b4fa74" opacity="0.08" strokeWidth="0.5">
-                    <animate attributeName="r" values="28;38;28" dur="4s" repeatCount="indefinite" />
-                    <animate attributeName="opacity" values="0.08;0.02;0.08" dur="4s" repeatCount="indefinite" />
-                  </circle>
-                </g>
-                {/* Store node */}
-                <g>
-                  <circle cx="600" cy="180" r="18" fill="#b4fa74" opacity="0.08">
-                    <animate attributeName="r" values="16;22;16" dur="3.5s" repeatCount="indefinite" />
-                    <animate attributeName="opacity" values="0.06;0.15;0.06" dur="3.5s" repeatCount="indefinite" />
-                  </circle>
-                  <circle cx="600" cy="180" r="6" fill="#b4fa74" opacity="0.3" />
-                  <circle cx="600" cy="180" r="30" fill="none" stroke="#b4fa74" opacity="0.08" strokeWidth="0.5">
-                    <animate attributeName="r" values="28;38;28" dur="4.5s" repeatCount="indefinite" />
-                  </circle>
-                </g>
-                {/* Recycler node */}
-                <g>
-                  <circle cx="950" cy="400" r="18" fill="#b4fa74" opacity="0.08">
-                    <animate attributeName="r" values="16;24;16" dur="4s" repeatCount="indefinite" />
-                    <animate attributeName="opacity" values="0.06;0.15;0.06" dur="4s" repeatCount="indefinite" />
-                  </circle>
-                  <circle cx="950" cy="400" r="7" fill="#b4fa74" opacity="0.25" />
-                  <circle cx="950" cy="400" r="32" fill="none" stroke="#b4fa74" opacity="0.06" strokeWidth="0.5">
-                    <animate attributeName="r" values="30;42;30" dur="5s" repeatCount="indefinite" />
-                  </circle>
-                </g>
-                {/* Community node */}
-                <g>
-                  <circle cx="600" cy="650" r="20" fill="#b4fa74" opacity="0.08">
-                    <animate attributeName="r" values="18;26;18" dur="3.8s" repeatCount="indefinite" />
-                    <animate attributeName="opacity" values="0.06;0.14;0.06" dur="3.8s" repeatCount="indefinite" />
-                  </circle>
-                  <circle cx="600" cy="650" r="7" fill="#b4fa74" opacity="0.25" />
-                  <circle cx="600" cy="650" r="34" fill="none" stroke="#b4fa74" opacity="0.06" strokeWidth="0.5">
-                    <animate attributeName="r" values="32;44;32" dur="4.2s" repeatCount="indefinite" />
-                  </circle>
-                </g>
-
-                {/* Traveling particles along paths - represent exchanges */}
-                <circle r="3" fill="#b4fa74" opacity="0.5">
-                  <animateMotion dur="4s" repeatCount="indefinite" path="M200,200 Q400,100 600,180" />
-                  <animate attributeName="opacity" values="0.1;0.6;0.1" dur="4s" repeatCount="indefinite" />
-                </circle>
-                <circle r="3" fill="#b4fa74" opacity="0.5">
-                  <animateMotion dur="5s" repeatCount="indefinite" path="M600,180 Q800,250 950,400" />
-                  <animate attributeName="opacity" values="0.1;0.6;0.1" dur="5s" repeatCount="indefinite" />
-                </circle>
-                <circle r="3" fill="#b4fa74" opacity="0.5">
-                  <animateMotion dur="4.5s" repeatCount="indefinite" path="M950,400 Q850,600 600,650" />
-                  <animate attributeName="opacity" values="0.1;0.6;0.1" dur="4.5s" repeatCount="indefinite" />
-                </circle>
-                <circle r="3" fill="#b4fa74" opacity="0.5">
-                  <animateMotion dur="5.5s" repeatCount="indefinite" path="M600,650 Q350,600 200,200" />
-                  <animate attributeName="opacity" values="0.1;0.6;0.1" dur="5.5s" repeatCount="indefinite" />
-                </circle>
-                {/* Extra traveling particles for density */}
-                <circle r="2" fill="#b4fa74" opacity="0.3">
-                  <animateMotion dur="6s" repeatCount="indefinite" path="M200,200 Q500,400 950,400" />
-                  <animate attributeName="opacity" values="0.05;0.4;0.05" dur="6s" repeatCount="indefinite" />
-                </circle>
-                <circle r="2" fill="#b4fa74" opacity="0.3">
-                  <animateMotion dur="7s" repeatCount="indefinite" path="M600,180 Q500,450 600,650" />
-                  <animate attributeName="opacity" values="0.05;0.4;0.05" dur="7s" repeatCount="indefinite" />
-                </circle>
-
-                {/* Small scattered dots - represent activity */}
-                {[
-                [150, 350], [300, 500], [450, 300], [750, 550], [850, 250], [400, 150], [700, 700], [100, 500], [900, 600], [500, 550],
-                [350, 250], [800, 350], [250, 600], [650, 450], [1000, 300]].
-                map(([cx, cy], i) =>
-                <circle key={i} cx={cx} cy={cy} r={1 + i % 3} fill="#b4fa74" opacity={0.05 + i % 5 * 0.03}>
-                    <animate attributeName="opacity" values={`${0.03 + i % 4 * 0.02};${0.15 + i % 3 * 0.05};${0.03 + i % 4 * 0.02}`} dur={`${3 + i * 0.3}s`} repeatCount="indefinite" />
-                  </circle>
-                )}
-              </svg>
-
-              {/* Radial glow behind center */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] md:w-[800px] md:h-[800px] rounded-full opacity-[0.04]" style={{ background: 'radial-gradient(circle, #b4fa74 0%, transparent 70%)' }} />
-            </div>
-            <FloatingParticles count={10} />
-            <PulsingOrb size={220} top="-80px" left="-100px" delay={0} />
-            <PulsingOrb size={160} bottom="-60px" right="-80px" delay={1.5} />
             <div className="container mx-auto max-w-6xl relative z-10">
               <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center justify-between">
                 {/* Left */}
@@ -441,10 +236,6 @@ export default function LandingPage() {
           {/* ═══════════════ Value Propositions ═══════════════ */}
           {/* --- Value Prop 1: Snap & Save --- */}
           <section className="py-16 md:py-24 px-4 relative overflow-hidden">
-            <DynamicDotsOverlay variant={0} />
-            <FloatingParticles count={10} />
-            <PulsingOrb size={180} top="-50px" right="-70px" delay={0} />
-            <PulsingOrb size={100} bottom="10%" left="-40px" delay={1.5} />
             <div className="container mx-auto max-w-6xl relative z-10">
               <div className="text-center mb-14">
                 <h2 style={{ color: '#b4fa74' }} className="text-3xl md:text-5xl font-permanent-marker mb-3">
@@ -473,10 +264,6 @@ export default function LandingPage() {
 
           {/* --- Value Prop 2: Grab & Rescue --- */}
           <section className="py-16 md:py-24 px-4 relative overflow-hidden">
-            <DynamicDotsOverlay variant={1} />
-            <FloatingParticles count={8} />
-            <PulsingOrb size={140} top="20%" left="-50px" delay={0.5} />
-            <PulsingOrb size={120} bottom="-30px" right="-40px" delay={2} />
             <div className="container mx-auto max-w-6xl relative z-10">
               <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
                 <div className="flex-1 max-w-xs md:max-w-sm">
@@ -498,10 +285,6 @@ export default function LandingPage() {
 
           {/* --- Value Prop 3: Track & Compete --- */}
           <section className="py-16 md:py-24 px-4 relative overflow-hidden">
-            <DynamicDotsOverlay variant={2} />
-            <FloatingParticles count={8} />
-            <PulsingOrb size={160} top="-40px" left="30%" delay={0} />
-            <PulsingOrb size={100} bottom="15%" right="-50px" delay={1} />
             <div className="container mx-auto max-w-6xl relative z-10">
               <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
                 <div className="flex-1 order-2 md:order-1">
@@ -523,69 +306,7 @@ export default function LandingPage() {
 
           {/* ═══════════════ Play for the Planet ═══════════════ */}
           <section className="py-20 md:py-28 px-4 relative overflow-hidden">
-            <DynamicDotsOverlay variant={2} />
-            <FloatingParticles count={8} />
-            <PulsingOrb size={200} top="10%" left="-60px" delay={0} />
-            <PulsingOrb size={120} bottom="20%" right="-40px" delay={2} />
             <div className="container mx-auto max-w-6xl relative z-10">
-              {/* Network hub visual behind title */}
-              <div className="flex justify-center mb-12">
-                <div className="relative w-72 h-72 md:w-96 md:h-96">
-                  <div className="absolute inset-0 rounded-full opacity-10 blur-3xl" style={{ backgroundColor: '#b4fa74' }} />
-                  <div className="absolute inset-0 rounded-full border-2 border-dashed border-white/10 animate-[spin_30s_linear_infinite]" />
-                  <div className="absolute inset-8 rounded-full border border-white/5 animate-[spin_20s_linear_infinite_reverse]" />
-                  <div className="absolute inset-16 rounded-full border border-white/[0.03]" />
-                  {[0, 60, 120, 180, 240, 300].map((deg, i) =>
-                  <div key={i} className="absolute inset-0 animate-[spin_25s_linear_infinite]" style={{ animationDelay: `${-i * 4.17}s` }}>
-                      <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 md:w-5 md:h-5 rounded-full border border-white/20 flex items-center justify-center"
-                    style={{ animation: `pulse-glow 3s ease-in-out ${i * 0.5}s infinite alternate` }}>
-                        <div className="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full" style={{ backgroundColor: '#b4fa74', opacity: 0.6 + i % 3 * 0.15 }} />
-                      </div>
-                    </div>
-                  )}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="relative">
-                      <div className="w-32 h-32 md:w-40 md:h-40 rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.06] to-transparent flex items-center justify-center shadow-[0_0_50px_rgba(180,250,116,0.12)]" style={{ transform: 'rotate(-3deg)' }}>
-                        <svg viewBox="0 0 80 80" className="w-20 h-20 md:w-24 md:h-24" fill="none" stroke="#b4fa74" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                          <circle cx="40" cy="40" r="8" fill="#b4fa74" opacity="0.15" stroke="#b4fa74" strokeWidth="1.5" />
-                          <circle cx="40" cy="40" r="3" fill="#b4fa74" opacity="0.5" />
-                          <circle cx="18" cy="18" r="6" fill="#b4fa74" opacity="0.08" stroke="#b4fa74" />
-                          <circle cx="62" cy="18" r="6" fill="#b4fa74" opacity="0.08" stroke="#b4fa74" />
-                          <circle cx="18" cy="62" r="6" fill="#b4fa74" opacity="0.08" stroke="#b4fa74" />
-                          <circle cx="62" cy="62" r="6" fill="#b4fa74" opacity="0.08" stroke="#b4fa74" />
-                          <circle cx="40" cy="12" r="5" fill="#b4fa74" opacity="0.08" stroke="#b4fa74" />
-                          <circle cx="40" cy="68" r="5" fill="#b4fa74" opacity="0.08" stroke="#b4fa74" />
-                          <line x1="40" y1="40" x2="18" y2="18" stroke="#b4fa74" opacity="0.3" strokeDasharray="3 3" />
-                          <line x1="40" y1="40" x2="62" y2="18" stroke="#b4fa74" opacity="0.3" strokeDasharray="3 3" />
-                          <line x1="40" y1="40" x2="18" y2="62" stroke="#b4fa74" opacity="0.3" strokeDasharray="3 3" />
-                          <line x1="40" y1="40" x2="62" y2="62" stroke="#b4fa74" opacity="0.3" strokeDasharray="3 3" />
-                          <line x1="40" y1="40" x2="40" y2="12" stroke="#b4fa74" opacity="0.3" strokeDasharray="3 3" />
-                          <line x1="40" y1="40" x2="40" y2="68" stroke="#b4fa74" opacity="0.3" strokeDasharray="3 3" />
-                          <line x1="18" y1="18" x2="62" y2="18" stroke="#b4fa74" opacity="0.12" />
-                          <line x1="18" y1="62" x2="62" y2="62" stroke="#b4fa74" opacity="0.12" />
-                          <line x1="18" y1="18" x2="18" y2="62" stroke="#b4fa74" opacity="0.12" />
-                          <line x1="62" y1="18" x2="62" y2="62" stroke="#b4fa74" opacity="0.12" />
-                          <circle cx="18" cy="18" r="2.5" fill="#b4fa74" opacity="0.5" />
-                          <circle cx="62" cy="18" r="2.5" fill="#b4fa74" opacity="0.5" />
-                          <circle cx="18" cy="62" r="2.5" fill="#b4fa74" opacity="0.5" />
-                          <circle cx="62" cy="62" r="2.5" fill="#b4fa74" opacity="0.5" />
-                          <circle cx="40" cy="12" r="2" fill="#b4fa74" opacity="0.5" />
-                          <circle cx="40" cy="68" r="2" fill="#b4fa74" opacity="0.5" />
-                        </svg>
-                      </div>
-                      <div className="absolute -top-6 -right-6 w-8 h-8 rounded-full border border-white/20 flex items-center justify-center" style={{ animation: 'pulse-glow 3s ease-in-out infinite alternate' }}>
-                        <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#b4fa74' }} />
-                      </div>
-                      <div className="absolute -bottom-5 -left-7 w-10 h-10 rounded-full border border-white/10 flex items-center justify-center" style={{ animation: 'pulse-glow 3s ease-in-out 1.5s infinite alternate' }}>
-                        <div className="w-4 h-4 rounded-full" style={{ backgroundColor: '#b4fa74', opacity: 0.4 }} />
-                      </div>
-                      <div className="absolute top-1/2 -right-10 w-6 h-6 rounded-full border border-white/15 flex items-center justify-center" style={{ animation: 'pulse-glow 3s ease-in-out 0.8s infinite alternate' }}>
-                        <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#b4fa74', opacity: 0.6 }} />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
               <FeatureRow
                 title={t('landing.playPlanet.title')}
                 subtitle={t('landing.playPlanet.subtitle')}
@@ -596,8 +317,6 @@ export default function LandingPage() {
 
           {/* ═══════════════ Final Beta CTA ═══════════════ */}
           <section id="waitlist" className="relative py-20 px-4">
-            <FloatingParticles count={6} />
-            <PulsingOrb size={150} top="10%" right="-50px" delay={0.8} />
             <div className="container mx-auto max-w-3xl text-center relative z-10">
               <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#141414] via-[#111] to-[#0d1a0d] p-10 md:p-14">
                 {/* Decorative glows */}
