@@ -74,15 +74,15 @@ export const HeroSection = ({ className }: HeroSectionProps) => {
         
         {/* H1 text positioned over the blank sign - Desktop */}
         <h1 
-          className="absolute font-permanent-marker text-center leading-tight hidden md:block"
+          className="absolute font-permanent-marker text-center leading-snug hidden md:block"
           style={{
-            top: '62%',
-            left: '28%',
+            top: '63%',
+            left: '27%',
             transform: 'translate(-50%, -50%)',
-            fontSize: 'clamp(0.8rem, 2.2vw, 2rem)',
+            fontSize: 'clamp(1rem, 2.8vw, 2.8rem)',
             color: '#3a2a1a',
             textShadow: '1px 1px 2px rgba(0,0,0,0.1)',
-            maxWidth: '28%',
+            maxWidth: '32%',
             letterSpacing: '0.02em',
           }}
         >
@@ -91,16 +91,16 @@ export const HeroSection = ({ className }: HeroSectionProps) => {
 
         {/* H1 text positioned over the blank sign - Mobile */}
         <h1 
-          className="absolute font-permanent-marker text-center leading-tight block md:hidden"
+          className="absolute font-permanent-marker text-center leading-snug block md:hidden"
           aria-hidden="true"
           style={{
             top: '30%',
             left: '32%',
             transform: 'translate(-50%, -50%)',
-            fontSize: 'clamp(0.7rem, 4vw, 1.4rem)',
+            fontSize: 'clamp(1rem, 5vw, 1.8rem)',
             color: '#3a2a1a',
             textShadow: '1px 1px 2px rgba(0,0,0,0.1)',
-            maxWidth: '50%',
+            maxWidth: '55%',
             letterSpacing: '0.02em',
           }}
         >
