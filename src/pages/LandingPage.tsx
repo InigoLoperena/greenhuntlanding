@@ -17,11 +17,6 @@ import valueProp1 from "@/assets/value-prop-1.png";
 import valueProp2 from "@/assets/value-prop-2.png";
 import valueProp3 from "@/assets/value-prop-3.png";
 import appMapScreen from "@/assets/app-map-screen-new.png";
-import madMaxCityBg from "@/assets/mad-max-city-bg.jpg";
-import greenhuntLogoNew from "@/assets/greenhunt-logo-new.svg";
-import signWoodLogo from "@/assets/sign-wood-logo.png";
-import signWoodTitle from "@/assets/sign-wood-title.png";
-import signStoneSubtitle from "@/assets/sign-stone-subtitle.png";
 
 const emailSchema = z.string().email();
 
@@ -207,51 +202,148 @@ export default function LandingPage() {
           {/* Hero Section */}
           <HeroSection className="my-0 py-[80px]" />
 
-          {/* ═══════════════ App Promo & CTA - Mad Max Style ═══════════════ */}
-          <section className="relative overflow-hidden">
-            {/* Mad Max Background */}
-            <div className="absolute inset-0">
-              <img src={madMaxCityBg} alt="" className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-black/40" />
-              <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-transparent to-[#0a0a0a]" />
-            </div>
+          {/* ═══════════════ App Promo & CTA ═══════════════ */}
+          <section className="px-4 py-16 relative overflow-hidden">
+            {/* Circular economy animated background - collaboration network */}
+            <div className="absolute inset-0 pointer-events-none">
+              {/* Large SVG animated network representing local collaboration */}
+              <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+                {/* Rotating outer ring */}
+                <g style={{ transformOrigin: '600px 400px', animation: 'spin-slow 60s linear infinite' }}>
+                  <circle cx="600" cy="400" r="340" fill="none" stroke="#b4fa74" strokeWidth="1" opacity="0.08" strokeDasharray="20 10" />
+                  <circle cx="600" cy="400" r="280" fill="none" stroke="#b4fa74" strokeWidth="0.8" opacity="0.06" strokeDasharray="8 16" />
+                </g>
+                <g style={{ transformOrigin: '600px 400px', animation: 'spin-slow 45s linear infinite reverse' }}>
+                  <circle cx="600" cy="400" r="220" fill="none" stroke="#b4fa74" strokeWidth="1.2" opacity="0.1" strokeDasharray="12 8" />
+                </g>
 
-            <div className="container mx-auto max-w-6xl relative z-10 px-4 py-20 md:py-28">
+                {/* Animated connection paths between "actors" */}
+                {/* Path 1: Hunter → Store */}
+                <path d="M200,200 Q400,100 600,180" fill="none" stroke="#b4fa74" strokeWidth="1.5" opacity="0.15" strokeDasharray="6 4">
+                  <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="4s" repeatCount="indefinite" />
+                </path>
+                {/* Path 2: Store → Recycler */}
+                <path d="M600,180 Q800,250 950,400" fill="none" stroke="#b4fa74" strokeWidth="1.5" opacity="0.12" strokeDasharray="6 4">
+                  <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="5s" repeatCount="indefinite" />
+                </path>
+                {/* Path 3: Recycler → Community */}
+                <path d="M950,400 Q850,600 600,650" fill="none" stroke="#b4fa74" strokeWidth="1.5" opacity="0.12" strokeDasharray="6 4">
+                  <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="4.5s" repeatCount="indefinite" />
+                </path>
+                {/* Path 4: Community → Hunter (closing the circle) */}
+                <path d="M600,650 Q350,600 200,200" fill="none" stroke="#b4fa74" strokeWidth="1.5" opacity="0.15" strokeDasharray="6 4">
+                  <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="5.5s" repeatCount="indefinite" />
+                </path>
+                {/* Cross paths - inner collaboration */}
+                <path d="M200,200 Q500,400 950,400" fill="none" stroke="#b4fa74" strokeWidth="0.8" opacity="0.06" strokeDasharray="4 8">
+                  <animate attributeName="stroke-dashoffset" from="0" to="-80" dur="6s" repeatCount="indefinite" />
+                </path>
+                <path d="M600,180 Q500,450 600,650" fill="none" stroke="#b4fa74" strokeWidth="0.8" opacity="0.06" strokeDasharray="4 8">
+                  <animate attributeName="stroke-dashoffset" from="0" to="-80" dur="7s" repeatCount="indefinite" />
+                </path>
+
+                {/* Node hubs - represent different actors */}
+                {/* Hunter node */}
+                <g>
+                  <circle cx="200" cy="200" r="18" fill="#b4fa74" opacity="0.08">
+                    <animate attributeName="r" values="16;22;16" dur="3s" repeatCount="indefinite" />
+                    <animate attributeName="opacity" values="0.06;0.15;0.06" dur="3s" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="200" cy="200" r="6" fill="#b4fa74" opacity="0.3" />
+                  <circle cx="200" cy="200" r="30" fill="none" stroke="#b4fa74" opacity="0.08" strokeWidth="0.5">
+                    <animate attributeName="r" values="28;38;28" dur="4s" repeatCount="indefinite" />
+                    <animate attributeName="opacity" values="0.08;0.02;0.08" dur="4s" repeatCount="indefinite" />
+                  </circle>
+                </g>
+                {/* Store node */}
+                <g>
+                  <circle cx="600" cy="180" r="18" fill="#b4fa74" opacity="0.08">
+                    <animate attributeName="r" values="16;22;16" dur="3.5s" repeatCount="indefinite" />
+                    <animate attributeName="opacity" values="0.06;0.15;0.06" dur="3.5s" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="600" cy="180" r="6" fill="#b4fa74" opacity="0.3" />
+                  <circle cx="600" cy="180" r="30" fill="none" stroke="#b4fa74" opacity="0.08" strokeWidth="0.5">
+                    <animate attributeName="r" values="28;38;28" dur="4.5s" repeatCount="indefinite" />
+                  </circle>
+                </g>
+                {/* Recycler node */}
+                <g>
+                  <circle cx="950" cy="400" r="18" fill="#b4fa74" opacity="0.08">
+                    <animate attributeName="r" values="16;24;16" dur="4s" repeatCount="indefinite" />
+                    <animate attributeName="opacity" values="0.06;0.15;0.06" dur="4s" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="950" cy="400" r="7" fill="#b4fa74" opacity="0.25" />
+                  <circle cx="950" cy="400" r="32" fill="none" stroke="#b4fa74" opacity="0.06" strokeWidth="0.5">
+                    <animate attributeName="r" values="30;42;30" dur="5s" repeatCount="indefinite" />
+                  </circle>
+                </g>
+                {/* Community node */}
+                <g>
+                  <circle cx="600" cy="650" r="20" fill="#b4fa74" opacity="0.08">
+                    <animate attributeName="r" values="18;26;18" dur="3.8s" repeatCount="indefinite" />
+                    <animate attributeName="opacity" values="0.06;0.14;0.06" dur="3.8s" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="600" cy="650" r="7" fill="#b4fa74" opacity="0.25" />
+                  <circle cx="600" cy="650" r="34" fill="none" stroke="#b4fa74" opacity="0.06" strokeWidth="0.5">
+                    <animate attributeName="r" values="32;44;32" dur="4.2s" repeatCount="indefinite" />
+                  </circle>
+                </g>
+
+                {/* Traveling particles along paths - represent exchanges */}
+                <circle r="3" fill="#b4fa74" opacity="0.5">
+                  <animateMotion dur="4s" repeatCount="indefinite" path="M200,200 Q400,100 600,180" />
+                  <animate attributeName="opacity" values="0.1;0.6;0.1" dur="4s" repeatCount="indefinite" />
+                </circle>
+                <circle r="3" fill="#b4fa74" opacity="0.5">
+                  <animateMotion dur="5s" repeatCount="indefinite" path="M600,180 Q800,250 950,400" />
+                  <animate attributeName="opacity" values="0.1;0.6;0.1" dur="5s" repeatCount="indefinite" />
+                </circle>
+                <circle r="3" fill="#b4fa74" opacity="0.5">
+                  <animateMotion dur="4.5s" repeatCount="indefinite" path="M950,400 Q850,600 600,650" />
+                  <animate attributeName="opacity" values="0.1;0.6;0.1" dur="4.5s" repeatCount="indefinite" />
+                </circle>
+                <circle r="3" fill="#b4fa74" opacity="0.5">
+                  <animateMotion dur="5.5s" repeatCount="indefinite" path="M600,650 Q350,600 200,200" />
+                  <animate attributeName="opacity" values="0.1;0.6;0.1" dur="5.5s" repeatCount="indefinite" />
+                </circle>
+                {/* Extra traveling particles for density */}
+                <circle r="2" fill="#b4fa74" opacity="0.3">
+                  <animateMotion dur="6s" repeatCount="indefinite" path="M200,200 Q500,400 950,400" />
+                  <animate attributeName="opacity" values="0.05;0.4;0.05" dur="6s" repeatCount="indefinite" />
+                </circle>
+                <circle r="2" fill="#b4fa74" opacity="0.3">
+                  <animateMotion dur="7s" repeatCount="indefinite" path="M600,180 Q500,450 600,650" />
+                  <animate attributeName="opacity" values="0.05;0.4;0.05" dur="7s" repeatCount="indefinite" />
+                </circle>
+
+                {/* Small scattered dots - represent activity */}
+                {[
+                [150, 350], [300, 500], [450, 300], [750, 550], [850, 250], [400, 150], [700, 700], [100, 500], [900, 600], [500, 550],
+                [350, 250], [800, 350], [250, 600], [650, 450], [1000, 300]].
+                map(([cx, cy], i) =>
+                <circle key={i} cx={cx} cy={cy} r={1 + i % 3} fill="#b4fa74" opacity={0.05 + i % 5 * 0.03}>
+                    <animate attributeName="opacity" values={`${0.03 + i % 4 * 0.02};${0.15 + i % 3 * 0.05};${0.03 + i % 4 * 0.02}`} dur={`${3 + i * 0.3}s`} repeatCount="indefinite" />
+                  </circle>
+                )}
+              </svg>
+
+              {/* Radial glow behind center */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] md:w-[800px] md:h-[800px] rounded-full opacity-[0.04]" style={{ background: 'radial-gradient(circle, #b4fa74 0%, transparent 70%)' }} />
+            </div>
+            <FloatingParticles count={10} />
+            <PulsingOrb size={220} top="-80px" left="-100px" delay={0} />
+            <PulsingOrb size={160} bottom="-60px" right="-80px" delay={1.5} />
+            <div className="container mx-auto max-w-6xl relative z-10">
               <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center justify-between">
                 {/* Left */}
-                <div className="flex-1 text-center lg:text-left flex flex-col items-center lg:items-start">
-                  {/* Logo on wooden sign - real asset */}
-                  <div className="relative mb-4">
-                    <img src={signWoodLogo} alt="" className="w-[300px] sm:w-[380px] h-auto drop-shadow-2xl" />
-                    <div className="absolute inset-0 flex items-center justify-center px-14 py-10">
-                      <img src={greenhuntLogoNew} alt="GreenHunt Logo" className="h-12 sm:h-16 w-auto" style={{ filter: 'drop-shadow(0 3px 8px rgba(0,0,0,0.7))' }} />
-                    </div>
-                  </div>
-
-                  {/* Title on wooden plank sign - real asset */}
-                  <div className="relative mb-4">
-                    <img src={signWoodTitle} alt="" className="w-[340px] sm:w-[440px] md:w-[520px] h-auto drop-shadow-2xl" />
-                    <div className="absolute inset-0 flex items-center justify-center px-16 sm:px-20 py-4">
-                      <h2 className="font-permanent-marker text-lg sm:text-xl md:text-2xl lg:text-3xl leading-tight text-center uppercase"
-                        style={{ 
-                          color: '#f0e0c0',
-                          textShadow: '2px 2px 4px rgba(0,0,0,0.9), 0 0 8px rgba(0,0,0,0.5)',
-                        }}>
-                        {t('landing.app.title')}
-                      </h2>
-                    </div>
-                  </div>
-
-                  {/* Subtitle on stone tablet - real asset */}
-                  <div className="relative mb-10 max-w-xl">
-                    <img src={signStoneSubtitle} alt="" className="w-full h-auto drop-shadow-xl" />
-                    <div className="absolute inset-0 flex items-center justify-center px-14 sm:px-18 py-4">
-                      <p className="font-sedgwick-ave text-sm sm:text-base md:text-lg leading-relaxed whitespace-pre-line text-center"
-                        style={{ color: '#3a3228', textShadow: '0 1px 1px rgba(255,255,255,0.15)' }}>
-                        {t('landing.app.subtitle')}
-                      </p>
-                    </div>
-                  </div>
+                <div className="flex-1 text-center lg:text-left">
+                  <h2 className="font-permanent-marker text-3xl md:text-4xl lg:text-5xl mb-4" style={{ color: '#b4fa74' }}>
+                    {t('landing.app.title')}
+                  </h2>
+                  <div className="w-16 h-1 rounded-full mx-auto lg:mx-0 mb-5" style={{ backgroundColor: '#b4fa74', opacity: 0.5 }} />
+                  <p className="font-sedgwick-ave text-subtitle-styled text-xl md:text-2xl max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed whitespace-pre-line">
+                    {t('landing.app.subtitle')}
+                  </p>
                   
                   {/* CTA Buttons */}
                   <div className="flex flex-row gap-4 items-center justify-center lg:justify-start mt-4">
@@ -259,6 +351,7 @@ export default function LandingPage() {
                       onClick={() => setWaitlistOpen(true)}
                       className="bg-[#b4fa74] hover:bg-[#a2e866] font-permanent-marker text-xl px-8 py-6 rounded-xl transition-all shadow-[0_0_25px_rgba(180,250,116,0.25)] hover:shadow-[0_0_40px_rgba(180,250,116,0.35)]"
                       style={{ color: '#0a0a0a' }}>
+                      
                       {language === 'en' ? 'GET BETA' : 'OBTÉN BETA'}
                       <ChevronRight className="ml-1 h-5 w-5" style={{ color: '#0a0a0a', stroke: '#0a0a0a' }} />
                     </Button>
@@ -270,6 +363,7 @@ export default function LandingPage() {
                         borderColor: '#b4fa74',
                         boxShadow: '0 0 15px rgba(180, 250, 116, 0.25), inset 0 0 15px rgba(180, 250, 116, 0.05)'
                       }}>
+                      
                       <Video className="h-5 w-5" style={{ color: '#611a5a', fill: '#611a5a', stroke: '#611a5a' }} />
                       <span className="tracking-wider" style={{ color: '#b4fa74' }}>TRAILER</span>
                     </button>
@@ -294,6 +388,7 @@ export default function LandingPage() {
                       loading="lazy"
                       src={appMapScreen}
                     />
+                    
                   </div>
                 </div>
               </div>
