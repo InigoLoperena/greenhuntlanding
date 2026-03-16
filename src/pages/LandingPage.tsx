@@ -200,7 +200,9 @@ export default function LandingPage() {
           <StructuredData />
           
           {/* Hero Section */}
-          <HeroSection className="my-0 py-[80px]" />
+          <div className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
+            <HeroSection className="my-0" />
+          </div>
 
           {/* ═══════════════ App Promo & CTA ═══════════════ */}
           <section className="px-4 py-16 relative overflow-hidden">
