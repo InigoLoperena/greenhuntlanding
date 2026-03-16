@@ -19,6 +19,8 @@ import valueProp3 from "@/assets/value-prop-3.png";
 import appMapScreen from "@/assets/app-map-screen-new.png";
 import madMaxCityBg from "@/assets/mad-max-city-bg.jpg";
 import greenhuntLogoNew from "@/assets/greenhunt-logo-new.svg";
+import woodenSignTexture from "@/assets/wooden-sign-texture.png";
+import metalSignTexture from "@/assets/metal-sign-texture.png";
 
 const emailSchema = z.string().email();
 
@@ -209,7 +211,7 @@ export default function LandingPage() {
             {/* Mad Max Background */}
             <div className="absolute inset-0">
               <img src={madMaxCityBg} alt="" className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-black/50" />
+              <div className="absolute inset-0 bg-black/40" />
               <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-transparent to-[#0a0a0a]" />
             </div>
 
@@ -217,62 +219,74 @@ export default function LandingPage() {
               <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center justify-between">
                 {/* Left */}
                 <div className="flex-1 text-center lg:text-left">
-                  {/* Logo in wooden sign */}
-                  <div className="inline-block mb-8 relative">
-                    <div className="relative px-6 py-4 rounded-lg border-4 border-[#5a3a1a]"
-                      style={{
-                        background: 'linear-gradient(135deg, #4a2e12 0%, #6b4423 30%, #3d2410 60%, #5a3a1a 100%)',
-                        boxShadow: '0 8px 30px rgba(0,0,0,0.6), inset 0 2px 4px rgba(255,255,255,0.1), inset 0 -2px 4px rgba(0,0,0,0.3)',
-                      }}>
-                      {/* Wood grain texture overlay */}
-                      <div className="absolute inset-0 rounded-lg opacity-20" style={{
-                        backgroundImage: 'repeating-linear-gradient(90deg, transparent, transparent 8px, rgba(0,0,0,0.15) 8px, rgba(0,0,0,0.15) 9px)',
-                      }} />
-                      {/* Nails */}
-                      <div className="absolute top-2 left-3 w-3 h-3 rounded-full bg-[#8a8a8a] shadow-inner" style={{ boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.5), 0 1px 1px rgba(255,255,255,0.1)' }} />
-                      <div className="absolute top-2 right-3 w-3 h-3 rounded-full bg-[#8a8a8a] shadow-inner" style={{ boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.5), 0 1px 1px rgba(255,255,255,0.1)' }} />
-                      <div className="absolute bottom-2 left-3 w-3 h-3 rounded-full bg-[#7a7a7a] shadow-inner" style={{ boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.5)' }} />
-                      <div className="absolute bottom-2 right-3 w-3 h-3 rounded-full bg-[#7a7a7a] shadow-inner" style={{ boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.5)' }} />
-                      <img src={greenhuntLogoNew} alt="GreenHunt Logo" className="relative h-16 sm:h-20 w-auto" />
+                  {/* Logo on real wooden sign */}
+                  <div className="inline-block mb-6 relative">
+                    <div className="relative overflow-hidden rounded-md" style={{
+                      boxShadow: '0 12px 40px rgba(0,0,0,0.8), 0 4px 8px rgba(0,0,0,0.5)',
+                    }}>
+                      <img src={woodenSignTexture} alt="" className="absolute inset-0 w-full h-full object-cover" />
+                      <div className="absolute inset-0 bg-black/20" />
+                      {/* Metal corner brackets */}
+                      <div className="absolute top-0 left-0 w-6 h-6 border-t-[3px] border-l-[3px] border-[#6b6b6b] rounded-tl-sm" style={{ boxShadow: 'inset 1px 1px 2px rgba(255,255,255,0.15)' }} />
+                      <div className="absolute top-0 right-0 w-6 h-6 border-t-[3px] border-r-[3px] border-[#6b6b6b] rounded-tr-sm" style={{ boxShadow: 'inset -1px 1px 2px rgba(255,255,255,0.15)' }} />
+                      <div className="absolute bottom-0 left-0 w-6 h-6 border-b-[3px] border-l-[3px] border-[#5a5a5a] rounded-bl-sm" />
+                      <div className="absolute bottom-0 right-0 w-6 h-6 border-b-[3px] border-r-[3px] border-[#5a5a5a] rounded-br-sm" />
+                      {/* Rusty nails */}
+                      <div className="absolute top-2 left-2 w-[10px] h-[10px] rounded-full" style={{ background: 'radial-gradient(circle, #8a7a6a 30%, #5a4a3a 70%)', boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.6), 0 1px 1px rgba(255,255,255,0.08)' }} />
+                      <div className="absolute top-2 right-2 w-[10px] h-[10px] rounded-full" style={{ background: 'radial-gradient(circle, #8a7a6a 30%, #5a4a3a 70%)', boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.6), 0 1px 1px rgba(255,255,255,0.08)' }} />
+                      <div className="absolute bottom-2 left-2 w-[10px] h-[10px] rounded-full" style={{ background: 'radial-gradient(circle, #7a6a5a 30%, #4a3a2a 70%)', boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.6)' }} />
+                      <div className="absolute bottom-2 right-2 w-[10px] h-[10px] rounded-full" style={{ background: 'radial-gradient(circle, #7a6a5a 30%, #4a3a2a 70%)', boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.6)' }} />
+                      <div className="relative px-8 py-5">
+                        <img src={greenhuntLogoNew} alt="GreenHunt Logo" className="relative h-16 sm:h-20 w-auto drop-shadow-lg" />
+                      </div>
                     </div>
+                    {/* Hanging chain effect */}
+                    <div className="absolute -top-4 left-1/4 w-px h-4 bg-gradient-to-b from-transparent to-[#6b6b6b]" />
+                    <div className="absolute -top-4 right-1/4 w-px h-4 bg-gradient-to-b from-transparent to-[#6b6b6b]" />
                   </div>
 
-                  {/* Title in metal sign */}
+                  {/* Title on real wooden sign - big and impactful */}
                   <div className="relative mb-6 inline-block">
-                    <div className="relative px-6 py-4 md:px-8 md:py-5 rounded-md border-2"
-                      style={{
-                        background: 'linear-gradient(180deg, #5a4a3a 0%, #3d2e1f 40%, #2a1e12 100%)',
-                        borderColor: '#6b4a2a',
-                        boxShadow: '0 6px 20px rgba(0,0,0,0.5), inset 0 1px 3px rgba(255,255,255,0.08), inset 0 -2px 4px rgba(0,0,0,0.4)',
-                      }}>
-                      {/* Rust spots */}
-                      <div className="absolute top-1 right-4 w-5 h-3 rounded-full bg-[#8b4513] opacity-20 blur-[1px]" />
-                      <div className="absolute bottom-2 left-6 w-7 h-4 rounded-full bg-[#a0522d] opacity-15 blur-[2px]" />
-                      <h2 className="relative font-permanent-marker text-3xl md:text-4xl lg:text-5xl leading-tight"
+                    <div className="relative overflow-hidden rounded-md" style={{
+                      boxShadow: '0 15px 50px rgba(0,0,0,0.8), 0 5px 15px rgba(0,0,0,0.5), inset 0 0 30px rgba(0,0,0,0.2)',
+                    }}>
+                      <img src={woodenSignTexture} alt="" className="absolute inset-0 w-full h-full object-cover" />
+                      <div className="absolute inset-0 bg-black/25" />
+                      {/* Metal brackets on edges */}
+                      <div className="absolute top-0 left-0 right-0 h-[4px]" style={{ background: 'linear-gradient(90deg, #5a4a3a, #8a7a6a 20%, #6b5b4b 50%, #8a7a6a 80%, #5a4a3a)' }} />
+                      <div className="absolute bottom-0 left-0 right-0 h-[4px]" style={{ background: 'linear-gradient(90deg, #4a3a2a, #7a6a5a 20%, #5b4b3b 50%, #7a6a5a 80%, #4a3a2a)' }} />
+                      {/* Nails */}
+                      <div className="absolute top-3 left-4 w-3 h-3 rounded-full" style={{ background: 'radial-gradient(circle, #9a8a7a 20%, #5a4a3a 70%)', boxShadow: 'inset 0 1px 3px rgba(0,0,0,0.7), 0 1px 2px rgba(255,255,255,0.1)' }} />
+                      <div className="absolute top-3 right-4 w-3 h-3 rounded-full" style={{ background: 'radial-gradient(circle, #9a8a7a 20%, #5a4a3a 70%)', boxShadow: 'inset 0 1px 3px rgba(0,0,0,0.7), 0 1px 2px rgba(255,255,255,0.1)' }} />
+                      <div className="absolute bottom-3 left-4 w-3 h-3 rounded-full" style={{ background: 'radial-gradient(circle, #8a7a6a 20%, #4a3a2a 70%)', boxShadow: 'inset 0 1px 3px rgba(0,0,0,0.7)' }} />
+                      <div className="absolute bottom-3 right-4 w-3 h-3 rounded-full" style={{ background: 'radial-gradient(circle, #8a7a6a 20%, #4a3a2a 70%)', boxShadow: 'inset 0 1px 3px rgba(0,0,0,0.7)' }} />
+                      <h2 className="relative font-permanent-marker text-3xl md:text-4xl lg:text-5xl leading-tight px-8 py-6 md:px-10 md:py-7"
                         style={{ 
-                          color: '#e8d5b0',
-                          textShadow: '2px 2px 4px rgba(0,0,0,0.6), 0 0 20px rgba(180,250,116,0.15)'
+                          color: '#f5e6c8',
+                          textShadow: '3px 3px 6px rgba(0,0,0,0.8), 0 0 30px rgba(180,250,116,0.1), -1px -1px 0 rgba(0,0,0,0.4)',
                         }}>
                         {t('landing.app.title')}
                       </h2>
                     </div>
-                    {/* Small vine decoration */}
-                    <div className="absolute -top-3 -right-3 text-2xl" style={{ filter: 'drop-shadow(0 2px 3px rgba(0,0,0,0.5))' }}>🌿</div>
+                    {/* Vine decoration */}
+                    <div className="absolute -top-4 -right-4 text-3xl" style={{ filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.7))' }}>🌿</div>
+                    <div className="absolute -bottom-2 -left-3 text-2xl rotate-180" style={{ filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.7))' }}>🍃</div>
                   </div>
 
-                  {/* Subtitle in weathered stone/parchment */}
+                  {/* Subtitle on rusty metal plate */}
                   <div className="relative mb-10 max-w-xl mx-auto lg:mx-0">
-                    <div className="relative px-6 py-5 rounded-md"
-                      style={{
-                        background: 'linear-gradient(135deg, #d4c5a9 0%, #c4b393 30%, #b8a882 60%, #cfc0a5 100%)',
-                        boxShadow: '0 4px 15px rgba(0,0,0,0.4), inset 0 1px 2px rgba(255,255,255,0.3)',
-                        border: '1px solid #a89870',
-                      }}>
-                      {/* Cracks/wear */}
-                      <div className="absolute top-0 left-1/4 w-px h-full bg-[#8a7a5a] opacity-10" />
-                      <div className="absolute top-0 left-3/4 w-px h-full bg-[#8a7a5a] opacity-8" />
-                      <p className="relative font-sedgwick-ave text-xl md:text-2xl leading-relaxed whitespace-pre-line"
-                        style={{ color: '#3a2e1e', textShadow: '0 1px 1px rgba(255,255,255,0.3)' }}>
+                    <div className="relative overflow-hidden rounded-sm" style={{
+                      boxShadow: '0 10px 35px rgba(0,0,0,0.7), 0 3px 10px rgba(0,0,0,0.4)',
+                    }}>
+                      <img src={metalSignTexture} alt="" className="absolute inset-0 w-full h-full object-cover" />
+                      <div className="absolute inset-0 bg-black/15" />
+                      {/* Rivets */}
+                      <div className="absolute top-3 left-3 w-[10px] h-[10px] rounded-full" style={{ background: 'radial-gradient(circle, #7a7a7a 30%, #4a4a4a 70%)', boxShadow: '0 2px 3px rgba(0,0,0,0.5), inset 0 1px 2px rgba(255,255,255,0.15)' }} />
+                      <div className="absolute top-3 right-3 w-[10px] h-[10px] rounded-full" style={{ background: 'radial-gradient(circle, #7a7a7a 30%, #4a4a4a 70%)', boxShadow: '0 2px 3px rgba(0,0,0,0.5), inset 0 1px 2px rgba(255,255,255,0.15)' }} />
+                      <div className="absolute bottom-3 left-3 w-[10px] h-[10px] rounded-full" style={{ background: 'radial-gradient(circle, #6a6a6a 30%, #3a3a3a 70%)', boxShadow: '0 2px 3px rgba(0,0,0,0.5)' }} />
+                      <div className="absolute bottom-3 right-3 w-[10px] h-[10px] rounded-full" style={{ background: 'radial-gradient(circle, #6a6a6a 30%, #3a3a3a 70%)', boxShadow: '0 2px 3px rgba(0,0,0,0.5)' }} />
+                      <p className="relative font-sedgwick-ave text-xl md:text-2xl leading-relaxed whitespace-pre-line px-8 py-6"
+                        style={{ color: '#d4c8a0', textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
                         {t('landing.app.subtitle')}
                       </p>
                     </div>
