@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
-import heroBannerClean from "@/assets/hero-banner-clean.png";
-import heroMobileBackground from "@/assets/hero-mobile-background.png";
+import heroBanner from "@/assets/hero-banner.png";
+import heroMobile from "@/assets/hero-mobile.png";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { z } from "zod";
@@ -61,51 +61,16 @@ export const HeroSection = ({ className }: HeroSectionProps) => {
       <section className={`relative w-full overflow-hidden ${className || ''}`}>
         {/* Desktop background */}
         <img 
-          src={heroBannerClean} 
+          src={heroBanner} 
           alt="GreenHunt - Stooping Real World Game" 
           className="hidden md:block w-full h-auto"
         />
         {/* Mobile background */}
         <img 
-          src={heroMobileBackground} 
+          src={heroMobile} 
           alt="GreenHunt - Stooping Real World Game" 
           className="block md:hidden w-full h-auto"
         />
-        
-        {/* H1 text positioned over the blank sign - Desktop */}
-        <h1 
-          className="absolute font-permanent-marker text-center leading-snug hidden md:block"
-          style={{
-            top: '63%',
-            left: '27%',
-            transform: 'translate(-50%, -50%)',
-            fontSize: 'clamp(1rem, 2.8vw, 2.8rem)',
-            color: '#3a2a1a',
-            textShadow: '1px 1px 2px rgba(0,0,0,0.1)',
-            maxWidth: '32%',
-            letterSpacing: '0.02em',
-          }}
-        >
-          Stooping Real World Game
-        </h1>
-
-        {/* H1 text positioned over the blank sign - Mobile */}
-        <h1 
-          className="absolute font-permanent-marker text-center leading-snug block md:hidden"
-          aria-hidden="true"
-          style={{
-            top: '30%',
-            left: '32%',
-            transform: 'translate(-50%, -50%)',
-            fontSize: 'clamp(1rem, 5vw, 1.8rem)',
-            color: '#3a2a1a',
-            textShadow: '1px 1px 2px rgba(0,0,0,0.1)',
-            maxWidth: '55%',
-            letterSpacing: '0.02em',
-          }}
-        >
-          Stooping Real World Game
-        </h1>
       </section>
       {/* Waitlist Dialog */}
       <Dialog open={waitlistOpen} onOpenChange={setWaitlistOpen}>
