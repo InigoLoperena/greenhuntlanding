@@ -224,23 +224,23 @@ export default function LandingPage() {
                   <div className="flex flex-row gap-4 items-center justify-center">
                     <Button
                     onClick={() => setWaitlistOpen(true)}
-                    className="bg-[#b4fa74] hover:bg-[#a2e866] font-permanent-marker text-xl px-8 py-6 rounded-xl transition-all shadow-[0_0_25px_rgba(180,250,116,0.25)] hover:shadow-[0_0_40px_rgba(180,250,116,0.35)]"
-                    style={{ color: '#0a0a0a' }}>
+                    className="bg-[#c8a46e] hover:bg-[#b8956a] font-permanent-marker text-xl px-8 py-6 rounded-xl transition-all shadow-[0_0_25px_rgba(200,164,110,0.3)] hover:shadow-[0_0_40px_rgba(200,164,110,0.4)]"
+                    style={{ color: '#1a1206' }}>
                       
                       {language === 'en' ? 'GET BETA' : 'OBTÉN BETA'}
-                      <ChevronRight className="ml-1 h-5 w-5" style={{ color: '#0a0a0a', stroke: '#0a0a0a' }} />
+                      <ChevronRight className="ml-1 h-5 w-5" style={{ color: '#1a1206', stroke: '#1a1206' }} />
                     </Button>
                     
                     <button
                     onClick={() => setTrailerOpen(true)}
-                    className="font-permanent-marker text-sm px-6 py-3 h-auto rounded-xl border-2 bg-transparent hover:bg-[#b4fa74]/10 transition-all duration-300 flex items-center gap-2 cursor-pointer"
+                    className="font-permanent-marker text-sm px-6 py-3 h-auto rounded-xl border-2 bg-transparent hover:bg-[#c8a46e]/10 transition-all duration-300 flex items-center gap-2 cursor-pointer"
                     style={{
-                      borderColor: '#b4fa74',
-                      boxShadow: '0 0 15px rgba(180, 250, 116, 0.25), inset 0 0 15px rgba(180, 250, 116, 0.05)'
+                      borderColor: '#c8a46e',
+                      boxShadow: '0 0 15px rgba(200, 164, 110, 0.25), inset 0 0 15px rgba(200, 164, 110, 0.05)'
                     }}>
                       
-                      <Video className="h-5 w-5" style={{ color: '#611a5a', fill: '#611a5a', stroke: '#611a5a' }} />
-                      <span className="tracking-wider" style={{ color: '#b4fa74' }}>TRAILER</span>
+                      <Video className="h-5 w-5" style={{ color: '#1a1206', fill: '#1a1206', stroke: '#1a1206' }} />
+                      <span className="tracking-wider" style={{ color: '#c8a46e' }}>TRAILER</span>
                     </button>
                   </div>
               </div>
