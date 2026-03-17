@@ -380,10 +380,8 @@ export default function LandingPage() {
               {/* Eslogan y email */}
               <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-2">
                 <div className="flex items-center gap-2">
-                  <span className="font-sedgwick-ave text-lg" style={{ color: '#c8a46e' }}>{t('landing.footer.madeWith')}</span>
-                  <span className="text-xl">🤎</span>
-                  <span className="font-sedgwick-ave text-lg" style={{ color: '#c8a46e' }}>{t('landing.footer.forPlanet')}</span>
-                  <span className="text-xl">🌍</span>
+                  <span className="font-sedgwick-ave text-lg" style={{ color: '#c8a46e' }}>Made to stop the linear economy apocalypse</span>
+                  <span className="text-xl">💀🌍</span>
                 </div>
                 <a href="mailto:hello@greenhunt.net" className="font-sedgwick-ave text-lg hover:scale-105 transition-all" style={{ color: '#b8956a' }}>
                   hello@greenhunt.net
