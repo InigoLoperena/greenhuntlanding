@@ -316,7 +316,7 @@ export default function LandingPage() {
                       type="submit" disabled={loading}
                       className="bg-[#c8a46e] hover:bg-[#b8956a] font-permanent-marker rounded-xl px-8 text-lg shadow-[0_0_25px_rgba(200,164,110,0.2)]"
                       style={{ color: '#1a1206' }}>
-                      {loading ? t('landing.beta.loading') : t('landing.beta.cta')}
+                      {loading ? t('landing.beta.joining') : t('landing.beta.button')}
                     </Button>
                   </form>
                 </div>
