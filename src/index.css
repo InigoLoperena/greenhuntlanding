@@ -10,40 +10,37 @@ Underground, urban and rebellious brand style with Impact font and uppercase tex
 
 @layer base {
   :root {
-    /* Nueva nomenclatura de colores de marca:
-       Color 1: Verde oscuro #17503a (primary)
-       Color 2: Verde claro #729f31 (accent)  
-       Color 3: Gris (muted) */
-    --background: 0 0% 13%; /* Dark background #212121 */
-    --foreground: 82 52% 41%; /* Accent green for text */
+    /* Paleta madera/caqui sobre fondo negro-gris */
+    --background: 0 0% 7%; /* Near-black #121212 */
+    --foreground: 36 45% 60%; /* Wood brown #c8a46e */
 
-    --card: 0 0% 100%;
-    --card-foreground: 124 63% 20%;
+    --card: 0 0% 10%;
+    --card-foreground: 36 45% 60%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 124 63% 20%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 36 45% 60%;
 
-    --primary: 82 43% 45%; /* #72a241 para header y menú */
-    --primary-foreground: 0 0% 100%;
+    --primary: 36 45% 60%; /* Wood brown #c8a46e */
+    --primary-foreground: 0 0% 7%;
 
-    --secondary: 81 28% 7%; /* Color actualizado: #142113 */
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 30 25% 15%;
+    --secondary-foreground: 36 35% 75%;
 
-    --muted: 200 3% 12%; /* Color 3: Gris oscuro #1d2122 */
-    --muted-foreground: 124 63% 20%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 36 30% 50%;
 
-    --accent: 82 52% 41%; /* Color 2: Verde claro #729f31 */
-    --accent-foreground: 0 0% 100%;
-    --button-green-foreground: 307 57% 24%; /* #611a5a for text/icons on green buttons */
+    --accent: 36 45% 60%; /* Wood brown #c8a46e */
+    --accent-foreground: 0 0% 7%;
+    --button-green-foreground: 0 0% 7%; /* Dark text on brown buttons */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 200 3% 20%; /* Color 3: Gris para bordes */
-    --input: 82 20% 90%;
-    --ring: 124 63% 20%; /* Color 1: Verde oscuro para focus */
+    --border: 36 20% 20%;
+    --input: 36 20% 85%;
+    --ring: 36 45% 60%;
     
-    --price-blue: 220 85% 30%; /* Dark blue for prices */
+    --price-blue: 220 85% 30%;
 
     --radius: 0.5rem;
 
@@ -65,35 +62,35 @@ Underground, urban and rebellious brand style with Impact font and uppercase tex
   }
 
   .dark {
-    --background: 124 63% 8%; /* Very dark version of Color 1 */
-    --foreground: 0 0% 95%;
+    --background: 0 0% 5%;
+    --foreground: 36 40% 65%;
 
-    --card: 124 63% 10%;
-    --card-foreground: 0 0% 95%;
+    --card: 0 0% 8%;
+    --card-foreground: 36 40% 65%;
 
-    --popover: 124 63% 10%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 36 40% 65%;
 
-    --primary: 124 63% 20%; /* Color 1: Verde oscuro mantiene consistencia */
-    --primary-foreground: 0 0% 95%;
+    --primary: 36 45% 60%;
+    --primary-foreground: 0 0% 5%;
 
-    --secondary: 124 63% 15%;
-    --secondary-foreground: 0 0% 95%;
+    --secondary: 30 25% 12%;
+    --secondary-foreground: 36 35% 75%;
 
-    --muted: 200 3% 12%; /* Color 3: Gris oscuro #1d2122 */
-    --muted-foreground: 210 11% 65%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 36 25% 45%;
 
-    --accent: 82 52% 50%; /* Color 2: Verde claro más brillante para dark mode */
-    --accent-foreground: 124 63% 8%;
+    --accent: 36 50% 55%;
+    --accent-foreground: 0 0% 5%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 210 11% 20%; /* Color 3: Gris oscuro para bordes */
-    --input: 210 11% 20%;
-    --ring: 124 63% 20%; /* Color 1: Verde oscuro para focus */
+    --border: 36 15% 18%;
+    --input: 36 15% 18%;
+    --ring: 36 45% 60%;
     
-    --price-blue: 220 85% 40%; /* Lighter dark blue for dark mode */
+    --price-blue: 220 85% 40%;
     
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -162,7 +159,7 @@ Underground, urban and rebellious brand style with Impact font and uppercase tex
   .text-subtitle-styled {
     font-family: 'Sedgwick Ave', cursive;
     text-transform: lowercase;
-    color: #a2c041;
+    color: #b8956a;
   }
 
 }
