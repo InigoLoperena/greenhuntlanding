@@ -129,6 +129,16 @@ export default function LandingPage() {
             <HeroSection className="my-0" />
           </div>
 
+          {/* Stone Tagline */}
+          <div className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32 flex justify-center py-8 md:py-12">
+            <img 
+              src={stoneTagline} 
+              alt="Your city is like a board game where valuable free finds suddenly appear!" 
+              className="w-[85%] sm:w-[70%] md:w-[50%] lg:w-[40%] xl:w-[35%] h-auto"
+              loading="lazy"
+            />
+          </div>
+
           {/* ═══════════════ App Promo & CTA ═══════════════ */}
           <section className="px-4 py-16 relative overflow-hidden">
             <div className="container mx-auto max-w-6xl relative z-10">
