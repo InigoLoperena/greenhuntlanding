@@ -25,17 +25,17 @@ import savePlanetPhone from "@/assets/save-planet-phone.png";
 
 
 const streetFindsImages = [
-  "/street-finds/find-1.jpeg",
-  "/street-finds/find-2.jpeg",
-  "/street-finds/find-3.jpeg",
-  "/street-finds/find-4.jpeg",
-  "/street-finds/find-5.jpeg",
-  "/street-finds/find-6.jpeg",
-  "/street-finds/find-7.png",
-  "/street-finds/find-8.png",
-  "/street-finds/find-9.png",
-  "/street-finds/find-10.png",
-];
+"/street-finds/find-1.jpeg",
+"/street-finds/find-2.jpeg",
+"/street-finds/find-3.jpeg",
+"/street-finds/find-4.jpeg",
+"/street-finds/find-5.jpeg",
+"/street-finds/find-6.jpeg",
+"/street-finds/find-7.png",
+"/street-finds/find-8.png",
+"/street-finds/find-9.png",
+"/street-finds/find-10.png"];
+
 
 const FrameCarouselSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -56,28 +56,28 @@ const FrameCarouselSection = () => {
             src={savePlanetPhone}
             alt="Save the planet by sharing photos and coordinates of discarded street finds"
             className="w-full h-auto block lg:h-full lg:object-cover"
-            loading="lazy"
-          />
+            loading="lazy" />
+          
         </div>
 
         {/* Right: Street finds carousel */}
         <div className="w-full lg:w-1/2 flex items-center justify-center bg-black overflow-hidden">
           <div className="relative w-full aspect-square">
-            {streetFindsImages.map((img, i) => (
-              <img
-                key={img}
-                src={img}
-                alt={`Hallazgo callejero ${i + 1}`}
-                className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300"
-                style={{ opacity: i === currentIndex ? 1 : 0 }}
-                loading="lazy"
-              />
-            ))}
+            {streetFindsImages.map((img, i) =>
+            <img
+              key={img}
+              src={img}
+              alt={`Hallazgo callejero ${i + 1}`}
+              className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300"
+              style={{ opacity: i === currentIndex ? 1 : 0 }}
+              loading="lazy" />
+
+            )}
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 const emailSchema = z.string().email();
 
@@ -193,8 +193,8 @@ export default function LandingPage() {
               src={rescueMapScene}
               alt="Rescue Map - Your city is like a board game where valuable free finds suddenly appear!"
               className="w-full h-auto block"
-              loading="lazy"
-            />
+              loading="lazy" />
+            
           </div>
 
           {/* ═══════════════ Phone + Frame Carousel Section ═══════════════ */}
@@ -221,28 +221,28 @@ export default function LandingPage() {
             <div className="container mx-auto max-w-6xl relative z-10">
               <div className="flex flex-col items-center justify-center text-center">
                   {/* CTA Buttons */}
-                  <div className="flex flex-row gap-4 items-center justify-center">
-                    <Button
-                    onClick={() => setWaitlistOpen(true)}
-                    className="bg-[#c8a46e] hover:bg-[#b8956a] font-permanent-marker text-xl px-8 py-6 rounded-xl transition-all shadow-[0_0_25px_rgba(200,164,110,0.3)] hover:shadow-[0_0_40px_rgba(200,164,110,0.4)]"
-                    style={{ color: '#1a1206' }}>
-                      
-                      {language === 'en' ? 'GET BETA' : 'OBTÉN BETA'}
-                      <ChevronRight className="ml-1 h-5 w-5" style={{ color: '#1a1206', stroke: '#1a1206' }} />
-                    </Button>
-                    
-                    <button
-                    onClick={() => setTrailerOpen(true)}
-                    className="font-permanent-marker text-sm px-6 py-3 h-auto rounded-xl border-2 bg-transparent hover:bg-[#c8a46e]/10 transition-all duration-300 flex items-center gap-2 cursor-pointer"
-                    style={{
-                      borderColor: '#c8a46e',
-                      boxShadow: '0 0 15px rgba(200, 164, 110, 0.25), inset 0 0 15px rgba(200, 164, 110, 0.05)'
-                    }}>
-                      
-                      <Video className="h-5 w-5" style={{ color: '#1a1206', fill: '#1a1206', stroke: '#1a1206' }} />
-                      <span className="tracking-wider" style={{ color: '#c8a46e' }}>TRAILER</span>
-                    </button>
-                  </div>
+                  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </div>
             </div>
           </section>
