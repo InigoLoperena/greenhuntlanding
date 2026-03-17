@@ -405,7 +405,7 @@ export default function LandingPage() {
             <DialogContent className="sm:max-w-md bg-[#141414] border border-white/10 shadow-[0_0_60px_rgba(180,250,116,0.08)]">
               <div className="text-center">
                 <h3 className="font-permanent-marker text-2xl mb-1" style={{ color: '#b4fa74' }}>
-                  {language === 'en' ? 'Get the Beta' : 'Obtén la Beta'}
+                  Get the Beta
                 </h3>
                 <p className="font-sedgwick-ave text-white/50 text-sm mb-4">
                   {t('landing.beta.description')}
