@@ -150,19 +150,9 @@ export default function LandingPage() {
           {/* ═══════════════ App Promo & CTA ═══════════════ */}
           <section className="px-4 py-16 relative overflow-hidden">
             <div className="container mx-auto max-w-6xl relative z-10">
-              <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center justify-between">
-                {/* Left */}
-                <div className="flex-1 text-center lg:text-left">
-                  <h2 className="font-permanent-marker text-3xl md:text-4xl lg:text-5xl mb-4" style={{ color: '#b4fa74' }}>
-                    {t('landing.app.title')}
-                  </h2>
-                  <div className="w-16 h-1 rounded-full mx-auto lg:mx-0 mb-5" style={{ backgroundColor: '#b4fa74', opacity: 0.5 }} />
-                  <p className="font-sedgwick-ave text-subtitle-styled text-xl md:text-2xl max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed whitespace-pre-line">
-                    {t('landing.app.subtitle')}
-                  </p>
-                  
+              <div className="flex flex-col items-center justify-center text-center">
                   {/* CTA Buttons */}
-                  <div className="flex flex-row gap-4 items-center justify-center lg:justify-start mt-4">
+                  <div className="flex flex-row gap-4 items-center justify-center">
                     <Button
                       onClick={() => setWaitlistOpen(true)}
                       className="bg-[#b4fa74] hover:bg-[#a2e866] font-permanent-marker text-xl px-8 py-6 rounded-xl transition-all shadow-[0_0_25px_rgba(180,250,116,0.25)] hover:shadow-[0_0_40px_rgba(180,250,116,0.35)]"
@@ -184,29 +174,6 @@ export default function LandingPage() {
                       <span className="tracking-wider" style={{ color: '#b4fa74' }}>TRAILER</span>
                     </button>
                   </div>
-                  
-                  {/* App Store Badges */}
-                  <div className="flex flex-col items-center lg:items-start mt-10">
-                    <img src={appStoreBadges} alt="Available on App Store and Google Play" className="w-[280px] md:w-[320px] h-auto opacity-80" style={{ mixBlendMode: 'screen' }} />
-                    <p style={{ color: '#b4fa74' }} className="font-sedgwick-ave text-2xl md:text-3xl mt-2 opacity-70">
-                      coming soon
-                    </p>
-                  </div>
-                </div>
-                
-                {/* Right - Phone */}
-                <div className="flex-1 flex items-center justify-center">
-                  <div className="relative">
-                    <div className="absolute -inset-8 rounded-full opacity-10 blur-3xl" style={{ backgroundColor: '#b4fa74' }} />
-                    <img
-                      alt="GreenHunt App Screenshot"
-                      className="relative h-96 md:h-[550px] lg:h-[700px] w-auto object-contain drop-shadow-2xl"
-                      loading="lazy"
-                      src={appMapScreen}
-                    />
-                    
-                  </div>
-                </div>
               </div>
             </div>
           </section>
