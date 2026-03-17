@@ -22,19 +22,8 @@ import stoneTagline from "@/assets/stone-tagline-new.png";
 import rescueMap from "@/assets/rescue-map.png";
 import rescueMapScene from "@/assets/rescue-map-scene.png";
 import savePlanetPhone from "@/assets/save-planet-phone.png";
-import woodPhotoFrame from "@/assets/wood-photo-frame.png";
 
-const carouselImages = [
-  "/garage-sales/curated9/garage-1.webp",
-  "/garage-sales/curated9/garage-2.jpg",
-  "/garage-sales/curated9/garage-3.png",
-  "/garage-sales/curated9/garage-4.webp",
-  "/garage-sales/curated9/garage-5.jpg",
-  "/thrift-stores/curated9/thrift-1.jpg",
-  "/thrift-stores/curated9/thrift-2.jpg",
-  "/thrift-stores/curated9/thrift-3.jpg",
-  "/thrift-stores/curated9/thrift-4.jpg",
-];
+
 
 const FrameCarouselSection = () => {
   return (
