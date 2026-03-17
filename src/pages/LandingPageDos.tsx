@@ -414,7 +414,7 @@ export default function LandingPage() {
               <form onSubmit={handleWaitlistSubmit} className="space-y-4">
                 <Input
                   type="email"
-                  placeholder={language === 'en' ? 'Enter your email' : 'Ingresa tu email'}
+                  placeholder="Enter your email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
