@@ -394,28 +394,28 @@ export default function LandingPage() {
 
           {/* Bottom Right Buttons */}
           <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
-            {/* Scroll to top - solid green fill style (like GET BETA) */}
+            {/* Scroll to top */}
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="font-permanent-marker px-4 py-3 rounded-xl hover:scale-105 transition-all"
               style={{
-                backgroundColor: '#b4fa74',
-                color: '#611a5a',
-                boxShadow: '0 0 15px rgba(180, 250, 116, 0.3)'
+                backgroundColor: '#c8a46e',
+                color: '#1a1206',
+                boxShadow: '0 0 15px rgba(200, 164, 110, 0.3)'
               }}
               aria-label={language === 'en' ? 'Go to top' : 'Ir al principio'}>
-              <ArrowUp className="h-5 w-5" style={{ color: '#611a5a', stroke: '#611a5a' }} />
+              <ArrowUp className="h-5 w-5" style={{ color: '#1a1206', stroke: '#1a1206' }} />
             </button>
             
-            {/* Language toggle - outlined style (like TRAILER) */}
+            {/* Language toggle */}
             <button
               onClick={() => setLanguage(language === 'en' ? 'es' : 'en')}
               className="font-permanent-marker px-4 py-3 rounded-xl hover:scale-105 transition-all tracking-wider text-sm"
               style={{
                 backgroundColor: 'transparent',
-                color: '#b4fa74',
-                border: '2px solid #b4fa74',
-                boxShadow: '0 0 15px rgba(180, 250, 116, 0.15), inset 0 0 15px rgba(180, 250, 116, 0.05)'
+                color: '#c8a46e',
+                border: '2px solid #c8a46e',
+                boxShadow: '0 0 15px rgba(200, 164, 110, 0.15), inset 0 0 15px rgba(200, 164, 110, 0.05)'
               }}>
               {language === 'en' ? 'ES' : 'EN'}
             </button>
