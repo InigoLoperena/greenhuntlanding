@@ -4,7 +4,7 @@ import { Linkedin, Instagram, Youtube, ArrowUp, Video, ChevronRight } from "luci
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/hooks/useLanguage";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { StructuredData } from "@/components/StructuredData";
 import { HeroSection } from "@/components/HeroSection";
 import { ApocalypticBackground } from "@/components/ApocalypticBackground";
@@ -21,6 +21,8 @@ import appMapScreen from "@/assets/app-map-screen-new.png";
 import stoneTagline from "@/assets/stone-tagline-new.png";
 import rescueMap from "@/assets/rescue-map.png";
 import rescueMapScene from "@/assets/rescue-map-scene.png";
+import savePlanetPhone from "@/assets/save-planet-phone.png";
+import woodPhotoFrame from "@/assets/wood-photo-frame.png";
 
 const emailSchema = z.string().email();
 
