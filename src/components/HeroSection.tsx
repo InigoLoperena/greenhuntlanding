@@ -77,22 +77,20 @@ export const HeroSection = ({ className }: HeroSectionProps) => {
         <DialogContent className="sm:max-w-md bg-[#1a1a1a] border border-white/10">
           <DialogHeader>
             <DialogTitle className="font-permanent-marker text-2xl" style={{ color: '#b4fa74' }}>
-              {language === 'en' ? 'Get the Beta' : 'Obtén la Beta'}
+              Get the Beta
             </DialogTitle>
           </DialogHeader>
           <form onSubmit={handleWaitlistSubmit} className="space-y-4">
             <Input 
               type="email" 
-              placeholder={language === 'en' ? 'Enter your email' : 'Ingresa tu email'} 
+              placeholder="Enter your email" 
               value={email} 
               onChange={e => setEmail(e.target.value)} 
               required 
               className="font-sedgwick-ave bg-white/5 border-white/20 text-white placeholder:text-white/40" 
             />
             <Button type="submit" disabled={loading} className="w-full bg-[#a2c041] hover:bg-[#8da836] font-permanent-marker btn-purple-text text-lg">
-              {loading 
-                ? (language === 'en' ? 'Sending...' : 'Enviando...') 
-                : (language === 'en' ? 'GET BETA' : 'OBTÉN BETA')}
+              {loading ? 'Sending...' : 'GET BETA'}
             </Button>
           </form>
         </DialogContent>

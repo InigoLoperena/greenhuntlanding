@@ -145,7 +145,7 @@ const FeatureRow = ({ title, subtitle, image, alt, reverse = false
 
 
 export default function LandingPage() {
-  const { t, language, setLanguage } = useLanguage();
+  const { t } = useLanguage();
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [waitlistOpen, setWaitlistOpen] = useState(false);
@@ -357,7 +357,7 @@ export default function LandingPage() {
                       className="bg-[#b4fa74] hover:bg-[#a2e866] font-permanent-marker text-xl px-8 py-6 rounded-xl transition-all shadow-[0_0_25px_rgba(180,250,116,0.25)] hover:shadow-[0_0_40px_rgba(180,250,116,0.35)]"
                       style={{ color: '#0a0a0a' }}>
                       
-                      {language === 'en' ? 'GET BETA' : 'OBTÉN BETA'}
+                      GET BETA
                       <ChevronRight className="ml-1 h-5 w-5" style={{ color: '#0a0a0a', stroke: '#0a0a0a' }} />
                     </Button>
                     
@@ -405,7 +405,7 @@ export default function LandingPage() {
             <DialogContent className="sm:max-w-md bg-[#141414] border border-white/10 shadow-[0_0_60px_rgba(180,250,116,0.08)]">
               <div className="text-center">
                 <h3 className="font-permanent-marker text-2xl mb-1" style={{ color: '#b4fa74' }}>
-                  {language === 'en' ? 'Get the Beta' : 'Obtén la Beta'}
+                  Get the Beta
                 </h3>
                 <p className="font-sedgwick-ave text-white/50 text-sm mb-4">
                   {t('landing.beta.description')}
@@ -414,7 +414,7 @@ export default function LandingPage() {
               <form onSubmit={handleWaitlistSubmit} className="space-y-4">
                 <Input
                   type="email"
-                  placeholder={language === 'en' ? 'Enter your email' : 'Ingresa tu email'}
+                  placeholder="Enter your email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -425,7 +425,7 @@ export default function LandingPage() {
                   className="w-full bg-[#b4fa74] hover:bg-[#a2e866] font-permanent-marker text-lg rounded-xl shadow-[0_0_20px_rgba(180,250,116,0.2)]"
                   style={{ color: '#0a0a0a' }}>
                   
-                  {loading ? language === 'en' ? 'Sending...' : 'Enviando...' : language === 'en' ? 'GET BETA' : 'OBTÉN BETA'}
+                  {loading ? 'Sending...' : 'GET BETA'}
                 </Button>
               </form>
             </DialogContent>
@@ -893,21 +893,8 @@ export default function LandingPage() {
                 color: '#611a5a',
                 boxShadow: '0 0 15px rgba(180, 250, 116, 0.3)',
               }}
-              aria-label={language === 'en' ? 'Go to top' : 'Ir al principio'}>
+              aria-label="Go to top">
               <ArrowUp className="h-5 w-5" style={{ color: '#611a5a', stroke: '#611a5a' }} />
-            </button>
-            
-            {/* Language toggle - outlined style (like TRAILER) */}
-            <button
-              onClick={() => setLanguage(language === 'en' ? 'es' : 'en')}
-              className="font-permanent-marker px-4 py-3 rounded-xl hover:scale-105 transition-all tracking-wider text-sm"
-              style={{
-                backgroundColor: 'transparent',
-                color: '#b4fa74',
-                border: '2px solid #b4fa74',
-                boxShadow: '0 0 15px rgba(180, 250, 116, 0.15), inset 0 0 15px rgba(180, 250, 116, 0.05)',
-              }}>
-              {language === 'en' ? 'ES' : 'EN'}
             </button>
           </div>
         </div>

@@ -126,7 +126,7 @@ const FeatureRow = ({ title, subtitle, image, alt, reverse = false
 
 
 export default function LandingPage() {
-  const { t, language, setLanguage } = useLanguage();
+  const { t } = useLanguage();
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [waitlistOpen, setWaitlistOpen] = useState(false);
@@ -252,7 +252,7 @@ export default function LandingPage() {
             <DialogContent className="sm:max-w-md bg-[#141414] border border-[#c8a46e]/20 shadow-[0_0_60px_rgba(200,164,110,0.08)]">
               <div className="text-center">
                 <h3 className="font-permanent-marker text-2xl mb-1" style={{ color: '#c8a46e' }}>
-                  {language === 'en' ? 'Get the Beta' : 'Obtén la Beta'}
+                  Get the Beta
                 </h3>
                 <p className="font-sedgwick-ave text-[#b8956a]/50 text-sm mb-4">
                   {t('landing.beta.description')}
@@ -261,7 +261,7 @@ export default function LandingPage() {
               <form onSubmit={handleWaitlistSubmit} className="space-y-4">
                 <Input
                   type="email"
-                  placeholder={language === 'en' ? 'Enter your email' : 'Ingresa tu email'}
+                  placeholder="Enter your email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -272,7 +272,7 @@ export default function LandingPage() {
                   className="w-full bg-[#c8a46e] hover:bg-[#b8956a] font-permanent-marker text-lg rounded-xl shadow-[0_0_20px_rgba(200,164,110,0.2)]"
                   style={{ color: '#1a1206' }}>
                   
-                  {loading ? language === 'en' ? 'Sending...' : 'Enviando...' : language === 'en' ? 'GET BETA' : 'OBTÉN BETA'}
+                  {loading ? 'Sending...' : 'GET BETA'}
                 </Button>
               </form>
             </DialogContent>
@@ -380,10 +380,8 @@ export default function LandingPage() {
               {/* Eslogan y email */}
               <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-2">
                 <div className="flex items-center gap-2">
-                  <span className="font-sedgwick-ave text-lg" style={{ color: '#c8a46e' }}>{t('landing.footer.madeWith')}</span>
-                  <span className="text-xl">🤎</span>
-                  <span className="font-sedgwick-ave text-lg" style={{ color: '#c8a46e' }}>{t('landing.footer.forPlanet')}</span>
-                  <span className="text-xl">🌍</span>
+                  <span className="font-sedgwick-ave text-lg" style={{ color: '#c8a46e' }}>Made to stop the linear economy apocalypse</span>
+                  <span className="text-xl">💀🌍</span>
                 </div>
                 <a href="mailto:hello@greenhunt.net" className="font-sedgwick-ave text-lg hover:scale-105 transition-all" style={{ color: '#b8956a' }}>
                   hello@greenhunt.net
@@ -403,22 +401,10 @@ export default function LandingPage() {
                 color: '#1a1206',
                 boxShadow: '0 0 15px rgba(200, 164, 110, 0.3)'
               }}
-              aria-label={language === 'en' ? 'Go to top' : 'Ir al principio'}>
+              aria-label="Go to top">
               <ArrowUp className="h-5 w-5" style={{ color: '#1a1206', stroke: '#1a1206' }} />
             </button>
             
-            {/* Language toggle */}
-            <button
-              onClick={() => setLanguage(language === 'en' ? 'es' : 'en')}
-              className="font-permanent-marker px-4 py-3 rounded-xl hover:scale-105 transition-all tracking-wider text-sm"
-              style={{
-                backgroundColor: 'transparent',
-                color: '#c8a46e',
-                border: '2px solid #c8a46e',
-                boxShadow: '0 0 15px rgba(200, 164, 110, 0.15), inset 0 0 15px rgba(200, 164, 110, 0.05)'
-              }}>
-              {language === 'en' ? 'ES' : 'EN'}
-            </button>
           </div>
         </div>
       </div>
