@@ -405,18 +405,6 @@ export default function LandingPage() {
               <ArrowUp className="h-5 w-5" style={{ color: '#1a1206', stroke: '#1a1206' }} />
             </button>
             
-            {/* Language toggle */}
-            <button
-              onClick={() => setLanguage(language === 'en' ? 'es' : 'en')}
-              className="font-permanent-marker px-4 py-3 rounded-xl hover:scale-105 transition-all tracking-wider text-sm"
-              style={{
-                backgroundColor: 'transparent',
-                color: '#c8a46e',
-                border: '2px solid #c8a46e',
-                boxShadow: '0 0 15px rgba(200, 164, 110, 0.15), inset 0 0 15px rgba(200, 164, 110, 0.05)'
-              }}>
-              {language === 'en' ? 'ES' : 'EN'}
-            </button>
           </div>
         </div>
       </div>
