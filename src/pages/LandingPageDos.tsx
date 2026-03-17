@@ -893,7 +893,7 @@ export default function LandingPage() {
                 color: '#611a5a',
                 boxShadow: '0 0 15px rgba(180, 250, 116, 0.3)',
               }}
-              aria-label={language === 'en' ? 'Go to top' : 'Ir al principio'}>
+              aria-label="Go to top">
               <ArrowUp className="h-5 w-5" style={{ color: '#611a5a', stroke: '#611a5a' }} />
             </button>
             
