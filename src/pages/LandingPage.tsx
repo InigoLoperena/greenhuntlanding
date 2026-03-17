@@ -18,7 +18,8 @@ import valueProp1 from "@/assets/value-prop-1.png";
 import valueProp2 from "@/assets/value-prop-2.png";
 import valueProp3 from "@/assets/value-prop-3.png";
 import appMapScreen from "@/assets/app-map-screen-new.png";
-import stoneTagline from "@/assets/stone-tagline.png";
+import stoneTagline from "@/assets/stone-tagline-new.png";
+import rescueMap from "@/assets/rescue-map.png";
 
 const emailSchema = z.string().email();
 
@@ -130,12 +131,18 @@ export default function LandingPage() {
             <HeroSection className="my-0" />
           </div>
 
-          {/* Stone Tagline */}
-          <div className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32 flex justify-center py-8 md:py-12">
+          {/* Tagline + Rescue Map */}
+          <div className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 py-8 md:py-12 px-4">
             <img 
               src={stoneTagline} 
               alt="Your city is like a board game where valuable free finds suddenly appear!" 
-              className="w-[85%] sm:w-[70%] md:w-[50%] lg:w-[40%] xl:w-[35%] h-auto"
+              className="w-[90%] sm:w-[70%] md:w-[45%] lg:w-[38%] xl:w-[32%] h-auto mix-blend-multiply drop-shadow-lg"
+              loading="lazy"
+            />
+            <img 
+              src={rescueMap} 
+              alt="Rescue Map - Mission: Save the Planet!" 
+              className="w-[75%] sm:w-[55%] md:w-[35%] lg:w-[28%] xl:w-[24%] h-auto mix-blend-multiply drop-shadow-lg"
               loading="lazy"
             />
           </div>
