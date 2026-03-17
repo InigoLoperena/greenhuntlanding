@@ -224,23 +224,23 @@ export default function LandingPage() {
                   <div className="flex flex-row gap-4 items-center justify-center">
                     <Button
                     onClick={() => setWaitlistOpen(true)}
-                    className="bg-[#b4fa74] hover:bg-[#a2e866] font-permanent-marker text-xl px-8 py-6 rounded-xl transition-all shadow-[0_0_25px_rgba(180,250,116,0.25)] hover:shadow-[0_0_40px_rgba(180,250,116,0.35)]"
-                    style={{ color: '#0a0a0a' }}>
+                    className="bg-[#c8a46e] hover:bg-[#b8956a] font-permanent-marker text-xl px-8 py-6 rounded-xl transition-all shadow-[0_0_25px_rgba(200,164,110,0.3)] hover:shadow-[0_0_40px_rgba(200,164,110,0.4)]"
+                    style={{ color: '#1a1206' }}>
                       
                       {language === 'en' ? 'GET BETA' : 'OBTÉN BETA'}
-                      <ChevronRight className="ml-1 h-5 w-5" style={{ color: '#0a0a0a', stroke: '#0a0a0a' }} />
+                      <ChevronRight className="ml-1 h-5 w-5" style={{ color: '#1a1206', stroke: '#1a1206' }} />
                     </Button>
                     
                     <button
                     onClick={() => setTrailerOpen(true)}
-                    className="font-permanent-marker text-sm px-6 py-3 h-auto rounded-xl border-2 bg-transparent hover:bg-[#b4fa74]/10 transition-all duration-300 flex items-center gap-2 cursor-pointer"
+                    className="font-permanent-marker text-sm px-6 py-3 h-auto rounded-xl border-2 bg-transparent hover:bg-[#c8a46e]/10 transition-all duration-300 flex items-center gap-2 cursor-pointer"
                     style={{
-                      borderColor: '#b4fa74',
-                      boxShadow: '0 0 15px rgba(180, 250, 116, 0.25), inset 0 0 15px rgba(180, 250, 116, 0.05)'
+                      borderColor: '#c8a46e',
+                      boxShadow: '0 0 15px rgba(200, 164, 110, 0.25), inset 0 0 15px rgba(200, 164, 110, 0.05)'
                     }}>
                       
-                      <Video className="h-5 w-5" style={{ color: '#611a5a', fill: '#611a5a', stroke: '#611a5a' }} />
-                      <span className="tracking-wider" style={{ color: '#b4fa74' }}>TRAILER</span>
+                      <Video className="h-5 w-5" style={{ color: '#1a1206', fill: '#1a1206', stroke: '#1a1206' }} />
+                      <span className="tracking-wider" style={{ color: '#c8a46e' }}>TRAILER</span>
                     </button>
                   </div>
               </div>
@@ -249,12 +249,12 @@ export default function LandingPage() {
 
           {/* Waitlist Dialog */}
           <Dialog open={waitlistOpen} onOpenChange={setWaitlistOpen}>
-            <DialogContent className="sm:max-w-md bg-[#141414] border border-white/10 shadow-[0_0_60px_rgba(180,250,116,0.08)]">
+            <DialogContent className="sm:max-w-md bg-[#141414] border border-[#c8a46e]/20 shadow-[0_0_60px_rgba(200,164,110,0.08)]">
               <div className="text-center">
-                <h3 className="font-permanent-marker text-2xl mb-1" style={{ color: '#b4fa74' }}>
+                <h3 className="font-permanent-marker text-2xl mb-1" style={{ color: '#c8a46e' }}>
                   {language === 'en' ? 'Get the Beta' : 'Obtén la Beta'}
                 </h3>
-                <p className="font-sedgwick-ave text-white/50 text-sm mb-4">
+                <p className="font-sedgwick-ave text-[#b8956a]/50 text-sm mb-4">
                   {t('landing.beta.description')}
                 </p>
               </div>
@@ -265,12 +265,12 @@ export default function LandingPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="font-sedgwick-ave bg-white/5 border-white/15 text-white placeholder:text-white/30 focus:border-[#b4fa74]/50 rounded-xl" />
+                  className="font-sedgwick-ave bg-white/5 border-[#c8a46e]/20 text-white placeholder:text-white/30 focus:border-[#c8a46e]/50 rounded-xl" />
                 
                 <Button
                   type="submit" disabled={loading}
-                  className="w-full bg-[#b4fa74] hover:bg-[#a2e866] font-permanent-marker text-lg rounded-xl shadow-[0_0_20px_rgba(180,250,116,0.2)]"
-                  style={{ color: '#0a0a0a' }}>
+                  className="w-full bg-[#c8a46e] hover:bg-[#b8956a] font-permanent-marker text-lg rounded-xl shadow-[0_0_20px_rgba(200,164,110,0.2)]"
+                  style={{ color: '#1a1206' }}>
                   
                   {loading ? language === 'en' ? 'Sending...' : 'Enviando...' : language === 'en' ? 'GET BETA' : 'OBTÉN BETA'}
                 </Button>
@@ -291,16 +291,16 @@ export default function LandingPage() {
           {/* ═══════════════ Final Beta CTA ═══════════════ */}
           <section id="waitlist" className="relative py-20 px-4">
             <div className="container mx-auto max-w-3xl text-center relative z-10">
-              <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#141414] via-[#111] to-[#0d1a0d] p-10 md:p-14">
+              <div className="relative overflow-hidden rounded-3xl border border-[#c8a46e]/15 bg-gradient-to-br from-[#1a1206] via-[#141010] to-[#0d0a06] p-10 md:p-14">
                 {/* Decorative glows */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-60 h-40 rounded-full opacity-10 blur-3xl" style={{ backgroundColor: '#b4fa74' }} />
-                <div className="absolute bottom-0 right-0 w-32 h-32 rounded-full opacity-5 blur-2xl" style={{ backgroundColor: '#b4fa74' }} />
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-60 h-40 rounded-full opacity-10 blur-3xl" style={{ backgroundColor: '#c8a46e' }} />
+                <div className="absolute bottom-0 right-0 w-32 h-32 rounded-full opacity-5 blur-2xl" style={{ backgroundColor: '#b8956a' }} />
                 
                 <div className="relative z-10">
-                  <h2 className="text-3xl md:text-4xl font-permanent-marker mb-3" style={{ color: '#b4fa74' }}>
+                  <h2 className="text-3xl md:text-4xl font-permanent-marker mb-3" style={{ color: '#c8a46e' }}>
                     {t('landing.beta.title')}
                   </h2>
-                  <p className="text-white/50 font-sedgwick-ave mb-8 text-lg">
+                  <p className="text-[#b8956a]/50 font-sedgwick-ave mb-8 text-lg">
                     {t('landing.beta.description')}
                   </p>
                   <form onSubmit={handleWaitlistSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
@@ -310,12 +310,12 @@ export default function LandingPage() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required disabled={loading}
-                      className="flex-1 bg-white/5 border-white/15 text-white placeholder:text-white/30 rounded-xl font-sedgwick-ave text-lg" />
+                      className="flex-1 bg-white/5 border-[#c8a46e]/20 text-white placeholder:text-white/30 rounded-xl font-sedgwick-ave text-lg" />
                     
                     <Button
                       type="submit" disabled={loading}
-                      className="bg-[#b4fa74] hover:bg-[#a2e866] font-permanent-marker rounded-xl px-8 text-lg shadow-[0_0_25px_rgba(180,250,116,0.2)]"
-                      style={{ color: '#0a0a0a' }}>
+                      className="bg-[#c8a46e] hover:bg-[#b8956a] font-permanent-marker rounded-xl px-8 text-lg shadow-[0_0_25px_rgba(200,164,110,0.2)]"
+                      style={{ color: '#1a1206' }}>
                       {loading ? t('landing.beta.loading') : t('landing.beta.cta')}
                     </Button>
                   </form>
@@ -325,7 +325,7 @@ export default function LandingPage() {
           </section>
 
           {/* Footer */}
-          <footer className="relative py-14 px-4 border-t border-white/5">
+          <footer className="relative py-14 px-4 border-t border-[#c8a46e]/10">
             <div className="container mx-auto max-w-5xl">
               <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 mb-8">
                 {[
@@ -336,7 +336,8 @@ export default function LandingPage() {
                 <Link
                   key={i}
                   to={link.to}
-                  className="text-white/40 hover:text-white/80 transition-colors font-permanent-marker text-base">
+                  className="hover:opacity-80 transition-colors font-permanent-marker text-base"
+                  style={{ color: '#b8956a' }}>
                   
                     {link.label}
                   </Link>
@@ -365,26 +366,26 @@ export default function LandingPage() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:scale-125 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(180,250,116,0.6)]"
-                  style={{ color: '#b4fa74' }}>
+                  className="hover:scale-125 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(200,164,110,0.6)]"
+                  style={{ color: '#c8a46e' }}>
                   
                     {social.icon}
                   </a>
                 )}
               </div>
 
-              {/* Línea divisora verde */}
-              <div className="w-full h-px mb-6" style={{ background: 'linear-gradient(90deg, transparent, #a2c041, #b4fa74, #a2c041, transparent)' }} />
+              {/* Línea divisora madera */}
+              <div className="w-full h-px mb-6" style={{ background: 'linear-gradient(90deg, transparent, #b8956a, #c8a46e, #b8956a, transparent)' }} />
 
               {/* Eslogan y email */}
               <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-2">
                 <div className="flex items-center gap-2">
-                  <span className="font-sedgwick-ave text-lg" style={{ color: '#b4fa74' }}>{t('landing.footer.madeWith')}</span>
-                  <span className="text-xl">💚</span>
-                  <span className="font-sedgwick-ave text-lg" style={{ color: '#b4fa74' }}>{t('landing.footer.forPlanet')}</span>
+                  <span className="font-sedgwick-ave text-lg" style={{ color: '#c8a46e' }}>{t('landing.footer.madeWith')}</span>
+                  <span className="text-xl">🤎</span>
+                  <span className="font-sedgwick-ave text-lg" style={{ color: '#c8a46e' }}>{t('landing.footer.forPlanet')}</span>
                   <span className="text-xl">🌍</span>
                 </div>
-                <a href="mailto:hello@greenhunt.net" className="font-sedgwick-ave text-lg hover:scale-105 transition-all" style={{ color: '#a2c041' }}>
+                <a href="mailto:hello@greenhunt.net" className="font-sedgwick-ave text-lg hover:scale-105 transition-all" style={{ color: '#b8956a' }}>
                   hello@greenhunt.net
                 </a>
               </div>
@@ -393,28 +394,28 @@ export default function LandingPage() {
 
           {/* Bottom Right Buttons */}
           <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
-            {/* Scroll to top - solid green fill style (like GET BETA) */}
+            {/* Scroll to top */}
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="font-permanent-marker px-4 py-3 rounded-xl hover:scale-105 transition-all"
               style={{
-                backgroundColor: '#b4fa74',
-                color: '#611a5a',
-                boxShadow: '0 0 15px rgba(180, 250, 116, 0.3)'
+                backgroundColor: '#c8a46e',
+                color: '#1a1206',
+                boxShadow: '0 0 15px rgba(200, 164, 110, 0.3)'
               }}
               aria-label={language === 'en' ? 'Go to top' : 'Ir al principio'}>
-              <ArrowUp className="h-5 w-5" style={{ color: '#611a5a', stroke: '#611a5a' }} />
+              <ArrowUp className="h-5 w-5" style={{ color: '#1a1206', stroke: '#1a1206' }} />
             </button>
             
-            {/* Language toggle - outlined style (like TRAILER) */}
+            {/* Language toggle */}
             <button
               onClick={() => setLanguage(language === 'en' ? 'es' : 'en')}
               className="font-permanent-marker px-4 py-3 rounded-xl hover:scale-105 transition-all tracking-wider text-sm"
               style={{
                 backgroundColor: 'transparent',
-                color: '#b4fa74',
-                border: '2px solid #b4fa74',
-                boxShadow: '0 0 15px rgba(180, 250, 116, 0.15), inset 0 0 15px rgba(180, 250, 116, 0.05)'
+                color: '#c8a46e',
+                border: '2px solid #c8a46e',
+                boxShadow: '0 0 15px rgba(200, 164, 110, 0.15), inset 0 0 15px rgba(200, 164, 110, 0.05)'
               }}>
               {language === 'en' ? 'ES' : 'EN'}
             </button>
