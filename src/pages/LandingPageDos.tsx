@@ -145,7 +145,7 @@ const FeatureRow = ({ title, subtitle, image, alt, reverse = false
 
 
 export default function LandingPage() {
-  const { t, language, setLanguage } = useLanguage();
+  const { t } = useLanguage();
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [waitlistOpen, setWaitlistOpen] = useState(false);
