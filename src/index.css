@@ -3,105 +3,79 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-Underground, urban and rebellious brand style with Impact font and uppercase text.
-*/
+/* ═══════════════════════════════════════════════════════════════
+   GreenHunt Design System
+   Theme: Weathered wood, rusted metal, old treasure map
+   Underground, urban, rebellious brand with post-apocalyptic RPG feel
+   All colors MUST be HSL.
+   ═══════════════════════════════════════════════════════════════ */
 
 @layer base {
   :root {
-    /* Nueva nomenclatura de colores de marca:
-       Color 1: Verde oscuro #17503a (primary)
-       Color 2: Verde claro #729f31 (accent)  
-       Color 3: Gris (muted) */
-    --background: 0 0% 13%; /* Dark background #212121 */
+    /* ─── Base ─── */
+    --background: 30 10% 8%; /* Very dark brown-black #161311 */
     --foreground: 82 52% 41%; /* Accent green for text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 124 63% 20%;
+    /* ─── Weathered palette ─── */
+    --wood-dark: 25 40% 16%; /* Dark aged wood #3A2518 */
+    --wood-medium: 30 35% 28%; /* Medium weathered plank #614B38 */
+    --wood-light: 33 30% 40%; /* Lighter worn wood #8A7560 */
+    --wood-grain: 28 25% 22%; /* Wood grain accent #473626 */
+    
+    --rust: 15 65% 30%; /* Rusted metal #7E3214 */
+    --rust-light: 18 55% 42%; /* Lighter rust #A65A30 */
+    --rust-dark: 12 70% 20%; /* Deep rust/iron #571D0F */
+    
+    --metal-dark: 30 8% 18%; /* Dark aged metal #302C28 */
+    --metal-medium: 35 6% 35%; /* Tarnished metal #5E5850 */
+    --metal-rivet: 38 15% 50%; /* Rivet/nail color #937E66 */
+    
+    --parchment: 40 35% 75%; /* Old paper/map #D4C5A9 */
+    --parchment-dark: 38 25% 55%; /* Aged parchment #A49070 */
+    --parchment-burnt: 30 40% 30%; /* Burnt edges #6B4D2D */
+    
+    --gold-old: 43 60% 45%; /* Old gold/brass #B8860B */
+    --gold-bright: 48 80% 55%; /* Bright treasure gold #E0B020 */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 124 63% 20%;
+    /* ─── Semantic tokens (mapped to weathered theme) ─── */
+    --card: 25 35% 14%; /* Dark wood card bg */
+    --card-foreground: 40 35% 75%; /* Parchment text on cards */
 
-    --primary: 82 43% 45%; /* #72a241 para header y menú */
+    --popover: 25 35% 12%;
+    --popover-foreground: 40 35% 75%;
+
+    --primary: 82 43% 45%; /* Green accent #72a241 */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 81 28% 7%; /* Color actualizado: #142113 */
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 25 40% 16%; /* Dark wood */
+    --secondary-foreground: 40 35% 75%;
 
-    --muted: 200 3% 12%; /* Color 3: Gris oscuro #1d2122 */
-    --muted-foreground: 124 63% 20%;
+    --muted: 30 8% 14%; /* Dark metal bg */
+    --muted-foreground: 35 6% 55%;
 
-    --accent: 82 52% 41%; /* Color 2: Verde claro #729f31 */
+    --accent: 82 52% 41%; /* Verde claro #729f31 */
     --accent-foreground: 0 0% 100%;
-    --button-green-foreground: 307 57% 24%; /* #611a5a for text/icons on green buttons */
+    --button-green-foreground: 307 57% 24%; /* #611a5a */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 200 3% 20%; /* Color 3: Gris para bordes */
-    --input: 82 20% 90%;
-    --ring: 124 63% 20%; /* Color 1: Verde oscuro para focus */
+    --border: 30 20% 22%; /* Wood-toned border */
+    --input: 33 15% 25%;
+    --ring: 43 60% 45%; /* Old gold focus ring */
     
-    --price-blue: 220 85% 30%; /* Dark blue for prices */
+    --price-blue: 220 85% 30%;
 
     --radius: 0.5rem;
 
+    /* ─── Sidebar (unchanged) ─── */
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 124 63% 8%; /* Very dark version of Color 1 */
-    --foreground: 0 0% 95%;
-
-    --card: 124 63% 10%;
-    --card-foreground: 0 0% 95%;
-
-    --popover: 124 63% 10%;
-    --popover-foreground: 0 0% 95%;
-
-    --primary: 124 63% 20%; /* Color 1: Verde oscuro mantiene consistencia */
-    --primary-foreground: 0 0% 95%;
-
-    --secondary: 124 63% 15%;
-    --secondary-foreground: 0 0% 95%;
-
-    --muted: 200 3% 12%; /* Color 3: Gris oscuro #1d2122 */
-    --muted-foreground: 210 11% 65%;
-
-    --accent: 82 52% 50%; /* Color 2: Verde claro más brillante para dark mode */
-    --accent-foreground: 124 63% 8%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 210 11% 20%; /* Color 3: Gris oscuro para bordes */
-    --input: 210 11% 20%;
-    --ring: 124 63% 20%; /* Color 1: Verde oscuro para focus */
-    
-    --price-blue: 220 85% 40%; /* Lighter dark blue for dark mode */
-    
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
@@ -163,6 +137,182 @@ Underground, urban and rebellious brand style with Impact font and uppercase tex
     font-family: 'Sedgwick Ave', cursive;
     text-transform: lowercase;
     color: #a2c041;
+  }
+
+  /* ═══════════════════════════════════════
+     WEATHERED DESIGN SYSTEM - Components
+     ═══════════════════════════════════════ */
+
+  /* ─── Wood Panel Container ─── */
+  .panel-wood {
+    background: linear-gradient(
+      180deg,
+      hsl(var(--wood-dark)) 0%,
+      hsl(var(--wood-medium)) 15%,
+      hsl(var(--wood-grain)) 30%,
+      hsl(var(--wood-medium)) 50%,
+      hsl(var(--wood-grain)) 70%,
+      hsl(var(--wood-medium)) 85%,
+      hsl(var(--wood-dark)) 100%
+    );
+    border: 3px solid hsl(var(--wood-dark));
+    box-shadow:
+      inset 0 2px 4px hsl(var(--wood-light) / 0.2),
+      inset 0 -2px 4px hsl(0 0% 0% / 0.4),
+      0 6px 20px hsl(0 0% 0% / 0.6),
+      0 2px 4px hsl(0 0% 0% / 0.4);
+    position: relative;
+  }
+
+  .panel-wood::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 8px,
+      hsl(var(--wood-dark) / 0.15) 8px,
+      hsl(var(--wood-dark) / 0.15) 9px
+    );
+    pointer-events: none;
+    border-radius: inherit;
+  }
+
+  /* ─── Metal Plate Container ─── */
+  .panel-metal {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--metal-dark)) 0%,
+      hsl(var(--metal-medium) / 0.8) 25%,
+      hsl(var(--metal-dark)) 50%,
+      hsl(var(--metal-medium) / 0.6) 75%,
+      hsl(var(--metal-dark)) 100%
+    );
+    border: 2px solid hsl(var(--rust-dark));
+    box-shadow:
+      inset 0 1px 2px hsl(var(--metal-medium) / 0.3),
+      inset 0 -2px 4px hsl(0 0% 0% / 0.5),
+      0 4px 15px hsl(0 0% 0% / 0.5);
+    position: relative;
+  }
+
+  /* ─── Rust Border ─── */
+  .border-rust {
+    border-color: hsl(var(--rust));
+    border-style: solid;
+  }
+
+  /* ─── Parchment / Map Surface ─── */
+  .panel-parchment {
+    background: linear-gradient(
+      145deg,
+      hsl(var(--parchment)) 0%,
+      hsl(var(--parchment-dark) / 0.3) 40%,
+      hsl(var(--parchment)) 60%,
+      hsl(var(--parchment-burnt) / 0.2) 100%
+    );
+    border: 2px solid hsl(var(--parchment-burnt));
+    box-shadow:
+      inset 0 0 30px hsl(var(--parchment-burnt) / 0.15),
+      0 4px 12px hsl(0 0% 0% / 0.4);
+    color: hsl(var(--wood-dark));
+  }
+
+  /* ─── Rivet / Nail Decorations ─── */
+  .rivet {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: radial-gradient(
+      circle at 35% 35%,
+      hsl(var(--metal-rivet)),
+      hsl(var(--metal-dark)) 70%
+    );
+    box-shadow:
+      inset 0 1px 1px hsl(0 0% 100% / 0.15),
+      0 1px 3px hsl(0 0% 0% / 0.5);
+    position: absolute;
+  }
+
+  /* ─── Weathered Button Base ─── */
+  .btn-wood {
+    background: linear-gradient(
+      180deg,
+      hsl(var(--wood-medium)) 0%,
+      hsl(var(--wood-dark)) 100%
+    );
+    border: 2px solid hsl(var(--wood-dark));
+    box-shadow:
+      inset 0 1px 2px hsl(var(--wood-light) / 0.3),
+      0 3px 8px hsl(0 0% 0% / 0.4);
+    color: hsl(var(--parchment));
+    text-shadow: 0 1px 2px hsl(0 0% 0% / 0.5);
+    transition: all 0.2s ease;
+  }
+
+  .btn-wood:hover {
+    background: linear-gradient(
+      180deg,
+      hsl(var(--wood-light) / 0.8) 0%,
+      hsl(var(--wood-medium)) 100%
+    );
+    box-shadow:
+      inset 0 1px 2px hsl(var(--wood-light) / 0.4),
+      0 4px 12px hsl(0 0% 0% / 0.5),
+      0 0 15px hsl(var(--gold-old) / 0.15);
+  }
+
+  .btn-metal {
+    background: linear-gradient(
+      180deg,
+      hsl(var(--metal-medium)) 0%,
+      hsl(var(--metal-dark)) 100%
+    );
+    border: 2px solid hsl(var(--rust-dark));
+    box-shadow:
+      inset 0 1px 2px hsl(var(--metal-rivet) / 0.3),
+      0 3px 8px hsl(0 0% 0% / 0.4);
+    color: hsl(var(--gold-old));
+    text-shadow: 0 1px 2px hsl(0 0% 0% / 0.6);
+    transition: all 0.2s ease;
+  }
+
+  .btn-metal:hover {
+    box-shadow:
+      inset 0 1px 2px hsl(var(--metal-rivet) / 0.4),
+      0 4px 12px hsl(0 0% 0% / 0.5),
+      0 0 20px hsl(var(--rust-light) / 0.2);
+  }
+
+  /* ─── Gold / Treasure Accent ─── */
+  .text-gold {
+    color: hsl(var(--gold-old));
+    text-shadow: 0 0 8px hsl(var(--gold-old) / 0.3);
+  }
+
+  .border-gold {
+    border-color: hsl(var(--gold-old));
+  }
+
+  /* ─── Burnt Edge Effect ─── */
+  .edge-burnt {
+    mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.03' numOctaves='4'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+    mask-composite: intersect;
+  }
+
+  /* ─── Chain Link Divider ─── */
+  .divider-chain {
+    height: 4px;
+    background: repeating-linear-gradient(
+      90deg,
+      hsl(var(--metal-dark)) 0px,
+      hsl(var(--metal-medium)) 6px,
+      hsl(var(--metal-dark)) 12px,
+      transparent 12px,
+      transparent 16px
+    );
+    opacity: 0.6;
   }
 
 }
@@ -317,6 +467,22 @@ button svg *,
 [role="button"] svg * {
   stroke: hsl(var(--button-green-foreground)) !important;
   fill: hsl(var(--button-green-foreground)) !important;
+}
+
+/* ═══ Weathered texture overlays ═══ */
+.texture-noise {
+  position: relative;
+}
+.texture-noise::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
+  pointer-events: none;
+  border-radius: inherit;
+  mix-blend-mode: overlay;
 }
 
 /* Prevent horizontal scroll */

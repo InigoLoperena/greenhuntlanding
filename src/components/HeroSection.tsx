@@ -15,6 +15,11 @@ interface HeroSectionProps {
   className?: string;
 }
 
+/* ─── Rivet dot component ─── */
+const Rivet = ({ className }: { className?: string }) => (
+  <div className={`rivet ${className || ''}`} />
+);
+
 export const HeroSection = ({ className }: HeroSectionProps) => {
   const [waitlistOpen, setWaitlistOpen] = useState(false);
   const [trailerOpen, setTrailerOpen] = useState(false);
@@ -58,25 +63,52 @@ export const HeroSection = ({ className }: HeroSectionProps) => {
 
   return (
     <>
+      {/* Hero Section with weathered wood frame */}
       <section className={`relative w-full overflow-hidden ${className || ''}`}>
-        {/* Desktop background */}
-        <img 
-          src={heroBanner} 
-          alt="GreenHunt - Stooping Real World Game" 
-          className="hidden md:block w-full h-auto"
-        />
-        {/* Mobile background */}
-        <img 
-          src={heroMobile} 
-          alt="GreenHunt - Stooping Real World Game" 
-          className="block md:hidden w-full h-auto"
-        />
+        {/* Outer metal frame */}
+        <div className="relative panel-metal rounded-none">
+          {/* Corner rivets */}
+          <Rivet className="top-3 left-3 z-10" />
+          <Rivet className="top-3 right-3 z-10" />
+          <Rivet className="bottom-3 left-3 z-10" />
+          <Rivet className="bottom-3 right-3 z-10" />
+
+          {/* Inner wood border frame */}
+          <div className="relative border-4 border-wood-dark" style={{
+            borderImage: 'linear-gradient(180deg, hsl(25 40% 20%), hsl(30 35% 30%), hsl(25 40% 18%)) 1',
+          }}>
+            {/* Desktop background */}
+            <img 
+              src={heroBanner} 
+              alt="GreenHunt - Stooping Real World Game" 
+              className="hidden md:block w-full h-auto"
+            />
+            {/* Mobile background */}
+            <img 
+              src={heroMobile} 
+              alt="GreenHunt - Stooping Real World Game" 
+              className="block md:hidden w-full h-auto"
+            />
+
+            {/* Bottom weathered wood plank bar */}
+            <div className="absolute bottom-0 left-0 right-0 panel-wood py-2 md:py-3 flex justify-center items-center gap-2 md:gap-4">
+              <Rivet className="relative" />
+              <div className="divider-chain flex-1 max-w-[100px] md:max-w-[200px]" />
+              <span className="font-permanent-marker text-xs md:text-sm tracking-widest uppercase" style={{ color: 'hsl(40 35% 75%)', textShadow: '0 1px 3px rgba(0,0,0,0.7)' }}>
+                {language === 'en' ? 'Stooping Real World Game' : 'Stooping Real World Game'}
+              </span>
+              <div className="divider-chain flex-1 max-w-[100px] md:max-w-[200px]" />
+              <Rivet className="relative" />
+            </div>
+          </div>
+        </div>
       </section>
-      {/* Waitlist Dialog */}
+
+      {/* Waitlist Dialog - weathered parchment style */}
       <Dialog open={waitlistOpen} onOpenChange={setWaitlistOpen}>
-        <DialogContent className="sm:max-w-md bg-[#1a1a1a] border border-white/10">
+        <DialogContent className="sm:max-w-md panel-wood rounded-xl border-2 border-wood-dark texture-noise">
           <DialogHeader>
-            <DialogTitle className="font-permanent-marker text-2xl" style={{ color: '#b4fa74' }}>
+            <DialogTitle className="font-permanent-marker text-2xl text-gold">
               {language === 'en' ? 'Get the Beta' : 'Obtén la Beta'}
             </DialogTitle>
           </DialogHeader>
@@ -87,27 +119,31 @@ export const HeroSection = ({ className }: HeroSectionProps) => {
               value={email} 
               onChange={e => setEmail(e.target.value)} 
               required 
-              className="font-sedgwick-ave bg-white/5 border-white/20 text-white placeholder:text-white/40" 
+              className="font-sedgwick-ave bg-wood-dark/50 border-wood-light/30 text-parchment placeholder:text-parchment/40 rounded-lg" 
             />
-            <Button type="submit" disabled={loading} className="w-full bg-[#a2c041] hover:bg-[#8da836] font-permanent-marker btn-purple-text text-lg">
+            <button 
+              type="submit" 
+              disabled={loading} 
+              className="w-full btn-metal font-permanent-marker text-lg px-8 py-3 rounded-lg uppercase tracking-wider"
+            >
               {loading 
                 ? (language === 'en' ? 'Sending...' : 'Enviando...') 
                 : (language === 'en' ? 'GET BETA' : 'OBTÉN BETA')}
-            </Button>
+            </button>
           </form>
         </DialogContent>
       </Dialog>
 
       {/* Trailer Dialog */}
       <Dialog open={trailerOpen} onOpenChange={setTrailerOpen}>
-        <DialogContent className="sm:max-w-4xl p-0 bg-black border-white/10">
+        <DialogContent className="sm:max-w-4xl p-0 panel-metal border-2 border-rust-dark rounded-lg overflow-hidden">
           <div className="aspect-video">
             <iframe 
               width="100%" height="100%" 
               src={trailerOpen ? "https://www.youtube.com/embed/RHj_lCvC9xw?autoplay=1" : ""} 
               title="GreenHunt Trailer" frameBorder="0" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowFullScreen className="rounded-lg" 
+              allowFullScreen
             />
           </div>
         </DialogContent>
