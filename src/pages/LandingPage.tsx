@@ -252,14 +252,8 @@ export default function LandingPage() {
           </Dialog>
 
 
-          {/* Get Free Stuff Promo - Full width */}
-          <div className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
-            <img
-              src={getFreeStuffPromo}
-              alt="Get free stuff in your city - keep it out of the landfill"
-              className="w-full h-auto block"
-              loading="lazy" />
-          </div>
+
+
 
           {/* ═══════════════ Final Beta CTA ═══════════════ */}
           <section id="waitlist" className="relative py-20 px-4">
