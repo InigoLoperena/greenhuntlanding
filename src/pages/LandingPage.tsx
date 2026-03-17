@@ -201,52 +201,15 @@ export default function LandingPage() {
           {/* ═══════════════ Phone + Frame Carousel Section ═══════════════ */}
           <FrameCarouselSection />
 
+          {/* Get Free Stuff Promo - Full width */}
+          <div className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
+            <img
+              src={getFreeStuffPromo}
+              alt="Get free stuff in your city - keep it out of the landfill"
+              className="w-full h-auto block"
+              loading="lazy" />
+          </div>
 
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-
-          {/* ═══════════════ App Promo & CTA ═══════════════ */}
-          <section className="px-4 py-16 relative overflow-hidden">
-            <div className="container mx-auto max-w-6xl relative z-10">
-              <div className="flex flex-col items-center justify-center text-center">
-                  {/* CTA Buttons */}
-                  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                
-              </div>
-            </div>
-          </section>
 
           {/* Waitlist Dialog */}
           <Dialog open={waitlistOpen} onOpenChange={setWaitlistOpen}>
@@ -289,14 +252,8 @@ export default function LandingPage() {
           </Dialog>
 
 
-          {/* Get Free Stuff Promo - Full width */}
-          <div className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
-            <img
-              src={getFreeStuffPromo}
-              alt="Get free stuff in your city - keep it out of the landfill"
-              className="w-full h-auto block"
-              loading="lazy" />
-          </div>
+
+
 
           {/* ═══════════════ Final Beta CTA ═══════════════ */}
           <section id="waitlist" className="relative py-20 px-4">
