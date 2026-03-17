@@ -202,11 +202,6 @@ export default function LandingPage() {
           <FrameCarouselSection />
 
 
-          
-
-
-
-
 
 
 
