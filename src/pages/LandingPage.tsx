@@ -144,7 +144,10 @@ export default function LandingPage() {
             />
           </div>
 
-          {/* Tagline + Rescue Map */}
+          {/* ═══════════════ Phone + Frame Carousel Section ═══════════════ */}
+          <FrameCarouselSection />
+
+
           <div className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 py-8 md:py-12 px-4">
             <img
 
