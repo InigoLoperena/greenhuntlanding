@@ -132,20 +132,20 @@ export default function LandingPage() {
           </div>
 
           {/* Tagline + Rescue Map */}
-          <div className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 py-8 md:py-12 px-4">
-            <img
+          
 
-              alt="Your city is like a board game where valuable free finds suddenly appear!"
-              className="w-[90%] sm:w-[70%] md:w-[45%] lg:w-[38%] xl:w-[32%] h-auto drop-shadow-lg"
-              loading="lazy" src="/lovable-uploads/7dfb9b31-8beb-418c-a261-7671699f7f94.png" />
-            
-            <img
 
-              alt="Rescue Map - Mission: Save the Planet!"
-              className="w-[75%] sm:w-[55%] md:w-[35%] lg:w-[28%] xl:w-[24%] h-auto drop-shadow-lg"
-              loading="lazy" src="/lovable-uploads/4181c51e-0ee0-46a8-8c0a-0a60c13f8887.png" />
-            
-          </div>
+
+
+
+
+
+
+
+
+
+
+          
 
           {/* ═══════════════ App Promo & CTA ═══════════════ */}
           <section className="px-4 py-16 relative overflow-hidden">
