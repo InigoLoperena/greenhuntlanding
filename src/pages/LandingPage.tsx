@@ -211,10 +211,6 @@ export default function LandingPage() {
           </div>
 
 
-              </div>
-            </div>
-          </section>
-
           {/* Waitlist Dialog */}
           <Dialog open={waitlistOpen} onOpenChange={setWaitlistOpen}>
             <DialogContent className="sm:max-w-md bg-[#141414] border border-[#c8a46e]/20 shadow-[0_0_60px_rgba(200,164,110,0.08)]">
