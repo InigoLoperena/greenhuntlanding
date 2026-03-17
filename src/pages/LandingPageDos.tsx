@@ -896,19 +896,6 @@ export default function LandingPage() {
               aria-label="Go to top">
               <ArrowUp className="h-5 w-5" style={{ color: '#611a5a', stroke: '#611a5a' }} />
             </button>
-            
-            {/* Language toggle - outlined style (like TRAILER) */}
-            <button
-              onClick={() => setLanguage(language === 'en' ? 'es' : 'en')}
-              className="font-permanent-marker px-4 py-3 rounded-xl hover:scale-105 transition-all tracking-wider text-sm"
-              style={{
-                backgroundColor: 'transparent',
-                color: '#b4fa74',
-                border: '2px solid #b4fa74',
-                boxShadow: '0 0 15px rgba(180, 250, 116, 0.15), inset 0 0 15px rgba(180, 250, 116, 0.05)',
-              }}>
-              {language === 'en' ? 'ES' : 'EN'}
-            </button>
           </div>
         </div>
       </div>
