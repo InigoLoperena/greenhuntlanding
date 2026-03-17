@@ -1,4 +1,4 @@
-import woodBg from "@/assets/wood-background.jpg";
+import woodFrameBg from "@/assets/wood-frame-background.png";
 
 export const ApocalypticBackground = () => {
   return (
@@ -6,7 +6,7 @@ export const ApocalypticBackground = () => {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url(${woodBg})`,
+          backgroundImage: `url(${woodFrameBg})`,
         }}
       />
     </div>
