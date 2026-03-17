@@ -88,7 +88,7 @@ const FrameCarouselSection = () => {
     </section>
   );
 };
-
+const emailSchema = z.string().email();
 
 
 /* ─── Step card component ─── */
