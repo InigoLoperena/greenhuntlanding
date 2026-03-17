@@ -37,15 +37,6 @@ const carouselImages = [
 ];
 
 const FrameCarouselSection = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % carouselImages.length);
-    }, 1500);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <section className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32 bg-black">
       <div className="flex flex-col lg:flex-row w-full">
@@ -59,30 +50,11 @@ const FrameCarouselSection = () => {
           />
         </div>
 
-        {/* Right: Wood frame with carousel */}
-        <div className="w-full lg:w-1/2 flex items-center justify-center p-6 md:p-12">
-          <div className="relative w-full max-w-lg aspect-[3/4]">
-            {/* Frame image */}
-            <img
-              src={woodPhotoFrame}
-              alt=""
-              className="absolute inset-0 w-full h-full object-contain z-10 pointer-events-none"
-              aria-hidden="true"
-            />
-            {/* Carousel inside frame */}
-            <div className="absolute inset-[8%] top-[6%] bottom-[6%] overflow-hidden rounded-sm z-0">
-              {carouselImages.map((img, i) => (
-                <img
-                  key={img}
-                  src={img}
-                  alt={`Street find ${i + 1}`}
-                  className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500"
-                  style={{ opacity: i === currentIndex ? 1 : 0 }}
-                  loading="lazy"
-                />
-              ))}
-            </div>
-          </div>
+        {/* Right: Carousel placeholder - waiting for photos */}
+        <div className="w-full lg:w-1/2 flex items-center justify-center p-6 md:p-12 bg-black min-h-[300px] lg:min-h-0">
+          <p className="font-sedgwick-ave text-[#c8a46e] text-2xl text-center opacity-40">
+            Carrusel de fotos próximamente...
+          </p>
         </div>
       </div>
     </section>
