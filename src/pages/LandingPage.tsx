@@ -4,7 +4,7 @@ import { Linkedin, Instagram, Youtube, ArrowUp, Video, ChevronRight } from "luci
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/hooks/useLanguage";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { StructuredData } from "@/components/StructuredData";
 import { HeroSection } from "@/components/HeroSection";
 import { ApocalypticBackground } from "@/components/ApocalypticBackground";
@@ -21,10 +21,74 @@ import appMapScreen from "@/assets/app-map-screen-new.png";
 import stoneTagline from "@/assets/stone-tagline-new.png";
 import rescueMap from "@/assets/rescue-map.png";
 import rescueMapScene from "@/assets/rescue-map-scene.png";
+import savePlanetPhone from "@/assets/save-planet-phone.png";
+import woodPhotoFrame from "@/assets/wood-photo-frame.png";
 
+const carouselImages = [
+  "/garage-sales/curated9/garage-1.webp",
+  "/garage-sales/curated9/garage-2.jpg",
+  "/garage-sales/curated9/garage-3.png",
+  "/garage-sales/curated9/garage-4.webp",
+  "/garage-sales/curated9/garage-5.jpg",
+  "/thrift-stores/curated9/thrift-1.jpg",
+  "/thrift-stores/curated9/thrift-2.jpg",
+  "/thrift-stores/curated9/thrift-3.jpg",
+  "/thrift-stores/curated9/thrift-4.jpg",
+];
+
+const FrameCarouselSection = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % carouselImages.length);
+    }, 1500);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <section className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32 bg-black">
+      <div className="flex flex-col lg:flex-row w-full">
+        {/* Left: Phone image */}
+        <div className="w-full lg:w-1/2 flex items-center justify-center">
+          <img
+            src={savePlanetPhone}
+            alt="Save the planet by sharing photos and coordinates of discarded street finds"
+            className="w-full h-auto block lg:h-full lg:object-cover"
+            loading="lazy"
+          />
+        </div>
+
+        {/* Right: Wood frame with carousel */}
+        <div className="w-full lg:w-1/2 flex items-center justify-center p-6 md:p-12">
+          <div className="relative w-full max-w-lg aspect-[3/4]">
+            {/* Frame image */}
+            <img
+              src={woodPhotoFrame}
+              alt=""
+              className="absolute inset-0 w-full h-full object-contain z-10 pointer-events-none"
+              aria-hidden="true"
+            />
+            {/* Carousel inside frame */}
+            <div className="absolute inset-[8%] top-[6%] bottom-[6%] overflow-hidden rounded-sm z-0">
+              {carouselImages.map((img, i) => (
+                <img
+                  key={img}
+                  src={img}
+                  alt={`Street find ${i + 1}`}
+                  className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500"
+                  style={{ opacity: i === currentIndex ? 1 : 0 }}
+                  loading="lazy"
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 const emailSchema = z.string().email();
-
-
 
 
 /* ─── Step card component ─── */
@@ -142,7 +206,10 @@ export default function LandingPage() {
             />
           </div>
 
-          {/* Tagline + Rescue Map */}
+          {/* ═══════════════ Phone + Frame Carousel Section ═══════════════ */}
+          <FrameCarouselSection />
+
+
           <div className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 py-8 md:py-12 px-4">
             <img
 
