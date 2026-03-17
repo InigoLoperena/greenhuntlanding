@@ -140,10 +140,10 @@ export default function LandingPage() {
               loading="lazy" src="/lovable-uploads/7dfb9b31-8beb-418c-a261-7671699f7f94.png" />
             
             <img
-              src={rescueMap}
+
               alt="Rescue Map - Mission: Save the Planet!"
               className="w-[75%] sm:w-[55%] md:w-[35%] lg:w-[28%] xl:w-[24%] h-auto drop-shadow-lg"
-              loading="lazy" />
+              loading="lazy" src="/lovable-uploads/4181c51e-0ee0-46a8-8c0a-0a60c13f8887.png" />
             
           </div>
 
