@@ -18,6 +18,7 @@ import valueProp1 from "@/assets/value-prop-1.png";
 import valueProp2 from "@/assets/value-prop-2.png";
 import valueProp3 from "@/assets/value-prop-3.png";
 import appMapScreen from "@/assets/app-map-screen-new.png";
+import stoneTagline from "@/assets/stone-tagline.png";
 
 const emailSchema = z.string().email();
 
