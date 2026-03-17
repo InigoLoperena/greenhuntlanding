@@ -66,33 +66,7 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				'price-blue': 'hsl(var(--price-blue))',
-				/* Weathered Design System Colors */
-				wood: {
-					dark: 'hsl(var(--wood-dark))',
-					DEFAULT: 'hsl(var(--wood-medium))',
-					light: 'hsl(var(--wood-light))',
-					grain: 'hsl(var(--wood-grain))',
-				},
-				rust: {
-					dark: 'hsl(var(--rust-dark))',
-					DEFAULT: 'hsl(var(--rust))',
-					light: 'hsl(var(--rust-light))',
-				},
-				metal: {
-					dark: 'hsl(var(--metal-dark))',
-					DEFAULT: 'hsl(var(--metal-medium))',
-					rivet: 'hsl(var(--metal-rivet))',
-				},
-				parchment: {
-					DEFAULT: 'hsl(var(--parchment))',
-					dark: 'hsl(var(--parchment-dark))',
-					burnt: 'hsl(var(--parchment-burnt))',
-				},
-				gold: {
-					old: 'hsl(var(--gold-old))',
-					bright: 'hsl(var(--gold-bright))',
-				},
+				'price-blue': 'hsl(var(--price-blue))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
