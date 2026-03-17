@@ -142,7 +142,7 @@ export default function LandingPage() {
             <img 
               src={rescueMap} 
               alt="Rescue Map - Mission: Save the Planet!" 
-              className="w-[75%] sm:w-[55%] md:w-[35%] lg:w-[28%] xl:w-[24%] h-auto mix-blend-multiply drop-shadow-lg"
+              className="w-[75%] sm:w-[55%] md:w-[35%] lg:w-[28%] xl:w-[24%] h-auto drop-shadow-lg"
               loading="lazy"
             />
           </div>
