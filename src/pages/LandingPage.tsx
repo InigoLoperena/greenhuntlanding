@@ -325,7 +325,7 @@ export default function LandingPage() {
           </section>
 
           {/* Footer */}
-          <footer className="relative py-14 px-4 border-t border-white/5">
+          <footer className="relative py-14 px-4 border-t border-[#c8a46e]/10">
             <div className="container mx-auto max-w-5xl">
               <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 mb-8">
                 {[
@@ -336,7 +336,8 @@ export default function LandingPage() {
                 <Link
                   key={i}
                   to={link.to}
-                  className="text-white/40 hover:text-white/80 transition-colors font-permanent-marker text-base">
+                  className="hover:opacity-80 transition-colors font-permanent-marker text-base"
+                  style={{ color: '#b8956a' }}>
                   
                     {link.label}
                   </Link>
@@ -365,26 +366,26 @@ export default function LandingPage() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:scale-125 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(180,250,116,0.6)]"
-                  style={{ color: '#b4fa74' }}>
+                  className="hover:scale-125 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(200,164,110,0.6)]"
+                  style={{ color: '#c8a46e' }}>
                   
                     {social.icon}
                   </a>
                 )}
               </div>
 
-              {/* Línea divisora verde */}
-              <div className="w-full h-px mb-6" style={{ background: 'linear-gradient(90deg, transparent, #a2c041, #b4fa74, #a2c041, transparent)' }} />
+              {/* Línea divisora madera */}
+              <div className="w-full h-px mb-6" style={{ background: 'linear-gradient(90deg, transparent, #b8956a, #c8a46e, #b8956a, transparent)' }} />
 
               {/* Eslogan y email */}
               <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-2">
                 <div className="flex items-center gap-2">
-                  <span className="font-sedgwick-ave text-lg" style={{ color: '#b4fa74' }}>{t('landing.footer.madeWith')}</span>
-                  <span className="text-xl">💚</span>
-                  <span className="font-sedgwick-ave text-lg" style={{ color: '#b4fa74' }}>{t('landing.footer.forPlanet')}</span>
+                  <span className="font-sedgwick-ave text-lg" style={{ color: '#c8a46e' }}>{t('landing.footer.madeWith')}</span>
+                  <span className="text-xl">🤎</span>
+                  <span className="font-sedgwick-ave text-lg" style={{ color: '#c8a46e' }}>{t('landing.footer.forPlanet')}</span>
                   <span className="text-xl">🌍</span>
                 </div>
-                <a href="mailto:hello@greenhunt.net" className="font-sedgwick-ave text-lg hover:scale-105 transition-all" style={{ color: '#a2c041' }}>
+                <a href="mailto:hello@greenhunt.net" className="font-sedgwick-ave text-lg hover:scale-105 transition-all" style={{ color: '#b8956a' }}>
                   hello@greenhunt.net
                 </a>
               </div>
