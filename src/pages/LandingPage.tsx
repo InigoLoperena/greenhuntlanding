@@ -135,57 +135,120 @@ export default function LandingPage() {
               <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center justify-between">
                 {/* Left */}
                 <div className="flex-1 text-center lg:text-left">
-                  {/* Title - weathered wood plank style */}
-                  <div className="relative inline-block panel-wood rounded-lg px-6 py-3 mb-6 texture-noise">
-                    <div className="rivet absolute top-2 left-2" />
-                    <div className="rivet absolute top-2 right-2" />
-                    <h2 className="font-permanent-marker text-3xl md:text-4xl lg:text-5xl uppercase tracking-wide"
-                      style={{ color: 'hsl(40, 35%, 75%)', textShadow: '0 2px 4px rgba(0,0,0,0.7), 0 0 10px rgba(184, 134, 11, 0.2)' }}>
-                      {t('landing.app.title')}
-                    </h2>
+
+                  {/* ─── WOODEN SIGN: Title ─── */}
+                  <div className="relative inline-block mb-2">
+                    <div className="relative px-6 md:px-10 py-4 md:py-5 rounded-sm" style={{
+                      background: 'linear-gradient(180deg, #5a3d2b 0%, #4a3222 8%, #6b4c35 15%, #5a3d2b 30%, #4e3525 50%, #6b4c35 65%, #5a3d2b 80%, #4a3222 92%, #3e2a1a 100%)',
+                      border: '3px solid #2a1a0e',
+                      boxShadow: 'inset 0 2px 6px rgba(139,90,43,0.25), inset 0 -3px 6px rgba(0,0,0,0.5), 0 8px 25px rgba(0,0,0,0.7), 0 2px 4px rgba(0,0,0,0.4)',
+                    }}>
+                      <div className="absolute inset-0 rounded-sm pointer-events-none" style={{
+                        backgroundImage: 'repeating-linear-gradient(0deg, transparent 0px, transparent 6px, rgba(42,26,14,0.12) 6px, rgba(42,26,14,0.12) 7px)',
+                      }} />
+                      {['top-0 left-0', 'top-0 right-0', 'bottom-0 left-0', 'bottom-0 right-0'].map((pos, i) => (
+                        <div key={i} className={`absolute ${pos} w-6 h-6 md:w-7 md:h-7`} style={{
+                          background: 'linear-gradient(135deg, #8a7560 0%, #5e4d3a 40%, #3e2e20 100%)',
+                          borderRight: pos.includes('left-0') ? '2px solid #2a1a0e' : 'none',
+                          borderLeft: pos.includes('right-0') ? '2px solid #2a1a0e' : 'none',
+                          borderBottom: pos.includes('top-0') ? '2px solid #2a1a0e' : 'none',
+                          borderTop: pos.includes('bottom-0') ? '2px solid #2a1a0e' : 'none',
+                        }}>
+                          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 md:w-3 md:h-3 rounded-full" style={{
+                            background: 'radial-gradient(circle at 35% 35%, #a08b70, #5e4d3a 60%, #3e2e20)',
+                            boxShadow: 'inset 0 1px 1px rgba(255,255,255,0.15), 0 1px 2px rgba(0,0,0,0.6)',
+                          }} />
+                        </div>
+                      ))}
+                      <h2 className="relative z-10 font-permanent-marker text-3xl md:text-4xl lg:text-5xl uppercase tracking-wide" style={{
+                        color: '#e8dcc8',
+                        textShadow: '0 2px 4px rgba(0,0,0,0.8), 0 0 15px rgba(139,90,43,0.3), 1px 1px 0 rgba(0,0,0,0.5)',
+                      }}>
+                        {t('landing.app.title')}
+                      </h2>
+                    </div>
+                    {/* Side metal hinges */}
+                    <div className="absolute top-1/2 -left-2 -translate-y-1/2 w-3 h-8 rounded-sm" style={{
+                      background: 'linear-gradient(90deg, #6b5540, #4a3828, #6b5540)',
+                      boxShadow: '0 2px 4px rgba(0,0,0,0.5)',
+                    }} />
+                    <div className="absolute top-1/2 -right-2 -translate-y-1/2 w-3 h-8 rounded-sm" style={{
+                      background: 'linear-gradient(90deg, #6b5540, #4a3828, #6b5540)',
+                      boxShadow: '0 2px 4px rgba(0,0,0,0.5)',
+                    }} />
                   </div>
-                  
-                  {/* Divider - chain style */}
-                  <div className="divider-chain w-24 mx-auto lg:mx-0 mb-5" />
-                  
-                  {/* Subtitle - parchment tone */}
-                  <p className="font-sedgwick-ave text-xl md:text-2xl max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed whitespace-pre-line"
-                    style={{ color: 'hsl(38, 25%, 55%)', textShadow: '0 1px 2px rgba(0,0,0,0.5)' }}>
-                    {t('landing.app.subtitle')}
-                  </p>
-                  
-                  {/* CTA Buttons - weathered metal style */}
+
+                  {/* ─── STONE/PARCHMENT: Subtitle ─── */}
+                  <div className="relative inline-block mt-4 mb-10 px-6 md:px-8 py-4 md:py-5 rounded-sm max-w-xl" style={{
+                    background: 'linear-gradient(145deg, #c4b49a 0%, #b8a88e 20%, #d4c5a9 45%, #c4b49a 65%, #a89878 85%, #b8a88e 100%)',
+                    border: '2px solid #8a7a60',
+                    boxShadow: 'inset 0 0 20px rgba(107,77,45,0.15), inset 0 2px 3px rgba(255,255,255,0.1), 0 6px 15px rgba(0,0,0,0.5)',
+                  }}>
+                    <div className="absolute inset-0 rounded-sm pointer-events-none opacity-[0.08]" style={{
+                      backgroundImage: 'repeating-linear-gradient(45deg, transparent 0px, transparent 20px, rgba(80,50,20,0.3) 20px, rgba(80,50,20,0.3) 21px)',
+                    }} />
+                    <p className="relative z-10 font-sedgwick-ave text-xl md:text-2xl leading-relaxed whitespace-pre-line" style={{
+                      color: '#3e2e1e',
+                      textShadow: '0 1px 1px rgba(255,255,255,0.2)',
+                    }}>
+                      {t('landing.app.subtitle')}
+                    </p>
+                  </div>
+
+                  {/* ─── CTA Buttons ─── */}
                   <div className="flex flex-row gap-4 items-center justify-center lg:justify-start mt-4">
+                    {/* GET BETA - wooden plank button */}
                     <button
                       onClick={() => setWaitlistOpen(true)}
-                      className="btn-wood font-permanent-marker text-xl px-8 py-4 rounded-lg uppercase tracking-wider flex items-center gap-2 cursor-pointer relative texture-noise"
+                      className="relative font-permanent-marker text-xl px-8 py-4 rounded-sm uppercase tracking-wider flex items-center gap-2 cursor-pointer transition-all duration-200 hover:brightness-110 hover:-translate-y-0.5"
+                      style={{
+                        background: 'linear-gradient(180deg, #6b4c35 0%, #5a3d2b 40%, #4a3222 100%)',
+                        border: '2px solid #2a1a0e',
+                        boxShadow: 'inset 0 1px 3px rgba(139,90,43,0.3), inset 0 -2px 4px rgba(0,0,0,0.4), 0 4px 12px rgba(0,0,0,0.5)',
+                        color: '#e8dcc8',
+                        textShadow: '0 2px 3px rgba(0,0,0,0.7)',
+                      }}
                     >
+                      {['top-1 left-1', 'top-1 right-1', 'bottom-1 left-1', 'bottom-1 right-1'].map((pos, i) => (
+                        <div key={i} className={`absolute ${pos} w-1.5 h-1.5 rounded-full`} style={{
+                          background: 'radial-gradient(circle at 35% 35%, #a08b70, #4a3828)',
+                          boxShadow: '0 1px 1px rgba(0,0,0,0.5)',
+                        }} />
+                      ))}
                       {language === 'en' ? 'GET BETA' : 'OBTÉN BETA'}
-                      <ChevronRight className="ml-1 h-5 w-5" style={{ color: 'hsl(40, 35%, 75%)', stroke: 'hsl(40, 35%, 75%)' }} />
+                      <ChevronRight className="ml-1 h-5 w-5" style={{ color: '#e8dcc8', stroke: '#e8dcc8' }} />
                     </button>
-                    
+
+                    {/* TRAILER - metal plate button */}
                     <button
                       onClick={() => setTrailerOpen(true)}
-                      className="btn-metal font-permanent-marker text-sm px-6 py-4 rounded-lg flex items-center gap-2 cursor-pointer uppercase tracking-wider relative texture-noise"
+                      className="relative font-permanent-marker text-sm px-6 py-4 rounded-sm flex items-center gap-2 cursor-pointer uppercase tracking-wider transition-all duration-200 hover:brightness-110 hover:-translate-y-0.5"
+                      style={{
+                        background: 'linear-gradient(180deg, #5e5045 0%, #3e3530 50%, #2e2520 100%)',
+                        border: '2px solid #1e1510',
+                        boxShadow: 'inset 0 1px 2px rgba(120,100,80,0.25), inset 0 -2px 3px rgba(0,0,0,0.4), 0 4px 12px rgba(0,0,0,0.5)',
+                        color: '#c4a055',
+                        textShadow: '0 1px 3px rgba(0,0,0,0.6)',
+                      }}
                     >
-                      <Video className="h-5 w-5" style={{ color: 'hsl(43, 60%, 45%)', stroke: 'hsl(43, 60%, 45%)', fill: 'none' }} />
-                      <span style={{ color: 'hsl(43, 60%, 45%)' }}>TRAILER</span>
+                      <Video className="h-5 w-5" style={{ color: '#c4a055', stroke: '#c4a055', fill: 'none' }} />
+                      <span>TRAILER</span>
                     </button>
                   </div>
                   
                   {/* App Store Badges */}
                   <div className="flex flex-col items-center lg:items-start mt-10">
                     <img src={appStoreBadges} alt="Available on App Store and Google Play" className="w-[280px] md:w-[320px] h-auto opacity-80" style={{ mixBlendMode: 'screen' }} />
-                    <p className="font-sedgwick-ave text-2xl md:text-3xl mt-2 opacity-70" style={{ color: 'hsl(43, 60%, 45%)' }}>
+                    <p className="font-sedgwick-ave text-2xl md:text-3xl mt-2 opacity-70" style={{ color: '#c4a055' }}>
                       coming soon
                     </p>
                   </div>
                 </div>
                 
-                {/* Right - Phone with metal frame */}
+                {/* Right - Phone */}
                 <div className="flex-1 flex items-center justify-center">
                   <div className="relative">
-                    <div className="absolute -inset-8 rounded-full opacity-8 blur-3xl" style={{ backgroundColor: 'hsl(43, 60%, 45%)' }} />
+                    <div className="absolute -inset-8 rounded-full opacity-[0.06] blur-3xl" style={{ backgroundColor: '#c4a055' }} />
                     <img
                       alt="GreenHunt App Screenshot"
                       className="relative h-96 md:h-[550px] lg:h-[700px] w-auto object-contain drop-shadow-2xl"
