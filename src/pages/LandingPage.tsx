@@ -132,6 +132,16 @@ export default function LandingPage() {
             <HeroSection className="my-0" />
           </div>
 
+          {/* Rescue Map Scene - Full width */}
+          <div className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
+            <img
+              src={rescueMapScene}
+              alt="Rescue Map - Your city is like a board game where valuable free finds suddenly appear!"
+              className="w-full h-auto block"
+              loading="lazy"
+            />
+          </div>
+
           {/* Tagline + Rescue Map */}
           <div className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 py-8 md:py-12 px-4">
             <img
