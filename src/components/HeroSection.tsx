@@ -77,7 +77,7 @@ export const HeroSection = ({ className }: HeroSectionProps) => {
         <DialogContent className="sm:max-w-md bg-[#1a1a1a] border border-white/10">
           <DialogHeader>
             <DialogTitle className="font-permanent-marker text-2xl" style={{ color: '#b4fa74' }}>
-              {language === 'en' ? 'Get the Beta' : 'Obtén la Beta'}
+              Get the Beta
             </DialogTitle>
           </DialogHeader>
           <form onSubmit={handleWaitlistSubmit} className="space-y-4">
