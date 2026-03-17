@@ -24,8 +24,29 @@ import rescueMapScene from "@/assets/rescue-map-scene.png";
 import savePlanetPhone from "@/assets/save-planet-phone.png";
 
 
+const streetFindsImages = [
+  "/street-finds/find-1.jpeg",
+  "/street-finds/find-2.jpeg",
+  "/street-finds/find-3.jpeg",
+  "/street-finds/find-4.jpeg",
+  "/street-finds/find-5.jpeg",
+  "/street-finds/find-6.jpeg",
+  "/street-finds/find-7.png",
+  "/street-finds/find-8.png",
+  "/street-finds/find-9.png",
+  "/street-finds/find-10.png",
+];
 
 const FrameCarouselSection = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % streetFindsImages.length);
+    }, 500);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32 bg-black">
       <div className="flex flex-col lg:flex-row w-full">
@@ -39,11 +60,20 @@ const FrameCarouselSection = () => {
           />
         </div>
 
-        {/* Right: Carousel placeholder - waiting for photos */}
-        <div className="w-full lg:w-1/2 flex items-center justify-center p-6 md:p-12 bg-black min-h-[300px] lg:min-h-0">
-          <p className="font-sedgwick-ave text-[#c8a46e] text-2xl text-center opacity-40">
-            Carrusel de fotos próximamente...
-          </p>
+        {/* Right: Street finds carousel */}
+        <div className="w-full lg:w-1/2 flex items-center justify-center bg-black overflow-hidden">
+          <div className="relative w-full aspect-square">
+            {streetFindsImages.map((img, i) => (
+              <img
+                key={img}
+                src={img}
+                alt={`Hallazgo callejero ${i + 1}`}
+                className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300"
+                style={{ opacity: i === currentIndex ? 1 : 0 }}
+                loading="lazy"
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
