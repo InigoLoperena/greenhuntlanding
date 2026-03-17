@@ -272,7 +272,7 @@ export default function LandingPage() {
                   className="w-full bg-[#c8a46e] hover:bg-[#b8956a] font-permanent-marker text-lg rounded-xl shadow-[0_0_20px_rgba(200,164,110,0.2)]"
                   style={{ color: '#1a1206' }}>
                   
-                  {loading ? language === 'en' ? 'Sending...' : 'Enviando...' : language === 'en' ? 'GET BETA' : 'OBTÉN BETA'}
+                  {loading ? 'Sending...' : 'GET BETA'}
                 </Button>
               </form>
             </DialogContent>
