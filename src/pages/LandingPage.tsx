@@ -20,6 +20,7 @@ import valueProp3 from "@/assets/value-prop-3.png";
 import appMapScreen from "@/assets/app-map-screen-new.png";
 import stoneTagline from "@/assets/stone-tagline-new.png";
 import rescueMap from "@/assets/rescue-map.png";
+import rescueMapScene from "@/assets/rescue-map-scene.png";
 
 const emailSchema = z.string().email();
 
