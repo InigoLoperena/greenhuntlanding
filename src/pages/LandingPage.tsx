@@ -249,12 +249,12 @@ export default function LandingPage() {
 
           {/* Waitlist Dialog */}
           <Dialog open={waitlistOpen} onOpenChange={setWaitlistOpen}>
-            <DialogContent className="sm:max-w-md bg-[#141414] border border-white/10 shadow-[0_0_60px_rgba(180,250,116,0.08)]">
+            <DialogContent className="sm:max-w-md bg-[#141414] border border-[#c8a46e]/20 shadow-[0_0_60px_rgba(200,164,110,0.08)]">
               <div className="text-center">
-                <h3 className="font-permanent-marker text-2xl mb-1" style={{ color: '#b4fa74' }}>
+                <h3 className="font-permanent-marker text-2xl mb-1" style={{ color: '#c8a46e' }}>
                   {language === 'en' ? 'Get the Beta' : 'Obtén la Beta'}
                 </h3>
-                <p className="font-sedgwick-ave text-white/50 text-sm mb-4">
+                <p className="font-sedgwick-ave text-[#b8956a]/50 text-sm mb-4">
                   {t('landing.beta.description')}
                 </p>
               </div>
@@ -265,12 +265,12 @@ export default function LandingPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="font-sedgwick-ave bg-white/5 border-white/15 text-white placeholder:text-white/30 focus:border-[#b4fa74]/50 rounded-xl" />
+                  className="font-sedgwick-ave bg-white/5 border-[#c8a46e]/20 text-white placeholder:text-white/30 focus:border-[#c8a46e]/50 rounded-xl" />
                 
                 <Button
                   type="submit" disabled={loading}
-                  className="w-full bg-[#b4fa74] hover:bg-[#a2e866] font-permanent-marker text-lg rounded-xl shadow-[0_0_20px_rgba(180,250,116,0.2)]"
-                  style={{ color: '#0a0a0a' }}>
+                  className="w-full bg-[#c8a46e] hover:bg-[#b8956a] font-permanent-marker text-lg rounded-xl shadow-[0_0_20px_rgba(200,164,110,0.2)]"
+                  style={{ color: '#1a1206' }}>
                   
                   {loading ? language === 'en' ? 'Sending...' : 'Enviando...' : language === 'en' ? 'GET BETA' : 'OBTÉN BETA'}
                 </Button>
