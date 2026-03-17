@@ -18,6 +18,7 @@ import valueProp1 from "@/assets/value-prop-1.png";
 import valueProp2 from "@/assets/value-prop-2.png";
 import valueProp3 from "@/assets/value-prop-3.png";
 import appMapScreen from "@/assets/app-map-screen-new.png";
+import stoneTagline from "@/assets/stone-tagline.png";
 
 const emailSchema = z.string().email();
 
@@ -127,6 +128,16 @@ export default function LandingPage() {
           {/* Hero Section */}
           <div className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
             <HeroSection className="my-0" />
+          </div>
+
+          {/* Stone Tagline */}
+          <div className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32 flex justify-center py-8 md:py-12">
+            <img 
+              src={stoneTagline} 
+              alt="Your city is like a board game where valuable free finds suddenly appear!" 
+              className="w-[85%] sm:w-[70%] md:w-[50%] lg:w-[40%] xl:w-[35%] h-auto"
+              loading="lazy"
+            />
           </div>
 
           {/* ═══════════════ App Promo & CTA ═══════════════ */}
