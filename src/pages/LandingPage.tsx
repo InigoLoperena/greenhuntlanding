@@ -12,6 +12,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { z } from "zod";
 import tutorialStep2 from "@/assets/tutorial-step-2.png";
+import getFreeStuffPromo from "@/assets/get-free-stuff-promo.png";
 import appStoreBadges from "@/assets/app-store-badges.png";
 import playForPlanetScreen from "@/assets/play-for-planet-screen.png";
 import valueProp1 from "@/assets/value-prop-1.png";
@@ -287,6 +288,15 @@ export default function LandingPage() {
             </DialogContent>
           </Dialog>
 
+
+          {/* Get Free Stuff Promo - Full width */}
+          <div className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
+            <img
+              src={getFreeStuffPromo}
+              alt="Get free stuff in your city - keep it out of the landfill"
+              className="w-full h-auto block"
+              loading="lazy" />
+          </div>
 
           {/* ═══════════════ Final Beta CTA ═══════════════ */}
           <section id="waitlist" className="relative py-20 px-4">
