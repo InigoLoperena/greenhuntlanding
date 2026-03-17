@@ -291,16 +291,16 @@ export default function LandingPage() {
           {/* ═══════════════ Final Beta CTA ═══════════════ */}
           <section id="waitlist" className="relative py-20 px-4">
             <div className="container mx-auto max-w-3xl text-center relative z-10">
-              <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#141414] via-[#111] to-[#0d1a0d] p-10 md:p-14">
+              <div className="relative overflow-hidden rounded-3xl border border-[#c8a46e]/15 bg-gradient-to-br from-[#1a1206] via-[#141010] to-[#0d0a06] p-10 md:p-14">
                 {/* Decorative glows */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-60 h-40 rounded-full opacity-10 blur-3xl" style={{ backgroundColor: '#b4fa74' }} />
-                <div className="absolute bottom-0 right-0 w-32 h-32 rounded-full opacity-5 blur-2xl" style={{ backgroundColor: '#b4fa74' }} />
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-60 h-40 rounded-full opacity-10 blur-3xl" style={{ backgroundColor: '#c8a46e' }} />
+                <div className="absolute bottom-0 right-0 w-32 h-32 rounded-full opacity-5 blur-2xl" style={{ backgroundColor: '#b8956a' }} />
                 
                 <div className="relative z-10">
-                  <h2 className="text-3xl md:text-4xl font-permanent-marker mb-3" style={{ color: '#b4fa74' }}>
+                  <h2 className="text-3xl md:text-4xl font-permanent-marker mb-3" style={{ color: '#c8a46e' }}>
                     {t('landing.beta.title')}
                   </h2>
-                  <p className="text-white/50 font-sedgwick-ave mb-8 text-lg">
+                  <p className="text-[#b8956a]/50 font-sedgwick-ave mb-8 text-lg">
                     {t('landing.beta.description')}
                   </p>
                   <form onSubmit={handleWaitlistSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
@@ -310,12 +310,12 @@ export default function LandingPage() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required disabled={loading}
-                      className="flex-1 bg-white/5 border-white/15 text-white placeholder:text-white/30 rounded-xl font-sedgwick-ave text-lg" />
+                      className="flex-1 bg-white/5 border-[#c8a46e]/20 text-white placeholder:text-white/30 rounded-xl font-sedgwick-ave text-lg" />
                     
                     <Button
                       type="submit" disabled={loading}
-                      className="bg-[#b4fa74] hover:bg-[#a2e866] font-permanent-marker rounded-xl px-8 text-lg shadow-[0_0_25px_rgba(180,250,116,0.2)]"
-                      style={{ color: '#0a0a0a' }}>
+                      className="bg-[#c8a46e] hover:bg-[#b8956a] font-permanent-marker rounded-xl px-8 text-lg shadow-[0_0_25px_rgba(200,164,110,0.2)]"
+                      style={{ color: '#1a1206' }}>
                       {loading ? t('landing.beta.loading') : t('landing.beta.cta')}
                     </Button>
                   </form>
