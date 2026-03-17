@@ -20,7 +20,6 @@ import valueProp3 from "@/assets/value-prop-3.png";
 import appMapScreen from "@/assets/app-map-screen-new.png";
 import stoneTagline from "@/assets/stone-tagline-new.png";
 import rescueMap from "@/assets/rescue-map.png";
-import rescueMapScene from "@/assets/rescue-map-scene.png";
 
 const emailSchema = z.string().email();
 
@@ -132,16 +131,6 @@ export default function LandingPage() {
             <HeroSection className="my-0" />
           </div>
 
-          {/* Rescue Map Scene - Full width */}
-          <div className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
-            <img
-              src={rescueMapScene}
-              alt="Rescue Map - Your city is like a board game where valuable free finds suddenly appear!"
-              className="w-full h-auto block"
-              loading="lazy"
-            />
-          </div>
-
           {/* Tagline + Rescue Map */}
           <div className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 py-8 md:py-12 px-4">
             <img
@@ -161,31 +150,31 @@ export default function LandingPage() {
           {/* ═══════════════ App Promo & CTA ═══════════════ */}
           <section className="px-4 py-16 relative overflow-hidden">
             <div className="container mx-auto max-w-6xl relative z-10">
-              <div className="flex flex-col items-center justify-center text-center">
-                  {/* CTA Buttons */}
-                  <div className="flex flex-row gap-4 items-center justify-center">
-                    <Button
-                    onClick={() => setWaitlistOpen(true)}
-                    className="bg-[#b4fa74] hover:bg-[#a2e866] font-permanent-marker text-xl px-8 py-6 rounded-xl transition-all shadow-[0_0_25px_rgba(180,250,116,0.25)] hover:shadow-[0_0_40px_rgba(180,250,116,0.35)]"
-                    style={{ color: '#0a0a0a' }}>
-                      
-                      {language === 'en' ? 'GET BETA' : 'OBTÉN BETA'}
-                      <ChevronRight className="ml-1 h-5 w-5" style={{ color: '#0a0a0a', stroke: '#0a0a0a' }} />
-                    </Button>
-                    
-                    <button
-                    onClick={() => setTrailerOpen(true)}
-                    className="font-permanent-marker text-sm px-6 py-3 h-auto rounded-xl border-2 bg-transparent hover:bg-[#b4fa74]/10 transition-all duration-300 flex items-center gap-2 cursor-pointer"
-                    style={{
-                      borderColor: '#b4fa74',
-                      boxShadow: '0 0 15px rgba(180, 250, 116, 0.25), inset 0 0 15px rgba(180, 250, 116, 0.05)'
-                    }}>
-                      
-                      <Video className="h-5 w-5" style={{ color: '#611a5a', fill: '#611a5a', stroke: '#611a5a' }} />
-                      <span className="tracking-wider" style={{ color: '#b4fa74' }}>TRAILER</span>
-                    </button>
-                  </div>
-              </div>
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              
             </div>
           </section>
 
