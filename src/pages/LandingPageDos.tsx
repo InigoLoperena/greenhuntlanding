@@ -357,7 +357,7 @@ export default function LandingPage() {
                       className="bg-[#b4fa74] hover:bg-[#a2e866] font-permanent-marker text-xl px-8 py-6 rounded-xl transition-all shadow-[0_0_25px_rgba(180,250,116,0.25)] hover:shadow-[0_0_40px_rgba(180,250,116,0.35)]"
                       style={{ color: '#0a0a0a' }}>
                       
-                      {language === 'en' ? 'GET BETA' : 'OBTÉN BETA'}
+                      GET BETA
                       <ChevronRight className="ml-1 h-5 w-5" style={{ color: '#0a0a0a', stroke: '#0a0a0a' }} />
                     </Button>
                     
