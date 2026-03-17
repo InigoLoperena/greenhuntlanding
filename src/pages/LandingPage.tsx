@@ -136,13 +136,13 @@ export default function LandingPage() {
             <img 
               src={stoneTagline} 
               alt="Your city is like a board game where valuable free finds suddenly appear!" 
-              className="w-[90%] sm:w-[70%] md:w-[45%] lg:w-[38%] xl:w-[32%] h-auto mix-blend-multiply drop-shadow-lg"
+              className="w-[90%] sm:w-[70%] md:w-[45%] lg:w-[38%] xl:w-[32%] h-auto drop-shadow-lg"
               loading="lazy"
             />
             <img 
               src={rescueMap} 
               alt="Rescue Map - Mission: Save the Planet!" 
-              className="w-[75%] sm:w-[55%] md:w-[35%] lg:w-[28%] xl:w-[24%] h-auto mix-blend-multiply drop-shadow-lg"
+              className="w-[75%] sm:w-[55%] md:w-[35%] lg:w-[28%] xl:w-[24%] h-auto drop-shadow-lg"
               loading="lazy"
             />
           </div>
