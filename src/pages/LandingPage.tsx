@@ -20,6 +20,7 @@ import valueProp3 from "@/assets/value-prop-3.png";
 import appMapScreen from "@/assets/app-map-screen-new.png";
 import stoneTagline from "@/assets/stone-tagline-new.png";
 import rescueMap from "@/assets/rescue-map.png";
+import rescueMapScene from "@/assets/rescue-map-scene.png";
 
 const emailSchema = z.string().email();
 
@@ -129,6 +130,16 @@ export default function LandingPage() {
           {/* Hero Section */}
           <div className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
             <HeroSection className="my-0" />
+          </div>
+
+          {/* Rescue Map Scene - Full width */}
+          <div className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
+            <img
+              src={rescueMapScene}
+              alt="Rescue Map - Your city is like a board game where valuable free finds suddenly appear!"
+              className="w-full h-auto block"
+              loading="lazy"
+            />
           </div>
 
           {/* Tagline + Rescue Map */}
