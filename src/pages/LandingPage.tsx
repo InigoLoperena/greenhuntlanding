@@ -135,58 +135,63 @@ export default function LandingPage() {
               <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center justify-between">
                 {/* Left */}
                 <div className="flex-1 text-center lg:text-left">
-                  <h2 className="font-permanent-marker text-3xl md:text-4xl lg:text-5xl mb-4" style={{ color: '#b4fa74' }}>
-                    {t('landing.app.title')}
-                  </h2>
-                  <div className="w-16 h-1 rounded-full mx-auto lg:mx-0 mb-5" style={{ backgroundColor: '#b4fa74', opacity: 0.5 }} />
-                  <p className="font-sedgwick-ave text-subtitle-styled text-xl md:text-2xl max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed whitespace-pre-line">
+                  {/* Title - weathered wood plank style */}
+                  <div className="relative inline-block panel-wood rounded-lg px-6 py-3 mb-6 texture-noise">
+                    <div className="rivet absolute top-2 left-2" />
+                    <div className="rivet absolute top-2 right-2" />
+                    <h2 className="font-permanent-marker text-3xl md:text-4xl lg:text-5xl uppercase tracking-wide"
+                      style={{ color: 'hsl(40, 35%, 75%)', textShadow: '0 2px 4px rgba(0,0,0,0.7), 0 0 10px rgba(184, 134, 11, 0.2)' }}>
+                      {t('landing.app.title')}
+                    </h2>
+                  </div>
+                  
+                  {/* Divider - chain style */}
+                  <div className="divider-chain w-24 mx-auto lg:mx-0 mb-5" />
+                  
+                  {/* Subtitle - parchment tone */}
+                  <p className="font-sedgwick-ave text-xl md:text-2xl max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed whitespace-pre-line"
+                    style={{ color: 'hsl(38, 25%, 55%)', textShadow: '0 1px 2px rgba(0,0,0,0.5)' }}>
                     {t('landing.app.subtitle')}
                   </p>
                   
-                  {/* CTA Buttons */}
+                  {/* CTA Buttons - weathered metal style */}
                   <div className="flex flex-row gap-4 items-center justify-center lg:justify-start mt-4">
-                    <Button
+                    <button
                       onClick={() => setWaitlistOpen(true)}
-                      className="bg-[#b4fa74] hover:bg-[#a2e866] font-permanent-marker text-xl px-8 py-6 rounded-xl transition-all shadow-[0_0_25px_rgba(180,250,116,0.25)] hover:shadow-[0_0_40px_rgba(180,250,116,0.35)]"
-                      style={{ color: '#0a0a0a' }}>
-                      
+                      className="btn-wood font-permanent-marker text-xl px-8 py-4 rounded-lg uppercase tracking-wider flex items-center gap-2 cursor-pointer relative texture-noise"
+                    >
                       {language === 'en' ? 'GET BETA' : 'OBTÉN BETA'}
-                      <ChevronRight className="ml-1 h-5 w-5" style={{ color: '#0a0a0a', stroke: '#0a0a0a' }} />
-                    </Button>
+                      <ChevronRight className="ml-1 h-5 w-5" style={{ color: 'hsl(40, 35%, 75%)', stroke: 'hsl(40, 35%, 75%)' }} />
+                    </button>
                     
                     <button
                       onClick={() => setTrailerOpen(true)}
-                      className="font-permanent-marker text-sm px-6 py-3 h-auto rounded-xl border-2 bg-transparent hover:bg-[#b4fa74]/10 transition-all duration-300 flex items-center gap-2 cursor-pointer"
-                      style={{
-                        borderColor: '#b4fa74',
-                        boxShadow: '0 0 15px rgba(180, 250, 116, 0.25), inset 0 0 15px rgba(180, 250, 116, 0.05)'
-                      }}>
-                      
-                      <Video className="h-5 w-5" style={{ color: '#611a5a', fill: '#611a5a', stroke: '#611a5a' }} />
-                      <span className="tracking-wider" style={{ color: '#b4fa74' }}>TRAILER</span>
+                      className="btn-metal font-permanent-marker text-sm px-6 py-4 rounded-lg flex items-center gap-2 cursor-pointer uppercase tracking-wider relative texture-noise"
+                    >
+                      <Video className="h-5 w-5" style={{ color: 'hsl(43, 60%, 45%)', stroke: 'hsl(43, 60%, 45%)', fill: 'none' }} />
+                      <span style={{ color: 'hsl(43, 60%, 45%)' }}>TRAILER</span>
                     </button>
                   </div>
                   
                   {/* App Store Badges */}
                   <div className="flex flex-col items-center lg:items-start mt-10">
                     <img src={appStoreBadges} alt="Available on App Store and Google Play" className="w-[280px] md:w-[320px] h-auto opacity-80" style={{ mixBlendMode: 'screen' }} />
-                    <p style={{ color: '#b4fa74' }} className="font-sedgwick-ave text-2xl md:text-3xl mt-2 opacity-70">
+                    <p className="font-sedgwick-ave text-2xl md:text-3xl mt-2 opacity-70" style={{ color: 'hsl(43, 60%, 45%)' }}>
                       coming soon
                     </p>
                   </div>
                 </div>
                 
-                {/* Right - Phone */}
+                {/* Right - Phone with metal frame */}
                 <div className="flex-1 flex items-center justify-center">
                   <div className="relative">
-                    <div className="absolute -inset-8 rounded-full opacity-10 blur-3xl" style={{ backgroundColor: '#b4fa74' }} />
+                    <div className="absolute -inset-8 rounded-full opacity-8 blur-3xl" style={{ backgroundColor: 'hsl(43, 60%, 45%)' }} />
                     <img
                       alt="GreenHunt App Screenshot"
                       className="relative h-96 md:h-[550px] lg:h-[700px] w-auto object-contain drop-shadow-2xl"
                       loading="lazy"
                       src={appMapScreen}
                     />
-                    
                   </div>
                 </div>
               </div>
