@@ -17,7 +17,7 @@ import thriftingStep3 from "@/assets/thrifting-step-3.png";
 import junkStep3 from "@/assets/junk-step-3.png";
 import junkRemovalFlow from "@/assets/junk-removal-flow.png";
 import appStoreBadges from "@/assets/app-store-badges.png";
-import playForPlanetScreen from "@/assets/play-for-planet-screen.png";
+import playForPlanetScreen from "@/assets/play-for-planet-screen.webp";
 import { MarginBackgrounds } from "@/components/MarginBackgrounds";
 
 const emailSchema = z.string().email();
