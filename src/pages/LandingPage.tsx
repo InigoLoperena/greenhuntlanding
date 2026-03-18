@@ -30,15 +30,15 @@ import conquerApocalypsePromo from "@/assets/conquer-apocalypse-promo.webp";
 
 const streetFindsImages = [
 "/street-finds/find-1.jpeg",
-"/street-finds/find-2.jpeg",
-"/street-finds/find-3.jpeg",
-"/street-finds/find-4.jpeg",
-"/street-finds/find-5.jpeg",
-"/street-finds/find-6.jpeg",
-"/street-finds/find-7.png",
-"/street-finds/find-8.png",
-"/street-finds/find-9.png",
-"/street-finds/find-10.png"];
+"/street-finds/find-2.webp",
+"/street-finds/find-3.webp",
+"/street-finds/find-4.webp",
+"/street-finds/find-5.webp",
+"/street-finds/find-6.webp",
+"/street-finds/find-7.webp",
+"/street-finds/find-8.webp",
+"/street-finds/find-9.webp",
+"/street-finds/find-10.webp"];
 
 
 const FrameCarouselSection = () => {
