@@ -293,67 +293,70 @@ export default function LandingPage() {
           </section>
 
           {/* Footer */}
-          <footer className="relative py-14 px-4 border-t border-[#c8a46e]/10">
-            <div className="container mx-auto max-w-5xl">
-              <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 mb-8">
-                {[
-                { to: "/legal", label: t('landing.footer.legal') },
-                { to: "/privacy", label: t('landing.footer.privacy') },
-                { to: "/cookies", label: t('landing.footer.cookies') }].
-                map((link, i) =>
-                <Link
-                  key={i}
-                  to={link.to}
-                  className="hover:opacity-80 transition-colors font-permanent-marker text-base"
-                  style={{ color: '#b8956a' }}>
-                  
-                    {link.label}
-                  </Link>
-                )}
-              </div>
-
-              {/* Redes sociales */}
-              <div className="flex items-center justify-center gap-6 sm:gap-8 mb-8">
-                {[
-                { href: "https://www.instagram.com/greenhuntstoopingapp/", icon: <Instagram className="h-8 w-8 sm:h-9 sm:w-9" /> },
-                { href: "https://www.tiktok.com/@greenhuntstoopingapp", icon:
-                  <svg className="h-8 w-8 sm:h-9 sm:w-9" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-.88-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z" />
-                    </svg>
-                },
-                { href: "https://www.youtube.com/@GreenHuntStoopingApp", icon: <Youtube className="h-8 w-8 sm:h-9 sm:w-9" /> },
-                { href: "https://x.com/StoopingApp", icon:
-                  <svg className="h-8 w-8 sm:h-9 sm:w-9" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                    </svg>
-                },
-                { href: "https://www.linkedin.com/company/greenhunt", icon: <Linkedin className="h-8 w-8 sm:h-9 sm:w-9" /> }].
-                map((social, i) =>
-                <a
-                  key={i}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:scale-125 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(200,164,110,0.6)]"
-                  style={{ color: '#c8a46e' }}>
-                  
-                    {social.icon}
-                  </a>
-                )}
-              </div>
-
-              {/* Línea divisora madera */}
-              <div className="w-full h-px mb-6" style={{ background: 'linear-gradient(90deg, transparent, #b8956a, #c8a46e, #b8956a, transparent)' }} />
-
-              {/* Eslogan y email */}
-              <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-2">
-                <div className="flex items-center gap-2">
-                  <span className="font-sedgwick-ave text-lg" style={{ color: '#c8a46e' }}>Made to stop the linear economy apocalypse</span>
-                  <span className="text-xl">💀🌍</span>
+          <footer className="relative -mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
+            <div className="relative py-14 px-4" style={{ backgroundImage: `url(${darkWoodTexture})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+              <div className="absolute inset-0 bg-black/25" />
+              <div className="container mx-auto max-w-5xl relative z-10">
+                <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 mb-8">
+                  {[
+                  { to: "/legal", label: t('landing.footer.legal') },
+                  { to: "/privacy", label: t('landing.footer.privacy') },
+                  { to: "/cookies", label: t('landing.footer.cookies') }].
+                  map((link, i) =>
+                  <Link
+                    key={i}
+                    to={link.to}
+                    className="hover:opacity-80 transition-colors font-permanent-marker text-base"
+                    style={{ color: '#f0c940' }}>
+                    
+                      {link.label}
+                    </Link>
+                  )}
                 </div>
-                <a href="mailto:hello@greenhunt.net" className="font-sedgwick-ave text-lg hover:scale-105 transition-all" style={{ color: '#b8956a' }}>
-                  hello@greenhunt.net
-                </a>
+
+                {/* Social media */}
+                <div className="flex items-center justify-center gap-6 sm:gap-8 mb-8">
+                  {[
+                  { href: "https://www.instagram.com/greenhuntstoopingapp/", icon: <Instagram className="h-8 w-8 sm:h-9 sm:w-9" /> },
+                  { href: "https://www.tiktok.com/@greenhuntstoopingapp", icon:
+                    <svg className="h-8 w-8 sm:h-9 sm:w-9" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-.88-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z" />
+                      </svg>
+                  },
+                  { href: "https://www.youtube.com/@GreenHuntStoopingApp", icon: <Youtube className="h-8 w-8 sm:h-9 sm:w-9" /> },
+                  { href: "https://x.com/StoopingApp", icon:
+                    <svg className="h-8 w-8 sm:h-9 sm:w-9" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                      </svg>
+                  },
+                  { href: "https://www.linkedin.com/company/greenhunt", icon: <Linkedin className="h-8 w-8 sm:h-9 sm:w-9" /> }].
+                  map((social, i) =>
+                  <a
+                    key={i}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:scale-125 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(240,201,64,0.6)]"
+                    style={{ color: '#f0c940' }}>
+                    
+                      {social.icon}
+                    </a>
+                  )}
+                </div>
+
+                {/* Divider */}
+                <div className="w-full h-px mb-6" style={{ background: 'linear-gradient(90deg, transparent, #f0c940, #d4a017, #f0c940, transparent)' }} />
+
+                {/* Tagline & email */}
+                <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-2">
+                  <div className="flex items-center gap-2">
+                    <span className="font-sedgwick-ave text-lg" style={{ color: '#f0c940' }}>Made to stop the linear economy apocalypse</span>
+                    <span className="text-xl">💀🌍</span>
+                  </div>
+                  <a href="mailto:hello@greenhunt.net" className="font-sedgwick-ave text-lg hover:scale-105 transition-all" style={{ color: '#d4a017' }}>
+                    hello@greenhunt.net
+                  </a>
+                </div>
               </div>
             </div>
           </footer>
