@@ -24,6 +24,8 @@ import rescueMap from "@/assets/rescue-map.png";
 import rescueMapScene from "@/assets/rescue-map-scene.png";
 import savePlanetPhone from "@/assets/save-planet-phone.png";
 import darkWoodTexture from "@/assets/dark-wood-texture.jpg";
+import trackImpactPromo from "@/assets/track-impact-promo.png";
+import conquerApocalypsePromo from "@/assets/conquer-apocalypse-promo.png";
 
 
 const streetFindsImages = [
@@ -255,6 +257,24 @@ export default function LandingPage() {
 
 
 
+
+          {/* Track Impact Promo - Full width */}
+          <div className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
+            <img
+              src={trackImpactPromo}
+              alt="Track your impact and compete with other local players"
+              className="w-full h-auto block"
+              loading="lazy" />
+          </div>
+
+          {/* Conquer Apocalypse Promo - Full width */}
+          <div className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
+            <img
+              src={conquerApocalypsePromo}
+              alt="Conquer the Green Apocalypse"
+              className="w-full h-auto block"
+              loading="lazy" />
+          </div>
 
           {/* ═══════════════ Final Beta CTA ═══════════════ */}
           <section id="waitlist" className="relative -mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
