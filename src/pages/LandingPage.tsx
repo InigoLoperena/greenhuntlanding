@@ -257,36 +257,36 @@ export default function LandingPage() {
 
 
           {/* ═══════════════ Final Beta CTA ═══════════════ */}
-          <section id="waitlist" className="relative py-20 px-4">
-            <div className="container mx-auto max-w-3xl text-center relative z-10">
-              <div className="relative overflow-hidden rounded-3xl border border-[#c8a46e]/15 bg-gradient-to-br from-[#1a1206] via-[#141010] to-[#0d0a06] p-10 md:p-14">
-                {/* Decorative glows */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-60 h-40 rounded-full opacity-10 blur-3xl" style={{ backgroundColor: '#c8a46e' }} />
-                <div className="absolute bottom-0 right-0 w-32 h-32 rounded-full opacity-5 blur-2xl" style={{ backgroundColor: '#b8956a' }} />
-                
-                <div className="relative z-10">
-                  <h2 className="text-3xl md:text-4xl font-permanent-marker mb-3" style={{ color: '#c8a46e' }}>
-                    {t('landing.beta.title')}
-                  </h2>
-                  <p className="text-[#b8956a]/50 font-sedgwick-ave mb-8 text-lg">
-                    {t('landing.beta.description')}
-                  </p>
-                  <form onSubmit={handleWaitlistSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-                    <Input
-                      type="email"
-                      placeholder={t('landing.beta.placeholder')}
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      required disabled={loading}
-                      className="flex-1 bg-white/5 border-[#c8a46e]/20 text-white placeholder:text-white/30 rounded-xl font-sedgwick-ave text-lg" />
-                    
-                    <Button
-                      type="submit" disabled={loading}
-                      className="bg-[#c8a46e] hover:bg-[#b8956a] font-permanent-marker rounded-xl px-8 text-lg shadow-[0_0_25px_rgba(200,164,110,0.2)]"
-                      style={{ color: '#1a1206' }}>
-                      {loading ? t('landing.beta.loading') : t('landing.beta.cta')}
-                    </Button>
-                  </form>
+          <section id="waitlist" className="relative -mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
+            <div className="relative py-20 px-4" style={{ backgroundImage: `url(${darkWoodTexture})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+              {/* Dark overlay for depth */}
+              <div className="absolute inset-0 bg-black/30" />
+              <div className="container mx-auto max-w-3xl text-center relative z-10">
+                <div className="relative overflow-hidden rounded-3xl border-2 border-[#d4a017]/30 bg-black/40 backdrop-blur-sm p-10 md:p-14 shadow-[0_0_40px_rgba(212,160,23,0.15)]">
+                  <div className="relative z-10">
+                    <h2 className="text-3xl md:text-4xl font-permanent-marker mb-3" style={{ color: '#f0c940' }}>
+                      Get Beta & Project Updates
+                    </h2>
+                    <p className="font-sedgwick-ave mb-8 text-lg" style={{ color: '#d4a017' }}>
+                      Be the first to know when we launch
+                    </p>
+                    <form onSubmit={handleWaitlistSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                      <Input
+                        type="email"
+                        placeholder="Enter your email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required disabled={loading}
+                        className="flex-1 bg-black/40 border-[#d4a017]/40 text-[#f0c940] placeholder:text-[#d4a017]/40 rounded-xl font-sedgwick-ave text-lg focus:border-[#f0c940]" />
+                      
+                      <Button
+                        type="submit" disabled={loading}
+                        className="font-permanent-marker rounded-xl px-8 text-lg"
+                        style={{ backgroundColor: '#d4a017', color: '#1a1206', boxShadow: '0 0 25px rgba(212,160,23,0.3)' }}>
+                        {loading ? 'Sending...' : 'GET BETA'}
+                      </Button>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
