@@ -258,6 +258,24 @@ export default function LandingPage() {
 
 
 
+          {/* Track Impact Promo - Full width */}
+          <div className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
+            <img
+              src={trackImpactPromo}
+              alt="Track your impact and compete with other local players"
+              className="w-full h-auto block"
+              loading="lazy" />
+          </div>
+
+          {/* Conquer Apocalypse Promo - Full width */}
+          <div className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
+            <img
+              src={conquerApocalypsePromo}
+              alt="Conquer the Green Apocalypse"
+              className="w-full h-auto block"
+              loading="lazy" />
+          </div>
+
           {/* ═══════════════ Final Beta CTA ═══════════════ */}
           <section id="waitlist" className="relative -mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
             <div className="relative py-20 px-4" style={{ backgroundImage: `url(${darkWoodTexture})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
