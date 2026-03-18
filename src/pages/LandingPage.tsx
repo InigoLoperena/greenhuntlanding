@@ -23,6 +23,7 @@ import stoneTagline from "@/assets/stone-tagline-new.png";
 import rescueMap from "@/assets/rescue-map.png";
 import rescueMapScene from "@/assets/rescue-map-scene.png";
 import savePlanetPhone from "@/assets/save-planet-phone.png";
+import darkWoodTexture from "@/assets/dark-wood-texture.jpg";
 
 
 const streetFindsImages = [
