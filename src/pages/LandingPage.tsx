@@ -12,33 +12,33 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { z } from "zod";
 import tutorialStep2 from "@/assets/tutorial-step-2.png";
-import getFreeStuffPromo from "@/assets/get-free-stuff-promo.png";
+import getFreeStuffPromo from "@/assets/get-free-stuff-promo.webp";
 import appStoreBadges from "@/assets/app-store-badges.png";
-import playForPlanetScreen from "@/assets/play-for-planet-screen.png";
-import valueProp1 from "@/assets/value-prop-1.png";
+import playForPlanetScreen from "@/assets/play-for-planet-screen.webp";
+import valueProp1 from "@/assets/value-prop-1.webp";
 import valueProp2 from "@/assets/value-prop-2.png";
 import valueProp3 from "@/assets/value-prop-3.png";
 import appMapScreen from "@/assets/app-map-screen-new.png";
-import stoneTagline from "@/assets/stone-tagline-new.png";
-import rescueMap from "@/assets/rescue-map.png";
-import rescueMapScene from "@/assets/rescue-map-scene.png";
-import savePlanetPhone from "@/assets/save-planet-phone.png";
+import stoneTagline from "@/assets/stone-tagline-new.webp";
+import rescueMap from "@/assets/rescue-map.webp";
+import rescueMapScene from "@/assets/rescue-map-scene.webp";
+import savePlanetPhone from "@/assets/save-planet-phone.webp";
 import darkWoodTexture from "@/assets/dark-wood-texture.jpg";
-import trackImpactPromo from "@/assets/track-impact-promo.png";
-import conquerApocalypsePromo from "@/assets/conquer-apocalypse-promo.png";
+import trackImpactPromo from "@/assets/track-impact-promo.webp";
+import conquerApocalypsePromo from "@/assets/conquer-apocalypse-promo.webp";
 
 
 const streetFindsImages = [
 "/street-finds/find-1.jpeg",
-"/street-finds/find-2.jpeg",
-"/street-finds/find-3.jpeg",
-"/street-finds/find-4.jpeg",
-"/street-finds/find-5.jpeg",
-"/street-finds/find-6.jpeg",
-"/street-finds/find-7.png",
-"/street-finds/find-8.png",
-"/street-finds/find-9.png",
-"/street-finds/find-10.png"];
+"/street-finds/find-2.webp",
+"/street-finds/find-3.webp",
+"/street-finds/find-4.webp",
+"/street-finds/find-5.webp",
+"/street-finds/find-6.webp",
+"/street-finds/find-7.webp",
+"/street-finds/find-8.webp",
+"/street-finds/find-9.webp",
+"/street-finds/find-10.webp"];
 
 
 const FrameCarouselSection = () => {
