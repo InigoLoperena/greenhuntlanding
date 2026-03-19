@@ -279,7 +279,7 @@ export default function LandingPage() {
 
           {/* ═══════════════ Final Beta CTA ═══════════════ */}
           <section id="waitlist" className="relative -mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
-            <div className="relative py-20 px-4" style={{ backgroundImage: `url(${darkWoodTexture})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+            <div className="relative py-28 md:py-36 px-4" style={{ backgroundImage: `url(${darkWoodTexture})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
               <div className="absolute inset-0 bg-black/30" />
               <div className="container mx-auto max-w-3xl text-center relative z-10">
                 <div className="relative overflow-hidden rounded-3xl border-2 bg-black/40 backdrop-blur-sm p-10 md:p-14 shadow-[0_0_40px_rgba(210,180,140,0.15)]" style={{ borderColor: 'rgba(210,180,140,0.3)' }}>
