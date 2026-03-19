@@ -369,12 +369,12 @@ export default function LandingPage() {
                 <div className="w-full h-px mb-6" style={{ background: 'linear-gradient(90deg, transparent, #D2B48C, #A0845C, #D2B48C, transparent)' }} />
 
                 {/* Tagline & email */}
-                <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-2">
+                <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-2 px-2">
                   <div className="flex items-center gap-2">
-                    <span className="text-lg" style={{ color: '#D2B48C', fontFamily: "'Open Sans', sans-serif" }}>Made to stop the linear economy apocalypse</span>
-                    <span className="text-xl">💀🌍</span>
+                    <span className="text-xl md:text-2xl font-bold" style={{ color: '#D2B48C', fontFamily: "'Inter', sans-serif" }}>Made to stop the linear economy apocalypse</span>
+                    <span className="text-2xl">💀🌍</span>
                   </div>
-                  <a href="mailto:hello@greenhunt.net" className="text-lg hover:scale-105 transition-all" style={{ color: '#D2B48C', fontFamily: "'Open Sans', sans-serif" }}>
+                  <a href="mailto:hello@greenhunt.net" className="text-xl md:text-2xl font-bold hover:scale-105 transition-all" style={{ color: '#D2B48C', fontFamily: "'Inter', sans-serif" }}>
                     hello@greenhunt.net
                   </a>
                 </div>
