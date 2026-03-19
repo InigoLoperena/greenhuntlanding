@@ -261,11 +261,25 @@ export default function LandingPage() {
 
 
 
-          {/* Track Impact Promo - Full width */}
-          <div className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
+          {/* Track Impact Promo - Desktop only */}
+          <div className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32 hidden md:block">
             <img
               src={trackImpactPromo}
               alt="Track your impact and compete with other local players"
+              className="w-full h-auto block"
+              loading="lazy" />
+          </div>
+
+          {/* Track Impact Mobile - Mobile only */}
+          <div className="-mx-4 block md:hidden bg-black">
+            <img
+              src={trackImpactMobile}
+              alt="Track your impact and compete with other local players"
+              className="w-full h-auto block"
+              loading="lazy" />
+            <img
+              src={rankingMobile}
+              alt="New York Ranking - Compete with local players"
               className="w-full h-auto block"
               loading="lazy" />
           </div>
