@@ -384,14 +384,13 @@ export default function LandingPage() {
 
           {/* Bottom Right Buttons */}
           <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
-            {/* Scroll to top */}
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="font-permanent-marker px-4 py-3 rounded-xl hover:scale-105 transition-all"
+              className="px-4 py-3 rounded-xl hover:scale-105 transition-all"
               style={{
-                backgroundColor: '#c8a46e',
+                backgroundColor: '#D2B48C',
                 color: '#1a1206',
-                boxShadow: '0 0 15px rgba(200, 164, 110, 0.3)'
+                boxShadow: '0 0 15px rgba(210, 180, 140, 0.3)'
               }}
               aria-label="Go to top">
               <ArrowUp className="h-5 w-5" style={{ color: '#1a1206', stroke: '#1a1206' }} />
