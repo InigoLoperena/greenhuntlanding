@@ -216,12 +216,12 @@ export default function LandingPage() {
 
           {/* Waitlist Dialog */}
           <Dialog open={waitlistOpen} onOpenChange={setWaitlistOpen}>
-            <DialogContent className="sm:max-w-md bg-[#141414] border border-[#c8a46e]/20 shadow-[0_0_60px_rgba(200,164,110,0.08)]">
+            <DialogContent className="sm:max-w-md bg-[#141414] border shadow-[0_0_60px_rgba(210,180,140,0.08)]" style={{ borderColor: 'rgba(210,180,140,0.2)' }}>
               <div className="text-center">
-                <h3 className="font-permanent-marker text-2xl mb-1" style={{ color: '#c8a46e' }}>
+                <h3 className="text-2xl mb-1" style={{ color: '#D2B48C', fontFamily: "'Libre Baskerville', serif" }}>
                   Get the Beta
                 </h3>
-                <p className="font-sedgwick-ave text-[#b8956a]/50 text-sm mb-4">
+                <p className="text-sm mb-4" style={{ color: 'rgba(210,180,140,0.5)', fontFamily: "'Open Sans', sans-serif" }}>
                   {t('landing.beta.description')}
                 </p>
               </div>
@@ -232,12 +232,13 @@ export default function LandingPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="font-sedgwick-ave bg-white/5 border-[#c8a46e]/20 text-white placeholder:text-white/30 focus:border-[#c8a46e]/50 rounded-xl" />
+                  className="bg-white/5 text-white placeholder:text-white/30 rounded-xl"
+                  style={{ borderColor: 'rgba(210,180,140,0.2)', fontFamily: "'Open Sans', sans-serif" }} />
                 
                 <Button
                   type="submit" disabled={loading}
-                  className="w-full bg-[#c8a46e] hover:bg-[#b8956a] font-permanent-marker text-lg rounded-xl shadow-[0_0_20px_rgba(200,164,110,0.2)]"
-                  style={{ color: '#1a1206' }}>
+                  className="w-full text-lg rounded-xl shadow-[0_0_20px_rgba(210,180,140,0.2)]"
+                  style={{ backgroundColor: '#D2B48C', color: '#1a1206', fontFamily: "'Libre Baskerville', serif" }}>
                   
                   {loading ? 'Sending...' : 'GET BETA'}
                 </Button>
