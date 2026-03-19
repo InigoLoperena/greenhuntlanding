@@ -23,7 +23,7 @@ import stoneTagline from "@/assets/stone-tagline-new.webp";
 import rescueMap from "@/assets/rescue-map.webp";
 import rescueMapScene from "@/assets/rescue-map-scene.webp";
 import savePlanetPhone from "@/assets/save-planet-phone.webp";
-import darkWoodTexture from "@/assets/dark-wood-texture.jpg";
+import darkWoodTexture from "@/assets/dark-wood-texture.webp";
 import trackImpactPromo from "@/assets/track-impact-promo.webp";
 import conquerApocalypsePromo from "@/assets/conquer-apocalypse-promo.webp";
 
@@ -216,12 +216,12 @@ export default function LandingPage() {
 
           {/* Waitlist Dialog */}
           <Dialog open={waitlistOpen} onOpenChange={setWaitlistOpen}>
-            <DialogContent className="sm:max-w-md bg-[#141414] border border-[#c8a46e]/20 shadow-[0_0_60px_rgba(200,164,110,0.08)]">
+            <DialogContent className="sm:max-w-md bg-[#141414] border shadow-[0_0_60px_rgba(210,180,140,0.08)]" style={{ borderColor: 'rgba(210,180,140,0.2)' }}>
               <div className="text-center">
-                <h3 className="font-permanent-marker text-2xl mb-1" style={{ color: '#c8a46e' }}>
+                <h3 className="text-2xl mb-1" style={{ color: '#D2B48C', fontFamily: "'Libre Baskerville', serif" }}>
                   Get the Beta
                 </h3>
-                <p className="font-sedgwick-ave text-[#b8956a]/50 text-sm mb-4">
+                <p className="text-sm mb-4" style={{ color: 'rgba(210,180,140,0.5)', fontFamily: "'Open Sans', sans-serif" }}>
                   {t('landing.beta.description')}
                 </p>
               </div>
@@ -232,12 +232,13 @@ export default function LandingPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="font-sedgwick-ave bg-white/5 border-[#c8a46e]/20 text-white placeholder:text-white/30 focus:border-[#c8a46e]/50 rounded-xl" />
+                  className="bg-white/5 text-white placeholder:text-white/30 rounded-xl"
+                  style={{ borderColor: 'rgba(210,180,140,0.2)', fontFamily: "'Open Sans', sans-serif" }} />
                 
                 <Button
                   type="submit" disabled={loading}
-                  className="w-full bg-[#c8a46e] hover:bg-[#b8956a] font-permanent-marker text-lg rounded-xl shadow-[0_0_20px_rgba(200,164,110,0.2)]"
-                  style={{ color: '#1a1206' }}>
+                  className="w-full text-lg rounded-xl shadow-[0_0_20px_rgba(210,180,140,0.2)]"
+                  style={{ backgroundColor: '#D2B48C', color: '#1a1206', fontFamily: "'Libre Baskerville', serif" }}>
                   
                   {loading ? 'Sending...' : 'GET BETA'}
                 </Button>
@@ -279,15 +280,14 @@ export default function LandingPage() {
           {/* ═══════════════ Final Beta CTA ═══════════════ */}
           <section id="waitlist" className="relative -mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
             <div className="relative py-20 px-4" style={{ backgroundImage: `url(${darkWoodTexture})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-              {/* Dark overlay for depth */}
               <div className="absolute inset-0 bg-black/30" />
               <div className="container mx-auto max-w-3xl text-center relative z-10">
-                <div className="relative overflow-hidden rounded-3xl border-2 border-[#d4a017]/30 bg-black/40 backdrop-blur-sm p-10 md:p-14 shadow-[0_0_40px_rgba(212,160,23,0.15)]">
+                <div className="relative overflow-hidden rounded-3xl border-2 bg-black/40 backdrop-blur-sm p-10 md:p-14 shadow-[0_0_40px_rgba(210,180,140,0.15)]" style={{ borderColor: 'rgba(210,180,140,0.3)' }}>
                   <div className="relative z-10">
-                    <h2 className="text-3xl md:text-4xl font-permanent-marker mb-3" style={{ color: '#f0c940' }}>
+                    <h2 className="text-3xl md:text-4xl mb-3" style={{ color: '#D2B48C', fontFamily: "'Libre Baskerville', serif" }}>
                       Get Beta & Project Updates
                     </h2>
-                    <p className="font-sedgwick-ave mb-8 text-lg" style={{ color: '#d4a017' }}>
+                    <p className="mb-8 text-lg" style={{ color: '#D2B48C', fontFamily: "'Open Sans', sans-serif" }}>
                       Be the first to know when we launch
                     </p>
                     <form onSubmit={handleWaitlistSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
@@ -297,12 +297,13 @@ export default function LandingPage() {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required disabled={loading}
-                        className="flex-1 bg-black/40 border-[#d4a017]/40 text-[#f0c940] placeholder:text-[#d4a017]/40 rounded-xl font-sedgwick-ave text-lg focus:border-[#f0c940]" />
+                        className="flex-1 bg-black/40 rounded-xl text-lg focus:border-[#D2B48C]"
+                        style={{ borderColor: 'rgba(210,180,140,0.4)', color: '#D2B48C', fontFamily: "'Open Sans', sans-serif" }} />
                       
                       <Button
                         type="submit" disabled={loading}
-                        className="font-permanent-marker rounded-xl px-8 text-lg"
-                        style={{ backgroundColor: '#d4a017', color: '#1a1206', boxShadow: '0 0 25px rgba(212,160,23,0.3)' }}>
+                        className="rounded-xl px-8 text-lg"
+                        style={{ backgroundColor: '#D2B48C', color: '#1a1206', fontFamily: "'Libre Baskerville', serif", boxShadow: '0 0 25px rgba(210,180,140,0.3)' }}>
                         {loading ? 'Sending...' : 'GET BETA'}
                       </Button>
                     </form>
@@ -326,8 +327,8 @@ export default function LandingPage() {
                   <Link
                     key={i}
                     to={link.to}
-                    className="hover:opacity-80 transition-colors font-permanent-marker text-base"
-                    style={{ color: '#f0c940' }}>
+                    className="hover:opacity-80 transition-colors text-base"
+                    style={{ color: '#D2B48C', fontFamily: "'Libre Baskerville', serif" }}>
                     
                       {link.label}
                     </Link>
@@ -356,8 +357,8 @@ export default function LandingPage() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:scale-125 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(240,201,64,0.6)]"
-                    style={{ color: '#f0c940' }}>
+                    className="hover:scale-125 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(210,180,140,0.6)]"
+                    style={{ color: '#D2B48C' }}>
                     
                       {social.icon}
                     </a>
@@ -365,15 +366,15 @@ export default function LandingPage() {
                 </div>
 
                 {/* Divider */}
-                <div className="w-full h-px mb-6" style={{ background: 'linear-gradient(90deg, transparent, #f0c940, #d4a017, #f0c940, transparent)' }} />
+                <div className="w-full h-px mb-6" style={{ background: 'linear-gradient(90deg, transparent, #D2B48C, #A0845C, #D2B48C, transparent)' }} />
 
                 {/* Tagline & email */}
                 <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-2">
                   <div className="flex items-center gap-2">
-                    <span className="font-sedgwick-ave text-lg" style={{ color: '#f0c940' }}>Made to stop the linear economy apocalypse</span>
+                    <span className="text-lg" style={{ color: '#D2B48C', fontFamily: "'Open Sans', sans-serif" }}>Made to stop the linear economy apocalypse</span>
                     <span className="text-xl">💀🌍</span>
                   </div>
-                  <a href="mailto:hello@greenhunt.net" className="font-sedgwick-ave text-lg hover:scale-105 transition-all" style={{ color: '#d4a017' }}>
+                  <a href="mailto:hello@greenhunt.net" className="text-lg hover:scale-105 transition-all" style={{ color: '#D2B48C', fontFamily: "'Open Sans', sans-serif" }}>
                     hello@greenhunt.net
                   </a>
                 </div>
@@ -383,14 +384,13 @@ export default function LandingPage() {
 
           {/* Bottom Right Buttons */}
           <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
-            {/* Scroll to top */}
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="font-permanent-marker px-4 py-3 rounded-xl hover:scale-105 transition-all"
+              className="px-4 py-3 rounded-xl hover:scale-105 transition-all"
               style={{
-                backgroundColor: '#c8a46e',
+                backgroundColor: '#D2B48C',
                 color: '#1a1206',
-                boxShadow: '0 0 15px rgba(200, 164, 110, 0.3)'
+                boxShadow: '0 0 15px rgba(210, 180, 140, 0.3)'
               }}
               aria-label="Go to top">
               <ArrowUp className="h-5 w-5" style={{ color: '#1a1206', stroke: '#1a1206' }} />
