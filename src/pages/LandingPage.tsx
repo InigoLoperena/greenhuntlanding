@@ -233,12 +233,12 @@ export default function LandingPage() {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                   className="bg-white/5 text-white placeholder:text-white/30 rounded-xl"
-                  style={{ borderColor: 'rgba(210,180,140,0.2)', fontFamily: "'Open Sans', sans-serif" }} />
+                  style={{ borderColor: 'rgba(210,180,140,0.2)', fontFamily: "'Inter', sans-serif" }} />
                 
                 <Button
                   type="submit" disabled={loading}
                   className="w-full text-lg rounded-xl shadow-[0_0_20px_rgba(210,180,140,0.2)]"
-                  style={{ backgroundColor: '#D2B48C', color: '#1a1206', fontFamily: "'Libre Baskerville', serif" }}>
+                  style={{ backgroundColor: '#D2B48C', color: '#1a1206', fontFamily: "'Cinzel', serif" }}>
                   
                   {loading ? 'Sending...' : 'GET BETA'}
                 </Button>
