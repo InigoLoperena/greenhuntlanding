@@ -271,17 +271,20 @@ export default function LandingPage() {
           </div>
 
           {/* Track Impact Mobile - Mobile only */}
-          <div className="-mx-4 block md:hidden bg-black">
+          <div className="-mx-4 block md:hidden">
             <img
               src={trackImpactMobile}
               alt="Track your impact and compete with other local players"
               className="w-full h-auto block"
               loading="lazy" />
-            <img
-              src={rankingMobile}
-              alt="New York Ranking - Compete with local players"
-              className="w-full h-auto block"
-              loading="lazy" />
+            <div className="relative" style={{ backgroundImage: `url(${darkWoodTexture})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+              <div className="absolute inset-0 bg-black/20" />
+              <img
+                src={rankingMobile}
+                alt="New York Ranking - Compete with local players"
+                className="w-full h-auto block relative z-10 mx-auto"
+                loading="lazy" />
+            </div>
           </div>
 
           {/* Conquer Apocalypse Promo - Full width */}
