@@ -284,10 +284,10 @@ export default function LandingPage() {
               <div className="container mx-auto max-w-3xl text-center relative z-10">
                 <div className="relative overflow-hidden rounded-3xl border-2 bg-black/40 backdrop-blur-sm p-10 md:p-14 shadow-[0_0_40px_rgba(210,180,140,0.15)]" style={{ borderColor: 'rgba(210,180,140,0.3)' }}>
                   <div className="relative z-10">
-                    <h2 className="text-3xl md:text-4xl mb-3" style={{ color: '#D2B48C', fontFamily: "'Libre Baskerville', serif" }}>
+                    <h2 className="text-3xl md:text-4xl mb-3" style={{ color: '#D2B48C', fontFamily: "'Cinzel', serif" }}>
                       Get Beta & Project Updates
                     </h2>
-                    <p className="mb-8 text-lg" style={{ color: '#D2B48C', fontFamily: "'Open Sans', sans-serif" }}>
+                    <p className="mb-8 text-lg" style={{ color: '#D2B48C', fontFamily: "'Inter', sans-serif" }}>
                       Be the first to know when we launch
                     </p>
                     <form onSubmit={handleWaitlistSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
