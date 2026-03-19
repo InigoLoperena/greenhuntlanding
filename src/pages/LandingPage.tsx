@@ -279,15 +279,14 @@ export default function LandingPage() {
           {/* ═══════════════ Final Beta CTA ═══════════════ */}
           <section id="waitlist" className="relative -mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
             <div className="relative py-20 px-4" style={{ backgroundImage: `url(${darkWoodTexture})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-              {/* Dark overlay for depth */}
               <div className="absolute inset-0 bg-black/30" />
               <div className="container mx-auto max-w-3xl text-center relative z-10">
-                <div className="relative overflow-hidden rounded-3xl border-2 border-[#d4a017]/30 bg-black/40 backdrop-blur-sm p-10 md:p-14 shadow-[0_0_40px_rgba(212,160,23,0.15)]">
+                <div className="relative overflow-hidden rounded-3xl border-2 bg-black/40 backdrop-blur-sm p-10 md:p-14 shadow-[0_0_40px_rgba(210,180,140,0.15)]" style={{ borderColor: 'rgba(210,180,140,0.3)' }}>
                   <div className="relative z-10">
-                    <h2 className="text-3xl md:text-4xl font-permanent-marker mb-3" style={{ color: '#f0c940' }}>
+                    <h2 className="text-3xl md:text-4xl mb-3" style={{ color: '#D2B48C', fontFamily: "'Libre Baskerville', serif" }}>
                       Get Beta & Project Updates
                     </h2>
-                    <p className="font-sedgwick-ave mb-8 text-lg" style={{ color: '#d4a017' }}>
+                    <p className="mb-8 text-lg" style={{ color: '#D2B48C', fontFamily: "'Open Sans', sans-serif" }}>
                       Be the first to know when we launch
                     </p>
                     <form onSubmit={handleWaitlistSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
@@ -297,12 +296,13 @@ export default function LandingPage() {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required disabled={loading}
-                        className="flex-1 bg-black/40 border-[#d4a017]/40 text-[#f0c940] placeholder:text-[#d4a017]/40 rounded-xl font-sedgwick-ave text-lg focus:border-[#f0c940]" />
+                        className="flex-1 bg-black/40 rounded-xl text-lg focus:border-[#D2B48C]"
+                        style={{ borderColor: 'rgba(210,180,140,0.4)', color: '#D2B48C', fontFamily: "'Open Sans', sans-serif" }} />
                       
                       <Button
                         type="submit" disabled={loading}
-                        className="font-permanent-marker rounded-xl px-8 text-lg"
-                        style={{ backgroundColor: '#d4a017', color: '#1a1206', boxShadow: '0 0 25px rgba(212,160,23,0.3)' }}>
+                        className="rounded-xl px-8 text-lg"
+                        style={{ backgroundColor: '#D2B48C', color: '#1a1206', fontFamily: "'Libre Baskerville', serif", boxShadow: '0 0 25px rgba(210,180,140,0.3)' }}>
                         {loading ? 'Sending...' : 'GET BETA'}
                       </Button>
                     </form>
