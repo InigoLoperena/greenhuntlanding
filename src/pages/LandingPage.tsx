@@ -26,6 +26,8 @@ import savePlanetPhone from "@/assets/save-planet-phone.webp";
 import darkWoodTexture from "@/assets/dark-wood-texture.webp";
 import trackImpactPromo from "@/assets/track-impact-promo.webp";
 import conquerApocalypsePromo from "@/assets/conquer-apocalypse-promo.webp";
+import trackImpactMobile from "@/assets/track-impact-mobile.webp";
+import rankingMobile from "@/assets/ranking-mobile.webp";
 
 
 const streetFindsImages = [
