@@ -23,7 +23,7 @@ import stoneTagline from "@/assets/stone-tagline-new.webp";
 import rescueMap from "@/assets/rescue-map.webp";
 import rescueMapScene from "@/assets/rescue-map-scene.webp";
 import savePlanetPhone from "@/assets/save-planet-phone.webp";
-import darkWoodTexture from "@/assets/dark-wood-texture.jpg";
+import darkWoodTexture from "@/assets/dark-wood-texture.webp";
 import trackImpactPromo from "@/assets/track-impact-promo.webp";
 import conquerApocalypsePromo from "@/assets/conquer-apocalypse-promo.webp";
 
