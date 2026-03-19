@@ -303,7 +303,7 @@ export default function LandingPage() {
                       <Button
                         type="submit" disabled={loading}
                         className="rounded-xl px-8 text-lg"
-                        style={{ backgroundColor: '#D2B48C', color: '#1a1206', fontFamily: "'Libre Baskerville', serif", boxShadow: '0 0 25px rgba(210,180,140,0.3)' }}>
+                        style={{ backgroundColor: '#D2B48C', color: '#1a1206', fontFamily: "'Cinzel', serif", boxShadow: '0 0 25px rgba(210,180,140,0.3)' }}>
                         {loading ? 'Sending...' : 'GET BETA'}
                       </Button>
                     </form>
