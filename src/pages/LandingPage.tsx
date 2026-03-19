@@ -326,8 +326,8 @@ export default function LandingPage() {
                   <Link
                     key={i}
                     to={link.to}
-                    className="hover:opacity-80 transition-colors font-permanent-marker text-base"
-                    style={{ color: '#f0c940' }}>
+                    className="hover:opacity-80 transition-colors text-base"
+                    style={{ color: '#D2B48C', fontFamily: "'Libre Baskerville', serif" }}>
                     
                       {link.label}
                     </Link>
@@ -356,8 +356,8 @@ export default function LandingPage() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:scale-125 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(240,201,64,0.6)]"
-                    style={{ color: '#f0c940' }}>
+                    className="hover:scale-125 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(210,180,140,0.6)]"
+                    style={{ color: '#D2B48C' }}>
                     
                       {social.icon}
                     </a>
@@ -365,15 +365,15 @@ export default function LandingPage() {
                 </div>
 
                 {/* Divider */}
-                <div className="w-full h-px mb-6" style={{ background: 'linear-gradient(90deg, transparent, #f0c940, #d4a017, #f0c940, transparent)' }} />
+                <div className="w-full h-px mb-6" style={{ background: 'linear-gradient(90deg, transparent, #D2B48C, #A0845C, #D2B48C, transparent)' }} />
 
                 {/* Tagline & email */}
                 <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-2">
                   <div className="flex items-center gap-2">
-                    <span className="font-sedgwick-ave text-lg" style={{ color: '#f0c940' }}>Made to stop the linear economy apocalypse</span>
+                    <span className="text-lg" style={{ color: '#D2B48C', fontFamily: "'Open Sans', sans-serif" }}>Made to stop the linear economy apocalypse</span>
                     <span className="text-xl">💀🌍</span>
                   </div>
-                  <a href="mailto:hello@greenhunt.net" className="font-sedgwick-ave text-lg hover:scale-105 transition-all" style={{ color: '#d4a017' }}>
+                  <a href="mailto:hello@greenhunt.net" className="text-lg hover:scale-105 transition-all" style={{ color: '#D2B48C', fontFamily: "'Open Sans', sans-serif" }}>
                     hello@greenhunt.net
                   </a>
                 </div>
