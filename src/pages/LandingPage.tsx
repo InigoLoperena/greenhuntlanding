@@ -218,10 +218,10 @@ export default function LandingPage() {
           <Dialog open={waitlistOpen} onOpenChange={setWaitlistOpen}>
             <DialogContent className="sm:max-w-md bg-[#141414] border shadow-[0_0_60px_rgba(210,180,140,0.08)]" style={{ borderColor: 'rgba(210,180,140,0.2)' }}>
               <div className="text-center">
-                <h3 className="text-2xl mb-1" style={{ color: '#D2B48C', fontFamily: "'Libre Baskerville', serif" }}>
+                <h3 className="text-2xl mb-1" style={{ color: '#D2B48C', fontFamily: "'Cinzel', serif" }}>
                   Get the Beta
                 </h3>
-                <p className="text-sm mb-4" style={{ color: 'rgba(210,180,140,0.5)', fontFamily: "'Open Sans', sans-serif" }}>
+                <p className="text-sm mb-4" style={{ color: 'rgba(210,180,140,0.5)', fontFamily: "'Inter', sans-serif" }}>
                   {t('landing.beta.description')}
                 </p>
               </div>
