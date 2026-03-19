@@ -298,7 +298,7 @@ export default function LandingPage() {
                         onChange={(e) => setEmail(e.target.value)}
                         required disabled={loading}
                         className="flex-1 bg-black/40 rounded-xl text-lg focus:border-[#D2B48C]"
-                        style={{ borderColor: 'rgba(210,180,140,0.4)', color: '#D2B48C', fontFamily: "'Open Sans', sans-serif" }} />
+                        style={{ borderColor: 'rgba(210,180,140,0.4)', color: '#D2B48C', fontFamily: "'Inter', sans-serif" }} />
                       
                       <Button
                         type="submit" disabled={loading}
