@@ -218,10 +218,10 @@ export default function LandingPage() {
           <Dialog open={waitlistOpen} onOpenChange={setWaitlistOpen}>
             <DialogContent className="sm:max-w-md bg-[#141414] border shadow-[0_0_60px_rgba(210,180,140,0.08)]" style={{ borderColor: 'rgba(210,180,140,0.2)' }}>
               <div className="text-center">
-                <h3 className="text-2xl mb-1" style={{ color: '#D2B48C', fontFamily: "'Libre Baskerville', serif" }}>
+                <h3 className="text-2xl mb-1" style={{ color: '#D2B48C', fontFamily: "'Cinzel', serif" }}>
                   Get the Beta
                 </h3>
-                <p className="text-sm mb-4" style={{ color: 'rgba(210,180,140,0.5)', fontFamily: "'Open Sans', sans-serif" }}>
+                <p className="text-sm mb-4" style={{ color: 'rgba(210,180,140,0.5)', fontFamily: "'Inter', sans-serif" }}>
                   {t('landing.beta.description')}
                 </p>
               </div>
@@ -233,12 +233,12 @@ export default function LandingPage() {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                   className="bg-white/5 text-white placeholder:text-white/30 rounded-xl"
-                  style={{ borderColor: 'rgba(210,180,140,0.2)', fontFamily: "'Open Sans', sans-serif" }} />
+                  style={{ borderColor: 'rgba(210,180,140,0.2)', fontFamily: "'Inter', sans-serif" }} />
                 
                 <Button
                   type="submit" disabled={loading}
                   className="w-full text-lg rounded-xl shadow-[0_0_20px_rgba(210,180,140,0.2)]"
-                  style={{ backgroundColor: '#D2B48C', color: '#1a1206', fontFamily: "'Libre Baskerville', serif" }}>
+                  style={{ backgroundColor: '#D2B48C', color: '#1a1206', fontFamily: "'Cinzel', serif" }}>
                   
                   {loading ? 'Sending...' : 'GET BETA'}
                 </Button>
@@ -284,10 +284,10 @@ export default function LandingPage() {
               <div className="container mx-auto max-w-3xl text-center relative z-10">
                 <div className="relative overflow-hidden rounded-3xl border-2 bg-black/40 backdrop-blur-sm p-10 md:p-14 shadow-[0_0_40px_rgba(210,180,140,0.15)]" style={{ borderColor: 'rgba(210,180,140,0.3)' }}>
                   <div className="relative z-10">
-                    <h2 className="text-3xl md:text-4xl mb-3" style={{ color: '#D2B48C', fontFamily: "'Libre Baskerville', serif" }}>
+                    <h2 className="text-3xl md:text-4xl mb-3" style={{ color: '#D2B48C', fontFamily: "'Cinzel', serif" }}>
                       Get Beta & Project Updates
                     </h2>
-                    <p className="mb-8 text-lg" style={{ color: '#D2B48C', fontFamily: "'Open Sans', sans-serif" }}>
+                    <p className="mb-8 text-lg" style={{ color: '#D2B48C', fontFamily: "'Inter', sans-serif" }}>
                       Be the first to know when we launch
                     </p>
                     <form onSubmit={handleWaitlistSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
@@ -298,12 +298,12 @@ export default function LandingPage() {
                         onChange={(e) => setEmail(e.target.value)}
                         required disabled={loading}
                         className="flex-1 bg-black/40 rounded-xl text-lg focus:border-[#D2B48C]"
-                        style={{ borderColor: 'rgba(210,180,140,0.4)', color: '#D2B48C', fontFamily: "'Open Sans', sans-serif" }} />
+                        style={{ borderColor: 'rgba(210,180,140,0.4)', color: '#D2B48C', fontFamily: "'Inter', sans-serif" }} />
                       
                       <Button
                         type="submit" disabled={loading}
                         className="rounded-xl px-8 text-lg"
-                        style={{ backgroundColor: '#D2B48C', color: '#1a1206', fontFamily: "'Libre Baskerville', serif", boxShadow: '0 0 25px rgba(210,180,140,0.3)' }}>
+                        style={{ backgroundColor: '#D2B48C', color: '#1a1206', fontFamily: "'Cinzel', serif", boxShadow: '0 0 25px rgba(210,180,140,0.3)' }}>
                         {loading ? 'Sending...' : 'GET BETA'}
                       </Button>
                     </form>
@@ -328,7 +328,7 @@ export default function LandingPage() {
                     key={i}
                     to={link.to}
                     className="hover:opacity-80 transition-colors text-base"
-                    style={{ color: '#D2B48C', fontFamily: "'Libre Baskerville', serif" }}>
+                    style={{ color: '#D2B48C', fontFamily: "'Cinzel', serif" }}>
                     
                       {link.label}
                     </Link>
@@ -369,12 +369,12 @@ export default function LandingPage() {
                 <div className="w-full h-px mb-6" style={{ background: 'linear-gradient(90deg, transparent, #D2B48C, #A0845C, #D2B48C, transparent)' }} />
 
                 {/* Tagline & email */}
-                <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-2">
+                <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-2 px-2">
                   <div className="flex items-center gap-2">
-                    <span className="text-lg" style={{ color: '#D2B48C', fontFamily: "'Open Sans', sans-serif" }}>Made to stop the linear economy apocalypse</span>
-                    <span className="text-xl">💀🌍</span>
+                    <span className="text-xl md:text-2xl font-bold" style={{ color: '#D2B48C', fontFamily: "'Inter', sans-serif" }}>Made to stop the linear economy apocalypse</span>
+                    <span className="text-2xl">💀🌍</span>
                   </div>
-                  <a href="mailto:hello@greenhunt.net" className="text-lg hover:scale-105 transition-all" style={{ color: '#D2B48C', fontFamily: "'Open Sans', sans-serif" }}>
+                  <a href="mailto:hello@greenhunt.net" className="text-xl md:text-2xl font-bold hover:scale-105 transition-all" style={{ color: '#D2B48C', fontFamily: "'Inter', sans-serif" }}>
                     hello@greenhunt.net
                   </a>
                 </div>
