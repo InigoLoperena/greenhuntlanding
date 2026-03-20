@@ -227,20 +227,20 @@ export default function LandingPage() {
           {/* SEO Section 1 - H1 Stooping App */}
           <section className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32 relative">
             <div
-              className="relative py-20 md:py-28 px-6 md:px-16 flex flex-col items-center justify-center text-center"
+              className="relative py-24 md:py-32 px-6 md:px-16 flex flex-col items-center justify-center text-center"
               style={{ backgroundImage: `url(${seoBgWoodLeaves})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
             >
-              <div className="absolute inset-0 bg-black/40" />
-              <div className="relative z-10 max-w-4xl mx-auto">
+              <div className="absolute inset-0 bg-black/[0.25]" />
+              <div className="relative z-10 max-w-4xl mx-auto flex flex-col justify-between min-h-[200px] md:min-h-[240px]">
                 <h1
-                  className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 leading-tight"
-                  style={{ color: '#F5E6D0', fontFamily: "'Cinzel', serif", textShadow: '2px 2px 8px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.5)' }}
+                  className="text-3xl md:text-5xl lg:text-6xl font-bold mb-auto leading-tight"
+                  style={{ color: '#E6C27A', fontFamily: "'Cinzel', serif", textShadow: '1px 2px 6px rgba(0,0,0,0.7), 0 0 14px rgba(0,0,0,0.4)' }}
                 >
                   Stooping App and Game
                 </h1>
                 <p
-                  className="text-lg md:text-2xl leading-relaxed max-w-3xl mx-auto"
-                  style={{ color: '#F5E6D0', fontFamily: "'Inter', sans-serif", textShadow: '2px 2px 8px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.5)', opacity: 0.92 }}
+                  className="text-lg md:text-2xl leading-relaxed max-w-3xl mx-auto mt-8 md:mt-12 font-medium"
+                  style={{ color: '#FFFFFF', fontFamily: "'Inter', sans-serif", textShadow: '1px 1px 4px rgba(0,0,0,0.6)' }}
                 >
                   The easiest and most fun way to do Stooping in your city
                 </p>
