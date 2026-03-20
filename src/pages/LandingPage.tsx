@@ -477,7 +477,7 @@ export default function LandingPage() {
                 {/* Tagline & email */}
                 <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-2 px-2">
                   <div className="flex items-center gap-2">
-                    <span className="text-xl md:text-2xl font-bold" style={{ color: '#D2B48C', fontFamily: "'Inter', sans-serif" }}>Made to stop the linear economy apocalypse</span>
+                    <span className="text-xl md:text-2xl font-bold" style={{ color: '#FFFFFF', fontFamily: "'Inter', sans-serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 5px rgba(0,0,0,0.9), -1px -1px 0 rgba(0,0,0,0.6), 1px -1px 0 rgba(0,0,0,0.6), -1px 1px 0 rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.6)' }}>Made to stop the linear economy apocalypse</span>
                     <span className="text-2xl">💀🌍</span>
                   </div>
                   <a href="mailto:hello@greenhunt.net" className="text-xl md:text-2xl font-bold hover:scale-105 transition-all" style={{ color: '#D2B48C', fontFamily: "'Inter', sans-serif" }}>
