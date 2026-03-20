@@ -426,7 +426,7 @@ export default function LandingPage() {
           {/* Footer */}
           <footer className="relative -mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
             <div className="relative py-20 md:py-24 px-4" style={{ backgroundImage: `url(${darkWoodTexture})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-              <div className="absolute inset-0 bg-black/25" />
+              <div className="absolute inset-0 bg-black/40" />
               <div className="container mx-auto max-w-5xl relative z-10">
                 <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 mb-10">
                   {[
