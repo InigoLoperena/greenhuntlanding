@@ -234,7 +234,7 @@ export default function LandingPage() {
               <div className="relative z-10 max-w-4xl mx-auto flex flex-col justify-between min-h-[200px] md:min-h-[240px]">
                 <h1
                   className="text-3xl md:text-5xl lg:text-6xl font-bold mb-auto leading-tight"
-                  style={{ color: '#E6C27A', fontFamily: "'Cinzel', serif", textShadow: '1px 2px 6px rgba(0,0,0,0.7), 0 0 14px rgba(0,0,0,0.4)' }}
+                  style={{ color: '#E6C27A', fontFamily: "'Cinzel', serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 6px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.5), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8), 1px 1px 0 rgba(0,0,0,0.8)' }}
                 >
                   Stooping App and Game
                 </h1>
