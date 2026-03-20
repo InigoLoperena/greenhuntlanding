@@ -362,6 +362,14 @@ export default function LandingPage() {
             </div>
           </div>
 
+          {/* SEO Section 5 - Share items in seconds */}
+          <SeoTextSection
+            bg={seoBgWoodLeaves}
+            isDark={true}
+            heading="Share items in seconds"
+            subheading="Post a photo, add a location, and help others find what you leave behind. Simple, fast, and built for the streets."
+          />
+
           {/* Conquer Apocalypse Promo - Full width */}
           <div className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
             <img
