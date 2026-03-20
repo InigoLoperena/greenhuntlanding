@@ -464,7 +464,7 @@ export default function LandingPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:scale-125 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(210,180,140,0.6)]"
-                    style={{ color: '#D2B48C' }}>
+                    style={{ color: '#E6C27A', filter: 'drop-shadow(0 0 3px rgba(0,0,0,0.8)) drop-shadow(1px 2px 4px rgba(0,0,0,0.7))' }}>
                     
                       {social.icon}
                     </a>
