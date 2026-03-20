@@ -240,7 +240,7 @@ export default function LandingPage() {
                 </h1>
                 <p
                   className="text-lg md:text-2xl leading-relaxed max-w-3xl mx-auto mt-8 md:mt-12 font-medium"
-                  style={{ color: '#FFFFFF', fontFamily: "'Inter', sans-serif", textShadow: '1px 1px 4px rgba(0,0,0,0.6)' }}
+                  style={{ color: '#FFFFFF', fontFamily: "'Inter', sans-serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 5px rgba(0,0,0,0.9), -1px -1px 0 rgba(0,0,0,0.6), 1px -1px 0 rgba(0,0,0,0.6), -1px 1px 0 rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.6)' }}
                 >
                   The easiest and most fun way to do Stooping in your city
                 </p>
