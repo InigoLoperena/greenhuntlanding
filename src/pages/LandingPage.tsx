@@ -262,7 +262,15 @@ export default function LandingPage() {
             
           </div>
 
-          {/* ═══════════════ Phone + Frame Carousel Section ═══════════════ */}
+          {/* SEO Section 2 - What is Stooping */}
+          <SeoTextSection
+            bg={seoBgParchment}
+            isDark={false}
+            heading="What is Stooping?"
+            subheading="Stooping is the act of finding and sharing discarded items left on the street for others to take. It's a growing urban practice to give objects a second life."
+          />
+
+
           <FrameCarouselSection />
 
           {/* SEO Section 3 - Why Instagram doesn't work */}
