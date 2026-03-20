@@ -28,6 +28,8 @@ import trackImpactPromo from "@/assets/track-impact-promo.webp";
 import conquerApocalypsePromo from "@/assets/conquer-apocalypse-promo.webp";
 import trackImpactMobile from "@/assets/track-impact-mobile.webp";
 import rankingMobile from "@/assets/ranking-mobile.webp";
+import seoBgWoodLeaves from "@/assets/seo-bg-wood-leaves.webp";
+import seoBgParchment from "@/assets/seo-bg-parchment.webp";
 
 
 const streetFindsImages = [
