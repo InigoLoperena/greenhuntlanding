@@ -265,6 +265,14 @@ export default function LandingPage() {
           {/* ═══════════════ Phone + Frame Carousel Section ═══════════════ */}
           <FrameCarouselSection />
 
+          {/* SEO Section 3 - Why Instagram doesn't work */}
+          <SeoTextSection
+            bg={seoBgWoodLeaves}
+            isDark={true}
+            heading="Why Instagram doesn't work good?"
+            subheading="Stooping happens mostly on Instagram, where posts are hard to find and publish. It's manual, fragmented, and inefficient."
+          />
+
           {/* Get Free Stuff Promo - Full width */}
           <div className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
             <img
