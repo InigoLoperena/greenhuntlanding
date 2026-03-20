@@ -390,10 +390,10 @@ export default function LandingPage() {
               <div className="container mx-auto max-w-3xl text-center relative z-10">
                 <div className="relative overflow-hidden rounded-3xl border-2 bg-black/40 backdrop-blur-sm p-10 md:p-14 shadow-[0_0_40px_rgba(210,180,140,0.15)]" style={{ borderColor: 'rgba(210,180,140,0.3)' }}>
                   <div className="relative z-10">
-                    <h2 className="text-3xl md:text-4xl mb-3" style={{ color: '#D2B48C', fontFamily: "'Cinzel', serif" }}>
+                    <h2 className="text-3xl md:text-4xl mb-3" style={{ color: '#E6C27A', fontFamily: "'Cinzel', serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 6px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.5), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8), 1px 1px 0 rgba(0,0,0,0.8)' }}>
                       Get Beta & Project Updates
                     </h2>
-                    <p className="mb-8 text-lg" style={{ color: '#D2B48C', fontFamily: "'Inter', sans-serif" }}>
+                    <p className="mb-8 text-lg font-medium" style={{ color: '#FFFFFF', fontFamily: "'Inter', sans-serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 5px rgba(0,0,0,0.9), -1px -1px 0 rgba(0,0,0,0.6), 1px -1px 0 rgba(0,0,0,0.6), -1px 1px 0 rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.6)' }}>
                       Be the first to know when we launch
                     </p>
                     <form onSubmit={handleWaitlistSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
@@ -434,7 +434,7 @@ export default function LandingPage() {
                     key={i}
                     to={link.to}
                     className="hover:opacity-80 transition-colors text-xl md:text-2xl"
-                    style={{ color: '#D2B48C', fontFamily: "'Cinzel', serif" }}>
+                    style={{ color: '#E6C27A', fontFamily: "'Cinzel', serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 6px rgba(0,0,0,0.9), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8), 1px 1px 0 rgba(0,0,0,0.8)' }}>
                     
                       {link.label}
                     </Link>
@@ -464,7 +464,7 @@ export default function LandingPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:scale-125 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(210,180,140,0.6)]"
-                    style={{ color: '#D2B48C' }}>
+                    style={{ color: '#E6C27A', filter: 'drop-shadow(0 0 3px rgba(0,0,0,0.8)) drop-shadow(1px 2px 4px rgba(0,0,0,0.7))' }}>
                     
                       {social.icon}
                     </a>
@@ -477,10 +477,10 @@ export default function LandingPage() {
                 {/* Tagline & email */}
                 <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-2 px-2">
                   <div className="flex items-center gap-2">
-                    <span className="text-xl md:text-2xl font-bold" style={{ color: '#D2B48C', fontFamily: "'Inter', sans-serif" }}>Made to stop the linear economy apocalypse</span>
+                    <span className="text-xl md:text-2xl font-bold" style={{ color: '#FFFFFF', fontFamily: "'Inter', sans-serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 5px rgba(0,0,0,0.9), -1px -1px 0 rgba(0,0,0,0.6), 1px -1px 0 rgba(0,0,0,0.6), -1px 1px 0 rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.6)' }}>Made to stop the linear economy apocalypse</span>
                     <span className="text-2xl">💀🌍</span>
                   </div>
-                  <a href="mailto:hello@greenhunt.net" className="text-xl md:text-2xl font-bold hover:scale-105 transition-all" style={{ color: '#D2B48C', fontFamily: "'Inter', sans-serif" }}>
+                  <a href="mailto:hello@greenhunt.net" className="text-xl md:text-2xl font-bold hover:scale-105 transition-all" style={{ color: '#FFFFFF', fontFamily: "'Inter', sans-serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 5px rgba(0,0,0,0.9), -1px -1px 0 rgba(0,0,0,0.6), 1px -1px 0 rgba(0,0,0,0.6), -1px 1px 0 rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.6)' }}>
                     hello@greenhunt.net
                   </a>
                 </div>
