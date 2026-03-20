@@ -282,6 +282,14 @@ export default function LandingPage() {
               loading="lazy" />
           </div>
 
+          {/* SEO Section 4 - Find free street treasures */}
+          <SeoTextSection
+            bg={seoBgParchment}
+            isDark={false}
+            heading="Find free street treasures in real time"
+            subheading="Greenhunt shows nearby stooping finds on a map and in a local feed, so you can discover useful items around you instantly."
+          />
+
 
           {/* Waitlist Dialog */}
           <Dialog open={waitlistOpen} onOpenChange={setWaitlistOpen}>
