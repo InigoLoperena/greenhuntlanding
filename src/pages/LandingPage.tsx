@@ -434,7 +434,7 @@ export default function LandingPage() {
                     key={i}
                     to={link.to}
                     className="hover:opacity-80 transition-colors text-xl md:text-2xl"
-                    style={{ color: '#D2B48C', fontFamily: "'Cinzel', serif" }}>
+                    style={{ color: '#E6C27A', fontFamily: "'Cinzel', serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 6px rgba(0,0,0,0.9), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8), 1px 1px 0 rgba(0,0,0,0.8)' }}>
                     
                       {link.label}
                     </Link>
