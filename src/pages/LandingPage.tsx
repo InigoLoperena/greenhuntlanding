@@ -89,31 +89,31 @@ const FrameCarouselSection = () => {
 };
 
 /* ─── SEO Text Section component ─── */
-const SeoTextSection = ({ heading, subheading, bg }: { heading: string; subheading: string; bg: string; isDark?: boolean }) => {
+const SeoTextSection = ({ heading, subheading, bg }: {heading: string;subheading: string;bg: string;isDark?: boolean;}) => {
   return (
     <section className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32 relative">
       <div
         className="relative py-24 md:py-32 px-6 md:px-16 flex flex-col items-center justify-center text-center"
-        style={{ backgroundImage: `url(${bg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-      >
+        style={{ backgroundImage: `url(${bg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        
         <div className="absolute inset-0 bg-black/[0.25]" />
         <div className="relative z-10 max-w-4xl mx-auto flex flex-col justify-between min-h-[200px] md:min-h-[240px]">
           <h2
             className="text-3xl md:text-5xl lg:text-6xl font-bold mb-auto leading-tight"
-            style={{ color: '#E6C27A', fontFamily: "'Cinzel', serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 6px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.5), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8), 1px 1px 0 rgba(0,0,0,0.8)' }}
-          >
+            style={{ color: '#E6C27A', fontFamily: "'Cinzel', serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 6px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.5), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8), 1px 1px 0 rgba(0,0,0,0.8)' }}>
+            
             {heading}
           </h2>
           <p
             className="text-lg md:text-2xl leading-relaxed max-w-3xl mx-auto mt-8 md:mt-12 font-medium"
-            style={{ color: '#FFFFFF', fontFamily: "'Inter', sans-serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 5px rgba(0,0,0,0.9), -1px -1px 0 rgba(0,0,0,0.6), 1px -1px 0 rgba(0,0,0,0.6), -1px 1px 0 rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.6)' }}
-          >
+            style={{ color: '#FFFFFF', fontFamily: "'Inter', sans-serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 5px rgba(0,0,0,0.9), -1px -1px 0 rgba(0,0,0,0.6), 1px -1px 0 rgba(0,0,0,0.6), -1px 1px 0 rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.6)' }}>
+            
             {subheading}
           </p>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 const emailSchema = z.string().email();
@@ -228,20 +228,20 @@ export default function LandingPage() {
           <section className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32 relative">
             <div
               className="relative py-24 md:py-32 px-6 md:px-16 flex flex-col items-center justify-center text-center"
-              style={{ backgroundImage: `url(${seoBgWoodLeaves})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-            >
+              style={{ backgroundImage: `url(${seoBgWoodLeaves})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+              
               <div className="absolute inset-0 bg-black/[0.25]" />
               <div className="relative z-10 max-w-4xl mx-auto flex flex-col justify-between min-h-[200px] md:min-h-[240px]">
                 <h1
                   className="text-3xl md:text-5xl lg:text-6xl font-bold mb-auto leading-tight"
-                  style={{ color: '#E6C27A', fontFamily: "'Cinzel', serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 6px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.5), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8), 1px 1px 0 rgba(0,0,0,0.8)' }}
-                >
+                  style={{ color: '#E6C27A', fontFamily: "'Cinzel', serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 6px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.5), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8), 1px 1px 0 rgba(0,0,0,0.8)' }}>
+                  
                   Stooping App and Game
                 </h1>
                 <p
-                  className="text-lg md:text-2xl leading-relaxed max-w-3xl mx-auto mt-8 md:mt-12 font-medium"
-                  style={{ color: '#FFFFFF', fontFamily: "'Inter', sans-serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 5px rgba(0,0,0,0.9), -1px -1px 0 rgba(0,0,0,0.6), 1px -1px 0 rgba(0,0,0,0.6), -1px 1px 0 rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.6)' }}
-                >
+                  className="text-lg md:text-2xl leading-relaxed max-w-3xl mx-auto mt-8 md:mt-12 font-medium my-[88px]"
+                  style={{ color: '#FFFFFF', fontFamily: "'Inter', sans-serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 5px rgba(0,0,0,0.9), -1px -1px 0 rgba(0,0,0,0.6), 1px -1px 0 rgba(0,0,0,0.6), -1px 1px 0 rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.6)' }}>
+                  
                   The easiest and most fun way to do Stooping in your city
                 </p>
               </div>
@@ -263,8 +263,8 @@ export default function LandingPage() {
             bg={seoBgParchment}
             isDark={false}
             heading="What is Stooping?"
-            subheading="Stooping is the act of finding and sharing discarded items left on the street for others to take. It's a growing urban practice to give objects a second life."
-          />
+            subheading="Stooping is the act of finding and sharing discarded items left on the street for others to take. It's a growing urban practice to give objects a second life." />
+          
 
 
           <FrameCarouselSection />
@@ -274,8 +274,8 @@ export default function LandingPage() {
             bg={seoBgWoodLeaves}
             isDark={true}
             heading="Why Instagram doesn't work good?"
-            subheading="Stooping happens mostly on Instagram, where posts are hard to find and publish. It's manual, fragmented, and inefficient."
-          />
+            subheading="Stooping happens mostly on Instagram, where posts are hard to find and publish. It's manual, fragmented, and inefficient." />
+          
 
           {/* Get Free Stuff Promo - Full width */}
           <div className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
@@ -291,8 +291,8 @@ export default function LandingPage() {
             bg={seoBgParchment}
             isDark={false}
             heading="Find free street treasures in real time"
-            subheading="Greenhunt shows nearby stooping finds on a map and in a local feed, so you can discover useful items around you instantly."
-          />
+            subheading="Greenhunt shows nearby stooping finds on a map and in a local feed, so you can discover useful items around you instantly." />
+          
 
 
           {/* Waitlist Dialog */}
@@ -371,8 +371,8 @@ export default function LandingPage() {
             bg={seoBgWoodLeaves}
             isDark={true}
             heading="Share items in seconds"
-            subheading="Post a photo, add a location, and help others find what you leave behind. Simple, fast, and built for the streets."
-          />
+            subheading="Post a photo, add a location, and help others find what you leave behind. Simple, fast, and built for the streets." />
+          
 
           {/* Conquer Apocalypse Promo - Full width */}
           <div className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
