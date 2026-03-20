@@ -28,6 +28,8 @@ import trackImpactPromo from "@/assets/track-impact-promo.webp";
 import conquerApocalypsePromo from "@/assets/conquer-apocalypse-promo.webp";
 import trackImpactMobile from "@/assets/track-impact-mobile.webp";
 import rankingMobile from "@/assets/ranking-mobile.webp";
+import seoBgWoodLeaves from "@/assets/seo-bg-wood-leaves.webp";
+import seoBgParchment from "@/assets/seo-bg-parchment.webp";
 
 
 const streetFindsImages = [
@@ -85,6 +87,39 @@ const FrameCarouselSection = () => {
     </section>);
 
 };
+
+/* ─── SEO Text Section component ─── */
+const SeoTextSection = ({ heading, subheading, bg, isDark = true }: { heading: string; subheading: string; bg: string; isDark?: boolean }) => {
+  const textColor = isDark ? '#F5E6D0' : '#2a1a0a';
+  const shadowStyle = isDark
+    ? '2px 2px 8px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.5)'
+    : '1px 1px 4px rgba(255,255,255,0.7), 0 0 10px rgba(255,255,255,0.3)';
+  return (
+    <section className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32 relative">
+      <div
+        className="relative py-20 md:py-28 px-6 md:px-16 flex flex-col items-center justify-center text-center"
+        style={{ backgroundImage: `url(${bg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+      >
+        <div className={`absolute inset-0 ${isDark ? 'bg-black/40' : 'bg-black/25'}`} />
+        <div className="relative z-10 max-w-4xl mx-auto">
+          <h2
+            className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 leading-tight"
+            style={{ color: textColor, fontFamily: "'Cinzel', serif", textShadow: shadowStyle }}
+          >
+            {heading}
+          </h2>
+          <p
+            className="text-lg md:text-2xl lg:text-2xl leading-relaxed max-w-3xl mx-auto"
+            style={{ color: textColor, fontFamily: "'Inter', sans-serif", textShadow: shadowStyle, opacity: 0.92 }}
+          >
+            {subheading}
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const emailSchema = z.string().email();
 
 
@@ -193,6 +228,30 @@ export default function LandingPage() {
             <HeroSection className="my-0" />
           </div>
 
+          {/* SEO Section 1 - H1 Stooping App */}
+          <section className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32 relative">
+            <div
+              className="relative py-20 md:py-28 px-6 md:px-16 flex flex-col items-center justify-center text-center"
+              style={{ backgroundImage: `url(${seoBgWoodLeaves})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+            >
+              <div className="absolute inset-0 bg-black/40" />
+              <div className="relative z-10 max-w-4xl mx-auto">
+                <h1
+                  className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 leading-tight"
+                  style={{ color: '#F5E6D0', fontFamily: "'Cinzel', serif", textShadow: '2px 2px 8px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.5)' }}
+                >
+                  Stooping App and Game
+                </h1>
+                <p
+                  className="text-lg md:text-2xl leading-relaxed max-w-3xl mx-auto"
+                  style={{ color: '#F5E6D0', fontFamily: "'Inter', sans-serif", textShadow: '2px 2px 8px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.5)', opacity: 0.92 }}
+                >
+                  The easiest and most fun way to do Stooping in your city
+                </p>
+              </div>
+            </div>
+          </section>
+
           {/* Rescue Map Scene - Full width */}
           <div className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
             <img
@@ -203,8 +262,24 @@ export default function LandingPage() {
             
           </div>
 
-          {/* ═══════════════ Phone + Frame Carousel Section ═══════════════ */}
+          {/* SEO Section 2 - What is Stooping */}
+          <SeoTextSection
+            bg={seoBgParchment}
+            isDark={false}
+            heading="What is Stooping?"
+            subheading="Stooping is the act of finding and sharing discarded items left on the street for others to take. It's a growing urban practice to give objects a second life."
+          />
+
+
           <FrameCarouselSection />
+
+          {/* SEO Section 3 - Why Instagram doesn't work */}
+          <SeoTextSection
+            bg={seoBgWoodLeaves}
+            isDark={true}
+            heading="Why Instagram doesn't work good?"
+            subheading="Stooping happens mostly on Instagram, where posts are hard to find and publish. It's manual, fragmented, and inefficient."
+          />
 
           {/* Get Free Stuff Promo - Full width */}
           <div className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
@@ -214,6 +289,14 @@ export default function LandingPage() {
               className="w-full h-auto block"
               loading="lazy" />
           </div>
+
+          {/* SEO Section 4 - Find free street treasures */}
+          <SeoTextSection
+            bg={seoBgParchment}
+            isDark={false}
+            heading="Find free street treasures in real time"
+            subheading="Greenhunt shows nearby stooping finds on a map and in a local feed, so you can discover useful items around you instantly."
+          />
 
 
           {/* Waitlist Dialog */}
@@ -286,6 +369,14 @@ export default function LandingPage() {
                 loading="lazy" />
             </div>
           </div>
+
+          {/* SEO Section 5 - Share items in seconds */}
+          <SeoTextSection
+            bg={seoBgWoodLeaves}
+            isDark={true}
+            heading="Share items in seconds"
+            subheading="Post a photo, add a location, and help others find what you leave behind. Simple, fast, and built for the streets."
+          />
 
           {/* Conquer Apocalypse Promo - Full width */}
           <div className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
