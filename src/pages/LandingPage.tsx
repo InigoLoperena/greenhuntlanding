@@ -263,7 +263,7 @@ export default function LandingPage() {
             bg={seoBgParchment}
             isDark={false}
             heading="What is Stooping?"
-            subheading="Stooping is the act of finding and sharing discarded items left on the street for others to take. It's a growing urban practice to give objects a second life." />
+            subheading="The act of finding and sharing discarded items left on the street for others to take. It's a growing urban practice to give objects a second life." />
           
 
 
