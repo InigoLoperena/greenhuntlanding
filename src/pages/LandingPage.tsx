@@ -291,7 +291,7 @@ export default function LandingPage() {
             bg={seoBgParchment}
             isDark={false}
             heading="Find free street treasures in real time"
-            subheading="Greenhunt shows nearby stooping finds on a map and in a local feed, so you can discover useful items around you instantly." />
+            subheading="Greenhunt shows nearby street finds on a map and in a local feed, so you can discover free valauble items around you" />
           
 
 
