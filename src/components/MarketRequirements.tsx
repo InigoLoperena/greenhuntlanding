@@ -101,7 +101,7 @@ const MarketRequirements = () => {
                 <div>
                   <h4 className="font-semibold">Create Promotional Video</h4>
                   <p className="text-sm text-muted-foreground">
-                    Make a short video talking about the GreenRiot app and your experience
+                    Make a short video talking about the GreenHunt app and your experience
                   </p>
                 </div>
               </div>
