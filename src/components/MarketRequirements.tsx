@@ -62,7 +62,7 @@ const MarketRequirements = () => {
                 <div className="text-center">
                   <img 
                     src="/lovable-uploads/86b3ae28-9916-425e-a0e0-9eb84f073882.png" 
-                    alt="GreenRiot Sticker" 
+                    alt="GreenHunt Sticker" 
                     className="w-full max-w-32 mx-auto rounded-lg shadow-md mb-2"
                   />
                   <p className="text-xs text-muted-foreground">Promotional Sticker</p>
