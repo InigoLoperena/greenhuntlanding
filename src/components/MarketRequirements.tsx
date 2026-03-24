@@ -92,7 +92,7 @@ const MarketRequirements = () => {
           </CardHeader>
           <CardContent className="space-y-4">
             <p className="text-muted-foreground">
-              Create content about GreenRiot to help spread awareness about circular economy.
+              Create content about GreenHunt to help spread awareness about circular economy.
             </p>
             
             <div className="space-y-3">
