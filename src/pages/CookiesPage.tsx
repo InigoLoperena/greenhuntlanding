@@ -18,7 +18,7 @@ export default function CookiesPage() {
         
         <div className="prose prose-lg max-w-none">
           <p className="text-lg mb-6">
-            In compliance with Law 34/2002 of July 11, on Information Society Services and Electronic Commerce (LSSICE), we inform you that this website, Greenriot, uses cookies.
+            In compliance with Law 34/2002 of July 11, on Information Society Services and Electronic Commerce (LSSICE), we inform you that this website, GreenHunt, uses cookies.
           </p>
           
           <p className="mb-6">
@@ -40,13 +40,13 @@ export default function CookiesPage() {
           
           <h3 className="text-xl font-impact text-rebel mb-3">Based on the entity that manages them:</h3>
           <p className="mb-4">
-            <strong>First-party cookies:</strong> Sent to the user's terminal from a device or domain managed by Greenriot and used to provide the requested service.
+            <strong>First-party cookies:</strong> Sent to the user's terminal from a device or domain managed by GreenHunt and used to provide the requested service.
           </p>
           <p className="mb-4">
-            <strong>Third-party cookies:</strong> Sent to the user's terminal from a device or domain not managed by Greenriot, but by another entity that processes the data obtained through the cookies.
+            <strong>Third-party cookies:</strong> Sent to the user's terminal from a device or domain not managed by GreenHunt, but by another entity that processes the data obtained through the cookies.
           </p>
           <p className="mb-6">
-            <em>Note:</em> If cookies are installed from a domain managed by Greenriot but the information is handled by a third party, they are not considered first-party cookies.
+            <em>Note:</em> If cookies are installed from a domain managed by GreenHunt but the information is handled by a third party, they are not considered first-party cookies.
           </p>
           
           <h3 className="text-xl font-impact text-rebel mb-3">Based on the duration of activity:</h3>
@@ -92,7 +92,7 @@ export default function CookiesPage() {
           
           <h2 className="text-2xl font-impact text-rebel mb-4">Updates and Changes to the Cookie Policy</h2>
           <p className="mb-6">
-            Greenriot may update or modify this cookie policy to comply with legal or regulatory requirements, adapt it to instructions from the Spanish Data Protection Agency, or reflect changes in the website's functionality. We recommend reviewing this policy periodically.
+            GreenHunt may update or modify this cookie policy to comply with legal or regulatory requirements, adapt it to instructions from the Spanish Data Protection Agency, or reflect changes in the website's functionality. We recommend reviewing this policy periodically.
           </p>
           
           <h2 className="text-2xl font-impact text-rebel mb-4">Contact</h2>
@@ -100,7 +100,7 @@ export default function CookiesPage() {
             If you have any questions regarding our use of cookies, you can contact us at:
           </p>
           <p className="mb-4">
-            📧 contact@greenriot.org
+            📧 hello@greenhunt.net
           </p>
           
           <p className="text-sm text-muted-foreground mt-8">

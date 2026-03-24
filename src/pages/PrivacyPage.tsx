@@ -19,7 +19,7 @@ export default function PrivacyPage() {
         <div className="prose prose-lg max-w-none">
           <h2 className="text-2xl font-impact text-rebel mb-4">Introduction</h2>
           <p className="text-lg mb-6">
-            At Greenriot Corporation C, we are highly attuned to the needs of Internet users and fully aware of the importance of maintaining the strict privacy of the personal information entrusted to us. This privacy statement is provided to inform you about our policy regarding the handling of personal data obtained from our visitors and users.
+            At GreenHunt Corporation C, we are highly attuned to the needs of Internet users and fully aware of the importance of maintaining the strict privacy of the personal information entrusted to us. This privacy statement is provided to inform you about our policy regarding the handling of personal data obtained from our visitors and users.
           </p>
           
           <p className="mb-6">
@@ -27,12 +27,12 @@ export default function PrivacyPage() {
           </p>
           
           <p className="mb-6">
-            <strong>Please note:</strong> This website is purely informative. The collection and processing of personal data occurs exclusively within the Greenriot mobile application, which operates as the core platform for our services.
+            <strong>Please note:</strong> This website is purely informative. The collection and processing of personal data occurs exclusively within the GreenHunt mobile application, which operates as the core platform for our services.
           </p>
           
           <h2 className="text-2xl font-impact text-rebel mb-4">Data Controller</h2>
           <p className="mb-6">
-            The owner of this site and the data controller is Greenriot Corporation C, with Tax ID (EIN) 36-5060375. You may contact us via email at contact@greenriot.org or by postal mail at 4751 Luminous Loop, postal code 34746, Kissimmee, FL, US.
+            The owner of this site and the data controller is GreenHunt Corporation C, with Tax ID (EIN) 36-5060375. You may contact us via email at hello@greenhunt.net or by postal mail at 4751 Luminous Loop, postal code 34746, Kissimmee, FL, US.
           </p>
           
           <h2 className="text-2xl font-impact text-rebel mb-4">Purpose of Data Processing</h2>
@@ -56,20 +56,20 @@ export default function PrivacyPage() {
           
           <h2 className="text-2xl font-impact text-rebel mb-4">Data Transfers and Sharing</h2>
           <p className="mb-4">
-            We are firmly committed to ensuring that any data you provide to Greenriot Corporation C will not be sold or shared with third parties without your prior consent under any circumstances, except with explicit consent or legal obligation.
+            We are firmly committed to ensuring that any data you provide to GreenHunt Corporation C will not be sold or shared with third parties without your prior consent under any circumstances, except with explicit consent or legal obligation.
           </p>
           <p className="mb-6">
-            Our website contains links to third-party websites. Greenriot Corporation C is not responsible for the privacy policies and practices of these external sites.
+            Our website contains links to third-party websites. GreenHunt Corporation C is not responsible for the privacy policies and practices of these external sites.
           </p>
           
           <h2 className="text-2xl font-impact text-rebel mb-4">Data Subject Rights</h2>
           <p className="mb-6">
-            You have the right to access the information stored about you in our databases, correct any inaccuracies, delete it, limit its processing, object to its use, and withdraw your consent if you so desire. To exercise these rights, simply email us at contact@greenriot.org, and we will gladly address any questions, comments, or clarifications you may require.
+            You have the right to access the information stored about you in our databases, correct any inaccuracies, delete it, limit its processing, object to its use, and withdraw your consent if you so desire. To exercise these rights, simply email us at hello@greenhunt.net, and we will gladly address any questions, comments, or clarifications you may require.
           </p>
           
           <h2 className="text-2xl font-impact text-rebel mb-4">Mobile App Privacy Policy</h2>
           <p className="mb-4">
-            This privacy policy applies to the Greenriot app (hereby referred to as "Application") for mobile devices that was created by Greenriot Corporation C (hereby referred to as "Service Provider") as an Ad Supported service. This service is intended for use "AS IS".
+            This privacy policy applies to the GreenHunt app (hereby referred to as "Application") for mobile devices that was created by GreenHunt Corporation C (hereby referred to as "Service Provider") as an Ad Supported service. This service is intended for use "AS IS".
           </p>
           <p className="mb-6">
             This Application complies with the data protection and security requirements of applicable European legislation, as well as the General Data Protection Regulation (GDPR).
@@ -101,7 +101,7 @@ export default function PrivacyPage() {
           
           <h3 className="text-xl font-impact text-rebel mb-3">Third Party Access</h3>
           <p className="mb-4">
-            Only aggregated, anonymized data is periodically transmitted to external services to aid Greenriot Corporation C in improving the Application and its service. Your information may be shared in these cases:
+            Only aggregated, anonymized data is periodically transmitted to external services to aid GreenHunt Corporation C in improving the Application and its service. Your information may be shared in these cases:
           </p>
           <ul className="mb-6 list-disc pl-6">
             <li>When required by law (e.g., subpoena or legal process)</li>
@@ -116,7 +116,7 @@ export default function PrivacyPage() {
           
           <h3 className="text-xl font-impact text-rebel mb-3">Data Retention Policy</h3>
           <p className="mb-6">
-            Greenriot Corporation C will retain user-provided data for as long as you use the Application and for a reasonable time thereafter. If you wish to delete data provided via the Application, please contact us at contact@greenriot.org and we will respond promptly.
+            GreenHunt Corporation C will retain user-provided data for as long as you use the Application and for a reasonable time thereafter. If you wish to delete data provided via the Application, please contact us at hello@greenhunt.net and we will respond promptly.
           </p>
           
           <h3 className="text-xl font-impact text-rebel mb-3">Children</h3>
@@ -130,7 +130,7 @@ export default function PrivacyPage() {
           
           <h3 className="text-xl font-impact text-rebel mb-3">Security</h3>
           <p className="mb-6">
-            Greenriot Corporation C is committed to protecting your data. We implement physical, electronic, and procedural safeguards to secure the information we process.
+            GreenHunt Corporation C is committed to protecting your data. We implement physical, electronic, and procedural safeguards to secure the information we process.
           </p>
           
           <h3 className="text-xl font-impact text-rebel mb-3">Changes</h3>
@@ -152,7 +152,7 @@ export default function PrivacyPage() {
             For questions regarding this Privacy Policy or your data, please contact us at:
           </p>
           <p className="mb-4">
-            📧 contact@greenriot.org
+            📧 hello@greenhunt.net
           </p>
           
           <p className="text-sm text-muted-foreground mt-8">
