@@ -39,7 +39,7 @@ export const SOCIAL_LINKS = {
 export const APP_META = {
   NAME: 'GreenHunt',
   TAGLINE: 'Make or save money - Save the Planet',
-  DESCRIPTION: 'Find free stuff, explore circular markets, and turn urban treasures into cash while helping the environment.',
+  DESCRIPTION: 'Easiest and most fun way to do Stooping in your city. Find or share free discarded stuff. Avoid stuff from becoming waste taking photos and earn rewards',
   EMAIL: 'hello@greenhunt.net',
   DOMAIN: 'https://greenhunt.net',
 } as const;
