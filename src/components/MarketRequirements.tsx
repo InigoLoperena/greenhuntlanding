@@ -121,7 +121,7 @@ const MarketRequirements = () => {
                 <div>
                   <h4 className="font-semibold">Send Video Link</h4>
                   <p className="text-sm text-muted-foreground">
-                    Email the link to <strong>contact@greenriot.org</strong>
+                    Email the link to <strong>hello@greenhunt.net</strong>
                   </p>
                 </div>
               </div>
