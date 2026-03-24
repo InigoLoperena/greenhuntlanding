@@ -30,7 +30,7 @@ const MarketRequirements = () => {
           </CardHeader>
           <CardContent className="space-y-4">
             <p className="text-muted-foreground">
-              Display our promotional materials in your store to join the GreenRiot community.
+              Display our promotional materials in your store to join the GreenHunt community.
             </p>
             
             <div className="space-y-3">
