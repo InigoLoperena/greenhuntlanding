@@ -12,7 +12,7 @@ interface WelcomeEmailRequest {
   email: string;
 }
 
-const BETA_URL = "https://greenriot-v2.web.app/";
+const BETA_URL = "https://greenhunt.net/";
 
 const SOCIAL_LINKS = {
   instagram: "https://www.instagram.com/greenhuntstoopingapp/",
