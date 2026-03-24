@@ -30,7 +30,7 @@ const MarketRequirements = () => {
           </CardHeader>
           <CardContent className="space-y-4">
             <p className="text-muted-foreground">
-              Display our promotional materials in your store to join the GreenRiot community.
+              Display our promotional materials in your store to join the GreenHunt community.
             </p>
             
             <div className="space-y-3">
@@ -62,7 +62,7 @@ const MarketRequirements = () => {
                 <div className="text-center">
                   <img 
                     src="/lovable-uploads/86b3ae28-9916-425e-a0e0-9eb84f073882.png" 
-                    alt="GreenRiot Sticker" 
+                    alt="GreenHunt Sticker" 
                     className="w-full max-w-32 mx-auto rounded-lg shadow-md mb-2"
                   />
                   <p className="text-xs text-muted-foreground">Promotional Sticker</p>
@@ -70,7 +70,7 @@ const MarketRequirements = () => {
                 <div className="text-center">
                   <img 
                     src="/lovable-uploads/2f77681b-a76e-4b04-b5fc-f3213fb9dfc0.png" 
-                    alt="GreenRiot Poster" 
+                    alt="GreenHunt Poster" 
                     className="w-full max-w-32 mx-auto rounded-lg shadow-md mb-2"
                   />
                   <p className="text-xs text-muted-foreground">Store Poster</p>
@@ -92,7 +92,7 @@ const MarketRequirements = () => {
           </CardHeader>
           <CardContent className="space-y-4">
             <p className="text-muted-foreground">
-              Create content about GreenRiot to help spread awareness about circular economy.
+              Create content about GreenHunt to help spread awareness about circular economy.
             </p>
             
             <div className="space-y-3">
@@ -101,7 +101,7 @@ const MarketRequirements = () => {
                 <div>
                   <h4 className="font-semibold">Create Promotional Video</h4>
                   <p className="text-sm text-muted-foreground">
-                    Make a short video talking about the GreenRiot app and your experience
+                    Make a short video talking about the GreenHunt app and your experience
                   </p>
                 </div>
               </div>
@@ -121,7 +121,7 @@ const MarketRequirements = () => {
                 <div>
                   <h4 className="font-semibold">Send Video Link</h4>
                   <p className="text-sm text-muted-foreground">
-                    Email the link to <strong>contact@greenriot.org</strong>
+                    Email the link to <strong>hello@greenhunt.net</strong>
                   </p>
                 </div>
               </div>
@@ -178,8 +178,8 @@ const MarketRequirements = () => {
       <div className="text-center space-y-2">
         <p className="text-muted-foreground">
           Questions about the requirements? Contact us at{' '}
-          <a href="mailto:contact@greenriot.org" className="text-primary hover:underline font-semibold">
-            contact@greenriot.org
+          <a href="mailto:hello@greenhunt.net" className="text-primary hover:underline font-semibold">
+            hello@greenhunt.net
           </a>
         </p>
         <p className="text-sm text-muted-foreground">

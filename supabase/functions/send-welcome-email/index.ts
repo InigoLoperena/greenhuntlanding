@@ -12,7 +12,7 @@ interface WelcomeEmailRequest {
   email: string;
 }
 
-const BETA_URL = "https://greenriot-v2.web.app/";
+const BETA_URL = "https://greenhunt.net/";
 
 const SOCIAL_LINKS = {
   instagram: "https://www.instagram.com/greenhuntstoopingapp/",
@@ -49,7 +49,7 @@ const handler = async (req: Request): Promise<Response> => {
                 <!-- Header with Logo -->
                 <tr>
                   <td align="center" style="padding: 40px 40px 20px 40px; background-color: #000000;">
-                    <img src="https://greenhuntstooping.lovable.app/lovable-uploads/greenriot-logo-white.png" alt="GreenHunt Logo" width="200" style="max-width: 200px; height: auto; display: block;" />
+                    <img src="https://greenhunt.net/lovable-uploads/greenhunt-logo-new.svg" alt="GreenHunt Logo" width="200" style="max-width: 200px; height: auto; display: block;" />
                   </td>
                 </tr>
                 

@@ -15,8 +15,8 @@ export const StructuredData = () => {
       "priceCurrency": "USD"
     },
     "description": language === 'en' 
-      ? "Make or save money - Save the Planet. Find free stuff, explore circular markets, and turn urban treasures into cash while helping the environment."
-      : "Gana o ahorra dinero - Salva el Planeta. Encuentra cosas gratis, explora mercados circulares y convierte tesoros urbanos en efectivo mientras ayudas al medio ambiente.",
+      ? "Easiest and most fun way to do Stooping in your city. Find or share free discarded stuff. Avoid stuff from becoming waste taking photos and earn rewards"
+      : "La forma más fácil y divertida de hacer Stooping en tu ciudad. Encuentra o comparte cosas gratis descartadas. Evita que se conviertan en basura y gana recompensas",
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.8",

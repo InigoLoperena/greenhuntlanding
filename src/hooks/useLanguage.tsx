@@ -56,7 +56,7 @@ const translations: Record<string, string> = {
   'landing.footer.legal': 'Legal',
   'landing.footer.madeWith': 'Made to stop the linear economy apocalypse',
   'landing.footer.forPlanet': '',
-  'landing.footer.contact': 'Contact: stooping@greenriot.net',
+  'landing.footer.contact': 'Contact: hello@greenhunt.net',
   'landing.ambassador.title': "Are you an Influencer?",
   'landing.ambassador.description': "If you are an influencer who shares our values and mission, let's discuss a partnership for the GreenHunt launch. Influencers who support us during this phase will become Lifetime Ambassadors, gaining access to exclusive perks like higher affiliate commissions and more",
   'landing.ambassador.button': 'Ambassadors program',
