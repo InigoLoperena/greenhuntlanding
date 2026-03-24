@@ -178,8 +178,8 @@ const MarketRequirements = () => {
       <div className="text-center space-y-2">
         <p className="text-muted-foreground">
           Questions about the requirements? Contact us at{' '}
-          <a href="mailto:contact@greenriot.org" className="text-primary hover:underline font-semibold">
-            contact@greenriot.org
+          <a href="mailto:hello@greenhunt.net" className="text-primary hover:underline font-semibold">
+            hello@greenhunt.net
           </a>
         </p>
         <p className="text-sm text-muted-foreground">
