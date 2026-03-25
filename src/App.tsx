@@ -19,6 +19,7 @@ const AdminPage = lazy(() => import("./pages/AdminPage"));
 const WasteManagerPage = lazy(() => import("./pages/WasteManagerPage"));
 const TestPage = lazy(() => import("./pages/TestPage"));
 const LandingPageDos = lazy(() => import("./pages/LandingPageDos"));
+const DeckPage = lazy(() => import("./pages/DeckPage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
