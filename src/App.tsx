@@ -65,6 +65,7 @@ const App = () => (
                 <Route path="/waste-managers" element={<WasteManagerPage />} />
                 <Route path="/test-page" element={<TestPage />} />
                 <Route path="/landing-dos" element={<LandingPageDos />} />
+                <Route path="/deck" element={<DeckPage />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>
