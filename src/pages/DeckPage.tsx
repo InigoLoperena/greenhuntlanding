@@ -277,7 +277,7 @@ export default function DeckPage() {
               </div>
             ))}
           </div>
-          <SlideImage src="/deck/page_12.jpg" alt="Features Overview" />
+          
         </SlideFrame>
       );
 
