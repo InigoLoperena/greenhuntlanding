@@ -553,15 +553,21 @@ export default function DeckPage() {
     <div className="w-screen h-screen bg-black overflow-hidden relative select-none" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
       {renderSlide()}
 
-      {/* Navigation */}
-      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-4 bg-black/60 backdrop-blur-md rounded-full px-4 py-2">
-        <button onClick={prev} className="w-8 h-8 rounded-full flex items-center justify-center hover:bg-white/10 transition-colors" style={{ color: '#E6C27A' }} disabled={current === 0}>
-          <ChevronLeft size={18} />
+      {/* Large side arrows */}
+      {current > 0 && (
+        <button onClick={prev} className="fixed left-2 md:left-6 top-1/2 -translate-y-1/2 z-50 w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center bg-black/50 hover:bg-black/70 backdrop-blur-sm transition-all border border-amber-900/40" style={{ color: '#E6C27A' }}>
+          <ChevronLeft size={28} />
         </button>
-        <span className="text-sm min-w-[60px] text-center" style={{ fontFamily: 'Cinzel', color: '#E6C27A' }}>{current + 1} / {total}</span>
-        <button onClick={next} className="w-8 h-8 rounded-full flex items-center justify-center hover:bg-white/10 transition-colors" style={{ color: '#E6C27A' }} disabled={current === total - 1}>
-          <ChevronRight size={18} />
+      )}
+      {current < total - 1 && (
+        <button onClick={next} className="fixed right-2 md:right-6 top-1/2 -translate-y-1/2 z-50 w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center bg-black/50 hover:bg-black/70 backdrop-blur-sm transition-all border border-amber-900/40" style={{ color: '#E6C27A' }}>
+          <ChevronRight size={28} />
         </button>
+      )}
+
+      {/* Bottom counter */}
+      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-black/60 backdrop-blur-md rounded-full px-5 py-2">
+        <span className="text-sm" style={{ fontFamily: 'Cinzel', color: '#E6C27A' }}>{current + 1} / {total}</span>
       </div>
 
       {/* Slide dots */}
