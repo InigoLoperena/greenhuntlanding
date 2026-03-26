@@ -188,7 +188,7 @@ export default function DeckPage() {
           <Title color={t.title}>THE THRIFT STORE PROBLEM</Title>
           <Body color={t.text}>Thrift and antique stores or garage sales do not digitize their catalogs because they do not have a good tool that highlights their value proposition: Seeing and touching things live before buying them.</Body>
           <SubTitle color={t.accent}>"When you buy online vs. when you receive it"</SubTitle>
-          <SlideImage src="/deck/page_6.jpg" alt="Thrift Store Problem" />
+          
         </SlideFrame>
       );
 
