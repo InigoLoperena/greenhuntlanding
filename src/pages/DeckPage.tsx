@@ -147,7 +147,7 @@ export default function DeckPage() {
           <Title color={t.title}>MASSIVE WASTE ‼️</Title>
           <Body color={t.text}>Tons of objects worth hundreds of dollars, in good or perfect condition, end up destroyed, burned or buried daily in landfills or recycling plants. By innovating it is possible to generate an incentive to give them a second life.</Body>
           <SubTitle color={t.accent}>Waste managers haven't any solution to reintroduce discarded stuff in the market.</SubTitle>
-          <SlideImage src="/deck/page_2.jpg" alt="Massive Waste Problem" />
+          
         </SlideFrame>
       );
 
