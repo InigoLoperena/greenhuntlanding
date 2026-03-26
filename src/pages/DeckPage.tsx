@@ -169,7 +169,7 @@ export default function DeckPage() {
           <Title color={t.title}>SYSTEM FOR SHARING PHOTOS AND COORDINATES</Title>
           <Body color={t.text}>Avoid discarded stuff from becoming waste and make money for just taking a photo.</Body>
           <Tags items={['Abandons', 'Donations', 'Products', 'Circular Markets']} accent={t.accent} />
-          <SlideImage src="/deck/page_4.jpg" alt="Photo & Coordinates System" />
+          
         </SlideFrame>
       );
 
