@@ -239,7 +239,7 @@ export default function DeckPage() {
               <p className="text-xs" style={{ color: t.text, fontFamily: 'Inter' }}>Measure the impact of recovered stuff on your phygital circular market</p>
             </div>
           </div>
-          <SlideImage src="/deck/page_10.jpg" alt="Waste Management System" />
+          
         </SlideFrame>
       );
 
