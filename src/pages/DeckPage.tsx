@@ -295,7 +295,7 @@ export default function DeckPage() {
           <div className="mt-4 px-6 py-3 rounded-lg" style={{ background: t.accent + '30', border: `2px solid ${t.accent}` }}>
             <p className="font-bold" style={{ color: t.title, fontFamily: 'Cinzel' }}>🏆 CLAIM REWARDS</p>
           </div>
-          <SlideImage src="/deck/page_13.jpg" alt="Impact & Rewards" />
+          
         </SlideFrame>
       );
 
