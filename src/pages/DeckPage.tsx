@@ -87,9 +87,7 @@ const SubTitle = ({ color, children }: { color: string; children: React.ReactNod
   </p>
 );
 
-const SlideImage = ({ src, alt }: { src: string; alt: string }) => (
-  <img src={src} alt={alt} className="mt-6 max-h-[30vh] md:max-h-[40vh] rounded-xl shadow-2xl border-2 border-amber-900/40 object-contain" loading="lazy" />
-);
+// SlideImage removed - PDF pages no longer embedded
 
 const Tags = ({ items, accent }: { items: string[]; accent: string }) => (
   <div className="flex flex-wrap justify-center gap-2 md:gap-3 mt-4">
@@ -140,7 +138,7 @@ export default function DeckPage() {
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-widest" style={{ fontFamily: 'Cinzel, serif', color: t.title, textShadow: '3px 3px 12px rgba(0,0,0,0.9), 0 0 40px rgba(204,85,0,0.3)' }}>GREENHUNT</h1>
           <p className="text-xl md:text-2xl lg:text-3xl mt-4 text-center italic" style={{ fontFamily: 'Inter, sans-serif', color: t.text }}>Make local circular economy<br />Easy, fun and profitable</p>
           <Tags items={['ABANDONS', 'JUNK PICK UP', 'PRODUCTS', 'CIRCULAR MARKETS']} accent={t.accent} />
-          <SlideImage src="/deck/page_1.jpg" alt="GreenHunt App Cover" />
+          
         </SlideFrame>
       );
 
@@ -149,7 +147,7 @@ export default function DeckPage() {
           <Title color={t.title}>MASSIVE WASTE ‼️</Title>
           <Body color={t.text}>Tons of objects worth hundreds of dollars, in good or perfect condition, end up destroyed, burned or buried daily in landfills or recycling plants. By innovating it is possible to generate an incentive to give them a second life.</Body>
           <SubTitle color={t.accent}>Waste managers haven't any solution to reintroduce discarded stuff in the market.</SubTitle>
-          <SlideImage src="/deck/page_2.jpg" alt="Massive Waste Problem" />
+          
         </SlideFrame>
       );
 
@@ -162,7 +160,7 @@ export default function DeckPage() {
               <span key={link} className="px-4 py-2 rounded-lg text-sm border" style={{ borderColor: t.accent, color: t.title, fontFamily: 'Inter' }}>{link}</span>
             ))}
           </div>
-          <SlideImage src="/deck/page_3.jpg" alt="UX of Stooping" />
+          
         </SlideFrame>
       );
 
@@ -171,7 +169,7 @@ export default function DeckPage() {
           <Title color={t.title}>SYSTEM FOR SHARING PHOTOS AND COORDINATES</Title>
           <Body color={t.text}>Avoid discarded stuff from becoming waste and make money for just taking a photo.</Body>
           <Tags items={['Abandons', 'Donations', 'Products', 'Circular Markets']} accent={t.accent} />
-          <SlideImage src="/deck/page_4.jpg" alt="Photo & Coordinates System" />
+          
         </SlideFrame>
       );
 
@@ -180,7 +178,7 @@ export default function DeckPage() {
           <Title color={t.title}>COORDINATES BUY-SELL SYSTEM</Title>
           <Body color={t.text}>You know is 2.4 miles away from you but not exactly where, buy the coordinates and get a 300 $ sofa for 1 $</Body>
           <SubTitle color={t.accent}>Buy bargains or make money taking photos on the streets</SubTitle>
-          <SlideImage src="/deck/page_5.jpg" alt="Coordinates Buy-Sell" />
+          
           <p className="text-[10px] md:text-xs mt-4 max-w-2xl text-center italic" style={{ color: t.text, opacity: 0.7, fontFamily: 'Inter' }}>*It is not guaranteed that the object is still there, but the time of publication or the publisher user reputation are indicators of the probability. We are integrating systems to make sure publications are legit.</p>
         </SlideFrame>
       );
@@ -190,7 +188,7 @@ export default function DeckPage() {
           <Title color={t.title}>THE THRIFT STORE PROBLEM</Title>
           <Body color={t.text}>Thrift and antique stores or garage sales do not digitize their catalogs because they do not have a good tool that highlights their value proposition: Seeing and touching things live before buying them.</Body>
           <SubTitle color={t.accent}>"When you buy online vs. when you receive it"</SubTitle>
-          <SlideImage src="/deck/page_6.jpg" alt="Thrift Store Problem" />
+          
         </SlideFrame>
       );
 
@@ -198,7 +196,7 @@ export default function DeckPage() {
         <SlideFrame theme={t} slideNum={n}>
           <Title color={t.title}>DIGITIZE THRIFT & ANTIQUE STORES, GARAGE SALES</Title>
           <Body color={t.text}>A nearby list of secondhand stores or circular markets and their catalogs is useful for their clients. Centralizing the catalogs and the communication with them on an App makes the experience easier: Buying, selling, negotiating, donating or requesting a pickup for your unwanted Stuff.</Body>
-          <SlideImage src="/deck/page_7.jpg" alt="Digitize Stores" />
+          
         </SlideFrame>
       );
 
@@ -212,7 +210,7 @@ export default function DeckPage() {
               <span key={url} className="text-[10px] md:text-xs px-2 py-1 rounded border" style={{ borderColor: t.accent + '40', color: t.title, fontFamily: 'Inter' }}>{url}</span>
             ))}
           </div>
-          <SlideImage src="/deck/page_8.jpg" alt="Circular Market Model" />
+          
         </SlideFrame>
       );
 
@@ -220,7 +218,7 @@ export default function DeckPage() {
         <SlideFrame theme={t} slideNum={n}>
           <Title color={t.title}>REINTRODUCING STUFF</Title>
           <Body color={t.text}>Reintroducing stuff like this on the market is easy if you donate it or sell it very cheap but waste managers and junk removers destroy them because they haven't enough incentives and a solution to do it easily.</Body>
-          <SlideImage src="/deck/page_9.jpg" alt="Reintroducing Stuff" />
+          
         </SlideFrame>
       );
 
@@ -241,7 +239,7 @@ export default function DeckPage() {
               <p className="text-xs" style={{ color: t.text, fontFamily: 'Inter' }}>Measure the impact of recovered stuff on your phygital circular market</p>
             </div>
           </div>
-          <SlideImage src="/deck/page_10.jpg" alt="Waste Management System" />
+          
         </SlideFrame>
       );
 
@@ -259,7 +257,7 @@ export default function DeckPage() {
               <p className="text-xs" style={{ color: t.text, fontFamily: 'Inter' }}>QuickJunk Removal: -$80 Cost</p>
             </div>
           </div>
-          <SlideImage src="/deck/page_11.jpg" alt="Pickup System" />
+          
         </SlideFrame>
       );
 
@@ -279,7 +277,7 @@ export default function DeckPage() {
               </div>
             ))}
           </div>
-          <SlideImage src="/deck/page_12.jpg" alt="Features Overview" />
+          
         </SlideFrame>
       );
 
@@ -297,7 +295,7 @@ export default function DeckPage() {
           <div className="mt-4 px-6 py-3 rounded-lg" style={{ background: t.accent + '30', border: `2px solid ${t.accent}` }}>
             <p className="font-bold" style={{ color: t.title, fontFamily: 'Cinzel' }}>🏆 CLAIM REWARDS</p>
           </div>
-          <SlideImage src="/deck/page_13.jpg" alt="Impact & Rewards" />
+          
         </SlideFrame>
       );
 
@@ -555,15 +553,21 @@ export default function DeckPage() {
     <div className="w-screen h-screen bg-black overflow-hidden relative select-none" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
       {renderSlide()}
 
-      {/* Navigation */}
-      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-4 bg-black/60 backdrop-blur-md rounded-full px-4 py-2">
-        <button onClick={prev} className="w-8 h-8 rounded-full flex items-center justify-center hover:bg-white/10 transition-colors" style={{ color: '#E6C27A' }} disabled={current === 0}>
-          <ChevronLeft size={18} />
+      {/* Large side arrows */}
+      {current > 0 && (
+        <button onClick={prev} className="fixed left-2 md:left-6 top-1/2 -translate-y-1/2 z-50 w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center bg-black/50 hover:bg-black/70 backdrop-blur-sm transition-all border border-amber-900/40" style={{ color: '#E6C27A' }}>
+          <ChevronLeft size={28} />
         </button>
-        <span className="text-sm min-w-[60px] text-center" style={{ fontFamily: 'Cinzel', color: '#E6C27A' }}>{current + 1} / {total}</span>
-        <button onClick={next} className="w-8 h-8 rounded-full flex items-center justify-center hover:bg-white/10 transition-colors" style={{ color: '#E6C27A' }} disabled={current === total - 1}>
-          <ChevronRight size={18} />
+      )}
+      {current < total - 1 && (
+        <button onClick={next} className="fixed right-2 md:right-6 top-1/2 -translate-y-1/2 z-50 w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center bg-black/50 hover:bg-black/70 backdrop-blur-sm transition-all border border-amber-900/40" style={{ color: '#E6C27A' }}>
+          <ChevronRight size={28} />
         </button>
+      )}
+
+      {/* Bottom counter */}
+      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-black/60 backdrop-blur-md rounded-full px-5 py-2">
+        <span className="text-sm" style={{ fontFamily: 'Cinzel', color: '#E6C27A' }}>{current + 1} / {total}</span>
       </div>
 
       {/* Slide dots */}
