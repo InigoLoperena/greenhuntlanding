@@ -210,7 +210,7 @@ export default function DeckPage() {
               <span key={url} className="text-[10px] md:text-xs px-2 py-1 rounded border" style={{ borderColor: t.accent + '40', color: t.title, fontFamily: 'Inter' }}>{url}</span>
             ))}
           </div>
-          <SlideImage src="/deck/page_8.jpg" alt="Circular Market Model" />
+          
         </SlideFrame>
       );
 
