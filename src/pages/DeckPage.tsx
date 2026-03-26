@@ -87,9 +87,7 @@ const SubTitle = ({ color, children }: { color: string; children: React.ReactNod
   </p>
 );
 
-const SlideImage = ({ src, alt }: { src: string; alt: string }) => (
-  <img src={src} alt={alt} className="mt-6 max-h-[30vh] md:max-h-[40vh] rounded-xl shadow-2xl border-2 border-amber-900/40 object-contain" loading="lazy" />
-);
+// SlideImage removed - PDF pages no longer embedded
 
 const Tags = ({ items, accent }: { items: string[]; accent: string }) => (
   <div className="flex flex-wrap justify-center gap-2 md:gap-3 mt-4">
