@@ -138,7 +138,7 @@ export default function DeckPage() {
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-widest" style={{ fontFamily: 'Cinzel, serif', color: t.title, textShadow: '3px 3px 12px rgba(0,0,0,0.9), 0 0 40px rgba(204,85,0,0.3)' }}>GREENHUNT</h1>
           <p className="text-xl md:text-2xl lg:text-3xl mt-4 text-center italic" style={{ fontFamily: 'Inter, sans-serif', color: t.text }}>Make local circular economy<br />Easy, fun and profitable</p>
           <Tags items={['ABANDONS', 'JUNK PICK UP', 'PRODUCTS', 'CIRCULAR MARKETS']} accent={t.accent} />
-          <SlideImage src="/deck/page_1.jpg" alt="GreenHunt App Cover" />
+          
         </SlideFrame>
       );
 
