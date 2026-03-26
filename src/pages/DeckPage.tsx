@@ -160,7 +160,7 @@ export default function DeckPage() {
               <span key={link} className="px-4 py-2 rounded-lg text-sm border" style={{ borderColor: t.accent, color: t.title, fontFamily: 'Inter' }}>{link}</span>
             ))}
           </div>
-          <SlideImage src="/deck/page_3.jpg" alt="UX of Stooping" />
+          
         </SlideFrame>
       );
 
