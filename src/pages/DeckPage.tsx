@@ -178,7 +178,7 @@ export default function DeckPage() {
           <Title color={t.title}>COORDINATES BUY-SELL SYSTEM</Title>
           <Body color={t.text}>You know is 2.4 miles away from you but not exactly where, buy the coordinates and get a 300 $ sofa for 1 $</Body>
           <SubTitle color={t.accent}>Buy bargains or make money taking photos on the streets</SubTitle>
-          <SlideImage src="/deck/page_5.jpg" alt="Coordinates Buy-Sell" />
+          
           <p className="text-[10px] md:text-xs mt-4 max-w-2xl text-center italic" style={{ color: t.text, opacity: 0.7, fontFamily: 'Inter' }}>*It is not guaranteed that the object is still there, but the time of publication or the publisher user reputation are indicators of the probability. We are integrating systems to make sure publications are legit.</p>
         </SlideFrame>
       );
