@@ -257,7 +257,7 @@ export default function DeckPage() {
               <p className="text-xs" style={{ color: t.text, fontFamily: 'Inter' }}>QuickJunk Removal: -$80 Cost</p>
             </div>
           </div>
-          <SlideImage src="/deck/page_11.jpg" alt="Pickup System" />
+          
         </SlideFrame>
       );
 
