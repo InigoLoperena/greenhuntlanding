@@ -196,7 +196,7 @@ export default function DeckPage() {
         <SlideFrame theme={t} slideNum={n}>
           <Title color={t.title}>DIGITIZE THRIFT & ANTIQUE STORES, GARAGE SALES</Title>
           <Body color={t.text}>A nearby list of secondhand stores or circular markets and their catalogs is useful for their clients. Centralizing the catalogs and the communication with them on an App makes the experience easier: Buying, selling, negotiating, donating or requesting a pickup for your unwanted Stuff.</Body>
-          <SlideImage src="/deck/page_7.jpg" alt="Digitize Stores" />
+          
         </SlideFrame>
       );
 
