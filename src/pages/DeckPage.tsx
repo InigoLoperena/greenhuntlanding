@@ -218,7 +218,7 @@ export default function DeckPage() {
         <SlideFrame theme={t} slideNum={n}>
           <Title color={t.title}>REINTRODUCING STUFF</Title>
           <Body color={t.text}>Reintroducing stuff like this on the market is easy if you donate it or sell it very cheap but waste managers and junk removers destroy them because they haven't enough incentives and a solution to do it easily.</Body>
-          <SlideImage src="/deck/page_9.jpg" alt="Reintroducing Stuff" />
+          
         </SlideFrame>
       );
 
