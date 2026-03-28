@@ -13,6 +13,7 @@ import { toast } from "sonner";
 import { z } from "zod";
 import tutorialStep2 from "@/assets/tutorial-step-2.png";
 import getFreeStuffPromo from "@/assets/get-free-stuff-promo.webp";
+import getFreeStuffHero from "@/assets/get-free-stuff-promo.png";
 import appStoreBadges from "@/assets/app-store-badges.png";
 import playForPlanetScreen from "@/assets/play-for-planet-screen.webp";
 import valueProp1 from "@/assets/value-prop-1.webp";
