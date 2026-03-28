@@ -228,7 +228,7 @@ export default function LandingPage() {
           {/* Get Free Stuff Promo - Full Width */}
           <div className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
             <img 
-              src={getFreeStuffHero} 
+              src="/lovable-uploads/aff0f1f6-c320-4eae-b991-fbb8565e524e.png" 
               alt="Get Free Stuff or save the planet from apocalypse taking photos - GreenHunt Stooping App" 
               className="w-full h-auto block"
               loading="eager"
