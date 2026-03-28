@@ -13,6 +13,7 @@ import { toast } from "sonner";
 import { z } from "zod";
 import tutorialStep2 from "@/assets/tutorial-step-2.png";
 import getFreeStuffPromo from "@/assets/get-free-stuff-promo.webp";
+import getFreeStuffHero from "@/assets/get-free-stuff-promo.png";
 import appStoreBadges from "@/assets/app-store-badges.png";
 import playForPlanetScreen from "@/assets/play-for-planet-screen.webp";
 import valueProp1 from "@/assets/value-prop-1.webp";
@@ -224,7 +225,17 @@ export default function LandingPage() {
             <HeroSection className="my-0" />
           </div>
 
-          {/* SEO Section 1 - H1 Stooping App */}
+          {/* Get Free Stuff Promo - Full Width */}
+          <div className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
+            <img 
+              src={getFreeStuffHero} 
+              alt="Get Free Stuff or save the planet from apocalypse taking photos - GreenHunt Stooping App" 
+              className="w-full h-auto block"
+              loading="eager"
+            />
+          </div>
+
+
           <section className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32 relative">
             <div
               className="relative py-24 md:py-32 px-6 md:px-16 flex flex-col items-center justify-center text-center"
