@@ -7,6 +7,7 @@ import { LanguageProvider } from "@/hooks/useLanguage";
 import { ErrorBoundary } from "@/utils/errorBoundary";
 import { lazy, Suspense } from "react";
 import { LoadingSpinner } from "@/components/LoadingSpinner";
+import { CanonicalURL } from "@/components/CanonicalURL";
 
 // Lazy load pages for better performance
 const LandingPage = lazy(() => import("./pages/LandingPage"));
