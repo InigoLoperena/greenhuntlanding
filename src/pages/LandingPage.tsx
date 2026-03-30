@@ -262,7 +262,7 @@ export default function LandingPage() {
           {/* Rescue Map Scene - Full width */}
           <div className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
             <img
-              src={rescueMapScene}
+              src="/lovable-uploads/rescue-map-new.png"
               alt="Rescue Map - Your city is like a board game where valuable free finds suddenly appear!"
               className="w-full h-auto block"
               loading="lazy" />
