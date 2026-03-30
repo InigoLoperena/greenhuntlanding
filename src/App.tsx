@@ -51,6 +51,7 @@ const App = () => (
           <Toaster />
           <Sonner />
           <BrowserRouter>
+            <CanonicalURL />
             <Suspense fallback={
               <div className="min-h-screen flex items-center justify-center bg-black">
                 <LoadingSpinner />
