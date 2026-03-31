@@ -85,7 +85,7 @@ const handler = async (req: Request): Promise<Response> => {
                     </table>
                     
                     <p style="color: #888888; font-size: 14px; line-height: 1.6; margin: 20px 0 0 0; text-align: center;">
-                      Start exploring and be part of the circular economy revolution!
+                      Start exploring and Hunting!
                     </p>
                   </td>
                 </tr>
