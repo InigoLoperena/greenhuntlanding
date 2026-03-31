@@ -12,7 +12,7 @@ interface WelcomeEmailRequest {
   email: string;
 }
 
-const BETA_URL = "https://greenhunt.net/";
+const BETA_URL = "https://greenhunt.vercel.app/login";
 
 const SOCIAL_LINKS = {
   instagram: "https://www.instagram.com/greenhuntstoopingapp/",
@@ -57,11 +57,11 @@ const handler = async (req: Request): Promise<Response> => {
                 <tr>
                   <td style="padding: 30px 40px;">
                     <h1 style="color: #b4fa74; font-size: 28px; margin: 0 0 20px 0; text-align: center;">
-                      Welcome to the Circular Revolution! 🎉
+                      Welcome to the GreenHunt!
                     </h1>
                     
                     <p style="color: #ffffff; font-size: 16px; line-height: 1.6; margin: 0 0 20px 0;">
-                      Thank you for joining the GreenHunt Beta! You're now part of a community that's transforming the way we think about waste and consumption.
+                      You're now part of a community that's transforming the linear economy apocalypse
                     </p>
                     
                     <p style="color: #97c26c; font-size: 16px; line-height: 1.6; margin: 0 0 20px 0;">
@@ -69,10 +69,8 @@ const handler = async (req: Request): Promise<Response> => {
                     </p>
                     
                     <ul style="color: #ffffff; font-size: 14px; line-height: 1.8; margin: 0 0 30px 20px; padding: 0;">
-                      <li style="margin-bottom: 8px;">🛋️ Hunt abandoned furniture and treasures on the street</li>
-                      <li style="margin-bottom: 8px;">💰 Earn money by sharing photos and coordinates</li>
-                      <li style="margin-bottom: 8px;">🏪 Discover local thrift stores and garage sales</li>
-                      <li style="margin-bottom: 8px;">🌍 Save the planet by giving objects a second life</li>
+                      <li style="margin-bottom: 8px;">🛋 Hunt abandoned furniture and treasures on the street</li>
+                      <li style="margin-bottom: 8px;">🌍 Save the planet avoiding treasures from becoming waste</li>
                     </ul>
                     
                     <!-- CTA Button -->
@@ -87,7 +85,7 @@ const handler = async (req: Request): Promise<Response> => {
                     </table>
                     
                     <p style="color: #888888; font-size: 14px; line-height: 1.6; margin: 20px 0 0 0; text-align: center;">
-                      Start exploring and be part of the circular economy revolution!
+                      Start exploring and Hunting!
                     </p>
                   </td>
                 </tr>
@@ -138,7 +136,7 @@ const handler = async (req: Request): Promise<Response> => {
       body: JSON.stringify({
       from: "GreenHunt <hello@greenhunt.net>",
         to: [email],
-        subject: "Welcome to GreenHunt Beta! 🌿",
+        subject: "Welcome to the GreenHunt! 🌿",
         html: emailHtml,
       }),
     });
