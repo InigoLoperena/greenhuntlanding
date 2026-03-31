@@ -269,18 +269,7 @@ export default function LandingPage() {
             
           </div>
 
-          {/* SEO Section 2 - What is Stooping */}
-          <SeoTextSection
-            bg={seoBgParchment}
-            isDark={false}
-            heading="What is Stooping?"
-            subheading="The act of finding and sharing discarded items left on the street for others to take. It's a growing urban practice to give objects a second life." />
-          
-
-
-          <FrameCarouselSection />
-
-          {/* Get Beta CTA - Before Instagram section */}
+          {/* Get Beta CTA - Before What is Stooping section */}
           <section className="relative -mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
             <div className="relative py-28 md:py-36 px-4" style={{ backgroundImage: `url(${darkWoodTexture})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
               <div className="absolute inset-0 bg-black/45" />
@@ -288,10 +277,10 @@ export default function LandingPage() {
                 <div className="relative overflow-hidden rounded-3xl border-2 bg-black/40 backdrop-blur-sm p-10 md:p-14 shadow-[0_0_40px_rgba(210,180,140,0.15)]" style={{ borderColor: 'rgba(210,180,140,0.3)' }}>
                   <div className="relative z-10">
                     <h2 className="text-3xl md:text-4xl mb-3" style={{ color: '#E6C27A', fontFamily: "'Cinzel', serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 6px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.5), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8), 1px 1px 0 rgba(0,0,0,0.8)' }}>
-                      Get Beta & Project Updates
+                        Get Beta & Project Updates
                     </h2>
                     <p className="mb-8 text-lg font-medium" style={{ color: '#FFFFFF', fontFamily: "'Inter', sans-serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 5px rgba(0,0,0,0.9), -1px -1px 0 rgba(0,0,0,0.6), 1px -1px 0 rgba(0,0,0,0.6), -1px 1px 0 rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.6)' }}>
-                      Be the first to know when we launch
+                        Be the first to know when we launch
                     </p>
                     <form onSubmit={handleWaitlistSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
                       <Input
@@ -314,6 +303,16 @@ export default function LandingPage() {
               </div>
             </div>
           </section>
+
+          {/* SEO Section 2 - What is Stooping */}
+          <SeoTextSection
+            bg={seoBgParchment}
+            isDark={false}
+            heading="What is Stooping?"
+            subheading="The act of finding and sharing discarded items left on the street for others to take. It's a growing urban practice to give objects a second life." />
+
+
+          <FrameCarouselSection />
 
           {/* SEO Section 3 - Why Instagram doesn't work */}
           <SeoTextSection
