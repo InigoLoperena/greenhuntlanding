@@ -12,7 +12,7 @@ interface WelcomeEmailRequest {
   email: string;
 }
 
-const BETA_URL = "https://greenhunt.net/";
+const BETA_URL = "https://greenhunt.vercel.app/login";
 
 const SOCIAL_LINKS = {
   instagram: "https://www.instagram.com/greenhuntstoopingapp/",
