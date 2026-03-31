@@ -136,7 +136,7 @@ const handler = async (req: Request): Promise<Response> => {
       body: JSON.stringify({
       from: "GreenHunt <hello@greenhunt.net>",
         to: [email],
-        subject: "Welcome to GreenHunt Beta! 🌿",
+        subject: "Welcome to the GreenHunt! 🌿",
         html: emailHtml,
       }),
     });
