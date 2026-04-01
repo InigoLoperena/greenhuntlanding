@@ -5,7 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/hooks/useLanguage";
 import { ErrorBoundary } from "@/utils/errorBoundary";
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { LoadingSpinner } from "@/components/LoadingSpinner";
 import { CanonicalURL } from "@/components/CanonicalURL";
 
@@ -21,6 +22,13 @@ const WasteManagerPage = lazy(() => import("./pages/WasteManagerPage"));
 const TestPage = lazy(() => import("./pages/TestPage"));
 const LandingPageDos = lazy(() => import("./pages/LandingPageDos"));
 const DeckPage = lazy(() => import("./pages/DeckPage"));
+
+const DeckRedirect = () => {
+  useEffect(() => {
+    window.location.href = '/deck.pdf';
+  }, []);
+  return null;
+};
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -67,7 +75,7 @@ const App = () => (
                 <Route path="/waste-managers" element={<WasteManagerPage />} />
                 <Route path="/test-page" element={<TestPage />} />
                 <Route path="/landing-dos" element={<LandingPageDos />} />
-                <Route path="/deck" element={<DeckPage />} />
+                <Route path="/deck" element={<DeckRedirect />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>
