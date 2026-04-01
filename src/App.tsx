@@ -22,13 +22,6 @@ const TestPage = lazy(() => import("./pages/TestPage"));
 const LandingPageDos = lazy(() => import("./pages/LandingPageDos"));
 const DeckPage = lazy(() => import("./pages/DeckPage"));
 
-const DeckRedirect = () => {
-  useEffect(() => {
-    window.location.href = '/deck.pdf';
-  }, []);
-  return null;
-};
-
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
