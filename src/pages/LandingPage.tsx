@@ -416,7 +416,7 @@ export default function LandingPage() {
             bg={seoBgWoodLeaves}
             isDark={true}
             heading="Share items in seconds"
-            subheading="Post a photo, add a location, and help others find what you leave behind. Simple, fast, and built for the streets." />
+            subheading="Post a photo + location in seconds and help others find what you leave behind. Simple, fast, and built for the streets." />
           
 
           {/* Conquer Apocalypse Promo - Full width */}
