@@ -20,6 +20,7 @@ const AdminPage = lazy(() => import("./pages/AdminPage"));
 const WasteManagerPage = lazy(() => import("./pages/WasteManagerPage"));
 const TestPage = lazy(() => import("./pages/TestPage"));
 const LandingPageDos = lazy(() => import("./pages/LandingPageDos"));
+const EmpleadosPage = lazy(() => import("./pages/EmpleadosPage"));
 
 const DeckRedirect = () => {
   useEffect(() => {
@@ -79,6 +80,7 @@ const App = () => (
                 <Route path="/test-page" element={<TestPage />} />
                 <Route path="/landing-dos" element={<LandingPageDos />} />
                 <Route path="/deck" element={<DeckRedirect />} />
+                <Route path="/empleados" element={<EmpleadosPage />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>
