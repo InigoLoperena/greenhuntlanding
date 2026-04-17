@@ -13,7 +13,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { toast } from "sonner";
-import { Play, Square, Pencil, Trash2, Save, X, CalendarClock } from "lucide-react";
+import { Play, Square, Pencil, Trash2, Save, X, CalendarClock, Wallet } from "lucide-react";
 
 const EMPLOYEES = ["Andrea", "Isvara", "Joaquina", "Pablo", "Lucas"] as const;
 type Employee = (typeof EMPLOYEES)[number];
@@ -26,6 +26,106 @@ interface TimeEntry {
   total_minutes: number | null;
   description: string | null;
 }
+
+interface PaymentMethod {
+  id?: string;
+  employee_name: string;
+  global_username: string | null;
+  bank_ars: string | null;
+  bank_usd: string | null;
+}
+
+const PaymentMethodForm = ({ name }: { name: Employee }) => {
+  const [pm, setPm] = useState<PaymentMethod>({
+    employee_name: name,
+    global_username: "",
+    bank_ars: "",
+    bank_usd: "",
+  });
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    (async () => {
+      const { data } = await supabase
+        .from("employee_payment_methods")
+        .select("*")
+        .eq("employee_name", name)
+        .maybeSingle();
+      if (data) setPm(data as PaymentMethod);
+    })();
+  }, [name]);
+
+  const save = async () => {
+    setLoading(true);
+    const payload = {
+      employee_name: name,
+      global_username: pm.global_username || null,
+      bank_ars: pm.bank_ars || null,
+      bank_usd: pm.bank_usd || null,
+    };
+    const { error } = await supabase
+      .from("employee_payment_methods")
+      .upsert(payload, { onConflict: "employee_name" });
+    setLoading(false);
+    if (error) {
+      toast.error("Error guardando método de pago");
+      return;
+    }
+    toast.success("Método de pago guardado");
+  };
+
+  return (
+    <div className="space-y-3 p-4 rounded-lg bg-zinc-950 border-2 border-[#a2c041]/40">
+      <div className="flex items-center gap-2 text-[#b4fa74] font-permanent-marker text-xl">
+        <Wallet className="w-5 h-5" /> Método de pago
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+        <div>
+          <label className="text-[#b4fa74] text-xs font-permanent-marker">
+            Usuario Global
+          </label>
+          <Input
+            placeholder="usuario o email"
+            value={pm.global_username || ""}
+            onChange={(e) =>
+              setPm({ ...pm, global_username: e.target.value })
+            }
+            className="bg-zinc-800 border-zinc-700 text-white mt-1"
+          />
+        </div>
+        <div>
+          <label className="text-[#b4fa74] text-xs font-permanent-marker">
+            Transferencia en Pesos (ARS)
+          </label>
+          <Input
+            placeholder="CBU / Alias / cuenta"
+            value={pm.bank_ars || ""}
+            onChange={(e) => setPm({ ...pm, bank_ars: e.target.value })}
+            className="bg-zinc-800 border-zinc-700 text-white mt-1"
+          />
+        </div>
+        <div>
+          <label className="text-[#b4fa74] text-xs font-permanent-marker">
+            Transferencia en Dólares (USD)
+          </label>
+          <Input
+            placeholder="cuenta / IBAN / SWIFT"
+            value={pm.bank_usd || ""}
+            onChange={(e) => setPm({ ...pm, bank_usd: e.target.value })}
+            className="bg-zinc-800 border-zinc-700 text-white mt-1"
+          />
+        </div>
+      </div>
+      <Button
+        onClick={save}
+        disabled={loading}
+        className="bg-[#a2c041] hover:bg-[#8da836] text-[#611a5a] font-permanent-marker"
+      >
+        <Save className="mr-1" /> Guardar método de pago
+      </Button>
+    </div>
+  );
+};
 
 const STORAGE_KEY = "greenhunt_active_timers";
 
@@ -150,6 +250,7 @@ const EmployeeSection = ({
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-4">
+        <PaymentMethodForm name={name} />
         <div className="flex flex-col sm:flex-row gap-3 items-start sm:items-center">
           {!active ? (
             <Button

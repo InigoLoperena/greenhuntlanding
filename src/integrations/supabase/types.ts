@@ -101,6 +101,36 @@ export type Database = {
         }
         Relationships: []
       }
+      employee_payment_methods: {
+        Row: {
+          bank_ars: string | null
+          bank_usd: string | null
+          created_at: string
+          employee_name: string
+          global_username: string | null
+          id: string
+          updated_at: string
+        }
+        Insert: {
+          bank_ars?: string | null
+          bank_usd?: string | null
+          created_at?: string
+          employee_name: string
+          global_username?: string | null
+          id?: string
+          updated_at?: string
+        }
+        Update: {
+          bank_ars?: string | null
+          bank_usd?: string | null
+          created_at?: string
+          employee_name?: string
+          global_username?: string | null
+          id?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       employee_time_entries: {
         Row: {
           created_at: string
