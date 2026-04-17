@@ -203,19 +203,25 @@ const EmployeeSection = ({
                 editingId === e.id ? (
                   <TableRow key={e.id} className="border-zinc-800">
                     <TableCell>
+                      <label className="flex items-center gap-2 text-[#b4fa74] text-xs font-permanent-marker mb-1">
+                        <CalendarClock className="w-4 h-4" /> Entrada
+                      </label>
                       <Input
                         type="datetime-local"
                         value={editStart}
                         onChange={(ev) => setEditStart(ev.target.value)}
-                        className="bg-zinc-800 border-zinc-700 text-white"
+                        className="bg-zinc-800 border-2 border-[#a2c041] text-white text-base h-12 [color-scheme:dark]"
                       />
                     </TableCell>
                     <TableCell>
+                      <label className="flex items-center gap-2 text-[#b4fa74] text-xs font-permanent-marker mb-1">
+                        <CalendarClock className="w-4 h-4" /> Salida
+                      </label>
                       <Input
                         type="datetime-local"
                         value={editEnd}
                         onChange={(ev) => setEditEnd(ev.target.value)}
-                        className="bg-zinc-800 border-zinc-700 text-white"
+                        className="bg-zinc-800 border-2 border-[#a2c041] text-white text-base h-12 [color-scheme:dark]"
                       />
                     </TableCell>
                     <TableCell className="text-zinc-400">auto</TableCell>
@@ -223,24 +229,23 @@ const EmployeeSection = ({
                       <Textarea
                         value={editDesc}
                         onChange={(ev) => setEditDesc(ev.target.value)}
-                        className="bg-zinc-800 border-zinc-700 text-white min-h-[40px]"
+                        className="bg-zinc-800 border-2 border-[#a2c041] text-white min-h-[48px]"
                       />
                     </TableCell>
                     <TableCell>
-                      <div className="flex gap-1">
+                      <div className="flex flex-col gap-2">
                         <Button
-                          size="icon"
                           onClick={() => saveEdit(e.id)}
-                          className="bg-[#a2c041] text-[#611a5a]"
+                          className="bg-[#a2c041] hover:bg-[#8da836] text-[#611a5a] font-permanent-marker"
                         >
-                          <Save />
+                          <Save className="mr-1" /> Guardar
                         </Button>
                         <Button
-                          size="icon"
                           variant="outline"
                           onClick={() => setEditingId(null)}
+                          className="border-zinc-600 text-zinc-200 hover:bg-zinc-800"
                         >
-                          <X />
+                          <X className="mr-1" /> Cancelar
                         </Button>
                       </div>
                     </TableCell>
@@ -260,13 +265,12 @@ const EmployeeSection = ({
                       {e.description || "—"}
                     </TableCell>
                     <TableCell>
-                      <div className="flex gap-1">
+                      <div className="flex gap-2">
                         <Button
-                          size="icon"
-                          variant="outline"
                           onClick={() => beginEdit(e)}
+                          className="bg-[#a2c041] hover:bg-[#8da836] text-[#611a5a] font-permanent-marker"
                         >
-                          <Pencil />
+                          <Pencil className="mr-1" /> Editar
                         </Button>
                         <Button
                           size="icon"
