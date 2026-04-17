@@ -12,5 +12,6 @@ Allow: /
 
 User-agent: *
 Allow: /
+Disallow: /empleados
 
 Sitemap: https://greenhunt.net/sitemap.xml
