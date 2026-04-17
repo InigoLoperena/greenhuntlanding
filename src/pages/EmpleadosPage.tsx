@@ -13,7 +13,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { toast } from "sonner";
-import { Play, Square, Pencil, Trash2, Save, X } from "lucide-react";
+import { Play, Square, Pencil, Trash2, Save, X, CalendarClock } from "lucide-react";
 
 const EMPLOYEES = ["Andrea", "Isvara", "Joaquina", "Pablo", "Lucas"] as const;
 type Employee = (typeof EMPLOYEES)[number];
