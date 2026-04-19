@@ -419,6 +419,22 @@ const EmployeeSection = ({
             </TableBody>
           </Table>
         </div>
+
+        {(() => {
+          const total = sumWeekMinutes(entries);
+          const h = Math.floor(total / 60);
+          const m = total % 60;
+          return (
+            <div className="p-4 rounded-lg bg-zinc-950 border-2 border-[#a2c041]/40 flex items-center justify-between flex-wrap gap-2">
+              <div className="text-[#b4fa74] font-permanent-marker text-xl">
+                Total esta semana (lun–dom)
+              </div>
+              <div className="text-white font-mono text-2xl">
+                {h}h {m}m
+              </div>
+            </div>
+          );
+        })()}
       </CardContent>
     </Card>
   );
