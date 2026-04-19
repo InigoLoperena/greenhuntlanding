@@ -3,21 +3,21 @@ import { MapPin, Users, Camera, Smartphone, Bluetooth, Navigation, Store, Recycl
 import { Link } from "react-router-dom";
 import greenhuntLogoNew from "@/assets/greenhunt-logo-new.svg";
 import wasteManagerTruck from "@/assets/waste-manager-truck.png";
-import coordinatesShareTruck from "@/assets/coordinates-share-truck.png";
+import coordinatesShareTruck from "@/assets/coordinates-share-truck.webp";
 import wasteScoutMotorcycle from "@/assets/waste-scout-motorcycle.png";
 import treasureMap from "@/assets/treasure-map.jpg";
-import coordinatesCard from "@/assets/coordinates-card.png";
-import coordinatesMap from "@/assets/coordinates-map.png";
-import wasteStep1 from "@/assets/waste-step-1.png";
-import wasteStep2 from "@/assets/waste-step-2.png";
-import wasteStep3 from "@/assets/waste-step-3.png";
-import wasteFlow1 from "@/assets/waste-flow-1.png";
-import wasteFlow2 from "@/assets/waste-flow-2.png";
-import wasteFlow3 from "@/assets/waste-flow-3.png";
-import benefitPartnership from "@/assets/benefit-partnership.png";
+import coordinatesCard from "@/assets/coordinates-card.webp";
+import coordinatesMap from "@/assets/coordinates-map.webp";
+import wasteStep1 from "@/assets/waste-step-1.webp";
+import wasteStep2 from "@/assets/waste-step-2.webp";
+import wasteStep3 from "@/assets/waste-step-3.webp";
+import wasteFlow1 from "@/assets/waste-flow-1.webp";
+import wasteFlow2 from "@/assets/waste-flow-2.webp";
+import wasteFlow3 from "@/assets/waste-flow-3.webp";
+import benefitPartnership from "@/assets/benefit-partnership.webp";
 import benefitRecycling from "@/assets/benefit-recycling.png";
 import benefitRoutes from "@/assets/benefit-routes.png";
-import benefitCosts from "@/assets/benefit-costs.png";
+import benefitCosts from "@/assets/benefit-costs.webp";
 export default function WasteManagerPage() {
   return <div className="min-h-screen bg-black text-white overflow-x-hidden">
       {/* Header with Logo */}
