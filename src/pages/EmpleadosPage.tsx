@@ -212,8 +212,8 @@ const EmployeeSection = ({
 
   const beginEdit = (e: TimeEntry) => {
     setEditingId(e.id);
-    setEditStart(e.start_time ? e.start_time.slice(0, 16) : "");
-    setEditEnd(e.end_time ? e.end_time.slice(0, 16) : "");
+    setEditStart(isoToLocalInput(e.start_time));
+    setEditEnd(isoToLocalInput(e.end_time));
     setEditDesc(e.description || "");
   };
 
