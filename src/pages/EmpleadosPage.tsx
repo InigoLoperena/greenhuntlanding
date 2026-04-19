@@ -157,6 +157,34 @@ const formatDateTime = (iso: string | null) => {
   });
 };
 
+// Convert ISO UTC string to a value usable by <input type="datetime-local"> in LOCAL time
+const isoToLocalInput = (iso: string | null): string => {
+  if (!iso) return "";
+  const d = new Date(iso);
+  const pad = (n: number) => String(n).padStart(2, "0");
+  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`;
+};
+
+// Monday 00:00 of the current local week
+const startOfCurrentWeek = (): Date => {
+  const now = new Date();
+  const day = now.getDay(); // 0=Sun..6=Sat
+  const diff = (day === 0 ? -6 : 1 - day); // shift to Monday
+  const monday = new Date(now.getFullYear(), now.getMonth(), now.getDate() + diff, 0, 0, 0, 0);
+  return monday;
+};
+
+const sumWeekMinutes = (entries: TimeEntry[]): number => {
+  const monday = startOfCurrentWeek().getTime();
+  const nextMonday = monday + 7 * 24 * 60 * 60 * 1000;
+  return entries.reduce((acc, e) => {
+    if (!e.start_time || e.total_minutes == null) return acc;
+    const t = new Date(e.start_time).getTime();
+    if (t >= monday && t < nextMonday) return acc + e.total_minutes;
+    return acc;
+  }, 0);
+};
+
 const EmployeeSection = ({
   name,
   entries,
@@ -184,8 +212,8 @@ const EmployeeSection = ({
 
   const beginEdit = (e: TimeEntry) => {
     setEditingId(e.id);
-    setEditStart(e.start_time ? e.start_time.slice(0, 16) : "");
-    setEditEnd(e.end_time ? e.end_time.slice(0, 16) : "");
+    setEditStart(isoToLocalInput(e.start_time));
+    setEditEnd(isoToLocalInput(e.end_time));
     setEditDesc(e.description || "");
   };
 
@@ -391,6 +419,22 @@ const EmployeeSection = ({
             </TableBody>
           </Table>
         </div>
+
+        {(() => {
+          const total = sumWeekMinutes(entries);
+          const h = Math.floor(total / 60);
+          const m = total % 60;
+          return (
+            <div className="p-4 rounded-lg bg-zinc-950 border-2 border-[#a2c041]/40 flex items-center justify-between flex-wrap gap-2">
+              <div className="text-[#b4fa74] font-permanent-marker text-xl">
+                Total esta semana (lun–dom)
+              </div>
+              <div className="text-white font-mono text-2xl">
+                {h}h {m}m
+              </div>
+            </div>
+          );
+        })()}
       </CardContent>
     </Card>
   );
