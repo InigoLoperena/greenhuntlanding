@@ -8,6 +8,7 @@ import { ErrorBoundary } from "@/utils/errorBoundary";
 import { lazy, Suspense } from "react";
 import { LoadingSpinner } from "@/components/LoadingSpinner";
 import { CanonicalURL } from "@/components/CanonicalURL";
+import { HelmetProvider } from "react-helmet-async";
 
 // Lazy load pages for better performance
 const LandingPage = lazy(() => import("./pages/LandingPage"));
@@ -16,6 +17,9 @@ const CookiesPage = lazy(() => import("./pages/CookiesPage"));
 const PrivacyPage = lazy(() => import("./pages/PrivacyPage"));
 const LegalPage = lazy(() => import("./pages/LegalPage"));
 const EmpleadosPage = lazy(() => import("./pages/EmpleadosPage"));
+const BlogListPage = lazy(() => import("./pages/BlogListPage"));
+const BlogPostPage = lazy(() => import("./pages/BlogPostPage"));
+const SistemaInternoPage = lazy(() => import("./pages/SistemaInternoPage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -40,31 +44,36 @@ const queryClient = new QueryClient({
 
 const App = () => (
   <ErrorBoundary>
-    <QueryClientProvider client={queryClient}>
-      <LanguageProvider>
-        <TooltipProvider>
-          <Toaster />
-          <Sonner />
-          <BrowserRouter>
-            <CanonicalURL />
-            <Suspense fallback={
-              <div className="min-h-screen flex items-center justify-center bg-black">
-                <LoadingSpinner />
-              </div>
-            }>
-              <Routes>
-                <Route path="/" element={<LandingPage />} />
-                <Route path="/cookies" element={<CookiesPage />} />
-                <Route path="/privacy" element={<PrivacyPage />} />
-                <Route path="/legal" element={<LegalPage />} />
-                <Route path="/empleados" element={<EmpleadosPage />} />
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </Suspense>
-          </BrowserRouter>
-        </TooltipProvider>
-      </LanguageProvider>
-    </QueryClientProvider>
+    <HelmetProvider>
+      <QueryClientProvider client={queryClient}>
+        <LanguageProvider>
+          <TooltipProvider>
+            <Toaster />
+            <Sonner />
+            <BrowserRouter>
+              <CanonicalURL />
+              <Suspense fallback={
+                <div className="min-h-screen flex items-center justify-center bg-black">
+                  <LoadingSpinner />
+                </div>
+              }>
+                <Routes>
+                  <Route path="/" element={<LandingPage />} />
+                  <Route path="/cookies" element={<CookiesPage />} />
+                  <Route path="/privacy" element={<PrivacyPage />} />
+                  <Route path="/legal" element={<LegalPage />} />
+                  <Route path="/empleados" element={<EmpleadosPage />} />
+                  <Route path="/blog" element={<BlogListPage />} />
+                  <Route path="/blog/:slug" element={<BlogPostPage />} />
+                  <Route path="/sistemainterno" element={<SistemaInternoPage />} />
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </Suspense>
+            </BrowserRouter>
+          </TooltipProvider>
+        </LanguageProvider>
+      </QueryClientProvider>
+    </HelmetProvider>
   </ErrorBoundary>
 );
 
