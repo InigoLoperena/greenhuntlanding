@@ -261,8 +261,8 @@ const EmployeeSection = ({
   };
 
   const saveEdit = async (id: string) => {
-    const startISO = new Date(editStart).toISOString();
-    const endISO = editEnd ? new Date(editEnd).toISOString() : null;
+    const startISO = localInputToISO(editStart);
+    const endISO = editEnd ? localInputToISO(editEnd) : null;
     const totalMinutes = endISO
       ? Math.max(
           0,
