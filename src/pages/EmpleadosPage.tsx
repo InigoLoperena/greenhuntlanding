@@ -150,29 +150,71 @@ const formatDuration = (minutes: number | null) => {
   return `${h}h ${m}m`;
 };
 
+// Argentina timezone (UTC-3, no DST). All time displays and inputs use this zone.
+const AR_TZ = "America/Argentina/Buenos_Aires";
+const AR_OFFSET_MIN = -180; // UTC-3
+
 const formatDateTime = (iso: string | null) => {
   if (!iso) return "—";
-  return new Date(iso).toLocaleString("es-ES", {
+  return new Date(iso).toLocaleString("es-AR", {
     dateStyle: "short",
     timeStyle: "short",
+    timeZone: AR_TZ,
   });
 };
 
-// Convert ISO UTC string to a value usable by <input type="datetime-local"> in LOCAL time
-const isoToLocalInput = (iso: string | null): string => {
-  if (!iso) return "";
-  const d = new Date(iso);
-  const pad = (n: number) => String(n).padStart(2, "0");
-  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`;
+// Get the wall-clock parts of an ISO timestamp as seen in Argentina
+const getARParts = (d: Date) => {
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: AR_TZ,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+  }).formatToParts(d);
+  const get = (t: string) => parts.find((p) => p.type === t)?.value || "00";
+  return {
+    year: get("year"),
+    month: get("month"),
+    day: get("day"),
+    hour: get("hour") === "24" ? "00" : get("hour"),
+    minute: get("minute"),
+  };
 };
 
-// Monday 00:00 of the current local week
+// Convert ISO UTC string to a value usable by <input type="datetime-local"> in Argentina time
+const isoToLocalInput = (iso: string | null): string => {
+  if (!iso) return "";
+  const p = getARParts(new Date(iso));
+  return `${p.year}-${p.month}-${p.day}T${p.hour}:${p.minute}`;
+};
+
+// Convert a datetime-local string (interpreted as Argentina time) to a UTC ISO string
+const localInputToISO = (local: string): string => {
+  // local is like "2026-04-21T15:00"; treat as Argentina wall time (UTC-3)
+  const [date, time] = local.split("T");
+  const [y, mo, d] = date.split("-").map(Number);
+  const [h, mi] = time.split(":").map(Number);
+  // UTC equivalent = AR time - offset (offset is -180, so subtract -180 = add 180 minutes)
+  const utcMs = Date.UTC(y, mo - 1, d, h, mi) - AR_OFFSET_MIN * 60_000;
+  return new Date(utcMs).toISOString();
+};
+
+// Monday 00:00 (Argentina time) of the current week, returned as a UTC timestamp (ms)
 const startOfCurrentWeek = (): Date => {
   const now = new Date();
-  const day = now.getDay(); // 0=Sun..6=Sat
-  const diff = (day === 0 ? -6 : 1 - day); // shift to Monday
-  const monday = new Date(now.getFullYear(), now.getMonth(), now.getDate() + diff, 0, 0, 0, 0);
-  return monday;
+  const p = getARParts(now);
+  // Determine weekday in Argentina
+  const arNoon = new Date(`${p.year}-${p.month}-${p.day}T12:00:00-03:00`);
+  const day = arNoon.getUTCDay(); // 0=Sun..6=Sat (same in any tz at noon)
+  const diff = day === 0 ? -6 : 1 - day;
+  const mondayDay = new Date(arNoon);
+  mondayDay.setUTCDate(mondayDay.getUTCDate() + diff);
+  const mp = getARParts(mondayDay);
+  // Monday 00:00 AR -> UTC
+  return new Date(`${mp.year}-${mp.month}-${mp.day}T00:00:00-03:00`);
 };
 
 const sumWeekMinutes = (entries: TimeEntry[]): number => {
@@ -219,8 +261,8 @@ const EmployeeSection = ({
   };
 
   const saveEdit = async (id: string) => {
-    const startISO = new Date(editStart).toISOString();
-    const endISO = editEnd ? new Date(editEnd).toISOString() : null;
+    const startISO = localInputToISO(editStart);
+    const endISO = editEnd ? localInputToISO(editEnd) : null;
     const totalMinutes = endISO
       ? Math.max(
           0,
