@@ -182,6 +182,7 @@ export type Database = {
           description: string | null
           employee_name: string
           end_time: string | null
+          entry_source: string
           id: string
           start_time: string
           total_minutes: number | null
@@ -192,6 +193,7 @@ export type Database = {
           description?: string | null
           employee_name: string
           end_time?: string | null
+          entry_source?: string
           id?: string
           start_time: string
           total_minutes?: number | null
@@ -202,6 +204,7 @@ export type Database = {
           description?: string | null
           employee_name?: string
           end_time?: string | null
+          entry_source?: string
           id?: string
           start_time?: string
           total_minutes?: number | null
