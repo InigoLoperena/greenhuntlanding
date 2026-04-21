@@ -393,7 +393,18 @@ const EmployeeSection = ({
                     </TableCell>
                     <TableCell>{formatDuration(e.total_minutes)}</TableCell>
                     <TableCell className="max-w-xs whitespace-pre-wrap">
-                      {e.description || "—"}
+                      <div className="flex items-start justify-between gap-2 flex-wrap">
+                        <span className="flex-1">{e.description || "—"}</span>
+                        {e.entry_source === "manual" ? (
+                          <span className="px-2 py-1 rounded-md bg-red-600/20 border border-red-500 text-red-300 text-xs font-permanent-marker whitespace-nowrap">
+                            Reg. manual
+                          </span>
+                        ) : (
+                          <span className="px-2 py-1 rounded-md bg-[#a2c041]/20 border border-[#a2c041] text-[#b4fa74] text-xs font-permanent-marker whitespace-nowrap">
+                            Reg. automático
+                          </span>
+                        )}
+                      </div>
                     </TableCell>
                     <TableCell>
                       <div className="flex gap-2">
