@@ -234,6 +234,7 @@ const EmployeeSection = ({
       end_time: endISO,
       total_minutes: totalMinutes,
       description: editDesc,
+      entry_source: "manual",
     });
     setEditingId(null);
   };
