@@ -25,6 +25,7 @@ interface TimeEntry {
   end_time: string | null;
   total_minutes: number | null;
   description: string | null;
+  entry_source?: string | null;
 }
 
 interface PaymentMethod {
