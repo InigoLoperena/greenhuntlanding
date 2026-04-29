@@ -41,7 +41,7 @@ const BlogListPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="policy-page min-h-screen">
       <Helmet>
         <title>Blog | Greenhunt</title>
         <meta
@@ -61,30 +61,28 @@ const BlogListPage = () => {
         </script>
       </Helmet>
 
-      <header className="border-b border-white/10">
+      <header className="border-b border-black/20">
         <div className="max-w-5xl mx-auto px-6 py-8 flex items-center justify-between">
-          <Link to="/" className="text-sm text-white/60 hover:text-white">
+          <Link to="/" className="text-sm underline">
             ← Greenhunt
           </Link>
-          <h1 className="text-3xl md:text-4xl font-permanent-marker" style={{ color: "#b4fa74" }}>
-            Blog
-          </h1>
+          <h1 className="text-4xl md:text-5xl">Blog</h1>
           <span className="w-20" />
         </div>
       </header>
 
       <main className="max-w-5xl mx-auto px-6 py-12">
         {loading ? (
-          <p className="text-white/60">Loading…</p>
+          <p>Loading…</p>
         ) : posts.length === 0 ? (
-          <p className="text-white/60">No articles yet.</p>
+          <p>No articles yet.</p>
         ) : (
           <ul className="grid gap-8 md:grid-cols-2">
             {posts.map((p) => (
               <li key={p.id}>
                 <Link
                   to={`/blog/${p.slug}`}
-                  className="block rounded-xl overflow-hidden bg-white/5 hover:bg-white/10 transition border border-white/10"
+                  className="block rounded-xl overflow-hidden bg-black/5 hover:bg-black/10 transition border border-black/20"
                 >
                   {p.cover_image_url && (
                     <img
@@ -95,8 +93,8 @@ const BlogListPage = () => {
                     />
                   )}
                   <div className="p-5">
-                    <h2 className="text-xl font-semibold mb-2">{p.title}</h2>
-                    <p className="text-white/70 text-sm line-clamp-3">{p.description}</p>
+                    <h2 className="text-2xl mb-2">{p.title}</h2>
+                    <p className="text-sm line-clamp-3">{p.description}</p>
                   </div>
                 </Link>
               </li>
