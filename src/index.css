@@ -162,6 +162,31 @@ Underground, urban and rebellious brand style with Impact font and uppercase tex
     color: #b8956a;
   }
 
+  /* Inverted policy pages: brown background, black non-bold text */
+  .policy-page {
+    background-color: #c8a46e !important;
+    color: #000 !important;
+  }
+  .policy-page *,
+  .policy-page h1,
+  .policy-page h2,
+  .policy-page h3,
+  .policy-page h4,
+  .policy-page p,
+  .policy-page li,
+  .policy-page a,
+  .policy-page strong,
+  .policy-page span {
+    color: #000 !important;
+    font-weight: 400 !important;
+    text-shadow: none !important;
+  }
+  .policy-page .text-rebel {
+    font-weight: 400 !important;
+  }
+  .policy-page a {
+    text-decoration: underline;
+  }
 }
 
 /* Line clamp utilities for text truncation */

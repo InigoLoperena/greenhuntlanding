@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export default function CookiesPage() {
   return (
-    <div className="min-h-screen bg-background p-4">
+    <div className="policy-page min-h-screen p-4">
       <div className="container mx-auto max-w-4xl py-8">
         <div className="mb-8">
           <Button asChild variant="ghost" className="mb-4">
