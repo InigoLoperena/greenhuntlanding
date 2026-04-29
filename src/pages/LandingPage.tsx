@@ -477,6 +477,14 @@ export default function LandingPage() {
                         ) : (
                           <div className="aspect-video bg-black/60" />
                         )}
+                        <div className="p-6">
+                          <h3 className="text-xl md:text-2xl mb-3 line-clamp-2" style={{ color: '#E6C27A', fontFamily: "'Cinzel', serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 1px 4px rgba(0,0,0,0.8)' }}>
+                            {post.title}
+                          </h3>
+                          <p className="text-sm md:text-base line-clamp-3" style={{ color: '#FFFFFF', fontFamily: "'Inter', sans-serif", textShadow: '0 0 2px rgba(0,0,0,0.9)' }}>
+                            {post.description}
+                          </p>
+                        </div>
                       </Link>
                     ))}
                   </div>
