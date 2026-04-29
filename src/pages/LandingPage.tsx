@@ -269,40 +269,7 @@ export default function LandingPage() {
             
           </div>
 
-          {/* Get Beta CTA - Before What is Stooping section */}
-          <section className="relative -mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
-            <div className="relative py-28 md:py-36 px-4" style={{ backgroundImage: `url(${darkWoodTexture})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-              <div className="absolute inset-0 bg-black/45" />
-              <div className="container mx-auto max-w-3xl text-center relative z-10">
-                <div className="relative overflow-hidden rounded-3xl border-2 bg-black/40 backdrop-blur-sm p-10 md:p-14 shadow-[0_0_40px_rgba(210,180,140,0.15)]" style={{ borderColor: 'rgba(210,180,140,0.3)' }}>
-                  <div className="relative z-10">
-                    <h2 className="text-3xl md:text-4xl mb-3" style={{ color: '#E6C27A', fontFamily: "'Cinzel', serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 6px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.5), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8), 1px 1px 0 rgba(0,0,0,0.8)' }}>
-                        Get Beta & Project Updates
-                    </h2>
-                    <p className="mb-8 text-lg font-medium" style={{ color: '#FFFFFF', fontFamily: "'Inter', sans-serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 5px rgba(0,0,0,0.9), -1px -1px 0 rgba(0,0,0,0.6), 1px -1px 0 rgba(0,0,0,0.6), -1px 1px 0 rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.6)' }}>
-                        Be the first to know when we launch
-                    </p>
-                    <form onSubmit={handleWaitlistSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-                      <Input
-                        type="email"
-                        placeholder="Enter your email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required disabled={loading}
-                        className="flex-1 bg-black/40 rounded-xl text-lg focus:border-[#D2B48C]"
-                        style={{ borderColor: 'rgba(210,180,140,0.4)', color: '#D2B48C', fontFamily: "'Inter', sans-serif" }} />
-                      <Button
-                        type="submit" disabled={loading}
-                        className="rounded-xl px-8 text-lg"
-                        style={{ backgroundColor: '#D2B48C', color: '#1a1206', fontFamily: "'Cinzel', serif", boxShadow: '0 0 25px rgba(210,180,140,0.3)' }}>
-                        {loading ? 'Sending...' : 'GET BETA'}
-                      </Button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+
 
           {/* SEO Section 2 - What is Stooping */}
           <SeoTextSection
