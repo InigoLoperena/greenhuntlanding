@@ -451,12 +451,9 @@ export default function LandingPage() {
                 <div className="absolute inset-0 bg-black/55" />
                 <div className="container mx-auto max-w-6xl relative z-10">
                   <div className="text-center mb-12">
-                    <h2 className="text-4xl md:text-5xl mb-3" style={{ color: '#E6C27A', fontFamily: "'Cinzel', serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 6px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.5), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8), 1px 1px 0 rgba(0,0,0,0.8)' }}>
-                      From the Blog
+                    <h2 className="text-4xl md:text-5xl" style={{ color: '#E6C27A', fontFamily: "'Cinzel', serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 6px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.5), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8), 1px 1px 0 rgba(0,0,0,0.8)' }}>
+                      Blog
                     </h2>
-                    <p className="text-lg md:text-xl" style={{ color: '#FFFFFF', fontFamily: "'Inter', sans-serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 5px rgba(0,0,0,0.9)' }}>
-                      Stories, tips and the culture behind stooping
-                    </p>
                   </div>
 
                   <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -466,6 +463,7 @@ export default function LandingPage() {
                         to={`/blog/${post.slug}`}
                         className="group relative overflow-hidden rounded-2xl border-2 bg-black/40 backdrop-blur-sm hover:scale-[1.02] transition-all duration-300 shadow-[0_0_30px_rgba(210,180,140,0.15)] hover:shadow-[0_0_40px_rgba(210,180,140,0.35)]"
                         style={{ borderColor: 'rgba(210,180,140,0.35)' }}
+                        aria-label={post.title}
                       >
                         {post.cover_image_url ? (
                           <div className="aspect-video overflow-hidden">
@@ -479,28 +477,9 @@ export default function LandingPage() {
                         ) : (
                           <div className="aspect-video bg-black/60" />
                         )}
-                        <div className="p-6">
-                          <h3 className="text-xl md:text-2xl mb-3 line-clamp-2" style={{ color: '#E6C27A', fontFamily: "'Cinzel', serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 1px 4px rgba(0,0,0,0.8)' }}>
-                            {post.title}
-                          </h3>
-                          <p className="text-sm md:text-base line-clamp-3" style={{ color: '#FFFFFF', fontFamily: "'Inter', sans-serif", textShadow: '0 0 2px rgba(0,0,0,0.9)' }}>
-                            {post.description}
-                          </p>
-                        </div>
                       </Link>
                     ))}
                   </div>
-
-                  <div className="text-center mt-12">
-                    <Link
-                      to="/blog"
-                      className="inline-block rounded-xl px-8 py-3 text-lg hover:scale-105 transition-all"
-                      style={{ backgroundColor: '#D2B48C', color: '#1a1206', fontFamily: "'Cinzel', serif", boxShadow: '0 0 25px rgba(210,180,140,0.3)' }}
-                    >
-                      Explore the Blog
-                    </Link>
-                  </div>
-                </div>
               </div>
             </section>
           )}
