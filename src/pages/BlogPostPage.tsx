@@ -36,7 +36,7 @@ const BlogPostPage = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-black text-white flex items-center justify-center">
+      <div className="policy-page min-h-screen flex items-center justify-center">
         Loading…
       </div>
     );
@@ -44,7 +44,7 @@ const BlogPostPage = () => {
 
   if (!post) {
     return (
-      <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center gap-4">
+      <div className="policy-page min-h-screen flex flex-col items-center justify-center gap-4">
         <p>Article not found.</p>
         <Link to="/blog" className="underline">Back to blog</Link>
       </div>
@@ -69,7 +69,7 @@ const BlogPostPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="policy-page min-h-screen">
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -93,19 +93,17 @@ const BlogPostPage = () => {
         </script>
       </Helmet>
 
-      <header className="border-b border-white/10">
+      <header className="border-b border-black/20">
         <div className="max-w-3xl mx-auto px-6 py-6">
-          <Link to="/blog" className="text-sm text-white/60 hover:text-white">
+          <Link to="/blog" className="text-sm underline">
             ← Blog
           </Link>
         </div>
       </header>
 
       <article className="max-w-3xl mx-auto px-6 py-10">
-        <h1 className="text-4xl md:text-5xl font-permanent-marker mb-4" style={{ color: "#b4fa74" }}>
-          {post.title}
-        </h1>
-        <p className="text-lg text-white/80 mb-8">{post.description}</p>
+        <h1 className="text-4xl md:text-5xl mb-4">{post.title}</h1>
+        <p className="text-lg mb-8">{post.description}</p>
         {post.cover_image_url && (
           <img
             src={post.cover_image_url}
@@ -115,7 +113,7 @@ const BlogPostPage = () => {
         )}
         {post.content && (
           <div
-            className="prose prose-invert max-w-none whitespace-pre-wrap leading-relaxed"
+            className="prose max-w-none whitespace-pre-wrap leading-relaxed"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
         )}
