@@ -162,30 +162,61 @@ Underground, urban and rebellious brand style with Impact font and uppercase tex
     color: #b8956a;
   }
 
-  /* Inverted policy pages: brown background, black non-bold text */
+  /* Themed inner pages: dark wood background, gold Cinzel titles, white body text */
   .policy-page {
-    background-color: #c8a46e !important;
-    color: #000 !important;
+    background-color: #1a0f08 !important;
+    background-image: url('/src/assets/seo-bg-wood-leaves.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #FFFFFF !important;
+    position: relative;
   }
-  .policy-page *,
+  .policy-page::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .policy-page > * {
+    position: relative;
+    z-index: 1;
+  }
+  .policy-page p,
+  .policy-page li,
+  .policy-page span,
+  .policy-page strong,
+  .policy-page div {
+    color: #FFFFFF !important;
+    font-weight: 400 !important;
+    font-family: 'Inter', sans-serif !important;
+    text-shadow: 0 0 2px rgba(0,0,0,0.9), 1px 1px 3px rgba(0,0,0,0.8) !important;
+  }
   .policy-page h1,
   .policy-page h2,
   .policy-page h3,
   .policy-page h4,
-  .policy-page p,
-  .policy-page li,
-  .policy-page a,
-  .policy-page strong,
-  .policy-page span {
-    color: #000 !important;
-    font-weight: 400 !important;
-    text-shadow: none !important;
-  }
+  .policy-page h5,
+  .policy-page h6,
   .policy-page .text-rebel {
+    color: #E6C27A !important;
+    font-family: 'Cinzel', serif !important;
     font-weight: 400 !important;
+    text-shadow: 0 0 3px rgba(0,0,0,1), 1px 2px 6px rgba(0,0,0,0.9), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8), 1px 1px 0 rgba(0,0,0,0.8) !important;
   }
   .policy-page a {
+    color: #E6C27A !important;
     text-decoration: underline;
+  }
+  .policy-page .text-muted-foreground {
+    color: #d4d4d4 !important;
+  }
+  .policy-page button,
+  .policy-page button * {
+    color: #E6C27A !important;
   }
 }
 
