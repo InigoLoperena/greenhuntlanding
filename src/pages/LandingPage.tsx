@@ -251,26 +251,22 @@ export default function LandingPage() {
 
           <section className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32 relative">
             <div
-              className="relative py-24 md:py-32 px-6 md:px-16 flex flex-col items-center justify-center text-center"
+              className="relative py-10 sm:py-14 md:py-16 px-4 sm:px-6 md:px-12 flex flex-col items-center justify-center text-center"
               style={{ backgroundImage: `url(${darkWoodTexture})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
               
               <div className="absolute inset-0 bg-black/45" />
               <div className="relative z-10 container mx-auto max-w-4xl">
-                <div className="relative overflow-hidden rounded-3xl border-2 bg-black/40 backdrop-blur-sm p-8 md:p-12 shadow-[0_0_40px_rgba(210,180,140,0.15)]" style={{ borderColor: 'rgba(210,180,140,0.3)' }}>
-                  <div className="flex flex-col justify-between min-h-[200px] md:min-h-[240px]">
-                    <h1
-                      className="text-3xl md:text-5xl lg:text-6xl font-bold mb-auto leading-tight"
-                      style={{ color: '#E6C27A', fontFamily: "'Cinzel', serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 6px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.5), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8), 1px 1px 0 rgba(0,0,0,0.8)' }}>
-                      
-                      Stooping App and Game
-                    </h1>
-                    <p
-                      className="text-lg md:text-2xl leading-relaxed max-w-3xl mx-auto mt-8 md:mt-12 font-medium my-[88px]"
-                      style={{ color: '#FFFFFF', fontFamily: "'Inter', sans-serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 5px rgba(0,0,0,0.9), -1px -1px 0 rgba(0,0,0,0.6), 1px -1px 0 rgba(0,0,0,0.6), -1px 1px 0 rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.6)' }}>
-                      
-                      The easiest and most fun way to do Stooping in your city
-                    </p>
-                  </div>
+                <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl border-2 bg-black/40 backdrop-blur-sm p-5 sm:p-8 md:p-10 shadow-[0_0_40px_rgba(210,180,140,0.15)]" style={{ borderColor: 'rgba(210,180,140,0.3)' }}>
+                  <h1
+                    className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight"
+                    style={{ color: '#E6C27A', fontFamily: "'Cinzel', serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 6px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.5), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8), 1px 1px 0 rgba(0,0,0,0.8)' }}>
+                    Stooping App and Game
+                  </h1>
+                  <p
+                    className="text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto mt-4 sm:mt-5 md:mt-6 font-medium"
+                    style={{ color: '#FFFFFF', fontFamily: "'Inter', sans-serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 5px rgba(0,0,0,0.9), -1px -1px 0 rgba(0,0,0,0.6), 1px -1px 0 rgba(0,0,0,0.6), -1px 1px 0 rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.6)' }}>
+                    The easiest and most fun way to do Stooping in your city
+                  </p>
                 </div>
               </div>
             </div>
