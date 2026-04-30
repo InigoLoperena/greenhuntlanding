@@ -94,26 +94,22 @@ const SeoTextSection = ({ heading, subheading, bg }: {heading: string;subheading
   return (
     <section className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32 relative">
       <div
-        className="relative py-24 md:py-32 px-6 md:px-16 flex flex-col items-center justify-center text-center"
+        className="relative py-10 sm:py-14 md:py-16 px-4 sm:px-6 md:px-12 flex flex-col items-center justify-center text-center"
         style={{ backgroundImage: `url(${darkWoodTexture})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         
         <div className="absolute inset-0 bg-black/45" />
         <div className="relative z-10 container mx-auto max-w-4xl">
-          <div className="relative overflow-hidden rounded-3xl border-2 bg-black/40 backdrop-blur-sm p-8 md:p-12 shadow-[0_0_40px_rgba(210,180,140,0.15)]" style={{ borderColor: 'rgba(210,180,140,0.3)' }}>
-            <div className="flex flex-col justify-between min-h-[200px] md:min-h-[240px]">
-              <h2
-                className="text-3xl md:text-5xl lg:text-6xl font-bold mb-auto leading-tight"
-                style={{ color: '#E6C27A', fontFamily: "'Cinzel', serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 6px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.5), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8), 1px 1px 0 rgba(0,0,0,0.8)' }}>
-                
-                {heading}
-              </h2>
-              <p
-                className="text-lg md:text-2xl leading-relaxed max-w-3xl mx-auto mt-8 md:mt-12 font-medium"
-                style={{ color: '#FFFFFF', fontFamily: "'Inter', sans-serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 5px rgba(0,0,0,0.9), -1px -1px 0 rgba(0,0,0,0.6), 1px -1px 0 rgba(0,0,0,0.6), -1px 1px 0 rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.6)' }}>
-                
-                {subheading}
-              </p>
-            </div>
+          <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl border-2 bg-black/40 backdrop-blur-sm p-5 sm:p-8 md:p-10 shadow-[0_0_40px_rgba(210,180,140,0.15)]" style={{ borderColor: 'rgba(210,180,140,0.3)' }}>
+            <h2
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight"
+              style={{ color: '#E6C27A', fontFamily: "'Cinzel', serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 6px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.5), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8), 1px 1px 0 rgba(0,0,0,0.8)' }}>
+              {heading}
+            </h2>
+            <p
+              className="text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto mt-4 sm:mt-5 md:mt-6 font-medium"
+              style={{ color: '#FFFFFF', fontFamily: "'Inter', sans-serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 5px rgba(0,0,0,0.9), -1px -1px 0 rgba(0,0,0,0.6), 1px -1px 0 rgba(0,0,0,0.6), -1px 1px 0 rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.6)' }}>
+              {subheading}
+            </p>
           </div>
         </div>
       </div>
@@ -255,26 +251,22 @@ export default function LandingPage() {
 
           <section className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32 relative">
             <div
-              className="relative py-24 md:py-32 px-6 md:px-16 flex flex-col items-center justify-center text-center"
+              className="relative py-10 sm:py-14 md:py-16 px-4 sm:px-6 md:px-12 flex flex-col items-center justify-center text-center"
               style={{ backgroundImage: `url(${darkWoodTexture})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
               
               <div className="absolute inset-0 bg-black/45" />
               <div className="relative z-10 container mx-auto max-w-4xl">
-                <div className="relative overflow-hidden rounded-3xl border-2 bg-black/40 backdrop-blur-sm p-8 md:p-12 shadow-[0_0_40px_rgba(210,180,140,0.15)]" style={{ borderColor: 'rgba(210,180,140,0.3)' }}>
-                  <div className="flex flex-col justify-between min-h-[200px] md:min-h-[240px]">
-                    <h1
-                      className="text-3xl md:text-5xl lg:text-6xl font-bold mb-auto leading-tight"
-                      style={{ color: '#E6C27A', fontFamily: "'Cinzel', serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 6px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.5), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8), 1px 1px 0 rgba(0,0,0,0.8)' }}>
-                      
-                      Stooping App and Game
-                    </h1>
-                    <p
-                      className="text-lg md:text-2xl leading-relaxed max-w-3xl mx-auto mt-8 md:mt-12 font-medium my-[88px]"
-                      style={{ color: '#FFFFFF', fontFamily: "'Inter', sans-serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 5px rgba(0,0,0,0.9), -1px -1px 0 rgba(0,0,0,0.6), 1px -1px 0 rgba(0,0,0,0.6), -1px 1px 0 rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.6)' }}>
-                      
-                      The easiest and most fun way to do Stooping in your city
-                    </p>
-                  </div>
+                <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl border-2 bg-black/40 backdrop-blur-sm p-5 sm:p-8 md:p-10 shadow-[0_0_40px_rgba(210,180,140,0.15)]" style={{ borderColor: 'rgba(210,180,140,0.3)' }}>
+                  <h1
+                    className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight"
+                    style={{ color: '#E6C27A', fontFamily: "'Cinzel', serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 6px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.5), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8), 1px 1px 0 rgba(0,0,0,0.8)' }}>
+                    Stooping App and Game
+                  </h1>
+                  <p
+                    className="text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto mt-4 sm:mt-5 md:mt-6 font-medium"
+                    style={{ color: '#FFFFFF', fontFamily: "'Inter', sans-serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 5px rgba(0,0,0,0.9), -1px -1px 0 rgba(0,0,0,0.6), 1px -1px 0 rgba(0,0,0,0.6), -1px 1px 0 rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.6)' }}>
+                    The easiest and most fun way to do Stooping in your city
+                  </p>
                 </div>
               </div>
             </div>
@@ -418,15 +410,15 @@ export default function LandingPage() {
 
           {/* ═══════════════ Final Beta CTA ═══════════════ */}
           <section id="waitlist" className="relative -mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
-            <div className="relative py-28 md:py-36 px-4" style={{ backgroundImage: `url(${darkWoodTexture})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+            <div className="relative py-12 sm:py-16 md:py-20 px-4" style={{ backgroundImage: `url(${darkWoodTexture})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
               <div className="absolute inset-0 bg-black/45" />
               <div className="container mx-auto max-w-3xl text-center relative z-10">
-                <div className="relative overflow-hidden rounded-3xl border-2 bg-black/40 backdrop-blur-sm p-10 md:p-14 shadow-[0_0_40px_rgba(210,180,140,0.15)]" style={{ borderColor: 'rgba(210,180,140,0.3)' }}>
+                <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl border-2 bg-black/40 backdrop-blur-sm p-6 sm:p-8 md:p-10 shadow-[0_0_40px_rgba(210,180,140,0.15)]" style={{ borderColor: 'rgba(210,180,140,0.3)' }}>
                   <div className="relative z-10">
-                    <h2 className="text-3xl md:text-4xl mb-3" style={{ color: '#E6C27A', fontFamily: "'Cinzel', serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 6px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.5), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8), 1px 1px 0 rgba(0,0,0,0.8)' }}>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl mb-2 sm:mb-3" style={{ color: '#E6C27A', fontFamily: "'Cinzel', serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 6px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.5), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8), 1px 1px 0 rgba(0,0,0,0.8)' }}>
                       Get Beta & Project Updates
                     </h2>
-                    <p className="mb-8 text-lg font-medium" style={{ color: '#FFFFFF', fontFamily: "'Inter', sans-serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 5px rgba(0,0,0,0.9), -1px -1px 0 rgba(0,0,0,0.6), 1px -1px 0 rgba(0,0,0,0.6), -1px 1px 0 rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.6)' }}>
+                    <p className="mb-5 sm:mb-6 text-base sm:text-lg font-medium" style={{ color: '#FFFFFF', fontFamily: "'Inter', sans-serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 5px rgba(0,0,0,0.9), -1px -1px 0 rgba(0,0,0,0.6), 1px -1px 0 rgba(0,0,0,0.6), -1px 1px 0 rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.6)' }}>
                       Be the first to know when we launch
                     </p>
                     <form onSubmit={handleWaitlistSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
@@ -436,12 +428,12 @@ export default function LandingPage() {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required disabled={loading}
-                        className="flex-1 bg-black/40 rounded-xl text-lg focus:border-[#D2B48C]"
+                        className="flex-1 bg-black/40 rounded-xl text-base sm:text-lg focus:border-[#D2B48C]"
                         style={{ borderColor: 'rgba(210,180,140,0.4)', color: '#D2B48C', fontFamily: "'Inter', sans-serif" }} />
                       
                       <Button
                         type="submit" disabled={loading}
-                        className="rounded-xl px-8 text-lg"
+                        className="rounded-xl px-6 sm:px-8 text-base sm:text-lg"
                         style={{ backgroundColor: '#D2B48C', color: '#1a1206', fontFamily: "'Cinzel', serif", boxShadow: '0 0 25px rgba(210,180,140,0.3)' }}>
                         {loading ? 'Sending...' : 'GET BETA'}
                       </Button>
@@ -455,11 +447,11 @@ export default function LandingPage() {
           {/* ═══════════════ Blog Highlights ═══════════════ */}
           {blogPosts.length > 0 && (
             <section className="relative -mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
-              <div className="relative py-20 md:py-28 px-4" style={{ backgroundImage: `url(${darkWoodTexture})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+              <div className="relative py-12 sm:py-14 md:py-16 px-4" style={{ backgroundImage: `url(${darkWoodTexture})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 <div className="absolute inset-0 bg-black/45" />
                 <div className="container mx-auto max-w-6xl relative z-10">
-                  <div className="text-center mb-12">
-                    <h2 className="text-4xl md:text-5xl" style={{ color: '#E6C27A', fontFamily: "'Cinzel', serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 6px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.5), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8), 1px 1px 0 rgba(0,0,0,0.8)' }}>
+                  <div className="text-center mb-6 sm:mb-8">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl" style={{ color: '#E6C27A', fontFamily: "'Cinzel', serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 6px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.5), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8), 1px 1px 0 rgba(0,0,0,0.8)' }}>
                       Blog
                     </h2>
                   </div>
@@ -503,7 +495,7 @@ export default function LandingPage() {
 
           {/* Footer */}
           <footer className="relative -mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
-            <div className="relative py-20 md:py-24 px-4" style={{ backgroundImage: `url(${darkWoodTexture})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+            <div className="relative py-12 sm:py-14 md:py-16 px-4" style={{ backgroundImage: `url(${darkWoodTexture})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
               <div className="absolute inset-0 bg-black/40" />
               <div className="container mx-auto max-w-5xl relative z-10">
                 <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 mb-10">
