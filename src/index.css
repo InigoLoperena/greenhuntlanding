@@ -177,13 +177,33 @@ Underground, urban and rebellious brand style with Impact font and uppercase tex
     content: '';
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.65);
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     pointer-events: none;
     z-index: 0;
   }
   .policy-page > * {
     position: relative;
     z-index: 1;
+  }
+  /* Glassmorphism content panel inside themed pages */
+  .policy-page main,
+  .policy-page article {
+    background: rgba(0, 0, 0, 0.40);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 2px solid rgba(210,180,140,0.35);
+    border-radius: 1rem;
+    box-shadow: 0 0 30px rgba(210,180,140,0.15);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .policy-page header {
+    background: rgba(0, 0, 0, 0.40);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(210,180,140,0.35);
   }
   .policy-page p,
   .policy-page li,
