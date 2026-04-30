@@ -455,8 +455,8 @@ export default function LandingPage() {
           {/* ═══════════════ Blog Highlights ═══════════════ */}
           {blogPosts.length > 0 && (
             <section className="relative -mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
-              <div className="relative py-20 md:py-28 px-4" style={{ backgroundImage: `url(${seoBgWoodLeaves})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-                <div className="absolute inset-0 bg-black/55" />
+              <div className="relative py-20 md:py-28 px-4" style={{ backgroundImage: `url(${darkWoodTexture})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                <div className="absolute inset-0 bg-black/45" />
                 <div className="container mx-auto max-w-6xl relative z-10">
                   <div className="text-center mb-12">
                     <h2 className="text-4xl md:text-5xl" style={{ color: '#E6C27A', fontFamily: "'Cinzel', serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 6px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.5), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8), 1px 1px 0 rgba(0,0,0,0.8)' }}>
