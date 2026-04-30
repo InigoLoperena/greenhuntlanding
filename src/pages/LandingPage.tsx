@@ -90,14 +90,14 @@ const FrameCarouselSection = () => {
 };
 
 /* ─── SEO Text Section component ─── */
-const SeoTextSection = ({ heading, subheading, bg }: {heading: string;subheading: string;bg: string;isDark?: boolean;}) => {
+const SeoTextSection = ({ heading, subheading, bg }: {heading: string;subheading: string;bg?: string;isDark?: boolean;}) => {
   return (
     <section className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32 relative">
       <div
         className="relative py-24 md:py-32 px-6 md:px-16 flex flex-col items-center justify-center text-center"
-        style={{ backgroundImage: `url(${bg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        style={{ backgroundImage: `url(${darkWoodTexture})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         
-        <div className="absolute inset-0 bg-black/[0.25]" />
+        <div className="absolute inset-0 bg-black/45" />
         <div className="relative z-10 container mx-auto max-w-4xl">
           <div className="relative overflow-hidden rounded-3xl border-2 bg-black/40 backdrop-blur-sm p-8 md:p-12 shadow-[0_0_40px_rgba(210,180,140,0.15)]" style={{ borderColor: 'rgba(210,180,140,0.3)' }}>
             <div className="flex flex-col justify-between min-h-[200px] md:min-h-[240px]">
@@ -256,9 +256,9 @@ export default function LandingPage() {
           <section className="-mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32 relative">
             <div
               className="relative py-24 md:py-32 px-6 md:px-16 flex flex-col items-center justify-center text-center"
-              style={{ backgroundImage: `url(${seoBgWoodLeaves})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+              style={{ backgroundImage: `url(${darkWoodTexture})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
               
-              <div className="absolute inset-0 bg-black/[0.25]" />
+              <div className="absolute inset-0 bg-black/45" />
               <div className="relative z-10 container mx-auto max-w-4xl">
                 <div className="relative overflow-hidden rounded-3xl border-2 bg-black/40 backdrop-blur-sm p-8 md:p-12 shadow-[0_0_40px_rgba(210,180,140,0.15)]" style={{ borderColor: 'rgba(210,180,140,0.3)' }}>
                   <div className="flex flex-col justify-between min-h-[200px] md:min-h-[240px]">
@@ -455,8 +455,8 @@ export default function LandingPage() {
           {/* ═══════════════ Blog Highlights ═══════════════ */}
           {blogPosts.length > 0 && (
             <section className="relative -mx-4 md:-mx-12 lg:-mx-24 xl:-mx-32">
-              <div className="relative py-20 md:py-28 px-4" style={{ backgroundImage: `url(${seoBgWoodLeaves})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-                <div className="absolute inset-0 bg-black/55" />
+              <div className="relative py-20 md:py-28 px-4" style={{ backgroundImage: `url(${darkWoodTexture})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                <div className="absolute inset-0 bg-black/45" />
                 <div className="container mx-auto max-w-6xl relative z-10">
                   <div className="text-center mb-12">
                     <h2 className="text-4xl md:text-5xl" style={{ color: '#E6C27A', fontFamily: "'Cinzel', serif", textShadow: '0 0 3px rgba(0,0,0,1), 1px 2px 6px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.5), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8), 1px 1px 0 rgba(0,0,0,0.8)' }}>
