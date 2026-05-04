@@ -228,6 +228,16 @@ const sumWeekMinutes = (entries: TimeEntry[]): number => {
   }, 0);
 };
 
+const sumPreviousWeeksMinutes = (entries: TimeEntry[]): number => {
+  const monday = startOfCurrentWeek().getTime();
+  return entries.reduce((acc, e) => {
+    if (!e.start_time || e.total_minutes == null) return acc;
+    const t = new Date(e.start_time).getTime();
+    if (t < monday) return acc + e.total_minutes;
+    return acc;
+  }, 0);
+};
+
 const EmployeeSection = ({
   name,
   entries,
