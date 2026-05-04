@@ -517,11 +517,9 @@ const EmployeeSection = ({
           const total = sumWeekMinutes(entries);
           const h = Math.floor(total / 60);
           const m = total % 60;
-          const prev = sumPreviousWeeksMinutes(entries);
-          const ph = Math.floor(prev / 60);
-          const pm = prev % 60;
+          const prevWeeks = groupPreviousWeeks(entries);
           return (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div className="space-y-3">
               <div className="p-4 rounded-lg bg-zinc-950 border-2 border-[#a2c041]/40 flex items-center justify-between flex-wrap gap-2">
                 <div className="text-[#b4fa74] font-permanent-marker text-xl">
                   Total esta semana (lun–dom)
@@ -530,14 +528,32 @@ const EmployeeSection = ({
                   {h}h {m}m
                 </div>
               </div>
-              <div className="p-4 rounded-lg bg-zinc-950 border-2 border-[#a2c041]/40 flex items-center justify-between flex-wrap gap-2">
-                <div className="text-[#b4fa74] font-permanent-marker text-xl">
-                  Total semanas anteriores
+              {prevWeeks.length > 0 && (
+                <div className="p-4 rounded-lg bg-zinc-950 border-2 border-[#a2c041]/20">
+                  <div className="text-[#b4fa74] font-permanent-marker text-lg mb-2">
+                    Semanas anteriores
+                  </div>
+                  <div className="divide-y divide-zinc-800">
+                    {prevWeeks.map((w) => {
+                      const wh = Math.floor(w.minutes / 60);
+                      const wm = w.minutes % 60;
+                      return (
+                        <div
+                          key={w.start.getTime()}
+                          className="py-2 flex items-center justify-between gap-2 flex-wrap"
+                        >
+                          <div className="text-white/80 font-mono text-sm">
+                            {formatARDate(w.start)} – {formatARDate(w.end)}
+                          </div>
+                          <div className="text-white font-mono text-lg">
+                            {wh}h {wm}m
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
-                <div className="text-white font-mono text-2xl">
-                  {ph}h {pm}m
-                </div>
-              </div>
+              )}
             </div>
           );
         })()}
