@@ -238,6 +238,34 @@ const sumPreviousWeeksMinutes = (entries: TimeEntry[]): number => {
   }, 0);
 };
 
+const groupPreviousWeeks = (
+  entries: TimeEntry[]
+): { start: Date; end: Date; minutes: number }[] => {
+  const currentMonday = startOfCurrentWeek().getTime();
+  const weekMs = 7 * 24 * 60 * 60 * 1000;
+  const buckets = new Map<number, number>();
+  for (const e of entries) {
+    if (!e.start_time || e.total_minutes == null) continue;
+    const t = new Date(e.start_time).getTime();
+    if (t >= currentMonday) continue;
+    const weeksAgo = Math.floor((currentMonday - t) / weekMs) + 1;
+    const weekStart = currentMonday - weeksAgo * weekMs;
+    buckets.set(weekStart, (buckets.get(weekStart) || 0) + e.total_minutes);
+  }
+  return Array.from(buckets.entries())
+    .sort((a, b) => b[0] - a[0])
+    .map(([start, minutes]) => ({
+      start: new Date(start),
+      end: new Date(start + weekMs - 1),
+      minutes,
+    }));
+};
+
+const formatARDate = (d: Date): string => {
+  const p = getARParts(d);
+  return `${p.day}/${p.month}`;
+};
+
 const EmployeeSection = ({
   name,
   entries,
