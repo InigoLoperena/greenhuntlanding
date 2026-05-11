@@ -298,16 +298,17 @@ export type Database = {
       }
     }
     Views: {
-      ambassador_leaderboard: {
-        Row: {
-          nickname: string | null
-          stores_count: number | null
-          total_earned: number | null
-        }
-        Relationships: []
-      }
+      [_ in never]: never
     }
     Functions: {
+      get_ambassador_leaderboard: {
+        Args: never
+        Returns: {
+          nickname: string
+          stores_count: number
+          total_earned: number
+        }[]
+      }
       has_role: {
         Args: {
           _role: Database["public"]["Enums"]["app_role"]
