@@ -13,7 +13,9 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { toast } from "sonner";
-import { Play, Square, Pencil, Trash2, Save, X, CalendarClock, Wallet } from "lucide-react";
+import { Play, Square, Pencil, Trash2, Save, X, CalendarClock, Wallet, ChevronDown } from "lucide-react";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
 const EMPLOYEES = ["Andrea", "Isvara", "Joaquina", "Pablo", "Lucas"] as const;
 type Employee = (typeof EMPLOYEES)[number];
