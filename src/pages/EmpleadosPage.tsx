@@ -393,7 +393,7 @@ const EmployeeSection = ({
           )}
         </div>
 
-        <Collapsible defaultOpen={false}>
+        <Collapsible defaultOpen={true}>
           <CollapsibleTrigger className="w-full flex items-center justify-between gap-2 p-3 rounded-lg bg-zinc-950 border-2 border-[#a2c041]/40 hover:border-[#a2c041] transition-colors group">
             <div className="flex items-center gap-2 text-[#b4fa74] font-permanent-marker text-lg">
               <CalendarClock className="w-5 h-5" />
@@ -695,7 +695,7 @@ const EmpleadosPage = () => {
               <TabsTrigger
                 key={name}
                 value={name}
-                className="font-permanent-marker text-base data-[state=active]:bg-[#a2c041] data-[state=active]:text-[#611a5a] text-[#b4fa74] flex-1 min-w-[100px]"
+                className="font-permanent-marker text-base data-[state=active]:bg-[#a2c041] data-[state=active]:text-[#611a5a] data-[state=inactive]:text-[#b4fa74] data-[state=inactive]:shadow-[0_0_8px_rgba(180,250,116,0.35)] flex-1 min-w-[100px]"
               >
                 {name}
               </TabsTrigger>
