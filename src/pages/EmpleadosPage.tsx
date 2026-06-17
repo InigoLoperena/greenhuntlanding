@@ -695,7 +695,7 @@ const EmpleadosPage = () => {
               <TabsTrigger
                 key={name}
                 value={name}
-                className="font-permanent-marker text-base data-[state=active]:bg-[#a2c041] data-[state=active]:text-[#611a5a] text-[#b4fa74] flex-1 min-w-[100px]"
+                className="font-permanent-marker text-base data-[state=active]:bg-[#a2c041] data-[state=active]:text-[#611a5a] data-[state=inactive]:text-[#b4fa74] data-[state=inactive]:shadow-[0_0_8px_rgba(180,250,116,0.35)] flex-1 min-w-[100px]"
               >
                 {name}
               </TabsTrigger>
