@@ -689,38 +689,52 @@ const EmpleadosPage = () => {
           </p>
         </header>
 
-        {EMPLOYEES.map((name) => {
-          const employeeEntries = entries.filter(
-            (e) => e.employee_name === name
-          );
-          const a = active[name];
-          const elapsed = a
-            ? Math.max(
-                0,
-                Math.round(
-                  (Date.now() - new Date(a.start).getTime()) / 60000
+        <Tabs defaultValue={EMPLOYEES[0]} className="w-full">
+          <TabsList className="w-full flex flex-wrap h-auto gap-1 bg-zinc-900 border border-zinc-800 p-1">
+            {EMPLOYEES.map((name) => (
+              <TabsTrigger
+                key={name}
+                value={name}
+                className="font-permanent-marker text-base data-[state=active]:bg-[#a2c041] data-[state=active]:text-[#611a5a] text-[#b4fa74] flex-1 min-w-[100px]"
+              >
+                {name}
+              </TabsTrigger>
+            ))}
+          </TabsList>
+          {EMPLOYEES.map((name) => {
+            const employeeEntries = entries.filter(
+              (e) => e.employee_name === name
+            );
+            const a = active[name];
+            const elapsed = a
+              ? Math.max(
+                  0,
+                  Math.round(
+                    (Date.now() - new Date(a.start).getTime()) / 60000
+                  )
                 )
-              )
-            : 0;
-          // tick used to recompute
-          void tick;
-          return (
-            <EmployeeSection
-              key={name}
-              name={name}
-              entries={employeeEntries}
-              active={a}
-              onStart={handleStart}
-              onStop={handleStop}
-              onUpdate={handleUpdate}
-              onDelete={handleDelete}
-              elapsed={elapsed}
-            />
-          );
-        })}
+              : 0;
+            void tick;
+            return (
+              <TabsContent key={name} value={name} className="mt-4">
+                <EmployeeSection
+                  name={name}
+                  entries={employeeEntries}
+                  active={a}
+                  onStart={handleStart}
+                  onStop={handleStop}
+                  onUpdate={handleUpdate}
+                  onDelete={handleDelete}
+                  elapsed={elapsed}
+                />
+              </TabsContent>
+            );
+          })}
+        </Tabs>
       </div>
     </div>
   );
 };
+
 
 export default EmpleadosPage;
