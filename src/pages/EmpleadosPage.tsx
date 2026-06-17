@@ -393,7 +393,7 @@ const EmployeeSection = ({
           )}
         </div>
 
-        <Collapsible defaultOpen={false}>
+        <Collapsible defaultOpen={true}>
           <CollapsibleTrigger className="w-full flex items-center justify-between gap-2 p-3 rounded-lg bg-zinc-950 border-2 border-[#a2c041]/40 hover:border-[#a2c041] transition-colors group">
             <div className="flex items-center gap-2 text-[#b4fa74] font-permanent-marker text-lg">
               <CalendarClock className="w-5 h-5" />
