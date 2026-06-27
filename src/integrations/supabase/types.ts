@@ -278,6 +278,45 @@ export type Database = {
         }
         Relationships: []
       }
+      venture_time_entries: {
+        Row: {
+          created_at: string
+          description: string | null
+          employee_name: string
+          end_time: string | null
+          entry_source: string | null
+          id: string
+          project_name: string
+          start_time: string
+          total_minutes: number | null
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          description?: string | null
+          employee_name: string
+          end_time?: string | null
+          entry_source?: string | null
+          id?: string
+          project_name: string
+          start_time: string
+          total_minutes?: number | null
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          description?: string | null
+          employee_name?: string
+          end_time?: string | null
+          entry_source?: string | null
+          id?: string
+          project_name?: string
+          start_time?: string
+          total_minutes?: number | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
       waitlist: {
         Row: {
           created_at: string
