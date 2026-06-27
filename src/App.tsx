@@ -17,6 +17,7 @@ const CookiesPage = lazy(() => import("./pages/CookiesPage"));
 const PrivacyPage = lazy(() => import("./pages/PrivacyPage"));
 const LegalPage = lazy(() => import("./pages/LegalPage"));
 const EmpleadosPage = lazy(() => import("./pages/EmpleadosPage"));
+const VentureBuilderPage = lazy(() => import("./pages/VentureBuilderPage"));
 const BlogListPage = lazy(() => import("./pages/BlogListPage"));
 const BlogPostPage = lazy(() => import("./pages/BlogPostPage"));
 const SistemaInternoPage = lazy(() => import("./pages/SistemaInternoPage"));
