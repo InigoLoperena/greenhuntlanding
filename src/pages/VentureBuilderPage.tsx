@@ -43,8 +43,8 @@ interface Project {
 
 const PROJECTS: Project[] = [
   { name: "BookLinks", creator: "Íñigo", creatorShare: 0.2 },
-  { name: "SmartYoung", creator: "Íñigo", creatorShare: 0.2 },
-  { name: "GreenRoot", creator: "Íñigo", creatorShare: 0.2 },
+  { name: "SmartJunk", creator: "Íñigo", creatorShare: 0.2 },
+  { name: "GreenRoute", creator: "Íñigo", creatorShare: 0.2 },
   { name: "GreenHand", creator: "Íñigo", creatorShare: 0.8 },
 ];
 
@@ -637,7 +637,7 @@ const ProjectPanel = ({
             <TabsTrigger
               key={name}
               value={name}
-              className="font-permanent-marker text-base data-[state=active]:bg-[#a2c041] data-[state=active]:text-[#611a5a] data-[state=inactive]:text-[#b4fa74] data-[state=inactive]:shadow-[0_0_8px_rgba(180,250,116,0.35)] flex-1 min-w-[100px]"
+              className="font-permanent-marker text-base data-[state=active]:bg-[#a2c041] data-[state=active]:text-[#611a5a] data-[state=inactive]:!text-[#b4fa74] data-[state=inactive]:shadow-[0_0_8px_rgba(180,250,116,0.35)] flex-1 min-w-[100px]"
             >
               {name}
             </TabsTrigger>
@@ -790,7 +790,7 @@ const VentureBuilderPage = () => {
               <TabsTrigger
                 key={p.name}
                 value={p.name}
-                className="font-permanent-marker text-base data-[state=active]:bg-[#a2c041] data-[state=active]:text-[#611a5a] data-[state=inactive]:text-[#b4fa74] data-[state=inactive]:shadow-[0_0_8px_rgba(180,250,116,0.35)] flex-1 min-w-[120px]"
+                className="font-permanent-marker text-base data-[state=active]:bg-[#a2c041] data-[state=active]:text-[#611a5a] data-[state=inactive]:!text-[#b4fa74] data-[state=inactive]:shadow-[0_0_8px_rgba(180,250,116,0.35)] flex-1 min-w-[120px]"
               >
                 {p.name}
               </TabsTrigger>
