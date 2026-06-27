@@ -43,8 +43,8 @@ interface Project {
 
 const PROJECTS: Project[] = [
   { name: "BookLinks", creator: "Íñigo", creatorShare: 0.2 },
-  { name: "SmartYoung", creator: "Íñigo", creatorShare: 0.2 },
-  { name: "GreenRoot", creator: "Íñigo", creatorShare: 0.2 },
+  { name: "SmartJunk", creator: "Íñigo", creatorShare: 0.2 },
+  { name: "GreenRoute", creator: "Íñigo", creatorShare: 0.2 },
   { name: "GreenHand", creator: "Íñigo", creatorShare: 0.8 },
 ];
 
