@@ -32,13 +32,13 @@ import {
 } from "@/components/ui/collapsible";
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from "recharts";
 
-const EMPLOYEES = ["Íñigo", "Andrea", "Isvara", "Joaquina", "Pablo", "Lucas"] as const;
+const EMPLOYEES = ["Íñigo", "Andrea", "Isvara", "Joaquina", "Pablo", "Lucas", "Yesica"] as const;
 type Employee = (typeof EMPLOYEES)[number];
 
 interface Project {
   name: string;
-  creator: Employee; // gets fixed creator share
-  creatorShare: number; // 0..1
+  creator: Employee;
+  creatorShare: number; // fixed share for creator
 }
 
 const PROJECTS: Project[] = [
@@ -55,6 +55,7 @@ const EMPLOYEE_COLORS: Record<Employee, string> = {
   Joaquina: "#ec4899",
   Pablo: "#38bdf8",
   Lucas: "#a78bfa",
+  Yesica: "#f472b6",
 };
 
 interface TimeEntry {
