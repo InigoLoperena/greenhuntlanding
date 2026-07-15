@@ -17,7 +17,7 @@ import { Play, Square, Pencil, Trash2, Save, X, CalendarClock, Wallet, ChevronDo
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
-const EMPLOYEES = ["Andrea", "Isvara", "Joaquina", "Pablo", "Lucas"] as const;
+const EMPLOYEES = ["Andrea", "Isvara", "Joaquina", "Pablo", "Lucas", "Yesica"] as const;
 type Employee = (typeof EMPLOYEES)[number];
 
 interface TimeEntry {
