@@ -268,6 +268,49 @@ const formatARDate = (d: Date): string => {
   return `${p.day}/${p.month}`;
 };
 
+const getMonthKey = (iso: string): string => {
+  const p = getARParts(new Date(iso));
+  return `${p.year}-${p.month}`;
+};
+
+const getCurrentMonthKey = (): string => {
+  const p = getARParts(new Date());
+  return `${p.year}-${p.month}`;
+};
+
+const formatMonthLabel = (key: string): string => {
+  const [year, month] = key.split("-").map(Number);
+  const d = new Date(Date.UTC(year, month - 1, 1, 12, 0, 0));
+  return d.toLocaleString("es-AR", {
+    month: "long",
+    year: "numeric",
+    timeZone: AR_TZ,
+  });
+};
+
+const groupByMonth = (
+  entries: TimeEntry[]
+): { key: string; label: string; entries: TimeEntry[] }[] => {
+  const map = new Map<string, TimeEntry[]>();
+  for (const e of entries) {
+    if (!e.start_time) continue;
+    const k = getMonthKey(e.start_time);
+    if (!map.has(k)) map.set(k, []);
+    map.get(k)!.push(e);
+  }
+  return Array.from(map.entries())
+    .sort((a, b) => b[0].localeCompare(a[0]))
+    .map(([key, list]) => ({
+      key,
+      label: formatMonthLabel(key),
+      entries: list.sort(
+        (a, b) =>
+          new Date(b.start_time!).getTime() -
+          new Date(a.start_time!).getTime()
+      ),
+    }));
+};
+
 const EmployeeSection = ({
   name,
   entries,
